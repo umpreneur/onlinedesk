@@ -4,8 +4,6 @@
 
   const LANG_KEY = 'portfolio-lang';
 
-  // Oude deellinks (…/#code=XXXX) horen bij de klantomgeving: daarheen doorsturen.
-  if (/code=/.test(location.hash)) { location.replace(`prive/${location.hash}`); return; }
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -58,7 +56,6 @@
         failed: 'Versturen is niet gelukt. Probeer het later nog eens.',
         failedMail: (m) => `Versturen is niet gelukt. Probeer het later nog eens of mail naar ${m}.`
       },
-      clientArea: 'Klantomgeving',
       mail: {
         subject: (what, option) => `Aanvraag: ${what} – ${option}`,
         body: (what, option) => `Hallo OnlineDesk,\n\nIk heb interesse in: ${what}\nGekozen optie: ${option}\n\nMijn naam:\nBedrijf (optioneel):\nMijn wensen:\n\nGroet,\n`,
@@ -111,7 +108,6 @@
         failed: "Sending didn't work. Please try again later.",
         failedMail: (m) => `Sending didn't work. Please try again later or email ${m}.`
       },
-      clientArea: 'Client area',
       mail: {
         subject: (what, option) => `Request: ${what} – ${option}`,
         body: (what, option) => `Hello OnlineDesk,\n\nI'm interested in: ${what}\nChosen option: ${option}\n\nMy name:\nCompany (optional):\nMy wishes:\n\nKind regards,\n`,
@@ -642,8 +638,7 @@
   function footer() {
     return h('footer', { class: 'site-footer' },
       h('div', { class: 'container footer-inner' },
-        h('span', {}, `© ${new Date().getFullYear()} ${C.brand || 'OnlineDesk'}`),
-        h('a', { class: 'footer-link', href: 'prive/' }, icon('lock', 15), ui().clientArea)
+        h('span', {}, `© ${new Date().getFullYear()} ${C.brand || 'OnlineDesk'}`)
       )
     );
   }

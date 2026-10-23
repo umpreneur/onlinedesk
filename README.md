@@ -1,32 +1,30 @@
 # OnlineDesk-website
 
-Openbare verkoopwebsite voor kant-en-klare websites en webshops, en websites, webshops en apps op maat. Met daarnaast een afgeschermde **klantomgeving** voor privévoorstellen en klantdemo's. De site draait gratis op **GitHub Pages** en is tweetalig (NL/EN).
+Openbare verkoopwebsite voor kant-en-klare websites en webshops, en websites, webshops en apps op maat. De site draait gratis op **GitHub Pages** en is tweetalig (NL/EN).
+
+Live: https://umpreneur.github.io/onlinedesk/
 
 ## Wat zit erin
 
 | Map / bestand | Wat het is |
 | --- | --- |
-| `index.html` | De openbare website (vindbaar in zoekmachines) |
+| `index.html` | De website (vindbaar in zoekmachines) |
 | `pakket.html` | Detailpagina per pakket, bijv. `pakket.html?id=webshop` |
-| `assets/js/content.js` | **Alle openbare teksten, producten, prijzen en FAQ (NL + EN). Hier pas je de site aan.** |
-| `assets/js/site.js` | Bouwt de openbare pagina op uit `content.js` |
+| `assets/js/content.js` | **Alle teksten, pakketten, prijzen en FAQ (NL + EN). Hier pas je de site aan.** |
+| `assets/js/site.js` | Bouwt de pagina's op uit `content.js` |
 | `assets/css/style.css` | Vormgeving (kleuren bovenaan aan te passen) |
-| `prive/` | Klantomgeving: alleen te openen met een toegangscode |
-| `data/portfolio.js` | Versleutelde inhoud van de klantomgeving |
-| `assets/js/prive.js`, `assets/js/vault.js` | Ontsleutelen en tonen van de klantomgeving |
-| `beheer/` | Beheerpagina voor de klantomgeving (inhoud + klantcodes) |
-| `robots.txt` | Houdt `prive/`, `beheer/` en `data/` buiten zoekmachines |
+| `robots.txt` | Zoekmachines mogen de hele site bekijken |
 
-## Nog in te vullen vóór publicatie
+## Nog in te vullen
 
 Open `assets/js/content.js` en zoek op **INVULLEN**:
 
-- `contact.email` — je echte e-mailadres. Zolang dit leeg is, verwijzen de aanvraagknoppen naar het contactblok en staat daar "Contactgegevens worden binnenkort toegevoegd".
+- `contact.email` — je echte e-mailadres. Zolang dit leeg is, verwijzen de aanvraagknoppen naar het contactblok en staat het contactformulier uit.
 - `contact.phone`, `contact.linkedin`, `contact.location` — optioneel.
 - Per pakket `price` (en `delivery`) — zolang dit leeg is, staat er "Prijs volgt". Nu nog leeg: bedrijfs-, salon-, horeca- en coachingswebsite.
 - Per pakket de detaillijsten (`features`, `included`, `extra`, `recurring`, `supply`, `receive`) — zolang die ontbreken, meldt de detailpagina dat de details binnenkort volgen.
-- Per product `image` — een echte screenshot (bijv. `assets/img/webshop.png`). Zolang dit leeg is, toont de site een getekende afbeelding met het label "Voorbeeldafbeelding".
-- Per product `demo` — link naar een werkende demo. Leeg = geen "Bekijk demo"-knop.
+- Per pakket `image` — een echte screenshot (bijv. `assets/img/webshop.png`). Zolang dit leeg is, toont de site een rustige schets.
+- Per pakket `demo` — link naar een werkende demo. Leeg = geen "Bekijk demo"-knop.
 - `work` — echte projecten. Leeg = het blok "Eigen werk" wordt niet getoond.
 
 ## Contactformulier
@@ -43,26 +41,11 @@ Zo doet het formulier nooit alsof een bericht is verstuurd terwijl dat niet zo i
 
 ## Aanvragen
 
-Er is geen online betaling. De knoppen **Pakket aanvragen**, **Laten aanpassen** en **Bespreek jouw idee** openen het e-mailprogramma van de bezoeker met een ingevuld bericht (product + gekozen optie). Dat staat ook onder de producten vermeld.
+Er is geen online betaling. De knoppen **Pakket aanvragen**, **Laten aanpassen** en **Vertel je idee** openen het e-mailprogramma van de bezoeker met een ingevuld bericht (pakket + gekozen optie).
 
-## Online zetten op GitHub (eenmalig)
+## Bijwerken op GitHub
 
-1. Maak een account op [github.com](https://github.com) als je dat nog niet hebt.
-2. Klik rechtsboven op **+ → New repository**. Geef het een naam, kies **Public** en klik **Create repository**.
-3. Klik op **uploading an existing file** en sleep de **inhoud** van de map erin: `index.html`, `pakket.html`, `robots.txt`, `.nojekyll` en de mappen `assets`, `beheer`, `data` en `prive`. Klik **Commit changes**.
-4. Ga naar **Settings → Pages**. Kies bij *Source*: **Deploy from a branch**, branch **main**, map **/ (root)** en klik **Save**.
-5. Na een minuut staat je site op `https://<jouw-gebruikersnaam>.github.io/<naam-repository>/`.
-
-## Klantomgeving (privévoorstellen en demo's)
-
-De klantomgeving staat op `/prive/`. De inhoud is **versleuteld** (AES-256): zonder geldige code onleesbaar, ook op GitHub. Elke klant krijgt een eigen code. Demo-code: `DEMO-2026` (vervang door je eigen codes).
-
-1. Open `/beheer/`.
-2. **Stap 1 – Inhoud:** vul een geldige code in en klik *Huidige openen* (of *Voorbeeld laden*). Pas de inhoud aan.
-3. **Stap 2 – Klanten:** voeg per klant een naam en een (gegenereerde) code toe. Met **Link NL / Link EN** kopieer je een deellink naar de klantomgeving.
-4. **Stap 3 – Publiceren:** sla je **werkbestand** op (bevat je codes onversleuteld, **nooit op GitHub zetten**) en download `portfolio.js`. Vervang daarmee `data/portfolio.js` op GitHub.
-
-**Toegang intrekken:** verwijder de klant in stap 2 en publiceer opnieuw.
+De site staat in de repository `umpreneur/onlinedesk` en wordt via **Settings → Pages** (branch **main**, map **/ (root)**) online gezet. Na elke wijziging die op GitHub komt, is de site binnen ongeveer een minuut bijgewerkt.
 
 ## Tweetalig (Nederlands / Engels)
 
@@ -77,12 +60,10 @@ Een gewone tekst, zoals `"Webshop"`, is in beide talen hetzelfde.
 ## Wat je verder kunt aanpassen
 
 - **Kleuren:** bovenaan `assets/css/style.css`. Kaartkleuren in de inhoud: `sage`, `clay`, `sky`, `lav`, `sand`.
-- **Iconen:** `cart`, `layout`, `code`, `cloud`, `compass`, `pen`, `search`, `phone`, `gear`, `users`, `clock`, `spark`.
+- **Iconen:** `cart`, `layout`, `briefcase`, `scissors`, `coffee`, `chat`, `code`, `cloud`, `compass`, `pen`, `search`, `phone`, `gear`, `users`, `clock`, `spark`.
 - **Beschikbaarheid:** `"available": true` of `false` bovenaan `content.js`.
-- **Producten:** per product titel, tekst, prijs, levertijd, functies, wat in de prijs zit, wat extra kost, terugkerende kosten, wat de klant aanlevert en wat de klant ontvangt. Met `"popular": true` krijgt een product het label "★ Populair".
+- **Pakketten:** per pakket titel, korte zin, prijs, levertijd, functies, wat in de prijs zit, wat extra kost, terugkerende kosten, wat de klant aanlevert en wat de klant ontvangt. Met `"popular": true` krijgt een pakket het label "★ Populair" op de detailpagina.
 
 ## Goed om te weten
 
-- Alles in `assets/js/content.js` is openbaar. Vertrouwelijke voorstellen horen in de klantomgeving.
-- De openbare site mag in zoekmachines; `prive/` en `beheer/` staan op `noindex` en in `robots.txt`.
-- Gebruik voor de klantomgeving gegenereerde codes (zoals `K7QM-4HXP`), geen korte of voorspelbare codes.
+- Alles in deze repository is openbaar. Zet hier geen vertrouwelijke klantinformatie in.

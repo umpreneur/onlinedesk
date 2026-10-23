@@ -1,5 +1,3 @@
-# Openbare website mag worden geïndexeerd; privé- en beheerpagina's niet.
+# De hele website mag worden geïndexeerd.
 User-agent: *
-Disallow: /prive/
-Disallow: /beheer/
-Disallow: /data/
+Allow: /

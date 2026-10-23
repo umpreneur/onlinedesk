@@ -2,8 +2,7 @@
    Openbare inhoud van de OnlineDesk-website (NL + EN)
 
    Dit bestand is OPENBAAR: alles hierin is voor iedereen zichtbaar.
-   Zet hier geen privévoorstellen of vertrouwelijke klantinformatie in;
-   die horen in de klantomgeving (/prive/, versleuteld via /beheer/).
+   Zet hier geen privévoorstellen of vertrouwelijke klantinformatie in.
 
    Tweetalig: { "nl": "…", "en": "…" }. Een gewone tekst geldt voor beide talen.
 
