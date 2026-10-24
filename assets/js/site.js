@@ -588,12 +588,19 @@
         h('div', { class: 'detail-hero reveal' },
           h('div', { class: 'detail-visual' }, productVisual(p, true), popularChip(p)),
           h('div', { class: 'detail-copy' },
-            h('div', { class: 'product-head' },
-              h('span', { class: 'project-icon' }, icon(p.icon || 'code', 24)),
-              h('h1', { class: 'detail-title' }, title)
-            ),
+            // Met "headline": de pakketnaam als klein label en de headline als grote kop.
+            p.headline
+              ? [
+                  h('p', { class: 'detail-eyebrow' }, h('span', { class: 'project-icon' }, icon(p.icon || 'code', 18)), title),
+                  h('h1', { class: 'detail-title is-headline' }, tr(p.headline))
+                ]
+              : h('div', { class: 'product-head' },
+                  h('span', { class: 'project-icon' }, icon(p.icon || 'code', 24)),
+                  h('h1', { class: 'detail-title' }, title)
+                ),
             p.audience && !p.audienceList && !hasTiers ? h('p', { class: 'type-audience' }, `${ui().forWho}: ${tr(p.audience)}`) : null,
             p.text ? h('p', { class: 'product-text' }, tr(p.text)) : null,
+            p.textSub ? h('p', { class: 'product-subtext' }, tr(p.textSub)) : null,
             suitedFor(p),
             highlights.length ? h('ul', { class: 'feature-tags' }, highlights.map((x) => h('li', {}, x))) : null,
             h('div', { class: 'product-facts' },

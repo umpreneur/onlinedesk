@@ -107,9 +107,11 @@ window.SITE_CONTENT = {
       "title": { "nl": "Portfoliowebsite", "en": "Portfolio website" },
       "icon": "layout", "color": "sky", "image": "assets/img/portfolio.jpg", "demo": "https://onlinedesk-portfolio.netlify.app",
       "audience": { "nl": "Fotografen, ontwerpers en andere makers", "en": "Photographers, designers and other creatives" },
+      "headline": { "nl": "Geef jouw werk de ruimte.", "en": "Give your work room to shine." },
+      "textSub": { "nl": "Zelf aanpassen of laten verzorgen.", "en": "Edit it yourself or have it done for you." },
       "text": {
-        "nl": "Een rustige portfolio van één pagina, in het Nederlands en Engels.",
-        "en": "A calm one-page portfolio, in Dutch and English."
+        "nl": "Een rustige website van één pagina voor jouw projecten, diensten en verhaal. In het Nederlands en Engels.",
+        "en": "A calm one-page website for your projects, services and story. In Dutch and English."
       },
       /* Scrollbare preview van de hele pagina */
       "preview": { "desktop": "assets/img/portfolio-pagina.jpg", "mobile": "assets/img/portfolio-pagina-mobiel.jpg" },

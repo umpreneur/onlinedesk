@@ -527,8 +527,24 @@ button { font: inherit; color: inherit; }
 .handset-body::before { left: -3px; top: 96px; height: 54px; }
 .handset-body::after { right: -3px; top: 120px; height: 72px; }
 .handset-island { position: absolute; z-index: 2; top: 15px; left: 50%; width: 76px; height: 22px; margin-left: -38px; border-radius: 999px; background: #1E2220; }
-.handset-view { height: 500px; border-radius: 35px; background: var(--surface); padding-top: 0; }
+.handset-view { height: 500px; border-radius: 35px; background: var(--surface); padding-top: 34px; scrollbar-width: none; -ms-overflow-style: none; }
+.handset-view::-webkit-scrollbar { display: none; }
 .handset-view img { border-radius: 0; }
+/* Geen selectie of sleep-markering bij klikken in de preview */
+.preview-stage { -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+.preview-stage img { -webkit-user-drag: none; pointer-events: none; }
+.browser-view:focus, .handset-view:focus { outline: none; }
+.browser-view:focus-visible, .handset-view:focus-visible { outline: 2px solid var(--tone-deep); outline-offset: 3px; }
+.browser-view { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+
+/* Bovenste stuk met label + grote kop, schermafbeelding in een schermkader */
+.detail-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+.detail-eyebrow .project-icon { width: 34px; height: 34px; border-radius: 11px; }
+.detail-title.is-headline { font-size: clamp(2rem, 4.2vw, 3rem); line-height: 1.05; letter-spacing: -0.03em; max-width: 12ch; }
+.product-subtext { color: var(--muted); font-size: .95rem; margin-top: -6px; }
+.detail-visual:has(.product-shot img) { padding: clamp(18px, 3vw, 30px); display: grid; place-items: center; }
+.detail-visual .product-shot { border: 6px solid #1E2220; border-radius: 14px; box-shadow: 0 22px 40px -26px rgba(30, 32, 30, .55); }
+.detail-visual .product-shot img { border-radius: 8px; }
 
 /* Wat staat erop */
 .parts { margin-top: clamp(40px, 6vw, 64px); }
