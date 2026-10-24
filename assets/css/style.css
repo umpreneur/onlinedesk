@@ -496,6 +496,24 @@ button { font: inherit; color: inherit; }
 .detail-card:nth-child(1), .detail-card:nth-child(2) { background: var(--tone-soft); }
 .detail-pending { display: flex; align-items: center; gap: 14px; margin-top: 20px; padding: 22px 24px; border-radius: var(--radius); background: var(--tone-soft); color: var(--ink-2); font-weight: 700; }
 .detail-pending .icon { color: var(--tone-deep); }
+
+/* Pakketopties (Basis / Plus / Compleet) */
+.tiers-wrap { margin-top: clamp(40px, 6vw, 64px); scroll-margin-top: 100px; }
+.tiers-head { margin-bottom: 20px; }
+.tiers-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); }
+.tiers-head p { color: var(--ink-2); margin-top: 6px; }
+.tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
+.tier { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 26px 24px; border-radius: var(--radius); background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--line); }
+.tier.is-popular { background: var(--tone-soft); box-shadow: inset 0 0 0 2px var(--tone-deep); }
+.tier h3 { font-size: 1.35rem; }
+.tier-text { color: var(--ink-2); font-size: .95rem; margin-top: -6px; }
+.tier .checks { flex: 1; align-content: start; }
+.tier .btn { justify-content: center; }
+.tier-chip { align-self: flex-start; }
+.extras-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.extras-list li { display: flex; justify-content: space-between; gap: 12px; color: var(--ink-2); padding-bottom: 10px; border-bottom: 1px dashed var(--line); }
+.extras-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.extras-list b { color: var(--tone-deep); white-space: nowrap; }
 .detail-missing { display: grid; gap: 20px; justify-items: start; }
 
 /* Op maat: tekst en knop links, vier gekleurde kaarten rechts */
@@ -657,6 +675,7 @@ button { font: inherit; color: inherit; }
   .contact-grid .contact-copy { padding-top: 0; }
   .contact-grid .contact-soft { margin-bottom: 24px; }
   .package-grid, .detail-grid { grid-template-columns: repeat(2, 1fr); }
+  .tiers { grid-template-columns: 1fr; max-width: 560px; }
   .detail-hero { grid-template-columns: 1fr; }
 }
 

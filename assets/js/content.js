@@ -112,32 +112,66 @@ window.SITE_CONTENT = {
         "nl": "Een rustige, moderne portfoliowebsite op één pagina: over jou, je projecten, je diensten en een contactformulier. Ik richt hem in met jouw teksten, foto's en kleuren en lever hem online op.",
         "en": "A calm, modern one-page portfolio website: about you, your projects, your services and a contact form. I set it up with your texts, photos and colours and deliver it online."
       },
-      "price": { "nl": "€ 595", "en": "€595" },
+      "price": { "nl": "€ 79", "en": "€79" },
       "priceNote": { "nl": "excl. btw", "en": "excl. VAT" },
-      "delivery": { "nl": "1–2 weken", "en": "1–2 weeks" },
+      "delivery": { "nl": "binnen 1 week na aanlevering", "en": "within 1 week of receiving your content" },
+      /* Drie opties met elk een eigen prijs (excl. btw, eenmalig) */
+      "tiers": [
+        {
+          "name": "Basis",
+          "text": { "nl": "Je krijgt de template en doet alles zelf.", "en": "You get the template and do everything yourself." },
+          "price": { "nl": "€ 79", "en": "€79" },
+          "items": {
+            "nl": ["Volledige websitebestanden (HTML, CSS, JS)", "Korte Nederlandstalige handleiding", "Uitleg om de site gratis online te zetten", "Geen support of installatie"],
+            "en": ["Complete website files (HTML, CSS, JS)", "Short step-by-step guide", "Instructions to put the site online for free", "No support or installation"]
+          }
+        },
+        {
+          "name": "Plus",
+          "text": { "nl": "Ik zet de site online, jij vult je eigen inhoud in.", "en": "I put the site online, you add your own content." },
+          "price": { "nl": "€ 249", "en": "€249" },
+          "items": {
+            "nl": ["Alles uit Basis", "Domeinnaam registreren en koppelen (1e jaar inbegrepen)", "Gratis hosting instellen met https", "Werkend contactformulier", "Favicon en deelafbeelding", "Je vult zelf je teksten en foto's in"],
+            "en": ["Everything in Basis", "Domain name registered and connected (first year included)", "Free hosting set up with https", "Working contact form", "Favicon and sharing image", "You add your own texts and photos"]
+          }
+        },
+        {
+          "name": "Compleet", "popular": true,
+          "text": { "nl": "Alles geregeld: ik richt de site helemaal voor je in.", "en": "All taken care of: I set up the whole site for you." },
+          "price": { "nl": "€ 595", "en": "€595" },
+          "items": {
+            "nl": ["Alles uit Plus", "Jouw teksten, foto's, projecten en logo's erin verwerkt", "Kleuren en lettertype aangepast aan je stijl", "Basis-SEO: titels, omschrijvingen en Google Search Console", "Getest op mobiel, tablet en desktop", "2 correctierondes", "Online binnen 1 week na aanlevering van je content"],
+            "en": ["Everything in Plus", "Your texts, photos, projects and logos added", "Colours and font matched to your style", "Basic SEO: titles, descriptions and Google Search Console", "Tested on mobile, tablet and desktop", "2 rounds of revisions", "Live within 1 week of receiving your content"]
+          }
+        }
+      ],
+      "extras": [
+        { "name": { "nl": "Extra pagina (bijv. losse projectpagina)", "en": "Extra page (e.g. a separate project page)" }, "price": { "nl": "€ 95 per pagina", "en": "€95 per page" } },
+        { "name": { "nl": "Extra taal (naast Nederlands en Engels)", "en": "Extra language (besides Dutch and English)" }, "price": { "nl": "€ 195", "en": "€195" } },
+        { "name": { "nl": "Zakelijk e-mailadres instellen (hallo@jouwnaam.nl)", "en": "Business email address set up (hello@yourname.com)" }, "price": { "nl": "€ 49", "en": "€49" } },
+        { "name": { "nl": "Extra correctieronde", "en": "Extra round of revisions" }, "price": { "nl": "€ 45", "en": "€45" } },
+        { "name": { "nl": "Teksten schrijven of herschrijven", "en": "Writing or rewriting copy" }, "price": { "nl": "€ 65 per uur", "en": "€65 per hour" } },
+        { "name": { "nl": "Spoedoplevering (binnen 3 werkdagen)", "en": "Rush delivery (within 3 working days)" }, "price": { "nl": "+ € 150", "en": "+ €150" } }
+      ],
       "features": {
         "nl": ["Eén pagina met over mij, klanten, projecten, diensten en contact", "Projectoverzicht met filters", "Tweetalig: Nederlands en Engels", "Contactformulier met spamfilter en social media-links", "Privacyverklaring en eigen 404-pagina", "Werkt perfect op mobiel"],
         "en": ["One page with about, clients, projects, services and contact", "Project overview with filters", "Bilingual: Dutch and English", "Contact form with spam filter and social media links", "Privacy statement and custom 404 page", "Works perfectly on mobile"]
       },
-      "included": {
-        "nl": ["Modern ontwerp, afgestemd op jou", "Inrichting met jouw teksten en foto's", "Domeinnaam en hosting voor 1 jaar", "Oplevering: ik zet de website online"],
-        "en": ["Modern design, tailored to you", "Set-up with your texts and photos", "Domain name and hosting for 1 year", "Delivery: I put the website online"]
-      },
-      "extra": {
-        "nl": ["Extra pagina's, zoals losse projectpagina's", "Extra functies buiten het pakket", "Hulp bij teksten en vindbaarheid"],
-        "en": ["Extra pages, such as separate project pages", "Extra features beyond the package", "Help with copy and findability"]
-      },
       "recurring": {
-        "nl": ["Domeinnaam en hosting na het eerste jaar — de kosten staan in je voorstel"],
-        "en": ["Domain name and hosting after the first year — the costs are in your proposal"]
+        "nl": ["Geen abonnement en geen onderhoudskosten", "Vanaf het 2e jaar betaal je de domeinnaam (± € 10–15 per jaar) zelf bij de provider", "De hosting is gratis"],
+        "en": ["No subscription and no maintenance fees", "From the second year you pay for the domain name (about €10–15 a year) directly to the provider", "Hosting is free"]
       },
       "supply": {
         "nl": ["Teksten over jou en je diensten", "Een portretfoto en foto's van je werk", "Logo en huisstijlkleuren (als je die hebt)", "Je gewenste domeinnaam"],
         "en": ["Texts about you and your services", "A portrait and photos of your work", "Logo and brand colours (if you have them)", "Your preferred domain name"]
       },
       "receive": {
-        "nl": ["Een werkende portfoliowebsite, online op je domeinnaam", "Domeinnaam en hosting geregeld voor het eerste jaar"],
-        "en": ["A working portfolio website, live on your domain name", "Domain name and hosting arranged for the first year"]
+        "nl": ["Een werkende portfoliowebsite, online op je domeinnaam (Plus en Compleet)", "Alle inloggegevens: domein, hosting en formulier staan op jouw naam"],
+        "en": ["A working portfolio website, live on your domain name (Plus and Compleet)", "All login details: domain, hosting and form are in your name"]
+      },
+      "terms": {
+        "nl": ["Basis betaal je vooraf; Plus en Compleet: 50% bij akkoord, 50% bij oplevering", "Je levert teksten en foto's aan binnen 2 weken na akkoord", "Na volledige betaling is de website helemaal van jou", "Geen onderhoud of support na oplevering", "Alle prijzen zijn exclusief 21% btw en gelden tot en met 31 december 2026"],
+        "en": ["Basis is paid in advance; Plus and Compleet: 50% on approval, 50% on delivery", "You supply texts and photos within 2 weeks of approval", "After full payment, the website is entirely yours", "No maintenance or support after delivery", "All prices exclude 21% VAT and are valid until 31 December 2026"]
       }
     },
     {

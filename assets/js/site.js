@@ -27,7 +27,8 @@
       productsText: 'Deze websites en webshops zijn al volledig gebouwd. Kies wat bij je past en ga zelf aan de slag. Wil je hulp met jouw teksten, huisstijl of het online zetten? Dat regel ik graag voor je.',
       from: 'vanaf', delivery: 'Levertijd', popular: 'Populair',
       sample: 'Voorbeeldafbeelding', sampleNote: 'echte screenshot volgt',
-      lists: { features: 'Functies', included: 'In de prijs', extra: 'Extra of op offerte', recurring: 'Terugkerende kosten', supply: 'Dit lever jij aan', receive: 'Dit ontvang je bij oplevering' },
+      lists: { features: 'Functies', included: 'In de prijs', extra: 'Extra of op offerte', recurring: 'Terugkerende kosten', supply: 'Dit lever jij aan', receive: 'Dit ontvang je bij oplevering', terms: 'Voorwaarden' },
+      tiers: { title: 'Kies je pakket', sub: 'Eenmalige prijzen. Na oplevering is alles van jou.', choose: 'Kies', once: 'eenmalig', see: 'Bekijk de pakketten', extras: 'Extra opties' },
       requestPkg: 'Pakket aanvragen', customise: 'Laten aanpassen', demo: 'Bekijk demo',
       forWho: 'Voor', details: 'Bekijk details', priceTbd: 'Prijs volgt', allPackages: 'Alle pakketten',
       invite: { title: 'Staat jouw idee er niet tussen?', text: 'Ik maak ook websites, webshops en apps op maat.', cta: 'Vertel je idee' },
@@ -79,7 +80,8 @@
       productsText: "These websites and webshops are already fully built. Choose what suits you and get started yourself. Would you like help with your copy, brand style or going live? I'm happy to take care of that for you.",
       from: 'from', delivery: 'Delivery', popular: 'Popular',
       sample: 'Sample image', sampleNote: 'real screenshot coming soon',
-      lists: { features: 'Features', included: 'Included in the price', extra: 'Extra or on quotation', recurring: 'Recurring costs', supply: 'What you supply', receive: 'What you receive on delivery' },
+      lists: { features: 'Features', included: 'Included in the price', extra: 'Extra or on quotation', recurring: 'Recurring costs', supply: 'What you supply', receive: 'What you receive on delivery', terms: 'Terms' },
+      tiers: { title: 'Choose your package', sub: 'One-off prices. After delivery, everything is yours.', choose: 'Choose', once: 'one-off', see: 'View the packages', extras: 'Extra options' },
       requestPkg: 'Request package', customise: 'Have it customised', demo: 'View demo',
       forWho: 'For', details: 'View details', priceTbd: 'Price coming soon', allPackages: 'All packages',
       invite: { title: "Can't find your idea here?", text: 'I also build custom websites, webshops and apps.', cta: 'Tell me your idea' },
@@ -365,6 +367,40 @@
     return p.popular ? h('span', { class: 'chip chip-on' }, '★ ', ui().popular) : null;
   }
 
+  // Pakketopties (bijv. Basis / Plus / Compleet), elk met eigen prijs, inhoud en aanvraagknop.
+  function tiersBlock(p, title) {
+    const tiers = p.tiers || [];
+    if (!tiers.length) return null;
+    const T = ui().tiers;
+    return h('div', { class: 'tiers-wrap', id: 'pakketten' },
+      h('div', { class: 'tiers-head reveal' }, h('h2', {}, T.title), h('p', {}, T.sub)),
+      h('div', { class: 'tiers' },
+        tiers.map((t) => {
+          const name = tr(t.name);
+          return h('article', { class: `tier reveal${t.popular ? ' is-popular' : ''}` },
+            t.popular ? h('span', { class: 'chip chip-on tier-chip' }, '★ ', ui().popular) : null,
+            h('h3', {}, name),
+            t.text ? h('p', { class: 'tier-text' }, tr(t.text)) : null,
+            h('p', { class: 'product-price' }, tr(t.price),
+              h('small', {}, ' ', [tr(p.priceNote), T.once].filter(Boolean).join(' · '))),
+            checks(trList(t.items)),
+            requestButton(`${T.choose} ${name}`, title, name, t.popular ? 'btn-primary' : 'btn-ghost')
+          );
+        })
+      )
+    );
+  }
+
+  // Losse extra's met een eigen prijs.
+  function extrasBlock(p) {
+    const extras = p.extras || [];
+    if (!extras.length) return null;
+    return h('div', { class: 'detail-card extras reveal' },
+      h('h3', {}, ui().tiers.extras),
+      h('ul', { class: 'extras-list' }, extras.map((x) => h('li', {}, h('span', {}, tr(x.name)), h('b', {}, tr(x.price)))))
+    );
+  }
+
   // Rustige schets per soort website (geen screenshot): blokken, lijnen en een vorm.
   // Elke regel: [soort, links %, boven %, breedte %, hoogte %]. b = blok, l = lijn, p = paneel, c = cirkel, a = boog, h = halve cirkel.
   const WIRES = {
@@ -440,9 +476,12 @@
     const L = ui().lists;
     const demo = safeUrl(p.demo);
     const highlights = trList(p.highlights);
-    const groups = ['features', 'included', 'extra', 'recurring', 'supply', 'receive']
+    const groups = ['features', 'included', 'extra', 'recurring', 'supply', 'receive', 'terms']
       .map((k) => { const items = trList(p[k]); return items.length ? h('div', { class: 'detail-card reveal' }, h('h3', {}, L[k]), checks(items)) : null; })
       .filter(Boolean);
+    const extras = extrasBlock(p);
+    if (extras) groups.splice(1, 0, extras);
+    const hasTiers = (p.tiers || []).length > 0;
 
     return h('section', { class: `section detail tone-${colorOf(p.color, i)}`, id: 'top' },
       h('div', { class: 'container' },
@@ -462,13 +501,16 @@
               tr(p.delivery) ? h('p', { class: 'product-meta' }, icon('clock', 16), `${ui().delivery}: ${tr(p.delivery)}`) : null
             ),
             h('div', { class: 'product-actions' },
-              requestButton(ui().requestPkg, title, ui().options.ready, 'btn-primary'),
+              hasTiers
+                ? h('a', { class: 'btn btn-primary', href: '#pakketten' }, ui().tiers.see, icon('arrow', 18))
+                : requestButton(ui().requestPkg, title, ui().options.ready, 'btn-primary'),
               requestButton(ui().customise, title, ui().options.custom, 'btn-ghost'),
               demo ? h('a', { class: 'btn btn-ghost', href: demo, target: '_blank', rel: 'noopener' }, ui().demo, icon('external', 16)) : null
             ),
             h('p', { class: 'mail-note is-left' }, icon(email() ? 'mail' : 'arrow', 16), email() ? ui().mailNote : ui().noMailNote)
           )
         ),
+        tiersBlock(p, title),
         groups.length
           ? h('div', { class: 'detail-grid' }, groups)
           : h('div', { class: 'detail-pending reveal' }, icon('clock', 22), h('p', {}, ui().detailsPending))
