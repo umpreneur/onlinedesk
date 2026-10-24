@@ -126,7 +126,7 @@ window.SITE_CONTENT = {
         ]
       },
       "price": { "nl": "€ 79", "en": "€79" },
-      "priceNote": { "nl": "excl. btw", "en": "excl. VAT" },
+      "priceNote": { "nl": "incl. btw", "en": "incl. VAT" },
       /* Drie pakketten (excl. btw, eenmalig) */
       "tiers": [
         { "name": "Basis", "price": { "nl": "€ 79", "en": "€79" } },
@@ -150,15 +150,12 @@ window.SITE_CONTENT = {
       ],
       "extras": [
         { "name": { "nl": "Extra pagina", "en": "Extra page" }, "price": { "nl": "€ 95", "en": "€95" } },
-        { "name": { "nl": "Extra taal", "en": "Extra language" }, "price": { "nl": "€ 195", "en": "€195" } },
-        { "name": { "nl": "Zakelijk e-mailadres", "en": "Business email address" }, "price": { "nl": "€ 49", "en": "€49" } },
         { "name": { "nl": "Extra correctieronde", "en": "Extra revision round" }, "price": { "nl": "€ 45", "en": "€45" } },
-        { "name": { "nl": "Teksten schrijven", "en": "Copywriting" }, "price": { "nl": "€ 65 / uur", "en": "€65 / hour" } },
-        { "name": { "nl": "Spoed (3 werkdagen)", "en": "Rush (3 working days)" }, "price": { "nl": "+ € 150", "en": "+ €150" } }
+        { "name": { "nl": "Teksten schrijven", "en": "Copywriting" }, "price": { "nl": "€ 35 / uur", "en": "€35 / hour" } }
       ],
       "terms": {
-        "nl": ["Basis vooraf; Plus en Compleet 50% bij akkoord, 50% bij oplevering", "Geen abonnement: vanaf jaar 2 betaal je alleen je domein (± € 12 per jaar)", "Na betaling is de website helemaal van jou", "Prijzen excl. 21% btw, geldig t/m 31-12-2026"],
-        "en": ["Basis paid in advance; Plus and Compleet 50% on approval, 50% on delivery", "No subscription: from year 2 you only pay for your domain (about €12 a year)", "After payment, the website is entirely yours", "Prices exclude 21% VAT, valid until 31-12-2026"]
+        "nl": ["Basis vooraf; Plus en Compleet 50% bij akkoord, 50% bij oplevering", "Na betaling is de website helemaal van jou", "Prijzen incl. 21% btw, geldig t/m 31-12-2026"],
+        "en": ["Basis paid in advance; Plus and Compleet 50% on approval, 50% on delivery", "After payment, the website is entirely yours", "Prices include 21% VAT, valid until 31-12-2026"]
       }
     },
     {
