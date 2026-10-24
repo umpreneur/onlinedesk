@@ -105,35 +105,35 @@ window.SITE_CONTENT = {
       "id": "portfolio",
       "tagline": { "nl": "Geef jouw werk de ruimte.", "en": "Give your work room to shine." }, "wire": "shop",
       "title": { "nl": "Portfoliowebsite", "en": "Portfolio website" },
-      "icon": "layout", "color": "sky", "image": "", "demo": "",
+      "icon": "layout", "color": "sky", "image": "assets/img/portfolio.jpg", "demo": "https://onlinedesk-portfolio.netlify.app",
       "audience": { "nl": "Fotografen, ontwerpers en andere makers", "en": "Photographers, designers and other creatives" },
-      "highlights": { "nl": ["Grote beelden", "Projectoverzicht", "Contact"], "en": ["Large images", "Project overview", "Contact"] },
+      "highlights": { "nl": ["One-page", "Projectoverzicht", "Diensten", "Contactformulier", "NL / EN"], "en": ["One-page", "Project overview", "Services", "Contact form", "NL / EN"] },
       "text": {
-        "nl": "Een stijlvolle website om jouw werk te laten zien. Ik richt hem in met jouw inhoud en lever hem online op.",
-        "en": "A stylish website to showcase your work. I set it up with your content and deliver it online."
+        "nl": "Een rustige, moderne portfoliowebsite op één pagina: over jou, je projecten, je diensten en een contactformulier. Ik richt hem in met jouw teksten, foto's en kleuren en lever hem online op.",
+        "en": "A calm, modern one-page portfolio website: about you, your projects, your services and a contact form. I set it up with your texts, photos and colours and deliver it online."
       },
       "price": { "nl": "€ 595", "en": "€595" },
       "priceNote": { "nl": "excl. btw", "en": "excl. VAT" },
       "delivery": { "nl": "1–2 weken", "en": "1–2 weeks" },
       "features": {
-        "nl": ["Tot 5 pagina's", "Je projecten en foto's mooi in beeld", "Contactformulier en social media-links", "Werkt perfect op mobiel"],
-        "en": ["Up to 5 pages", "Your projects and photos beautifully displayed", "Contact form and social media links", "Works perfectly on mobile"]
+        "nl": ["Eén pagina met over mij, klanten, projecten, diensten en contact", "Projectoverzicht met filters", "Tweetalig: Nederlands en Engels", "Contactformulier met spamfilter en social media-links", "Privacyverklaring en eigen 404-pagina", "Werkt perfect op mobiel"],
+        "en": ["One page with about, clients, projects, services and contact", "Project overview with filters", "Bilingual: Dutch and English", "Contact form with spam filter and social media links", "Privacy statement and custom 404 page", "Works perfectly on mobile"]
       },
       "included": {
         "nl": ["Modern ontwerp, afgestemd op jou", "Inrichting met jouw teksten en foto's", "Domeinnaam en hosting voor 1 jaar", "Oplevering: ik zet de website online"],
         "en": ["Modern design, tailored to you", "Set-up with your texts and photos", "Domain name and hosting for 1 year", "Delivery: I put the website online"]
       },
       "extra": {
-        "nl": ["Meer dan 5 pagina's", "Extra functies buiten het pakket", "Hulp bij teksten en vindbaarheid"],
-        "en": ["More than 5 pages", "Extra features beyond the package", "Help with copy and findability"]
+        "nl": ["Extra pagina's, zoals losse projectpagina's", "Extra functies buiten het pakket", "Hulp bij teksten en vindbaarheid"],
+        "en": ["Extra pages, such as separate project pages", "Extra features beyond the package", "Help with copy and findability"]
       },
       "recurring": {
         "nl": ["Domeinnaam en hosting na het eerste jaar — de kosten staan in je voorstel"],
         "en": ["Domain name and hosting after the first year — the costs are in your proposal"]
       },
       "supply": {
-        "nl": ["Teksten voor je pagina's", "Foto's van je werk", "Logo en huisstijlkleuren (als je die hebt)", "Je gewenste domeinnaam"],
-        "en": ["Texts for your pages", "Photos of your work", "Logo and brand colours (if you have them)", "Your preferred domain name"]
+        "nl": ["Teksten over jou en je diensten", "Een portretfoto en foto's van je werk", "Logo en huisstijlkleuren (als je die hebt)", "Je gewenste domeinnaam"],
+        "en": ["Texts about you and your services", "A portrait and photos of your work", "Logo and brand colours (if you have them)", "Your preferred domain name"]
       },
       "receive": {
         "nl": ["Een werkende portfoliowebsite, online op je domeinnaam", "Domeinnaam en hosting geregeld voor het eerste jaar"],
