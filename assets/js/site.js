@@ -24,14 +24,14 @@
       available: { label: 'Beschikbaar', title: 'Weet je nog niet wat je nodig hebt?', text: 'Vertel wat je wilt bereiken. Ik denk met je mee over een passende website, webshop of app.', cta: 'Denk met me mee' },
       unavailable: { label: 'Niet beschikbaar', title: 'Momenteel niet beschikbaar', text: 'Mijn agenda zit vol. Neem gerust contact op voor een later moment.', cta: 'Neem contact op' },
       productsEyebrow: 'Producten', productsTitle: 'Direct aan de slag?',
-      productsText: 'Deze websites en webshops zijn al volledig gebouwd. Kies wat bij je past en ga zelf aan de slag. Wil je hulp met jouw teksten, huisstijl of het online zetten? Dat regel ik graag voor je.',
+      productsText: 'De basis staat al klaar. Kies een website of webshop die bij je past en bepaal wat je zelf wilt doen. Zelf aanpassen of hulp nodig met je inhoud, huisstijl of het online zetten? Bekijk de mogelijkheden per product.',
       from: 'vanaf', delivery: 'Levertijd', popular: 'Populair',
       sample: 'Voorbeeldafbeelding', sampleNote: 'echte screenshot volgt',
       lists: { features: 'Functies', included: 'In de prijs', extra: 'Extra of op offerte', recurring: 'Terugkerende kosten', supply: 'Dit lever jij aan', receive: 'Dit ontvang je bij oplevering', terms: 'Voorwaarden' },
       page: { suited: 'Geschikt voor', preview: 'Zo ziet het eruit', previewSub: 'Scroll door de website om te zien hoe hij eruitziet.', desktop: 'Computer', mobile: 'Telefoon', sections: 'Wat staat erop' },
-      tiers: { title: 'Kies je pakket', sub: 'Eenmalige prijzen. Na oplevering is alles van jou.', choose: 'Kies', once: 'eenmalig', see: 'Bekijk de pakketten', extras: 'Extra opties' },
+      tiers: { title: 'Kies je pakket', sub: 'Kies wat je zelf wilt doen en wat je wilt laten verzorgen. Eenmalige pakketprijzen, inclusief btw.', choose: 'Kies', once: 'eenmalig', see: 'Bekijk de pakketten', extras: 'Extra opties' },
       requestPkg: 'Pakket aanvragen', customise: 'Laten aanpassen', demo: 'Bekijk demo',
-      forWho: 'Voor', details: 'Bekijk details', priceTbd: 'Prijs volgt', allPackages: 'Alle pakketten',
+      forWho: 'Voor', details: 'Bekijk details', priceTbd: 'Prijs volgt', allPackages: 'Alle producten',
       invite: { title: 'Staat jouw idee er niet tussen?', text: 'Ik maak ook websites, webshops en apps op maat.', cta: 'Vertel je idee' },
       notFound: 'Dit pakket bestaat niet (meer).',
       detailsPending: 'De volledige details van dit pakket volgen binnenkort. Vraag gerust naar de mogelijkheden: je krijgt altijd eerst een voorstel met duidelijke kosten.',
@@ -74,18 +74,18 @@
       nav: { producten: 'Products', maatwerk: 'Custom-built', faq: 'FAQ', contact: 'Contact' },
       mainMenu: 'Main menu', openMenu: 'Open menu',
       hello: 'Hi, great to have you here!',
-      seeProducts: 'View the offer', discussCustom: 'Tell me your idea',
-      available: { label: 'Available', title: "Not sure yet what you need?", text: "Tell me what you want to achieve. I'll think along with you about a suitable website, webshop or app.", cta: "Let's think it through" },
+      seeProducts: 'View products', discussCustom: 'Tell me your idea',
+      available: { label: 'Available', title: "Not sure yet what you need?", text: "Tell me what you want to achieve. I'll help you choose a suitable website, online store or app.", cta: "Let's think it through" },
       unavailable: { label: 'Unavailable', title: 'Currently unavailable', text: 'My schedule is full. Feel free to get in touch for a later date.', cta: 'Get in touch' },
       productsEyebrow: 'Products', productsTitle: 'Ready to get started?',
-      productsText: "These websites and webshops are already fully built. Choose what suits you and get started yourself. Would you like help with your copy, brand style or going live? I'm happy to take care of that for you.",
+      productsText: "The starting point is ready. Choose a website or online store that suits you and decide how much you want to do yourself. Explore each product to see the options for editing content, personalisation and publishing.",
       from: 'from', delivery: 'Delivery', popular: 'Popular',
       sample: 'Sample image', sampleNote: 'real screenshot coming soon',
       lists: { features: 'Features', included: 'Included in the price', extra: 'Extra or on quotation', recurring: 'Recurring costs', supply: 'What you supply', receive: 'What you receive on delivery', terms: 'Terms' },
       page: { suited: 'Suitable for', preview: 'What it looks like', previewSub: 'Scroll through the website to see what it looks like.', desktop: 'Desktop', mobile: 'Phone', sections: "What's on it" },
-      tiers: { title: 'Choose your package', sub: 'One-off prices. After delivery, everything is yours.', choose: 'Choose', once: 'one-off', see: 'View the packages', extras: 'Extra options' },
+      tiers: { title: 'Choose your package', sub: 'Choose how much you want to do yourself. One-off package prices, including VAT.', choose: 'Choose', once: 'one-off', see: 'View the packages', extras: 'Extra options' },
       requestPkg: 'Request package', customise: 'Have it customised', demo: 'View demo',
-      forWho: 'For', details: 'View details', priceTbd: 'Price coming soon', allPackages: 'All packages',
+      forWho: 'For', details: 'View details', priceTbd: 'Price coming soon', allPackages: 'All products',
       invite: { title: "Can't find your idea here?", text: 'I also build custom websites, webshops and apps.', cta: 'Tell me your idea' },
       notFound: 'This package does not exist (anymore).',
       detailsPending: "The full details of this package are coming soon. Feel free to ask about the options: you'll always get a proposal with clear costs first.",
@@ -391,10 +391,11 @@
             h('tr', {},
               h('th', { scope: 'col', class: 'compare-corner' }, h('span', { class: 'sr-only' }, T.title)),
               tiers.map((t) => h('th', { scope: 'col', class: pop(t).trim() || null },
-                t.popular ? h('span', { class: 'chip chip-on tier-chip' }, '★ ', ui().popular) : null,
+                t.popular ? h('span', { class: 'chip chip-on tier-chip' }, t.badge ? tr(t.badge) : ui().popular) : null,
                 h('span', { class: 'tier-name' }, tr(t.name)),
                 h('span', { class: 'tier-price' }, tr(t.price)),
-                h('small', {}, [tr(p.priceNote), T.once].filter(Boolean).join(' · '))
+                h('small', {}, [tr(p.priceNote), T.once].filter(Boolean).join(' · ')),
+                t.description ? h('small', {}, tr(t.description)) : null
               ))
             )
           ),
@@ -412,7 +413,10 @@
             )
           )
         )
-      )
+      ),
+      trList(p.packageNotes).length
+        ? h('div', { class: 'detail-card' }, checks(trList(p.packageNotes)))
+        : null
     );
   }
 
@@ -433,7 +437,7 @@
     if (!desk && !mob) return null;
     const P = ui().page;
     return h('div', { class: 'preview reveal' },
-      h('div', { class: 'preview-head' }, h('h2', {}, P.preview), h('p', {}, P.previewSub)),
+      // De beelden en de demoknop geven voldoende context; geen herhaalde introductie.
       h('div', { class: 'preview-stage' },
         desk ? h('figure', { class: 'browser' },
           h('div', { class: 'browser-bar', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'), demo ? h('span', {}, demo.replace(/^https?:\/\//, '').replace(/\/$/, '')) : null),
@@ -496,7 +500,8 @@
     if (!extras.length) return null;
     return h('div', { class: 'detail-card extras reveal' },
       h('h3', {}, ui().tiers.extras),
-      h('ul', { class: 'extras-list' }, extras.map((x) => h('li', {}, h('span', {}, tr(x.name)), h('b', {}, tr(x.price)))))
+      h('ul', { class: 'extras-list' }, extras.map((x) => h('li', {}, h('span', {}, tr(x.name)), h('b', {}, tr(x.price))))),
+      p.extrasNote ? h('p', {}, tr(p.extrasNote)) : null
     );
   }
 
@@ -714,7 +719,8 @@
     const c = C.contact || {};
     const endpoint = safeUrl(c.formEndpoint) && /^https:/i.test(c.formEndpoint) ? c.formEndpoint : '';
     const mode = endpoint ? 'send' : (email() ? 'mail' : 'off');
-    const t = ui().form;
+    const copy = PAGE === 'pakket' ? currentProduct()?.p.contactCopy : null;
+    const t = { ...ui().form, ...(copy ? Object.fromEntries(Object.entries(copy).map(([key, value]) => [key, tr(value)])) : {}) };
     const phone = String(c.phone || '').trim();
     const direct = [
       email() && ['mail', t.directMail, email(), `mailto:${email()}?subject=${encodeURIComponent(ui().mail.generalSubject)}`],
