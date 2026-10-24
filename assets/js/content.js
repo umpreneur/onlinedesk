@@ -125,12 +125,12 @@ window.SITE_CONTENT = {
         "en": "Give your work room to shine."
       },
       "textSub": {
-        "nl": "Zelf aanpassen of laten verzorgen.",
-        "en": "Edit it yourself or have it done for you."
+        "nl": "Pas de website zelf aan, of laat mij je helpen.",
+        "en": "Customise the website yourself, or let me help."
       },
       "text": {
-        "nl": "Een rustige website van één pagina voor jouw projecten, diensten en verhaal. Met Nederlandse en Engelse voorbeeldteksten.",
-        "en": "A clean one-page website for your projects, services and story. With Dutch and English sample text."
+        "nl": "Een rustige, tweetalige website van één pagina voor jouw projecten, diensten en verhaal. Je bezoekers kiezen tussen Nederlands en Engels.",
+        "en": "A clean, bilingual one-page website for your projects, services and story. Visitors can switch between Dutch and English."
       },
       "preview": {
         "desktop": "assets/img/portfolio-pagina.jpg",
@@ -142,58 +142,58 @@ window.SITE_CONTENT = {
           "en": "How it works"
         },
         "sub": {
-          "nl": "De werkwijze verschilt per pakket: zelf aan de slag met Basis, de installatie laten regelen met Plus of de invulling laten verzorgen met Compleet.",
-          "en": "Choose how much you do yourself: edit and publish with Basic, have the technical setup handled with Plus, or have your content added with Complete."
+          "nl": "Kies wat bij je past: zelf aanpassen, hulp bij het online zetten of ook je teksten en huisstijl laten aanpassen.",
+          "en": "Choose what suits you: edit it yourself, get help publishing, or also have your text and brand style added."
         },
         "items": [
           {
             "title": {
-              "nl": "Kiezen en afspreken",
-              "en": "Choose and agree"
+              "nl": "Pakket kiezen",
+              "en": "Choose a package"
             },
             "text": {
-              "nl": "Bij Basis betaal je vooraf. Bij Plus en Compleet betaal je 50% bij akkoord. We spreken vooraf af wat wordt geleverd en wanneer.",
-              "en": "Basic is paid in full in advance. For Plus and Complete, you pay 50% on approval. We agree on the scope and timing before work starts."
+              "nl": "Je kiest je pakket. Basis betaal je vooraf. Bij Plus en Compleet betaal je 50% bij akkoord. We bespreken persoonlijk wanneer ik aan je website kan werken.",
+              "en": "Choose your package. Basic is paid in advance. With Plus and Complete, you pay 50% on approval. We discuss personally when I can work on your website."
             }
           },
           {
             "title": {
-              "nl": "Zelf aanpassen of aanleveren",
-              "en": "Edit or supply content"
+              "nl": "Voorbereiden",
+              "en": "Get ready"
             },
             "text": {
-              "nl": "Bij Basis en Plus pas je de inhoud zelf aan in de websitebestanden. Bij Compleet lever je binnen 2 weken je teksten, foto’s, projecten en logo aan, in de talen die je wilt gebruiken.",
-              "en": "With Basic and Plus, you edit the content in the website files yourself. With Complete, you supply your text, photos, projects and logo within 2 weeks, in the languages you want to use."
+              "nl": "Je koopt zelf je domeinnaam en hosting. Bij Plus en Compleet kan ik je daarbij helpen. Je krijgt de handleiding in het Nederlands of Engels, afhankelijk van welke taal je spreekt.",
+              "en": "You purchase your own domain name and hosting. With Plus and Complete, I can help you with this. You receive the guide in Dutch or English, depending on which language you speak."
             }
           },
           {
             "title": {
-              "nl": "Bestanden of installatie",
-              "en": "Files or technical setup"
+              "nl": "Website aanpassen",
+              "en": "Customise your website"
             },
             "text": {
-              "nl": "Basis ontvang je binnen 1 werkdag na betaling. Bij Plus regel ik de technische installatie. Bij Compleet verwerk ik ook jouw materiaal in het bestaande ontwerp.",
-              "en": "You receive Basic within 1 working day of payment. With Plus, I handle the technical setup. With Complete, I also add your content to the existing design."
+              "nl": "Bij Basis en Plus pas je de inhoud zelf aan. Bij Compleet stuur je mij je teksten en vertel je welke kleuren en welk lettertype je wilt gebruiken. Je voegt bij elk pakket zelf je afbeeldingen toe; ik kan uitleggen hoe.",
+              "en": "With Basic and Plus, you edit the content yourself. With Complete, you send me your text and tell me which colours and font you want to use. With every package, you add your own images; I can explain how."
             }
           },
           {
             "title": {
-              "nl": "Controleren en corrigeren",
+              "nl": "Bekijken en aanpassen",
               "en": "Review and revise"
             },
             "text": {
-              "nl": "Compleet bevat 2 correctierondes binnen de afgesproken opdracht. Je verzamelt je feedback per ronde in één overzicht. Extra wijzigingen bespreken we vooraf.",
-              "en": "Complete includes 2 revision rounds within the agreed scope. You collect your feedback in one list per round. We discuss additional changes in advance."
+              "nl": "Bij Compleet krijg je 2 rondes om wijzigingen aan je teksten, kleuren en lettertype door te geven. Stuur je wensen per ronde in één bericht. Wil je extra pagina’s of functies? Dan bespreken we eerst de mogelijkheden en kosten.",
+              "en": "Complete includes 2 rounds of changes to your text, colours and font. Send your requests in one message per round. For extra pages or features, we discuss the options and costs first."
             }
           },
           {
             "title": {
-              "nl": "Opleveren",
-              "en": "Delivery"
+              "nl": "Online zetten",
+              "en": "Publish your website"
             },
             "text": {
-              "nl": "Bij Basis zet je de website zelf online. Bij Plus en Compleet verzorg ik de livegang en ontvang je de bijbehorende toegangsgegevens. De resterende 50% betaal je bij oplevering.",
-              "en": "With Basic, you publish the site yourself. With Plus and Complete, I publish it and provide the relevant access details. The remaining 50% is due on delivery."
+              "nl": "Bij Basis zet je de website zelf online met de handleiding. Bij Plus en Compleet help ik je de website op jouw hosting online te zetten. De resterende 50% betaal je bij oplevering.",
+              "en": "With Basic, you publish the site yourself using the guide. With Plus and Complete, I help publish the site on your hosting. The remaining 50% is due on delivery."
             }
           }
         ]
@@ -217,8 +217,8 @@ window.SITE_CONTENT = {
             "en": "€79"
           },
           "description": {
-            "nl": "Zelf aanpassen en online zetten. Je ontvangt de websitebestanden en een Nederlandstalige handleiding.",
-            "en": "Edit and publish it yourself. You receive the website files and a guide in Dutch."
+            "nl": "Je ontvangt de websitebestanden en een handleiding in het Nederlands of Engels. Je past de website zelf aan en zet hem zelf online.",
+            "en": "You receive the website files and a guide in Dutch or English. You customise and publish the website yourself."
           }
         },
         {
@@ -228,8 +228,8 @@ window.SITE_CONTENT = {
             "en": "€249"
           },
           "description": {
-            "nl": "Jij past de inhoud zelf aan. Ik regel de domeinnaam, technische installatie en het contactformulier.",
-            "en": "You edit the content yourself. I arrange the domain name, technical setup and contact form."
+            "nl": "Jij past de inhoud aan en koopt je domeinnaam en hosting. Ik help je met de installatie en stel het contactformulier in.",
+            "en": "You edit the content and purchase your domain name and hosting. I help with the setup and configure the contact form."
           }
         },
         {
@@ -243,12 +243,12 @@ window.SITE_CONTENT = {
           },
           "popular": true,
           "badge": {
-            "nl": "Laten verzorgen",
-            "en": "Done for you"
+            "nl": "Met persoonlijke hulp",
+            "en": "With personal help"
           },
           "description": {
-            "nl": "Jij levert je materiaal aan. Ik verwerk de inhoud, pas kleuren en lettertype aan en zet de website online.",
-            "en": "You supply your content. I add it to the website, adjust the colours and font, and publish the site."
+            "nl": "Ik plaats jouw teksten, stem de kleuren en het lettertype af op jouw voorkeur of huisstijl en zet de website online. Je voegt zelf je afbeeldingen toe; ik leg uit hoe dat werkt.",
+            "en": "I add your text, adjust the colours and font to your preferences or brand style, and publish the website. You add your images yourself; I explain how."
           }
         }
       ],
@@ -266,8 +266,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Nederlandstalige handleiding",
-            "en": "Step-by-step guide in Dutch"
+            "nl": "Handleiding in het Nederlands of Engels",
+            "en": "Guide in Dutch or English"
           },
           "values": [
             true,
@@ -277,8 +277,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Domeinnaam registreren en koppelen (1e jaar)",
-            "en": "Domain name registered and connected (1st year)"
+            "nl": "Hulp bij je eigen domeinnaam en hosting",
+            "en": "Help with your own domain name and hosting"
           },
           "values": [
             false,
@@ -288,8 +288,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Hosting instellen met https/SSL",
-            "en": "Hosting set up with https/SSL"
+            "nl": "Technische installatie op jouw hosting, met HTTPS",
+            "en": "Technical setup on your hosting, with HTTPS"
           },
           "values": [
             false,
@@ -310,8 +310,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Favicon en deelafbeelding",
-            "en": "Favicon and sharing image"
+            "nl": "Uitleg over zelf toevoegen van een site-icoon en deelafbeelding",
+            "en": "Guidance on adding your own site icon and sharing image"
           },
           "values": [
             false,
@@ -321,8 +321,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Jouw teksten, foto's, projecten en logo's verwerkt",
-            "en": "Your texts, photos, projects and logos added"
+            "nl": "Jouw aangeleverde teksten geplaatst",
+            "en": "Your supplied text added"
           },
           "values": [
             false,
@@ -332,8 +332,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Kleuren en lettertype aangepast",
-            "en": "Colours and font adjusted"
+            "nl": "Kleuren en lettertype naar jouw voorkeur of huisstijl",
+            "en": "Colours and font to suit your preferences or brand style"
           },
           "values": [
             false,
@@ -343,8 +343,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Basis-SEO en Google Search Console",
-            "en": "Basic SEO and Google Search Console"
+            "nl": "Basis-SEO en hulp bij Google Search Console",
+            "en": "Basic SEO and guidance on Google Search Console"
           },
           "values": [
             false,
@@ -430,16 +430,16 @@ window.SITE_CONTENT = {
       "terms": {
         "nl": [
           "Basis betaal je volledig vooraf. Voor Plus en Compleet betaal je 50% bij akkoord en 50% bij oplevering.",
-          "Bij Plus en Compleet is domeinregistratie voor het eerste jaar inbegrepen. De gekozen hosting- en formulierdienst, eventuele gebruikslimieten en terugkerende kosten worden vóór akkoord in je voorstel vermeld.",
-          "Plus en Compleet staan binnen 1 week online nadat alle benodigde bestanden, content en toegangen compleet zijn. We bevestigen de planning vooraf. Latere aanlevering of extra wijzigingen kunnen de opleverdatum verschuiven.",
+          "Domeinnaam en hosting zijn niet bij de pakketprijs inbegrepen. Je koopt en betaalt deze zelf bij een aanbieder naar keuze. Bij Plus en Compleet kan ik je hierbij helpen. Eventuele kosten van een formulierdienst bespreken we vooraf.",
+          "De planning hangt af van mijn lopende projecten en wat je nodig hebt. We bespreken de start en oplevering persoonlijk voordat ik begin.",
           "Na volledige betaling ontvang je de websitebestanden en een gebruikslicentie voor één website. Je mag de inhoud, code en vormgeving aanpassen. De template is niet exclusief en mag niet als template worden doorverkocht of verspreid.",
           "Onderhoud en latere aanpassingen zijn niet inbegrepen. De afgesproken oplevering en inbegrepen correctierondes staan los van later meerwerk.",
           "Alle genoemde prijzen zijn inclusief 21% btw en geldig tot en met 31 december 2026."
         ],
         "en": [
           "Basic is paid in full in advance. For Plus and Complete, you pay 50% on approval and 50% on delivery.",
-          "Plus and Complete include domain registration for the first year. The hosting and form services, any usage limits and recurring costs are specified in your proposal before approval.",
-          "Plus and Complete go live within 1 week after all required files, content and access details have been received. We confirm the schedule in advance. Late content or additional changes may affect delivery.",
+          "Domain name and hosting are not included in the package price. You purchase and pay for them yourself with a provider of your choice. With Plus and Complete, I can help you with this. We discuss any form service costs in advance.",
+          "The schedule depends on my current projects and what you need. We discuss the start and delivery dates personally before I begin.",
           "After full payment, you receive the website files and a licence for one website. You may edit the content, code and design. The template is not exclusive and may not be resold or distributed as a template.",
           "Maintenance and later changes are not included. The agreed delivery and included revision rounds are separate from later additional work.",
           "All listed prices include 21% VAT and are valid until 31 December 2026."
@@ -451,14 +451,20 @@ window.SITE_CONTENT = {
       },
       "packageNotes": {
         "nl": [
-          "Alle pakketten gebruiken dezelfde mobielvriendelijke template. De inhoud pas je aan in HTML/CSS/JS-bestanden; een visuele editor of beheersysteem is niet inbegrepen.",
-          "De template bevat Nederlandse en Engelse voorbeeldteksten. Het schrijven of vertalen van jouw eigen teksten is niet inbegrepen.",
-          "Bij Compleet spreken we vooraf af hoeveel projecten, afbeeldingen en tekst worden verwerkt. Aanpassingen blijven binnen het bestaande ontwerp; extra functies en grotere wijzigingen bespreken we apart."
+          "De website is tweetalig: bezoekers kunnen wisselen tussen Nederlands en Engels. Je levert je eigen teksten aan in de talen die je wilt gebruiken. Teksten schrijven of vertalen is niet inbegrepen.",
+          "Je krijgt een handleiding in het Nederlands of Engels. Je past de website aan in HTML/CSS/JS-bestanden; er is geen visuele editor.",
+          "Je koopt en betaalt zelf je domeinnaam en hosting. Bij Plus en Compleet help ik je met de keuze en installatie.",
+          "Je voegt zelf je foto’s, logo, site-icoon en deelafbeelding toe. Ik lever of plaats geen afbeeldingen, maar kan uitleggen hoe je ze toevoegt.",
+          "Bij Compleet plaats ik je teksten en pas ik kleuren en lettertype aan. Samen bespreken we vooraf wat je op de website wilt zetten. Een andere indeling, extra pagina’s of nieuwe functies bespreken we apart.",
+          "Voor Google Search Console maak je zelf een account aan. Bij Compleet help ik je met het koppelen van je website."
         ],
         "en": [
-          "All packages use the same mobile-friendly template. Content is edited in HTML/CSS/JS files; a visual editor or content management system is not included.",
-          "The template contains Dutch and English sample text. Writing or translating your own text is not included.",
-          "With Complete, we agree in advance on the amount of text, projects and images to add. Changes stay within the existing design; extra features and larger changes are discussed separately."
+          "The website is bilingual: visitors can switch between Dutch and English. You supply your text in the languages you want to use. Writing or translation is not included.",
+          "You receive a guide in Dutch or English. You edit the website in HTML/CSS/JS files; there is no visual editor.",
+          "You purchase and pay for your domain name and hosting yourself. With Plus and Complete, I help you choose and set them up.",
+          "You add your own photos, logo, site icon and sharing image. I do not supply or add images, but I can explain how to add them.",
+          "With Complete, I add your text and adjust the colours and font. We discuss in advance what you want on the website. A different layout, extra pages or new features are discussed separately.",
+          "You create your own Google Search Console account. With Complete, I help connect your website."
         ]
       },
       "contactCopy": {
