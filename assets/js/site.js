@@ -367,27 +367,62 @@
     return p.popular ? h('span', { class: 'chip chip-on' }, '★ ', ui().popular) : null;
   }
 
-  // Pakketopties (bijv. Basis / Plus / Compleet), elk met eigen prijs, inhoud en aanvraagknop.
+  // Pakketopties (bijv. Basis / Plus / Compleet) als vergelijkingstabel: per rij een onderdeel,
+  // per kolom een pakket met prijs en aanvraagknop. Waarden: true = vinkje, false = streepje, tekst = tekst.
   function tiersBlock(p, title) {
     const tiers = p.tiers || [];
     if (!tiers.length) return null;
     const T = ui().tiers;
-    return h('div', { class: 'tiers-wrap', id: 'pakketten' },
-      h('div', { class: 'tiers-head reveal' }, h('h2', {}, T.title), h('p', {}, T.sub)),
-      h('div', { class: 'tiers' },
-        tiers.map((t) => {
-          const name = tr(t.name);
-          return h('article', { class: `tier reveal${t.popular ? ' is-popular' : ''}` },
-            t.popular ? h('span', { class: 'chip chip-on tier-chip' }, '★ ', ui().popular) : null,
-            h('h3', {}, name),
-            t.text ? h('p', { class: 'tier-text' }, tr(t.text)) : null,
-            h('p', { class: 'product-price' }, tr(t.price),
-              h('small', {}, ' ', [tr(p.priceNote), T.once].filter(Boolean).join(' · '))),
-            checks(trList(t.items)),
-            requestButton(`${T.choose} ${name}`, title, name, t.popular ? 'btn-primary' : 'btn-ghost')
-          );
-        })
+    const pop = (t) => (t.popular ? ' is-popular' : '');
+    const cell = (v, t) => {
+      const val = typeof v === 'object' && v !== null ? tr(v) : v;
+      return h('td', { class: pop(t).trim() || null },
+        val === true ? h('span', { class: 'yes', 'aria-label': '✓' }, icon('check', 18))
+          : val === false || val == null || val === '' ? h('span', { class: 'no', 'aria-label': '–' }, '–')
+          : h('span', { class: 'txt' }, val));
+    };
+    return h('div', { class: 'tiers-wrap reveal', id: 'pakketten' },
+      h('div', { class: 'tiers-head' }, h('h2', {}, T.title), h('p', {}, T.sub)),
+      h('div', { class: 'compare-scroll' },
+        h('table', { class: 'compare' },
+          h('thead', {},
+            h('tr', {},
+              h('th', { scope: 'col', class: 'compare-corner' }, h('span', { class: 'sr-only' }, T.title)),
+              tiers.map((t) => h('th', { scope: 'col', class: pop(t).trim() || null },
+                t.popular ? h('span', { class: 'chip chip-on tier-chip' }, '★ ', ui().popular) : null,
+                h('span', { class: 'tier-name' }, tr(t.name)),
+                h('span', { class: 'tier-price' }, tr(t.price)),
+                h('small', {}, [tr(p.priceNote), T.once].filter(Boolean).join(' · '))
+              ))
+            )
+          ),
+          h('tbody', {},
+            (p.compare || []).map((row) => h('tr', {},
+              h('th', { scope: 'row' }, tr(row.label)),
+              tiers.map((t, i) => cell((row.values || [])[i], t))
+            ))
+          ),
+          h('tfoot', {},
+            h('tr', {},
+              h('td', {}),
+              tiers.map((t) => h('td', { class: pop(t).trim() || null },
+                requestButton(`${T.choose} ${tr(t.name)}`, title, tr(t.name), t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm')))
+            )
+          )
+        )
       )
+    );
+  }
+
+  // Fotogalerij met schermafbeeldingen. "wide" = breed beeld, "tall" = staand (bijv. mobiel).
+  function galleryBlock(p) {
+    const pics = (p.gallery || []).filter((g) => safeSrc(g.src));
+    if (!pics.length) return null;
+    return h('div', { class: 'gallery reveal' },
+      pics.map((g) => h('a', { class: `gallery-item${g.size ? ` is-${g.size}` : ''}`, href: safeSrc(g.src), target: '_blank', rel: 'noopener' },
+        h('img', { src: safeSrc(g.src), alt: tr(g.alt) || tr(p.title), loading: 'lazy' }),
+        g.caption ? h('span', { class: 'gallery-cap' }, tr(g.caption)) : null
+      ))
     );
   }
 
@@ -480,7 +515,7 @@
       .map((k) => { const items = trList(p[k]); return items.length ? h('div', { class: 'detail-card reveal' }, h('h3', {}, L[k]), checks(items)) : null; })
       .filter(Boolean);
     const extras = extrasBlock(p);
-    if (extras) groups.splice(1, 0, extras);
+    if (extras) groups.splice(p.features ? 1 : 0, 0, extras);
     const hasTiers = (p.tiers || []).length > 0;
 
     return h('section', { class: `section detail tone-${colorOf(p.color, i)}`, id: 'top' },
@@ -510,9 +545,10 @@
             h('p', { class: 'mail-note is-left' }, icon(email() ? 'mail' : 'arrow', 16), email() ? ui().mailNote : ui().noMailNote)
           )
         ),
+        galleryBlock(p),
         tiersBlock(p, title),
         groups.length
-          ? h('div', { class: 'detail-grid' }, groups)
+          ? h('div', { class: `detail-grid${groups.length === 2 ? ' is-two' : ''}` }, groups)
           : h('div', { class: 'detail-pending reveal' }, icon('clock', 22), h('p', {}, ui().detailsPending))
       )
     );
