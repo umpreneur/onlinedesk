@@ -28,6 +28,7 @@
       from: 'vanaf', delivery: 'Levertijd', popular: 'Populair',
       sample: 'Voorbeeldafbeelding', sampleNote: 'echte screenshot volgt',
       lists: { features: 'Functies', included: 'In de prijs', extra: 'Extra of op offerte', recurring: 'Terugkerende kosten', supply: 'Dit lever jij aan', receive: 'Dit ontvang je bij oplevering', terms: 'Voorwaarden' },
+      page: { suited: 'Geschikt voor', preview: 'Zo ziet het eruit', previewSub: 'Scroll door de website, of bekijk de demo live.', desktop: 'Computer', mobile: 'Telefoon', sections: 'Wat staat erop' },
       tiers: { title: 'Kies je pakket', sub: 'Eenmalige prijzen. Na oplevering is alles van jou.', choose: 'Kies', once: 'eenmalig', see: 'Bekijk de pakketten', extras: 'Extra opties' },
       requestPkg: 'Pakket aanvragen', customise: 'Laten aanpassen', demo: 'Bekijk demo',
       forWho: 'Voor', details: 'Bekijk details', priceTbd: 'Prijs volgt', allPackages: 'Alle pakketten',
@@ -81,6 +82,7 @@
       from: 'from', delivery: 'Delivery', popular: 'Popular',
       sample: 'Sample image', sampleNote: 'real screenshot coming soon',
       lists: { features: 'Features', included: 'Included in the price', extra: 'Extra or on quotation', recurring: 'Recurring costs', supply: 'What you supply', receive: 'What you receive on delivery', terms: 'Terms' },
+      page: { suited: 'Suitable for', preview: 'What it looks like', previewSub: 'Scroll through the website, or view the live demo.', desktop: 'Desktop', mobile: 'Phone', sections: "What's on it" },
       tiers: { title: 'Choose your package', sub: 'One-off prices. After delivery, everything is yours.', choose: 'Choose', once: 'one-off', see: 'View the packages', extras: 'Extra options' },
       requestPkg: 'Request package', customise: 'Have it customised', demo: 'View demo',
       forWho: 'For', details: 'View details', priceTbd: 'Price coming soon', allPackages: 'All packages',
@@ -414,6 +416,67 @@
     );
   }
 
+  // "Geschikt voor": korte labels met de doelgroep.
+  function suitedFor(p) {
+    const list = trList(p.audienceList);
+    if (!list.length) return null;
+    return h('div', { class: 'suited' },
+      h('span', { class: 'suited-label' }, icon('users', 16), ui().page.suited),
+      h('ul', { class: 'suited-list' }, list.map((x) => h('li', {}, x)))
+    );
+  }
+
+  // "Zo ziet het eruit": de hele pagina in een browser- en telefoonkader, scrollbaar.
+  function previewBlock(p) {
+    const pv = p.preview || {};
+    const desk = safeSrc(pv.desktop), mob = safeSrc(pv.mobile), demo = safeUrl(p.demo);
+    if (!desk && !mob) return null;
+    const P = ui().page;
+    return h('div', { class: 'preview reveal' },
+      h('div', { class: 'preview-head' },
+        h('div', {}, h('h2', {}, P.preview), h('p', {}, P.previewSub)),
+        demo ? h('a', { class: 'btn btn-ghost btn-sm', href: demo, target: '_blank', rel: 'noopener' }, ui().demo, icon('external', 16)) : null
+      ),
+      h('div', { class: 'preview-stage' },
+        desk ? h('figure', { class: 'browser' },
+          h('div', { class: 'browser-bar', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'), demo ? h('span', {}, demo.replace(/^https?:\/\//, '').replace(/\/$/, '')) : null),
+          h('div', { class: 'browser-view', tabindex: '0', 'aria-label': `${P.preview} · ${P.desktop}` }, h('img', { src: desk, alt: `${tr(p.title)} · ${P.desktop}`, loading: 'lazy' })),
+          h('figcaption', {}, P.desktop)
+        ) : null,
+        mob ? h('figure', { class: 'handset' },
+          h('div', { class: 'handset-view', tabindex: '0', 'aria-label': `${P.preview} · ${P.mobile}` }, h('img', { src: mob, alt: `${tr(p.title)} · ${P.mobile}`, loading: 'lazy' })),
+          h('figcaption', {}, P.mobile)
+        ) : null
+      )
+    );
+  }
+
+  // "Wat staat erop": de onderdelen van de website, kort en met een icoon.
+  function sectionsBlock(p) {
+    const items = p.sections || [];
+    if (!items.length) return null;
+    return h('div', { class: 'parts reveal' },
+      h('h2', {}, ui().page.sections),
+      h('ul', { class: 'parts-list' }, items.map((s) => h('li', {},
+        h('span', { class: 'parts-icon' }, icon(s.icon || 'spark', 20)),
+        h('div', {}, h('h3', {}, tr(s.title)), h('p', {}, tr(s.text)))
+      )))
+    );
+  }
+
+  // Kort proces in genummerde stappen.
+  function stepsBlock(p) {
+    const st = p.steps;
+    if (!st || !(st.items || []).length) return null;
+    return h('div', { class: 'steps reveal' },
+      h('h2', {}, tr(st.title)),
+      h('ol', { class: 'steps-list' }, st.items.map((s, i) => h('li', {},
+        h('span', { class: 'step-num' }, String(i + 1)),
+        h('div', {}, h('h3', {}, tr(s.title)), h('p', {}, tr(s.text)))
+      )))
+    );
+  }
+
   // Fotogalerij met schermafbeeldingen. "wide" = breed beeld, "tall" = staand (bijv. mobiel).
   function galleryBlock(p) {
     const pics = (p.gallery || []).filter((g) => safeSrc(g.src));
@@ -528,8 +591,9 @@
               h('span', { class: 'project-icon' }, icon(p.icon || 'code', 24)),
               h('h1', { class: 'detail-title' }, title)
             ),
-            p.audience ? h('p', { class: 'type-audience' }, `${ui().forWho}: ${tr(p.audience)}`) : null,
+            p.audience && !p.audienceList ? h('p', { class: 'type-audience' }, `${ui().forWho}: ${tr(p.audience)}`) : null,
             p.text ? h('p', { class: 'product-text' }, tr(p.text)) : null,
+            suitedFor(p),
             highlights.length ? h('ul', { class: 'feature-tags' }, highlights.map((x) => h('li', {}, x))) : null,
             h('div', { class: 'product-facts' },
               priceLine(p),
@@ -545,8 +609,11 @@
             h('p', { class: 'mail-note is-left' }, icon(email() ? 'mail' : 'arrow', 16), email() ? ui().mailNote : ui().noMailNote)
           )
         ),
+        previewBlock(p),
+        sectionsBlock(p),
         galleryBlock(p),
         tiersBlock(p, title),
+        stepsBlock(p),
         groups.length
           ? h('div', { class: `detail-grid${groups.length === 2 ? ' is-two' : ''}` }, groups)
           : h('div', { class: 'detail-pending reveal' }, icon('clock', 22), h('p', {}, ui().detailsPending))

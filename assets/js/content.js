@@ -107,21 +107,32 @@ window.SITE_CONTENT = {
       "title": { "nl": "Portfoliowebsite", "en": "Portfolio website" },
       "icon": "layout", "color": "sky", "image": "assets/img/portfolio.jpg", "demo": "https://onlinedesk-portfolio.netlify.app",
       "audience": { "nl": "Fotografen, ontwerpers en andere makers", "en": "Photographers, designers and other creatives" },
-      "highlights": { "nl": ["One-page", "NL / EN", "Contactformulier", "Mobielvriendelijk"], "en": ["One-page", "NL / EN", "Contact form", "Mobile-friendly"] },
+      "audienceList": { "nl": ["Fotografen", "Ontwerpers", "Illustratoren", "Creatieve zzp'ers"], "en": ["Photographers", "Designers", "Illustrators", "Creative freelancers"] },
       "text": {
-        "nl": "Een rustige, moderne portfoliowebsite op één pagina. Kies zelf hoeveel ik voor je regel.",
-        "en": "A calm, modern one-page portfolio website. You choose how much I take care of."
+        "nl": "Een website van één pagina waarop je jezelf voorstelt, je werk laat zien en bezoekers direct contact met je opnemen. Rustig, modern en in het Nederlands én Engels.",
+        "en": "A one-page website where you introduce yourself, show your work and let visitors contact you directly. Calm, modern and in Dutch and English."
+      },
+      /* Scrollbare preview van de hele pagina */
+      "preview": { "desktop": "assets/img/portfolio-pagina.jpg", "mobile": "assets/img/portfolio-pagina-mobiel.jpg" },
+      /* Onderdelen van de website (iconen: zie README) */
+      "sections": [
+        { "icon": "users", "title": { "nl": "Over jou", "en": "About you" }, "text": { "nl": "Een korte introductie met je foto.", "en": "A short introduction with your photo." } },
+        { "icon": "layout", "title": { "nl": "Je werk", "en": "Your work" }, "text": { "nl": "Projecten in een overzicht met filters.", "en": "Projects in an overview with filters." } },
+        { "icon": "briefcase", "title": { "nl": "Je diensten", "en": "Your services" }, "text": { "nl": "Wat je doet, helder op een rij.", "en": "What you do, clearly listed." } },
+        { "icon": "chat", "title": "Contact", "text": { "nl": "Een formulier en je social media.", "en": "A form and your social media." } }
+      ],
+      /* Kort proces na de pakketten */
+      "steps": {
+        "title": { "nl": "Van keuze naar jouw eigen website.", "en": "From choice to your own website." },
+        "items": [
+          { "title": { "nl": "Kies je pakket", "en": "Choose your package" }, "text": { "nl": "Bepaal wat je zelf wilt doen en wat je wilt laten verzorgen.", "en": "Decide what you want to do yourself and what you'd like taken care of." } },
+          { "title": { "nl": "Maak de inhoud compleet", "en": "Complete the content" }, "text": { "nl": "Bij Basis en Plus pas je de inhoud zelf aan. Bij Compleet lever je jouw teksten, foto's en logo aan.", "en": "With Basis and Plus you edit the content yourself. With Compleet you supply your texts, photos and logo." } },
+          { "title": { "nl": "Zet je website online", "en": "Put your website online" }, "text": { "nl": "Zelf aan de slag met Basis, of de technische installatie laten verzorgen met Plus of Compleet.", "en": "Get started yourself with Basis, or have the technical set-up handled with Plus or Compleet." } }
+        ]
       },
       "price": { "nl": "€ 79", "en": "€79" },
       "priceNote": { "nl": "excl. btw", "en": "excl. VAT" },
       "delivery": { "nl": "binnen 1 week na aanlevering", "en": "within 1 week of receiving your content" },
-      /* Schermafbeeldingen onder de introductie. size: "big" = groot, "tall" = staand */
-      "gallery": [
-        { "src": "assets/img/portfolio-presentatie.jpg", "size": "big", "alt": { "nl": "De portfoliowebsite op laptop en telefoon", "en": "The portfolio website on laptop and phone" } },
-        { "src": "assets/img/portfolio-ervaring.jpg", "caption": { "nl": "Projecten", "en": "Projects" }, "alt": { "nl": "Projectoverzicht met filters", "en": "Project overview with filters" } },
-        { "src": "assets/img/portfolio-mobiel.jpg", "size": "tall", "caption": { "nl": "Mobiel", "en": "Mobile" }, "alt": { "nl": "De website op een telefoon", "en": "The website on a phone" } },
-        { "src": "assets/img/portfolio-diensten.jpg", "caption": { "nl": "Diensten", "en": "Services" }, "alt": { "nl": "Overzicht van diensten", "en": "Overview of services" } }
-      ],
       /* Drie pakketten (excl. btw, eenmalig) */
       "tiers": [
         { "name": "Basis", "price": { "nl": "€ 79", "en": "€79" } },
