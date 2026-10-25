@@ -105,137 +105,147 @@ window.SITE_CONTENT = {
         "en": "Your business online, with its own ordering."
       },
       "text": {
-        "nl": "Een warme, tweetalige website met menukaart, verhaal, sfeerbeelden en openingstijden. Gasten bestellen rechtstreeks bij jou voor afhalen of bezorgen, zonder bestelplatform ertussen.",
-        "en": "A warm, bilingual website with your menu, story, photos and opening hours. Guests order directly from you for pickup or delivery, with no ordering platform in between."
+        "nl": "Een warme website met menukaart, verhaal, sfeerbeelden, openingstijden, route en contact. Gasten bestellen zonder account rechtstreeks bij jou, voor afhalen of bezorgen, en rekenen online af.",
+        "en": "A warm website with your menu, story, photos, opening hours, directions and contact. Guests order directly from you without an account, for pickup or delivery, and pay online."
       },
       "textSub": {
         "nl": "Probeer de demo: bestel als voorbeeld bij de fictieve lunchroom Aan Tafel.",
         "en": "Try the demo: place an example order at the fictional lunchroom Aan Tafel."
       },
-      "priceText": { "nl": "Prijs op offerte", "en": "Price on quotation" },
-      "requestLabel": { "nl": "Offerte aanvragen", "en": "Request a quote" },
       "preview": {
         "desktop": "assets/img/horeca-pagina.jpg",
         "mobile": "assets/img/horeca-pagina-mobiel.jpg"
       },
-      "gallery": [
-        { "src": "assets/img/horeca-bestellen.jpg", "size": "big",
-          "alt": { "nl": "Bestelpagina met menu en winkelwagen", "en": "Order page with menu and cart" },
-          "caption": { "nl": "Bestellen met winkelwagen", "en": "Ordering with a cart" } },
-        { "src": "assets/img/horeca-beheer.jpg",
-          "alt": { "nl": "Beheer met bestellingen en statussen", "en": "Admin with orders and statuses" },
-          "caption": { "nl": "Bestellingen in het beheer", "en": "Orders in the admin" } },
-        { "src": "assets/img/horeca-bezorgen-mobiel.jpg", "size": "tall",
-          "alt": { "nl": "Afrekenen op de telefoon met afhalen of bezorgen", "en": "Checkout on a phone with pickup or delivery" },
-          "caption": { "nl": "Afhalen of bezorgen", "en": "Pickup or delivery" } },
-        { "src": "assets/img/horeca-beheer-bezorgen.jpg",
-          "alt": { "nl": "Bezorggebieden instellen in het beheer", "en": "Setting delivery areas in the admin" },
-          "caption": { "nl": "Bezorggebieden instellen", "en": "Setting delivery areas" } }
-      ],
-      "tiersSub": {
-        "nl": "Zelf aan de slag of hulp nodig? Vergelijk hieronder wat je per pakket krijgt. Je ontvangt vooraf een offerte met de kosten.",
-        "en": "Do it yourself or need help? Compare what you get with each package below. You receive a quote with the costs in advance."
+      "steps": {
+        "title": { "nl": "Werkwijze", "en": "How it works" },
+        "sub": {
+          "nl": "Basis lever ik binnen 1 werkdag na betaling. Plus en Compleet staan online binnen 2 weken nadat ik je menukaart en content heb ontvangen. Voor Plus en Compleet werkt het zo:",
+          "en": "I deliver Basic within 1 working day of payment. Plus and Complete are live within 2 weeks of receiving your menu and content. For Plus and Complete, it works like this:"
+        },
+        "items": [
+          { "title": { "nl": "Akkoord", "en": "Approval" },
+            "text": { "nl": "Je tekent de offerte en betaalt de aanbetaling van 50%.", "en": "You sign the quote and pay the 50% deposit." } },
+          { "title": { "nl": "Content aanleveren", "en": "Supply your content" },
+            "text": { "nl": "Binnen 2 weken stuur je je menukaart (met prijzen, opties en allergenen), openingstijden, bezorggebieden, teksten, foto's en logo.", "en": "Within 2 weeks you send your menu (with prices, options and allergens), opening hours, delivery areas, text, photos and logo." } },
+          { "title": { "nl": "Bouwen", "en": "Build" },
+            "text": { "nl": "Ik richt de website en bestelomgeving in en stuur je een voorbeeldlink.", "en": "I set up the website and ordering and send you a preview link." } },
+          { "title": { "nl": "Testen en correcties", "en": "Test and revise" },
+            "text": { "nl": "We doen samen een testbestelling en je geeft je feedback in maximaal 2 rondes.", "en": "We place a test order together and you give your feedback in up to 2 rounds." } },
+          { "title": { "nl": "Oplevering", "en": "Delivery" },
+            "text": { "nl": "De site gaat live en je krijgt alle inloggegevens. Daarna betaal je de resterende 50%.", "en": "The site goes live and you receive all login details. Then you pay the remaining 50%." } }
+        ]
       },
-      "tierNote": { "nl": "eenmalig · offerte vooraf", "en": "one-off · quote in advance" },
+      "price": { "nl": "€ 180,29", "en": "€180.29" },
+      "priceNote": { "nl": "incl. btw", "en": "incl. VAT" },
       "tiers": [
         {
           "name": { "nl": "Basis", "en": "Basic" },
-          "price": { "nl": "Op offerte", "en": "On quotation" },
+          "price": { "nl": "€ 180,29", "en": "€180.29" },
           "description": {
-            "nl": "Je ontvangt de bestanden van de website, bestelomgeving en het beheer, met installatie-instructies en een handleiding in het Nederlands en Engels. Je installeert en vult alles zelf in.",
-            "en": "You receive the files for the website, ordering and admin, with setup instructions and a guide in Dutch and English. You install and fill in everything yourself."
+            "nl": "Je ontvangt de websitebestanden met menukaart- en bestelpagina en een Nederlandstalige handleiding. Je zet de website zelf online en vult alles zelf in.",
+            "en": "You receive the website files with menu and order pages and a guide in Dutch. You publish the website and fill in everything yourself."
           }
         },
         {
           "name": "Plus",
-          "price": { "nl": "Op offerte", "en": "On quotation" },
+          "price": { "nl": "€ 543,29", "en": "€543.29" },
           "description": {
-            "nl": "Ik zet de website op jouw hosting, koppel online betalen via Mollie en we doen samen een proefbestelling. Jij vult je menu, tijden en bezorggebieden zelf in via het beheer.",
-            "en": "I set up the website on your hosting, connect online payment via Mollie and we place a test order together. You fill in your menu, times and delivery areas yourself in the admin."
+            "nl": "Ik zet de website en bestelomgeving online, met afhalen, bezorgen en online betalen. Jij vult je menukaart zelf in.",
+            "en": "I put the website and ordering online, with pickup, delivery and online payment. You fill in your menu yourself."
           }
         },
         {
           "name": { "nl": "Compleet", "en": "Complete" },
-          "price": { "nl": "Op offerte", "en": "On quotation" },
+          "price": { "nl": "€ 1.203,95", "en": "€1,203.95" },
           "popular": true,
-          "badge": { "nl": "Met persoonlijke hulp", "en": "With personal help" },
+          "badge": { "nl": "Meest gekozen", "en": "Most popular" },
           "description": {
-            "nl": "Ik richt ook je menukaart, openingstijden, afhaal- en bezorgtijden en bezorggebieden in en stem de kleuren af op je huisstijl. Je voegt zelf je foto's toe; ik leg uit hoe dat werkt.",
-            "en": "I also set up your menu, opening hours, pickup and delivery times and delivery areas, and match the colours to your brand style. You add your photos yourself; I explain how."
+            "nl": "Ik regel alles. Jij levert alleen je menukaart, teksten en foto's aan.",
+            "en": "I take care of everything. You only supply your menu, text and photos."
           }
         }
       ],
       "compare": [
-        { "label": { "nl": "Website met menukaart, bestelomgeving en beheer", "en": "Website with menu, ordering and admin" }, "values": [true, true, true] },
-        { "label": { "nl": "Afhalen en bezorgen, online betalen via Mollie", "en": "Pickup and delivery, online payment via Mollie" }, "values": [true, true, true] },
-        { "label": { "nl": "Handleiding en installatie-instructies (NL en EN)", "en": "Guide and setup instructions (Dutch and English)" }, "values": [true, true, true] },
-        { "label": { "nl": "Hulp bij je domeinnaam, hosting en Mollie-account", "en": "Help with your domain name, hosting and Mollie account" }, "values": [false, true, true] },
-        { "label": { "nl": "Installatie op jouw hosting, met HTTPS", "en": "Setup on your hosting, with HTTPS" }, "values": [false, true, true] },
-        { "label": { "nl": "Online betalen gekoppeld en proefbestelling met testbetaling", "en": "Online payment connected and test order with a test payment" }, "values": [false, true, true] },
-        { "label": { "nl": "Beheeraccount aangemaakt en uitleg van het beheer", "en": "Admin account created and admin walkthrough" }, "values": [false, true, true] },
-        { "label": { "nl": "Jouw menukaart, prijzen en allergeneninformatie ingevoerd", "en": "Your menu, prices and allergen information entered" }, "values": [false, false, true] },
-        { "label": { "nl": "Openingstijden, afhaal- en bezorgtijden en bezorggebieden ingesteld", "en": "Opening hours, pickup and delivery times and delivery areas set up" }, "values": [false, false, true] },
-        { "label": { "nl": "Kleuren naar jouw huisstijl", "en": "Colours to suit your brand style" }, "values": [false, false, true] },
-        { "label": { "nl": "Persoonlijke begeleiding", "en": "Personal guidance" },
-          "values": [{ "nl": "Geen", "en": "None" }, { "nl": "Bij installatie", "en": "During setup" }, { "nl": "Tot oplevering", "en": "Until delivery" }] }
+        { "label": { "nl": "Websitebestanden met menukaart- en bestelpagina", "en": "Website files with menu and order pages" }, "values": [true, true, true] },
+        { "label": { "nl": "Nederlandstalige handleiding (menu, prijzen, openingstijden, uitverkocht zetten)", "en": "Guide in Dutch (menu, prices, opening hours, marking sold out)" }, "values": [true, true, true] },
+        { "label": { "nl": "Domeinnaam registreren en koppelen (1e jaar)", "en": "Domain name registered and connected (1st year)" }, "values": [false, true, true] },
+        { "label": { "nl": "Hosting instellen met HTTPS/SSL", "en": "Hosting set up with HTTPS/SSL" }, "values": [false, true, true] },
+        { "label": { "nl": "Online bestellen voor afhalen ingesteld", "en": "Online ordering for pickup set up" }, "values": [false, true, true] },
+        { "label": { "nl": "Bezorgen per postcodegebied met bezorgkosten en minimumbedrag", "en": "Delivery by postcode area with delivery fee and minimum order" }, "values": [false, true, true] },
+        { "label": { "nl": "Online betalen gekoppeld (account op jouw naam)", "en": "Online payment connected (account in your name)" }, "values": [false, true, true] },
+        { "label": { "nl": "Openingstijden, adres, route en contact ingesteld", "en": "Opening hours, address, directions and contact set up" }, "values": [false, true, true] },
+        { "label": { "nl": "Favicon en deelafbeelding", "en": "Favicon and sharing image" }, "values": [false, true, true] },
+        { "label": { "nl": "Jouw menukaart ingevoerd: gerechten, prijzen, opties en allergenen", "en": "Your menu entered: dishes, prices, options and allergens" }, "values": [false, false, true] },
+        { "label": { "nl": "Jouw teksten, foto's en logo verwerkt", "en": "Your text, photos and logo added" }, "values": [false, false, true] },
+        { "label": { "nl": "Kleuren en lettertype aangepast aan je huisstijl", "en": "Colours and font matched to your brand style" }, "values": [false, false, true] },
+        { "label": { "nl": "Basis-SEO, Google Search Console en Google Bedrijfsprofiel gekoppeld", "en": "Basic SEO, Google Search Console and Google Business Profile connected" }, "values": [false, false, true] },
+        { "label": { "nl": "Testbestelling samen doorlopen, getest op mobiel, tablet en desktop", "en": "Test order together, tested on mobile, tablet and desktop" }, "values": [false, false, true] },
+        { "label": { "nl": "2 correctierondes", "en": "2 rounds of revisions" }, "values": [false, false, true] },
+        { "label": { "nl": "Support", "en": "Support" },
+          "values": [{ "nl": "Geen", "en": "None" }, { "nl": "Geen", "en": "None" }, { "nl": "Tot oplevering", "en": "Until delivery" }] }
       ],
       "packageNotes": {
         "nl": [
-          "Website en bestellen zijn tweetalig: bezoekers kunnen wisselen tussen Nederlands en Engels. Je levert je eigen teksten aan in de talen die je wilt gebruiken. Teksten schrijven of vertalen is niet inbegrepen.",
-          "Je koopt en betaalt zelf je domeinnaam en hosting (met ondersteuning voor Node.js) en maakt zelf een account aan bij Mollie. Bij Plus en Compleet help ik je met de keuze en installatie.",
-          "Je voegt zelf je foto's en logo toe via het beheer. Ik lever of plaats geen afbeeldingen, maar kan uitleggen hoe je ze toevoegt.",
-          "Jij blijft verantwoordelijk voor je menu, prijzen en allergeneninformatie. De website toont alleen wat jij invult.",
-          "Bij bezorgen regel je zelf wie er bezorgt: eigen personeel of een koeriersdienst. De website plant geen ritten.",
-          "De kosten hangen af van wat je nodig hebt. Je ontvangt altijd eerst een offerte; een andere indeling, extra pagina's of nieuwe functies bespreken we apart."
+          "Bij oplevering staat alles op jouw naam: domein, hosting, bestelomgeving en betaalaccount. Je hebt geen lopende kosten aan mij.",
+          "De betaalprovider rekent zelf een klein bedrag per online betaling. Die kosten betaal je rechtstreeks aan de provider.",
+          "Vanaf het 2e jaar betaal je het domein zelf bij de provider (± € 10–15 per jaar).",
+          "Jij bent verantwoordelijk voor juiste prijzen en allergeneninformatie op de menukaart.",
+          "De website is standaard Nederlandstalig. Een extra taal, zoals Engels voor toeristen, is een optie."
         ],
         "en": [
-          "The website and ordering are bilingual: visitors can switch between Dutch and English. You supply your text in the languages you want to use. Writing or translation is not included.",
-          "You purchase and pay for your own domain name and hosting (with Node.js support) and create your own Mollie account. With Plus and Complete, I help you choose and set them up.",
-          "You add your own photos and logo in the admin. I do not supply or add images, but I can explain how to add them.",
-          "You remain responsible for your menu, prices and allergen information. The website only shows what you enter.",
-          "For delivery, you arrange who delivers: your own staff or a courier service. The website does not plan routes.",
-          "The cost depends on what you need. You always receive a quote first; a different layout, extra pages or new features are discussed separately."
+          "On delivery, everything is in your name: domain, hosting, ordering and payment account. You have no ongoing costs to me.",
+          "The payment provider charges a small fee per online payment. You pay these costs directly to the provider.",
+          "From the 2nd year, you pay for the domain yourself at the provider (approx. €10–15 per year).",
+          "You are responsible for correct prices and allergen information on the menu.",
+          "The website is in Dutch as standard. An extra language, such as English for tourists, is available as an option."
         ]
       },
-      "steps": {
-        "title": { "nl": "Werkwijze", "en": "How it works" },
-        "sub": {
-          "nl": "Kies wat bij je past: zelf installeren, hulp bij het online zetten of ook je menu en tijden laten inrichten.",
-          "en": "Choose what suits you: install it yourself, get help going live, or also have your menu and times set up."
-        },
-        "items": [
-          { "title": { "nl": "Offerte aanvragen", "en": "Request a quote" },
-            "text": { "nl": "Vertel welk pakket je zoekt en wat je zaak nodig heeft: afhalen, bezorgen of allebei. Je ontvangt vooraf een offerte met de kosten.", "en": "Tell me which package you're looking for and what your business needs: pickup, delivery or both. You receive a quote with the costs in advance." } },
-          { "title": { "nl": "Voorbereiden", "en": "Get ready" },
-            "text": { "nl": "Je koopt zelf je domeinnaam en hosting en maakt een account aan bij Mollie. Bij Plus en Compleet help ik je daarbij.", "en": "You purchase your own domain name and hosting and create a Mollie account. With Plus and Complete, I help you with this." } },
-          { "title": { "nl": "Inrichten", "en": "Set up" },
-            "text": { "nl": "Bij Basis en Plus vul je je menu, tijden en bezorggebieden zelf in. Bij Compleet stuur je mij je gegevens en richt ik het in. Je voegt bij elk pakket zelf je foto's toe.", "en": "With Basic and Plus, you fill in your menu, times and delivery areas yourself. With Complete, you send me your details and I set them up. With every package, you add your own photos." } },
-          { "title": { "nl": "Proefbestelling", "en": "Test order" },
-            "text": { "nl": "Bij Plus en Compleet doen we samen een proefbestelling met een testbetaling, op jouw eigen domein. Pas als alles werkt, gaat online betalen live.", "en": "With Plus and Complete, we place a test order with a test payment on your own domain. Only when everything works does online payment go live." } },
-          { "title": { "nl": "Online", "en": "Live" },
-            "text": { "nl": "Je website en bestelomgeving staan online. Bestellingen komen binnen in jouw beheer, ook als een e-mail niet aankomt.", "en": "Your website and ordering are live. Orders arrive in your admin, even if an email does not get through." } }
+      "extras": [
+        { "name": { "nl": "Extra taal (bijv. Engels, voor toeristen)", "en": "Extra language (e.g. English, for tourists)" }, "price": { "nl": "€ 235,95", "en": "€235.95" } },
+        { "name": { "nl": "Foto per gerecht verwerken in de menukaart", "en": "Adding a photo per dish to the menu" }, "price": { "nl": "€ 6,05 / gerecht", "en": "€6.05 / dish" } },
+        { "name": { "nl": "QR-code menukaart voor op tafel (printklaar ontwerp)", "en": "QR code menu for the table (print-ready design)" }, "price": { "nl": "€ 42,35", "en": "€42.35" } },
+        { "name": { "nl": "Zakelijk e-mailadres instellen", "en": "Setting up a business email address" }, "price": { "nl": "€ 59,29", "en": "€59.29" } },
+        { "name": { "nl": "Menukaart bijwerken na oplevering", "en": "Updating the menu after delivery" }, "price": { "nl": "€ 42,35 / keer", "en": "€42.35 / time" } },
+        { "name": { "nl": "Extra correctieronde", "en": "Extra revision round" }, "price": { "nl": "€ 54,45", "en": "€54.45" } },
+        { "name": { "nl": "Teksten schrijven of herschrijven", "en": "Writing or rewriting text" }, "price": { "nl": "€ 78,65 / uur", "en": "€78.65 / hour" } },
+        { "name": { "nl": "Spoedoplevering (binnen 5 werkdagen)", "en": "Rush delivery (within 5 working days)" }, "price": { "nl": "€ 235,95", "en": "€235.95" } }
+      ],
+      "extrasNote": {
+        "nl": "Alle bedragen zijn inclusief 21% btw. Extra's zitten niet in de pakketprijs; je kiest ze bij je akkoord.",
+        "en": "All amounts include 21% VAT. Extras are not included in the package price; you choose them when you approve."
+      },
+      "terms": {
+        "nl": [
+          "Basis betaal je volledig vooraf. De bestanden lever ik na ontvangst van de betaling.",
+          "Voor Plus en Compleet betaal je 50% bij akkoord en 50% bij oplevering, binnen 14 dagen na factuurdatum.",
+          "Als de menukaart en content niet binnen 2 weken binnen zijn, schuift de planning op.",
+          "Domein, hosting, bestelomgeving en betaalaccount worden aangemaakt op jouw naam en account. Na volledige betaling is de website van jou.",
+          "Er is geen onderhoud of support inbegrepen na oplevering.",
+          "Werk buiten de offerte gebeurt alleen na akkoord en tegen de genoemde tarieven.",
+          "Een offerte is 30 dagen geldig. Alle genoemde prijzen zijn inclusief 21% btw."
+        ],
+        "en": [
+          "Basic is paid in full in advance. I deliver the files once payment is received.",
+          "For Plus and Complete, you pay 50% on approval and 50% on delivery, within 14 days of the invoice date.",
+          "If the menu and content have not arrived within 2 weeks, the schedule moves accordingly.",
+          "Domain, hosting, ordering and payment account are created in your name and account. After full payment, the website is yours.",
+          "No maintenance or support is included after delivery.",
+          "Work outside the quote is only done after approval and at the stated rates.",
+          "A quote is valid for 30 days. All listed prices include 21% VAT."
         ]
-      },
-      "supply": {
-        "nl": ["Bedrijfsgegevens, openingstijden en bezorggebieden", "Menu met prijzen, varianten en allergeneninformatie", "Je eigen foto's en logo", "Een account bij Mollie (voor online betalen)"],
-        "en": ["Business details, opening hours and delivery areas", "Menu with prices, variants and allergen information", "Your own photos and logo", "A Mollie account (for online payment)"]
-      },
-      "recurring": {
-        "nl": ["Domeinnaam en hosting (bij een aanbieder naar keuze)", "Transactiekosten van Mollie per betaling", "Eventueel een e-maildienst voor bevestigingsmails", "Deze kosten betaal je zelf rechtstreeks aan de aanbieders; controleer hun actuele tarieven"],
-        "en": ["Domain name and hosting (with a provider of your choice)", "Mollie transaction fees per payment", "Optionally an email service for confirmation emails", "You pay these costs directly to the providers; check their current rates"]
       },
       "contactCopy": {
         "heading": { "nl": "Jouw zaak,\nonline bestellen.", "en": "Your business,\nordering online." },
         "lead": {
-          "nl": "Wil je een offerte, of eerst weten wat er kan voor jouw zaak? Vertel kort wat je nodig hebt. Ik denk met je mee.",
-          "en": "Would you like a quote, or first want to know what's possible for your business? Tell me briefly what you need and I'll help you think it through."
+          "nl": "Weet je welk pakket bij je past, of twijfel je nog? Vertel kort wat je nodig hebt. Ik denk met je mee.",
+          "en": "Know which package you want, or still deciding? Tell me what you need and I'll help you choose."
         },
         "soft": {
-          "nl": "Vermeld gerust of je afhalen, bezorgen of allebei wilt aanbieden.",
-          "en": "Feel free to mention whether you want to offer pickup, delivery or both."
+          "nl": "Vermeld gerust het pakket en de extra's die je op het oog hebt.",
+          "en": "Feel free to mention the package and extras you have in mind."
         }
       },
-      "price": "", "priceNote": "", "delivery": ""
+      "delivery": ""
     },
     {
       "id": "portfolio",
