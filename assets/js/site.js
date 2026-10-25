@@ -359,7 +359,9 @@
   const detailHref = (p) => `pakket.html?id=${encodeURIComponent(p.id)}`;
 
   // Eigen prijs per pakket; zolang die niet is ingevuld staat er "Prijs volgt".
+  // Met "priceText" (bijv. "Prijs op offerte") staat die tekst er in plaats van een bedrag.
   function priceLine(p) {
+    if (tr(p.priceText)) return h('p', { class: 'product-price is-quote' }, tr(p.priceText));
     return tr(p.price)
       ? h('p', { class: 'product-price' }, h('small', {}, ui().from), ' ', tr(p.price), p.priceNote ? h('small', {}, ' ', tr(p.priceNote)) : null)
       : h('p', { class: 'product-price is-tbd' }, ui().priceTbd);
@@ -615,7 +617,7 @@
             h('div', { class: 'product-actions' },
               hasTiers
                 ? h('a', { class: 'btn btn-primary', href: '#pakketten' }, ui().tiers.see, icon('arrow', 18))
-                : requestButton(ui().requestPkg, title, ui().options.ready, 'btn-primary'),
+                : requestButton(tr(p.requestLabel) || ui().requestPkg, title, ui().options.ready, 'btn-primary'),
               hasTiers ? null : requestButton(ui().customise, title, ui().options.custom, 'btn-ghost'),
               demo ? h('a', { class: 'btn btn-ghost', href: demo, target: '_blank', rel: 'noopener' }, ui().demo, icon('external', 16)) : null
             ),
@@ -879,7 +881,7 @@
   const missing = [];
   if (!email()) missing.push('contact.email');
   (C.products || []).forEach((p) => {
-    if (!p.price) missing.push(`products[${p.id}].price`);
+    if (!p.price && !p.priceText) missing.push(`products[${p.id}].price`);
     if (!p.image) missing.push(`products[${p.id}].image`);
   });
   if (missing.length) console.info('[OnlineDesk] Nog in te vullen in assets/js/content.js:', missing.join(', '));

@@ -462,6 +462,7 @@ button { font: inherit; color: inherit; }
 .pcard:hover .pcard-arrow { transform: translateX(4px); }
 .pcard-text { font-size: .92rem; color: var(--ink-2); }
 .product-price.is-tbd { font-size: 1.1rem; color: var(--muted); }
+.product-price.is-quote { font-size: 1.45rem; }
 
 /* Rustige uitnodiging voor maatwerk onder de pakketten */
 .invite {
