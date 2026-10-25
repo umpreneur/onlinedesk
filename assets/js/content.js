@@ -59,8 +59,8 @@ window.SITE_CONTENT = {
       "priceNote": { "nl": "excl. btw", "en": "excl. VAT" },
       "delivery": { "nl": "2–3 weken", "en": "2–3 weeks" },
       "features": {
-        "nl": ["Productpagina's en winkelwagen", "Veilig betalen met iDEAL, creditcard en meer", "Werkt perfect op mobiel"],
-        "en": ["Product pages and shopping cart", "Secure payments with iDEAL, credit card and more", "Works perfectly on mobile"]
+        "nl": ["Productpagina's en winkelwagen", "Veilig betalen met iDEAL, creditcard en meer", "Geschikt voor mobiel, tablet en desktop"],
+        "en": ["Product pages and shopping cart", "Secure payments with iDEAL, credit card and more", "Suitable for mobile, tablet and desktop"]
       },
       "included": {
         "nl": ["Professioneel ontwerp in jouw huisstijl", "Tot 50 producten voor je ingericht", "Domeinnaam en hosting voor 1 jaar", "Korte uitleg, zodat je zelf verder kunt", "Oplevering: ik zet de webshop online"],
@@ -622,7 +622,7 @@ window.SITE_CONTENT = {
               "en": "Choose a package"
             },
             "text": {
-              "nl": "Je kiest je pakket. Basis betaal je vooraf. Bij Plus en Compleet betaal je 50% bij akkoord. We bespreken persoonlijk wanneer ik aan je website kan werken.",
+              "nl": "Je kiest je pakket. Basic betaal je vooraf. Bij Plus en Compleet betaal je 50% bij akkoord. We bespreken persoonlijk wanneer ik aan je website kan werken.",
               "en": "Choose your package. Basic is paid in advance. With Plus and Complete, you pay 50% on approval. We discuss personally when I can work on your website."
             }
           },
@@ -642,7 +642,7 @@ window.SITE_CONTENT = {
               "en": "Customise your website"
             },
             "text": {
-              "nl": "Bij Basis en Plus pas je de inhoud zelf aan. Bij Compleet stuur je mij je teksten en vertel je welke kleuren en welk lettertype je wilt gebruiken. Je voegt bij elk pakket zelf je afbeeldingen toe; ik kan uitleggen hoe.",
+              "nl": "Bij Basic en Plus pas je de inhoud zelf aan. Bij Compleet stuur je mij je teksten en vertel je welke kleuren en welk lettertype je wilt gebruiken. Je voegt bij elk pakket zelf je afbeeldingen toe; ik kan uitleggen hoe.",
               "en": "With Basic and Plus, you edit the content yourself. With Complete, you send me your text and tell me which colours and font you want to use. With every package, you add your own images; I can explain how."
             }
           },
@@ -662,7 +662,7 @@ window.SITE_CONTENT = {
               "en": "Publish your website"
             },
             "text": {
-              "nl": "Bij Basis zet je de website zelf online met de handleiding. Bij Plus en Compleet help ik je de website op jouw hosting online te zetten. De resterende 50% betaal je bij oplevering.",
+              "nl": "Bij Basic zet je de website zelf online met de handleiding. Bij Plus en Compleet help ik je de website op jouw hosting online te zetten. De resterende 50% betaal je bij oplevering.",
               "en": "With Basic, you publish the site yourself using the guide. With Plus and Complete, I help publish the site on your hosting. The remaining 50% is due on delivery."
             }
           }
@@ -679,7 +679,7 @@ window.SITE_CONTENT = {
       "tiers": [
         {
           "name": {
-            "nl": "Basis",
+            "nl": "Basic",
             "en": "Basic"
           },
           "price": {
@@ -899,7 +899,7 @@ window.SITE_CONTENT = {
       ],
       "terms": {
         "nl": [
-          "Basis betaal je volledig vooraf. Voor Plus en Compleet betaal je 50% bij akkoord en 50% bij oplevering.",
+          "Basic betaal je volledig vooraf. Voor Plus en Compleet betaal je 50% bij akkoord en 50% bij oplevering.",
           "Domeinnaam en hosting zijn niet bij de pakketprijs inbegrepen. Je koopt en betaalt deze zelf bij een aanbieder naar keuze. Bij Plus en Compleet kan ik je hierbij helpen. Eventuele kosten van een formulierdienst bespreken we vooraf.",
           "De planning hangt af van mijn lopende projecten en wat je nodig hebt. We bespreken de start en oplevering persoonlijk voordat ik begin.",
           "Na volledige betaling ontvang je de websitebestanden en een gebruikslicentie voor één website. Je mag de inhoud, code en vormgeving aanpassen. De template is niet exclusief en mag niet als template worden doorverkocht of verspreid.",
