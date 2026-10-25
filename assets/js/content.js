@@ -110,7 +110,7 @@ window.SITE_CONTENT = {
           "Domeinnaam en hosting voor 1 jaar",
           "Korte uitleg, zodat je zelf verder kunt",
           "Oplevering: ik zet de webshop online",
-          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet; je krijgt uitleg."
+          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt."
         ],
         "en": [
           "Professional design in your brand style",
@@ -118,7 +118,7 @@ window.SITE_CONTENT = {
           "Domain name and hosting for 1 year",
           "A short walkthrough so you can carry on yourself",
           "Delivery: I put the webshop online",
-          "You add images yourself, including with Complete. I do not supply or add them; instructions are provided."
+          "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them."
         ]
       },
       "extra": {
@@ -324,8 +324,8 @@ window.SITE_CONTENT = {
             "en": "Set up for you"
           },
           "description": {
-            "nl": "Jij runt je zaak, ik regel de inrichting, menukaart, teksten, koppelingen en livegang. Alleen afbeeldingen voeg je zelf toe; je krijgt uitleg.",
-            "en": "You run your business; I handle setup, your menu, text, integrations and launch. You add the images yourself; instructions are provided."
+            "nl": "Jij runt je zaak, ik regel de inrichting, menukaart, teksten, koppelingen en livegang. Alleen afbeeldingen voeg je zelf toe; ik leg uit hoe je ze toevoegt.",
+            "en": "You run your business; I handle setup, your menu, text, integrations and launch. You add the images yourself; I explain how to add them."
           }
         }
       ],
@@ -519,7 +519,7 @@ window.SITE_CONTENT = {
       "packageNotes": {
         "nl": [
           "Je koopt een bestaande template. Bij Basic doe je het zelf; bij Plus regel ik de techniek; bij Compleet ook je menukaart en teksten.",
-          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet; je krijgt uitleg.",
+          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt.",
           "Bij Plus en Compleet staan domein, hosting en betaalaccount op jouw naam. Je betaalt geen verplicht abonnement aan mij.",
           "Het eerste jaar domein is inbegrepen bij Plus en Compleet. Daarna betaal je de verlenging zelf. Eventuele hosting- en dienstkosten staan vooraf in je offerte.",
           "Transactiekosten betaal je rechtstreeks aan je betaalprovider. Jij controleert de prijzen, gerechten en allergeneninformatie.",
@@ -527,7 +527,7 @@ window.SITE_CONTENT = {
         ],
         "en": [
           "You are buying an existing template. With Basic you do it yourself; with Plus I handle the technical setup; with Complete I also add your menu and text.",
-          "You add images yourself, including with Complete. I do not supply or add them; instructions are provided.",
+          "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them.",
           "With Plus and Complete, the domain, hosting and payment account are in your name. There is no mandatory subscription to me.",
           "The first year of the domain is included with Plus and Complete. You pay for renewals afterwards. Any hosting and service costs are stated in your quote upfront.",
           "You pay transaction fees directly to your payment provider. You check the prices, dishes and allergen information.",
@@ -793,8 +793,8 @@ window.SITE_CONTENT = {
             "en": "With personal help"
           },
           "description": {
-            "nl": "Ik plaats je teksten, pas kleuren en lettertype aan en zet je website online. Afbeeldingen voeg je zelf toe; je krijgt uitleg.",
-            "en": "I add your text, adjust colours and font, and publish your website. You add images yourself; instructions are provided."
+            "nl": "Ik plaats je teksten, pas kleuren en lettertype aan en zet je website online. Afbeeldingen voeg je zelf toe; ik leg uit hoe je ze toevoegt.",
+            "en": "I add your text, adjust colours and font, and publish your website. You add images yourself; I explain how to add them."
           }
         }
       ],
@@ -1000,7 +1000,7 @@ window.SITE_CONTENT = {
           "De website is tweetalig: bezoekers kunnen wisselen tussen Nederlands en Engels. Je levert je eigen teksten aan in de talen die je wilt gebruiken. Teksten schrijven of vertalen is niet inbegrepen.",
           "Je krijgt een handleiding in het Nederlands of Engels. Je past de website aan in HTML/CSS/JS-bestanden; er is geen visuele editor.",
           "Je koopt en betaalt zelf je domeinnaam en hosting. Bij Plus en Compleet help ik je met de keuze en installatie.",
-          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet; je krijgt uitleg.",
+          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt.",
           "Bij Compleet plaats ik je teksten en pas ik kleuren en lettertype aan. Samen bespreken we vooraf wat je op de website wilt zetten. Een andere indeling, extra pagina’s of nieuwe functies bespreken we apart.",
           "Voor Google Search Console maak je zelf een account aan. Bij Compleet help ik je met het koppelen van je website."
         ],
@@ -1008,7 +1008,7 @@ window.SITE_CONTENT = {
           "The website is bilingual: visitors can switch between Dutch and English. You supply your text in the languages you want to use. Writing or translation is not included.",
           "You receive a guide in Dutch or English. You edit the website in HTML/CSS/JS files; there is no visual editor.",
           "You purchase and pay for your domain name and hosting yourself. With Plus and Complete, I help you choose and set them up.",
-          "You add images yourself, including with Complete. I do not supply or add them; instructions are provided.",
+          "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them.",
           "With Complete, I add your text and adjust the colours and font. We discuss in advance what you want on the website. A different layout, extra pages or new features are discussed separately.",
           "You create your own Google Search Console account. With Complete, I help connect your website."
         ]
@@ -1117,8 +1117,8 @@ window.SITE_CONTENT = {
         "en": "Who adds the images?"
       },
       "a": {
-        "nl": "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet; je krijgt uitleg.",
-        "en": "You add images yourself, including with Complete. I do not supply or add them; instructions are provided."
+        "nl": "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt.",
+        "en": "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them."
       }
     }
   ],
