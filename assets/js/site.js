@@ -385,8 +385,11 @@
           : val === false || val == null || val === '' ? h('span', { class: 'no', 'aria-label': '–' }, '–')
           : h('span', { class: 'txt' }, val));
     };
+    // Per product eigen uitleg boven de tabel ("tiersSub") en onder elke prijs ("tierNote"),
+    // bijv. bij werken met een offerte in plaats van vaste prijzen.
+    const tierNote = p.tierNote ? tr(p.tierNote) : [tr(p.priceNote), T.once].filter(Boolean).join(' · ');
     return h('div', { class: 'tiers-wrap reveal', id: 'pakketten' },
-      h('div', { class: 'tiers-head' }, h('h2', {}, T.title), h('p', {}, T.sub)),
+      h('div', { class: 'tiers-head' }, h('h2', {}, T.title), h('p', {}, p.tiersSub ? tr(p.tiersSub) : T.sub)),
       h('div', { class: 'compare-scroll' },
         h('table', { class: 'compare' },
           h('thead', {},
@@ -396,7 +399,7 @@
                 t.popular ? h('span', { class: 'chip chip-on tier-chip' }, t.badge ? tr(t.badge) : ui().popular) : null,
                 h('span', { class: 'tier-name' }, tr(t.name)),
                 h('span', { class: 'tier-price' }, tr(t.price)),
-                h('small', {}, [tr(p.priceNote), T.once].filter(Boolean).join(' · ')),
+                tierNote ? h('small', {}, tierNote) : null,
                 t.description ? h('small', {}, tr(t.description)) : null
               ))
             )
