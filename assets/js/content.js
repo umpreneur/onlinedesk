@@ -46,43 +46,129 @@ window.SITE_CONTENT = {
     },
     {
       "id": "webshop",
-      "tagline": { "nl": "Verkoop jouw producten online.", "en": "Sell your products online." }, "wire": "shop",
+      "tagline": {
+        "nl": "Verkoop jouw producten online.",
+        "en": "Sell your products online."
+      },
+      "wire": "shop",
       "title": "Webshop",
-      "icon": "cart", "color": "clay", "popular": true, "image": "", "demo": "",
-      "audience": { "nl": "Ondernemers die producten verkopen", "en": "Entrepreneurs who sell products" },
-      "highlights": { "nl": ["Productfoto's", "Categorieën", "Productpagina", "Winkelwagen"], "en": ["Product photos", "Categories", "Product page", "Shopping cart"] },
+      "icon": "cart",
+      "color": "clay",
+      "popular": true,
+      "image": "",
+      "demo": "",
+      "audience": {
+        "nl": "Ondernemers die producten verkopen",
+        "en": "Entrepreneurs who sell products"
+      },
+      "highlights": {
+        "nl": [
+          "Productfoto's",
+          "Categorieën",
+          "Productpagina",
+          "Winkelwagen"
+        ],
+        "en": [
+          "Product photos",
+          "Categories",
+          "Product page",
+          "Shopping cart"
+        ]
+      },
       "text": {
         "nl": "Een complete online winkel, klaar om te verkopen. Ik richt hem in met jouw producten en lever hem online op.",
         "en": "A complete online store, ready to sell. I set it up with your products and deliver it online."
       },
-      "price": { "nl": "€ 1.495", "en": "€1,495" },
-      "priceNote": { "nl": "excl. btw", "en": "excl. VAT" },
-      "delivery": { "nl": "2–3 weken", "en": "2–3 weeks" },
+      "price": {
+        "nl": "€ 1.495",
+        "en": "€1,495"
+      },
+      "priceNote": {
+        "nl": "excl. btw",
+        "en": "excl. VAT"
+      },
+      "delivery": {
+        "nl": "2–3 weken",
+        "en": "2–3 weeks"
+      },
       "features": {
-        "nl": ["Productpagina's en winkelwagen", "Veilig betalen met iDEAL, creditcard en meer", "Geschikt voor mobiel, tablet en desktop"],
-        "en": ["Product pages and shopping cart", "Secure payments with iDEAL, credit card and more", "Suitable for mobile, tablet and desktop"]
+        "nl": [
+          "Productpagina's en winkelwagen",
+          "Veilig betalen met iDEAL, creditcard en meer",
+          "Geschikt voor mobiel, tablet en desktop"
+        ],
+        "en": [
+          "Product pages and shopping cart",
+          "Secure payments with iDEAL, credit card and more",
+          "Suitable for mobile, tablet and desktop"
+        ]
       },
       "included": {
-        "nl": ["Professioneel ontwerp in jouw huisstijl", "Tot 50 producten voor je ingericht", "Domeinnaam en hosting voor 1 jaar", "Korte uitleg, zodat je zelf verder kunt", "Oplevering: ik zet de webshop online"],
-        "en": ["Professional design in your brand style", "Up to 50 products set up for you", "Domain name and hosting for 1 year", "A short walkthrough so you can carry on yourself", "Delivery: I put the webshop online"]
+        "nl": [
+          "Professioneel ontwerp in jouw huisstijl",
+          "Tot 50 producten voor je ingericht",
+          "Domeinnaam en hosting voor 1 jaar",
+          "Korte uitleg, zodat je zelf verder kunt",
+          "Oplevering: ik zet de webshop online",
+          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet; je krijgt uitleg."
+        ],
+        "en": [
+          "Professional design in your brand style",
+          "Up to 50 products set up for you",
+          "Domain name and hosting for 1 year",
+          "A short walkthrough so you can carry on yourself",
+          "Delivery: I put the webshop online",
+          "You add images yourself, including with Complete. I do not supply or add them; instructions are provided."
+        ]
       },
       "extra": {
-        "nl": ["Meer dan 50 producten inrichten", "Koppelingen (zoals boekhouding of voorraad) en extra functies", "Hulp bij productteksten en vindbaarheid"],
-        "en": ["Setting up more than 50 products", "Integrations (such as accounting or stock) and extra features", "Help with product copy and search visibility"]
+        "nl": [
+          "Meer dan 50 producten inrichten",
+          "Koppelingen (zoals boekhouding of voorraad) en extra functies",
+          "Hulp bij productteksten en vindbaarheid"
+        ],
+        "en": [
+          "Setting up more than 50 products",
+          "Integrations (such as accounting or stock) and extra features",
+          "Help with product copy and search visibility"
+        ]
       },
       "recurring": {
-        "nl": ["Domeinnaam en hosting na het eerste jaar — de kosten staan in je voorstel", "Transactiekosten van je betaalprovider (rechtstreeks via de provider)"],
-        "en": ["Domain name and hosting after the first year — the costs are in your proposal", "Transaction fees from your payment provider (charged directly by the provider)"]
+        "nl": [
+          "Domeinnaam en hosting na het eerste jaar — de kosten staan in je voorstel",
+          "Transactiekosten van je betaalprovider (rechtstreeks via de provider)"
+        ],
+        "en": [
+          "Domain name and hosting after the first year — the costs are in your proposal",
+          "Transaction fees from your payment provider (charged directly by the provider)"
+        ]
       },
       "supply": {
-        "nl": ["Productgegevens: namen, prijzen, omschrijvingen en foto's", "Logo en huisstijl", "Je bedrijfsgegevens voor op de webshop (zoals KvK-nummer en adres)", "Een account bij een betaalprovider"],
-        "en": ["Product details: names, prices, descriptions and photos", "Logo and brand style", "Your business details for the webshop (such as company number and address)", "An account with a payment provider"]
+        "nl": [
+          "Productgegevens: namen, prijzen en omschrijvingen",
+          "Je huisstijl en voorkeuren",
+          "Je bedrijfsgegevens voor op de webshop (zoals KvK-nummer en adres)",
+          "Een account bij een betaalprovider"
+        ],
+        "en": [
+          "Product details: names, prices and descriptions",
+          "Your brand style and preferences",
+          "Your business details for the webshop (such as company number and address)",
+          "An account with a payment provider"
+        ]
       },
       "receive": {
-        "nl": ["Een werkende webshop, online op je domeinnaam", "Een korte uitleg om zelf producten en bestellingen te beheren"],
-        "en": ["A working webshop, live on your domain name", "A short walkthrough to manage products and orders yourself"]
+        "nl": [
+          "Een werkende webshop, online op je domeinnaam",
+          "Een korte uitleg om zelf producten en bestellingen te beheren"
+        ],
+        "en": [
+          "A working webshop, live on your domain name",
+          "A short walkthrough to manage products and orders yourself"
+        ]
       }
     },
+
     {
       "id": "salon",
       "tagline": { "nl": "Een eigen plek voor jouw salon.", "en": "A place of your own for your salon." }, "wire": "circle",
@@ -120,8 +206,8 @@ window.SITE_CONTENT = {
         "en": "Turn visitors into guests. This template brings your business, menu, table reservations, pickup and delivery together. Guests order directly from you and pay online."
       },
       "textSub": {
-        "nl": "Zelf aan de slag of alles laten regelen? Kies jouw pakket en ontdek de Aan Tafel-demo.",
-        "en": "Do it yourself or leave the setup to me? Choose your package and explore the Aan Tafel demo."
+        "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en ontdek de Aan Tafel-demo.",
+        "en": "Start yourself or get help with setup? Choose your package and explore the Aan Tafel demo."
       },
       "preview": {
         "desktop": "assets/img/horeca-pagina.jpg",
@@ -153,14 +239,14 @@ window.SITE_CONTENT = {
               "en": "Tell me about your business"
             },
             "text": {
-              "nl": "Stuur je bedrijfsgegevens, openingstijden en bestelwensen. Bij Compleet lever je ook je menukaart, teksten, logo en eventuele foto's zonder personen aan. Bij Plus vul je de inhoud zelf in.",
-              "en": "Send your business details, opening hours and ordering preferences. For Complete, also supply your menu, text, logo and any photos without people. With Plus, you enter the content yourself."
+              "nl": "Stuur je bedrijfsgegevens, openingstijden en bestelwensen. Bij Compleet lever je ook je menukaart en teksten aan. Afbeeldingen voeg je zelf toe.",
+              "en": "Send your business details, opening hours and ordering preferences. For Complete, also supply your menu and text. You add images yourself."
             }
           },
           {
             "title": {
-              "nl": "Ik richt alles in",
-              "en": "I set it up"
+              "nl": "Website inrichten",
+              "en": "Website setup"
             },
             "text": {
               "nl": "Bij Plus regel ik de techniek. Bij Compleet plaats ik ook je inhoud en stem ik kleuren en lettertype af op jouw zaak.",
@@ -234,12 +320,12 @@ window.SITE_CONTENT = {
           },
           "popular": true,
           "badge": {
-            "nl": "Alles geregeld",
-            "en": "Everything taken care of"
+            "nl": "Voor je ingericht",
+            "en": "Set up for you"
           },
           "description": {
-            "nl": "Jij runt je zaak, ik regel je website. Van jouw menukaart en teksten tot inrichting, koppelingen en livegang: ik verzorg alles op basis van deze template.",
-            "en": "You run your business; I handle your website. From your menu and text to setup, integrations and launch: I take care of everything using this template."
+            "nl": "Jij runt je zaak, ik regel de inrichting, menukaart, teksten, koppelingen en livegang. Alleen afbeeldingen voeg je zelf toe; je krijgt uitleg.",
+            "en": "You run your business; I handle setup, your menu, text, integrations and launch. You add the images yourself; instructions are provided."
           }
         }
       ],
@@ -334,8 +420,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Site-icoon en deelafbeelding ingesteld",
-            "en": "Site icon and sharing image configured"
+            "nl": "Uitleg over zelf toevoegen van site-icoon en deelafbeelding",
+            "en": "Guidance on adding your own site icon and sharing image"
           },
           "values": [
             false,
@@ -356,8 +442,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Jouw teksten, logo en foto's zonder personen geplaatst",
-            "en": "Your text, logo and photos without people added"
+            "nl": "Jouw aangeleverde teksten geplaatst",
+            "en": "Your supplied text added"
           },
           "values": [
             false,
@@ -432,16 +518,16 @@ window.SITE_CONTENT = {
       ],
       "packageNotes": {
         "nl": [
-          "Je koopt een bestaande template. Bij Basic doe je alles zelf; bij Plus verzorg ik de techniek; bij Compleet regel ik de volledige inrichting.",
-          "Ik lever en plaats geen foto's waarop mensen staan. Product- en sfeerfoto's zonder personen kun je wel aanleveren.",
+          "Je koopt een bestaande template. Bij Basic doe je het zelf; bij Plus regel ik de techniek; bij Compleet ook je menukaart en teksten.",
+          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet; je krijgt uitleg.",
           "Bij Plus en Compleet staan domein, hosting en betaalaccount op jouw naam. Je betaalt geen verplicht abonnement aan mij.",
           "Het eerste jaar domein is inbegrepen bij Plus en Compleet. Daarna betaal je de verlenging zelf. Eventuele hosting- en dienstkosten staan vooraf in je offerte.",
           "Transactiekosten betaal je rechtstreeks aan je betaalprovider. Jij controleert de prijzen, gerechten en allergeneninformatie.",
           "Een extra taal of aanvullende wens? Bekijk de extra's; we spreken de kosten vooraf af."
         ],
         "en": [
-          "You are buying an existing template. With Basic you do everything yourself; with Plus I handle the technical setup; with Complete I take care of the full setup.",
-          "I do not supply or add photos showing people. You may supply product and atmosphere photos without people.",
+          "You are buying an existing template. With Basic you do it yourself; with Plus I handle the technical setup; with Complete I also add your menu and text.",
+          "You add images yourself, including with Complete. I do not supply or add them; instructions are provided.",
           "With Plus and Complete, the domain, hosting and payment account are in your name. There is no mandatory subscription to me.",
           "The first year of the domain is included with Plus and Complete. You pay for renewals afterwards. Any hosting and service costs are stated in your quote upfront.",
           "You pay transaction fees directly to your payment provider. You check the prices, dishes and allergen information.",
@@ -457,16 +543,6 @@ window.SITE_CONTENT = {
           "price": {
             "nl": "€ 235,95",
             "en": "€235.95"
-          }
-        },
-        {
-          "name": {
-            "nl": "Jouw gerechtfoto's zonder personen plaatsen",
-            "en": "Add your dish photos without people"
-          },
-          "price": {
-            "nl": "€ 6,05 / gerecht",
-            "en": "€6.05 / dish"
           }
         },
         {
@@ -560,8 +636,8 @@ window.SITE_CONTENT = {
           "en": "Bring your business\nonline."
         },
         "lead": {
-          "nl": "Zelf starten of alles uit handen geven? Vertel kort over je zaak. Je ontvangt een helder voorstel voor jouw pakket.",
-          "en": "Build it yourself or leave it to me? Tell me about your business and receive a clear proposal for your package."
+          "nl": "Zelf starten of je website laten inrichten? Vertel kort over je zaak. Je ontvangt een helder voorstel voor jouw pakket.",
+          "en": "Start yourself or have your website set up? Tell me about your business and receive a clear proposal for your package."
         },
         "soft": {
           "nl": "Kies Basic, Plus of Compleet en vermeld je wensen voor reserveren, afhalen en bezorgen.",
@@ -717,8 +793,8 @@ window.SITE_CONTENT = {
             "en": "With personal help"
           },
           "description": {
-            "nl": "Ik plaats jouw teksten, stem de kleuren en het lettertype af op jouw voorkeur of huisstijl en zet de website online. Je voegt zelf je afbeeldingen toe; ik leg uit hoe dat werkt.",
-            "en": "I add your text, adjust the colours and font to your preferences or brand style, and publish the website. You add your images yourself; I explain how."
+            "nl": "Ik plaats je teksten, pas kleuren en lettertype aan en zet je website online. Afbeeldingen voeg je zelf toe; je krijgt uitleg.",
+            "en": "I add your text, adjust colours and font, and publish your website. You add images yourself; instructions are provided."
           }
         }
       ],
@@ -924,7 +1000,7 @@ window.SITE_CONTENT = {
           "De website is tweetalig: bezoekers kunnen wisselen tussen Nederlands en Engels. Je levert je eigen teksten aan in de talen die je wilt gebruiken. Teksten schrijven of vertalen is niet inbegrepen.",
           "Je krijgt een handleiding in het Nederlands of Engels. Je past de website aan in HTML/CSS/JS-bestanden; er is geen visuele editor.",
           "Je koopt en betaalt zelf je domeinnaam en hosting. Bij Plus en Compleet help ik je met de keuze en installatie.",
-          "Je voegt zelf je foto’s, logo, site-icoon en deelafbeelding toe. Ik lever of plaats geen afbeeldingen, maar kan uitleggen hoe je ze toevoegt.",
+          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet; je krijgt uitleg.",
           "Bij Compleet plaats ik je teksten en pas ik kleuren en lettertype aan. Samen bespreken we vooraf wat je op de website wilt zetten. Een andere indeling, extra pagina’s of nieuwe functies bespreken we apart.",
           "Voor Google Search Console maak je zelf een account aan. Bij Compleet help ik je met het koppelen van je website."
         ],
@@ -932,7 +1008,7 @@ window.SITE_CONTENT = {
           "The website is bilingual: visitors can switch between Dutch and English. You supply your text in the languages you want to use. Writing or translation is not included.",
           "You receive a guide in Dutch or English. You edit the website in HTML/CSS/JS files; there is no visual editor.",
           "You purchase and pay for your domain name and hosting yourself. With Plus and Complete, I help you choose and set them up.",
-          "You add your own photos, logo, site icon and sharing image. I do not supply or add images, but I can explain how to add them.",
+          "You add images yourself, including with Complete. I do not supply or add them; instructions are provided.",
           "With Complete, I add your text and adjust the colours and font. We discuss in advance what you want on the website. A different layout, extra pages or new features are discussed separately.",
           "You create your own Google Search Console account. With Complete, I help connect your website."
         ]
@@ -952,6 +1028,7 @@ window.SITE_CONTENT = {
         }
       }
     },
+
     {
       "id": "coaching",
       "tagline": { "nl": "Maak persoonlijk contact.", "en": "Make a personal connection." }, "wire": "half",
@@ -994,18 +1071,56 @@ window.SITE_CONTENT = {
   "work": [],
 
   "faq": [
-    { "q": { "nl": "Kan ik iets laten aanpassen?", "en": "Can I have something changed?" },
-      "a": { "nl": "Ja, zeker. Vertel wat je wilt veranderen. Je ontvangt vooraf een voorstel met de kosten.",
-             "en": "Yes, of course. Tell me what you'd like to change. You'll receive a proposal with the costs in advance." } },
-    { "q": { "nl": "Wat krijg ik bij mijn aankoop?", "en": "What do I get with my purchase?" },
-      "a": { "nl": "Dat verschilt per pakket. Op de pagina van elk pakket zie je wat in de prijs zit, wat je zelf aanlevert en wat je bij oplevering ontvangt.",
-             "en": "That depends on the package. Each package page shows what's included in the price, what you supply yourself and what you receive on delivery." } },
-    { "q": { "nl": "Kan ik zelf aan de slag?", "en": "Can I get started myself?" },
-      "a": { "nl": "Dat kan, afhankelijk van het product en je ervaring. Bij de portfoliowebsite pas je teksten en afbeeldingen aan in HTML/CSS/JS-bestanden; een visuele editor is niet inbegrepen. Wil je hulp met de invulling of het online zetten? Kies dan het passende pakket.",
-             "en": "That depends on the product and your experience. For the portfolio website, you edit text and images in HTML/CSS/JS files; a visual editor is not included. If you would like help adding content or publishing the site, choose the appropriate package." } },
-    { "q": { "nl": "Hoe werkt maatwerk?", "en": "How does a custom build work?" },
-      "a": { "nl": "Je vertelt je idee en we bespreken je wensen. Daarna ontvang je een voorstel met duidelijke kosten en afspraken, en bouw ik volgens de afgesproken planning.",
-             "en": "You tell me your idea and we discuss your wishes. You then receive a proposal with clear costs and agreements, and I build according to the agreed schedule." } }
+    {
+      "q": {
+        "nl": "Kan ik iets laten aanpassen?",
+        "en": "Can I have something changed?"
+      },
+      "a": {
+        "nl": "Ja, zeker. Vertel wat je wilt veranderen. Je ontvangt vooraf een voorstel met de kosten.",
+        "en": "Yes, of course. Tell me what you'd like to change. You'll receive a proposal with the costs in advance."
+      }
+    },
+    {
+      "q": {
+        "nl": "Wat krijg ik bij mijn aankoop?",
+        "en": "What do I get with my purchase?"
+      },
+      "a": {
+        "nl": "Dat verschilt per pakket. Op de pagina van elk pakket zie je wat in de prijs zit, wat je zelf aanlevert en wat je bij oplevering ontvangt.",
+        "en": "That depends on the package. Each package page shows what's included in the price, what you supply yourself and what you receive on delivery."
+      }
+    },
+    {
+      "q": {
+        "nl": "Kan ik zelf aan de slag?",
+        "en": "Can I get started myself?"
+      },
+      "a": {
+        "nl": "Dat kan, afhankelijk van het product en je ervaring. Bij de portfoliowebsite pas je teksten en afbeeldingen aan in HTML/CSS/JS-bestanden; een visuele editor is niet inbegrepen. Wil je hulp met de invulling of het online zetten? Kies dan het passende pakket.",
+        "en": "That depends on the product and your experience. For the portfolio website, you edit text and images in HTML/CSS/JS files; a visual editor is not included. If you would like help adding content or publishing the site, choose the appropriate package."
+      }
+    },
+    {
+      "q": {
+        "nl": "Hoe werkt maatwerk?",
+        "en": "How does a custom build work?"
+      },
+      "a": {
+        "nl": "Je vertelt je idee en we bespreken je wensen. Daarna ontvang je een voorstel met duidelijke kosten en afspraken, en bouw ik volgens de afgesproken planning.",
+        "en": "You tell me your idea and we discuss your wishes. You then receive a proposal with clear costs and agreements, and I build according to the agreed schedule."
+      }
+    },
+    {
+      "q": {
+        "nl": "Wie voegt de afbeeldingen toe?",
+        "en": "Who adds the images?"
+      },
+      "a": {
+        "nl": "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet; je krijgt uitleg.",
+        "en": "You add images yourself, including with Complete. I do not supply or add them; instructions are provided."
+      }
+    }
   ],
 
   "contact": {
