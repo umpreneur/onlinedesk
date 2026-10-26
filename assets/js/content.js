@@ -37,12 +37,364 @@ window.SITE_CONTENT = {
   "products": [
     {
       "id": "bedrijf",
-      "tagline": { "nl": "Laat zien wat je doet.", "en": "Show what you do." }, "wire": "split",
-      "title": { "nl": "Bedrijfswebsite", "en": "Business website" },
-      "icon": "briefcase", "color": "sage", "image": "", "demo": "",
-      "audience": { "nl": "Zzp'ers en kleine bedrijven", "en": "Freelancers and small businesses" },
-      "highlights": { "nl": ["Introductie", "Diensten", "Projecten", "Reviews", "Offerteknop"], "en": ["Introduction", "Services", "Projects", "Reviews", "Quote button"] },
-      "price": "", "priceNote": { "nl": "excl. btw", "en": "excl. VAT" }, "delivery": ""
+      "tagline": {
+        "nl": "Zakelijk, rustig en compleet.",
+        "en": "Professional, calm and complete."
+      },
+      "wire": "split",
+      "title": {
+        "nl": "Bedrijfswebsite",
+        "en": "Business website"
+      },
+      "icon": "briefcase",
+      "color": "sage",
+      "image": "assets/img/bedrijf.jpg",
+      "demo": "https://koersvast-advies-demo.netlify.app",
+      "audience": {
+        "nl": "Adviesbureaus en zakelijke dienstverleners",
+        "en": "Consultancies and professional service firms"
+      },
+      "highlights": {
+        "nl": [
+          "Groot beeld bovenaan",
+          "Diensten",
+          "Cases",
+          "Nieuws",
+          "Vacatures",
+          "Contactformulier"
+        ],
+        "en": [
+          "Large hero image",
+          "Services",
+          "Case studies",
+          "News",
+          "Vacancies",
+          "Contact form"
+        ]
+      },
+      "headline": {
+        "nl": "Laat zien wat je doet, en waarom klanten voor je kiezen.",
+        "en": "Show what you do, and why clients choose you."
+      },
+      "text": {
+        "nl": "Een strakke, zakelijke website met zeven pagina's: Home, Over ons, Diensten, Cases, Nieuws, Werken bij en Contact. Met een groot beeld of video bovenaan, kerncijfers, filterbare cases, nieuwsberichten en vacatures. Gemaakt voor mobiel, tablet en desktop.",
+        "en": "A clean, professional website with seven pages: Home, About, Services, Case studies, News, Careers and Contact. With a large image or video at the top, key figures, filterable case studies, news and vacancies. Built for mobile, tablet and desktop."
+      },
+      "textSub": {
+        "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en bekijk de demo van het fictieve adviesbureau Koersvast.",
+        "en": "Start yourself or get help with setup? Choose your package and explore the demo of the fictional consultancy Koersvast."
+      },
+      "preview": {
+        "desktop": "assets/img/bedrijf-pagina.jpg",
+        "mobile": "assets/img/bedrijf-pagina-mobiel.jpg"
+      },
+      "steps": {
+        "title": {
+          "nl": "Van template naar jouw website",
+          "en": "From template to your website"
+        },
+        "sub": {
+          "nl": "Basic: de code binnen 1 werkdag na betaling. Plus en Compleet: online binnen 2 weken na ontvangst van alle benodigde gegevens. Zo pakken we het aan:",
+          "en": "Basic: code delivered within 1 working day of payment. Plus and Complete: live within 2 weeks of receiving all required details. Here is how we get started:"
+        },
+        "items": [
+          {
+            "title": {
+              "nl": "Akkoord",
+              "en": "Approval"
+            },
+            "text": {
+              "nl": "Kies je pakket. Bij Plus en Compleet betaal je 50% vooraf; Basic betaal je volledig vooraf.",
+              "en": "Choose your package. Plus and Complete require a 50% deposit; Basic is paid in full upfront."
+            }
+          },
+          {
+            "title": {
+              "nl": "Jouw bedrijf in beeld",
+              "en": "Tell me about your business"
+            },
+            "text": {
+              "nl": "Stuur je bedrijfsgegevens en contactgegevens. Bij Compleet lever je ook je teksten over diensten, cases, nieuws en vacatures aan. Afbeeldingen voeg je zelf toe.",
+              "en": "Send your business and contact details. For Complete, also supply your text for services, case studies, news and vacancies. You add images yourself."
+            }
+          },
+          {
+            "title": {
+              "nl": "Website inrichten",
+              "en": "Website setup"
+            },
+            "text": {
+              "nl": "Bij Plus regel ik de techniek en het contactformulier. Bij Compleet plaats ik ook je inhoud en stem ik kleuren en lettertype af op je huisstijl.",
+              "en": "With Plus, I handle the technical setup and the contact form. With Complete, I also add your content and match the colours and font to your brand style."
+            }
+          },
+          {
+            "title": {
+              "nl": "Testen en correcties",
+              "en": "Test and revise"
+            },
+            "text": {
+              "nl": "Je bekijkt de website voor de livegang. Bij Compleet zijn 2 correctierondes inbegrepen.",
+              "en": "Review your website before launch. Complete includes 2 rounds of revisions."
+            }
+          },
+          {
+            "title": {
+              "nl": "Online",
+              "en": "Live"
+            },
+            "text": {
+              "nl": "Je website gaat online op je eigen domein. Je krijgt de toegang tot je accounts en betaalt de resterende 50%.",
+              "en": "Your website goes live on your own domain. You receive access to your accounts and pay the remaining 50%."
+            }
+          }
+        ]
+      },
+      "price": {
+        "nl": "€ 149",
+        "en": "€149"
+      },
+      "priceNote": {
+        "nl": "incl. btw",
+        "en": "incl. VAT"
+      },
+      "tiers": [
+        {
+          "name": {
+            "nl": "Basic",
+            "en": "Basic"
+          },
+          "price": {
+            "nl": "€ 149",
+            "en": "€149"
+          },
+          "description": {
+            "nl": "Voor wie zelf bouwt. Je ontvangt de code van de template en een Nederlandstalige handleiding. Inhoud aanpassen, het formulier koppelen en online zetten doe je zelf.",
+            "en": "For the DIY builder. You receive the template code and a guide in Dutch. You edit the content, connect the form and publish the website yourself."
+          }
+        },
+        {
+          "name": "Plus",
+          "price": {
+            "nl": "€ 449",
+            "en": "€449"
+          },
+          "description": {
+            "nl": "Jij vult in, ik regel de techniek. Ik zet je website online op je eigen domein en stel het contactformulier in. Jij vult je teksten zelf in.",
+            "en": "You add the content; I handle the technical setup. I publish your website on your own domain and set up the contact form. You add your text yourself."
+          }
+        },
+        {
+          "name": {
+            "nl": "Compleet",
+            "en": "Complete"
+          },
+          "price": {
+            "nl": "€ 899",
+            "en": "€899"
+          },
+          "popular": true,
+          "badge": {
+            "nl": "Voor je ingericht",
+            "en": "Set up for you"
+          },
+          "description": {
+            "nl": "Jij runt je bedrijf, ik regel de inrichting, teksten, huisstijl en livegang. Alleen afbeeldingen voeg je zelf toe; ik leg uit hoe je ze toevoegt.",
+            "en": "You run your business; I handle setup, text, brand style and launch. You add the images yourself; I explain how to add them."
+          }
+        }
+      ],
+      "compare": [
+        {
+          "label": {
+            "nl": "Templatecode met 7 pagina's (HTML/CSS/JS)",
+            "en": "Template code with 7 pages (HTML/CSS/JS)"
+          },
+          "values": [true, true, true]
+        },
+        {
+          "label": {
+            "nl": "Nederlandstalige handleiding (teksten, kleuren, nieuws, cases, vacatures)",
+            "en": "Guide in Dutch (text, colours, news, case studies, vacancies)"
+          },
+          "values": [true, true, true]
+        },
+        {
+          "label": {
+            "nl": "Code zelf aanpassen en op eigen hosting gebruiken",
+            "en": "Edit the code and use your own hosting"
+          },
+          "values": [true, true, true]
+        },
+        {
+          "label": {
+            "nl": "Domeinnaam registreren en koppelen (1e jaar)",
+            "en": "Domain name registered and connected (1st year)"
+          },
+          "values": [false, true, true]
+        },
+        {
+          "label": {
+            "nl": "Hosting instellen met HTTPS/SSL",
+            "en": "Hosting set up with HTTPS/SSL"
+          },
+          "values": [false, true, true]
+        },
+        {
+          "label": {
+            "nl": "Werkend contactformulier",
+            "en": "Working contact form"
+          },
+          "values": [false, true, true]
+        },
+        {
+          "label": {
+            "nl": "Contactgegevens, adres en openingstijden ingesteld",
+            "en": "Contact details, address and opening hours set up"
+          },
+          "values": [false, true, true]
+        },
+        {
+          "label": {
+            "nl": "Uitleg over zelf toevoegen van site-icoon, deelafbeelding en grote foto of video bovenaan",
+            "en": "Guidance on adding your own site icon, sharing image and large hero image or video"
+          },
+          "values": [false, true, true]
+        },
+        {
+          "label": {
+            "nl": "Jouw aangeleverde teksten geplaatst: diensten, cases, nieuws en vacatures",
+            "en": "Your supplied text added: services, case studies, news and vacancies"
+          },
+          "values": [false, false, true]
+        },
+        {
+          "label": {
+            "nl": "Kleuren en lettertype aangepast aan je huisstijl",
+            "en": "Colours and font matched to your brand style"
+          },
+          "values": [false, false, true]
+        },
+        {
+          "label": {
+            "nl": "Basis voor Google: SEO, Search Console en Bedrijfsprofiel",
+            "en": "Google basics: SEO, Search Console and Business Profile"
+          },
+          "values": [false, false, true]
+        },
+        {
+          "label": {
+            "nl": "Controle op mobiel, tablet en desktop",
+            "en": "Checks on mobile, tablet and desktop"
+          },
+          "values": [false, false, true]
+        },
+        {
+          "label": {
+            "nl": "2 correctierondes",
+            "en": "2 rounds of revisions"
+          },
+          "values": [false, false, true]
+        },
+        {
+          "label": {
+            "nl": "Support",
+            "en": "Support"
+          },
+          "values": [
+            { "nl": "Geen", "en": "None" },
+            { "nl": "Geen", "en": "None" },
+            { "nl": "Tot oplevering", "en": "Until delivery" }
+          ]
+        }
+      ],
+      "packageNotes": {
+        "nl": [
+          "Je koopt een bestaande template. Bij Basic doe je het zelf; bij Plus regel ik de techniek; bij Compleet ook je teksten en huisstijl.",
+          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt.",
+          "De website is Nederlandstalig. Je past hem aan in HTML/CSS/JS-bestanden; er is geen visuele editor.",
+          "Bij Plus en Compleet staan domein en hosting op jouw naam. Je betaalt geen verplicht abonnement aan mij.",
+          "Het eerste jaar domein is inbegrepen bij Plus en Compleet. Daarna betaal je de verlenging zelf. Eventuele hosting- en formulierkosten staan vooraf in je offerte.",
+          "Een extra pagina of aanvullende wens? Bekijk de extra's; we spreken de kosten vooraf af."
+        ],
+        "en": [
+          "You are buying an existing template. With Basic you do it yourself; with Plus I handle the technical setup; with Complete I also add your text and brand style.",
+          "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them.",
+          "The website is in Dutch. You edit it in HTML/CSS/JS files; there is no visual editor.",
+          "With Plus and Complete, the domain and hosting are in your name. There is no mandatory subscription to me.",
+          "The first year of the domain is included with Plus and Complete. You pay for renewals afterwards. Any hosting and form service costs are stated in your quote upfront.",
+          "Need an extra page or something extra? Explore the extras; we agree on costs in advance."
+        ]
+      },
+      "extras": [
+        {
+          "name": { "nl": "Extra pagina in dezelfde stijl", "en": "Extra page in the same style" },
+          "price": { "nl": "€ 95", "en": "€95" }
+        },
+        {
+          "name": { "nl": "Extra taal (bijv. Engels)", "en": "Extra language (e.g. English)" },
+          "price": { "nl": "€ 235,95", "en": "€235.95" }
+        },
+        {
+          "name": { "nl": "Zakelijk e-mailadres instellen", "en": "Setting up a business email address" },
+          "price": { "nl": "€ 59,29", "en": "€59.29" }
+        },
+        {
+          "name": { "nl": "Nieuwsbericht, case of vacature plaatsen na oplevering", "en": "Adding a news item, case study or vacancy after delivery" },
+          "price": { "nl": "€ 29 / stuk", "en": "€29 / item" }
+        },
+        {
+          "name": { "nl": "Extra correctieronde", "en": "Extra revision round" },
+          "price": { "nl": "€ 54,45", "en": "€54.45" }
+        },
+        {
+          "name": { "nl": "Teksten schrijven of herschrijven", "en": "Writing or rewriting text" },
+          "price": { "nl": "€ 78,65 / uur", "en": "€78.65 / hour" }
+        },
+        {
+          "name": { "nl": "Spoedoplevering (binnen 5 werkdagen)", "en": "Rush delivery (within 5 working days)" },
+          "price": { "nl": "€ 235,95", "en": "€235.95" }
+        }
+      ],
+      "extrasNote": {
+        "nl": "Extra's kies je zelf. We spreken de inhoud en kosten vooraf af. Alle bedragen zijn inclusief btw.",
+        "en": "Choose the extras you need. We agree on the scope and costs upfront. All amounts include VAT."
+      },
+      "terms": {
+        "nl": [
+          "Basic betaal je volledig vooraf. Je ontvangt de templatecode en handleiding binnen 1 werkdag na betaling.",
+          "Voor Plus en Compleet betaal je 50% bij akkoord en 50% bij oplevering, binnen 14 dagen na factuurdatum.",
+          "De planning start zodra alle benodigde gegevens binnen zijn. Lever je later aan, dan schuift de oplevering mee.",
+          "Na volledige betaling ontvang je de websitebestanden en een gebruikslicentie voor één website. Je mag de inhoud, code en vormgeving aanpassen. De template is niet exclusief en mag niet als template worden doorverkocht of verspreid.",
+          "Er is geen onderhoud of support inbegrepen na oplevering.",
+          "Werk buiten de offerte gebeurt alleen na akkoord en tegen de genoemde tarieven.",
+          "Een offerte is 30 dagen geldig. Alle genoemde prijzen zijn inclusief 21% btw."
+        ],
+        "en": [
+          "Basic is paid in full upfront. You receive the template code and guide within 1 working day of payment.",
+          "For Plus and Complete, you pay 50% on approval and 50% on delivery, within 14 days of the invoice date.",
+          "The schedule starts once all required details have arrived. Later delivery of your content moves the launch date accordingly.",
+          "After full payment, you receive the website files and a licence for one website. You may edit the content, code and design. The template is not exclusive and may not be resold or distributed as a template.",
+          "No maintenance or support is included after delivery.",
+          "Work outside the quote is only done after approval and at the stated rates.",
+          "A quote is valid for 30 days. All listed prices include 21% VAT."
+        ]
+      },
+      "contactCopy": {
+        "heading": {
+          "nl": "Jouw bedrijf,\nzakelijk online.",
+          "en": "Your business,\nprofessionally online."
+        },
+        "lead": {
+          "nl": "Zelf starten of je website laten inrichten? Vertel kort over je bedrijf. Je ontvangt een helder voorstel voor jouw pakket.",
+          "en": "Start yourself or have your website set up? Tell me about your business and receive a clear proposal for your package."
+        },
+        "soft": {
+          "nl": "Kies Basic, Plus of Compleet en vermeld welke pagina's je nodig hebt.",
+          "en": "Choose Basic, Plus or Complete and mention which pages you need."
+        }
+      },
+      "delivery": ""
     },
     {
       "id": "webshop",
