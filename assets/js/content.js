@@ -1383,12 +1383,370 @@ window.SITE_CONTENT = {
 
     {
       "id": "coaching",
-      "tagline": { "nl": "Maak persoonlijk contact.", "en": "Make a personal connection." }, "wire": "half",
-      "title": { "nl": "Coachingswebsite", "en": "Coaching website" },
-      "icon": "chat", "color": "sage", "image": "", "demo": "",
-      "audience": { "nl": "Coaches, trainers en adviseurs", "en": "Coaches, trainers and consultants" },
-      "highlights": { "nl": ["Persoonlijke introductie", "Trajecten", "Kennismakingsgesprek"], "en": ["Personal introduction", "Programmes", "Introductory call"] },
-      "price": "", "priceNote": { "nl": "excl. btw", "en": "excl. VAT" }, "delivery": ""
+      "tagline": {
+        "nl": "Maak persoonlijk contact.",
+        "en": "Make a personal connection."
+      },
+      "wire": "half",
+      "title": {
+        "nl": "Coachingswebsite",
+        "en": "Coaching website"
+      },
+      "icon": "chat",
+      "color": "sage",
+      "image": "assets/img/coaching.jpg",
+      "demo": "",
+      "audience": {
+        "nl": "Coaches, trainers en adviseurs",
+        "en": "Coaches, trainers and consultants"
+      },
+      "highlights": {
+        "nl": [
+          "Persoonlijke introductie",
+          "Aanbod en trajecten",
+          "Online afspraak maken",
+          "Blog",
+          "Veelgestelde vragen",
+          "Contactformulier"
+        ],
+        "en": [
+          "Personal introduction",
+          "Services and programmes",
+          "Online booking",
+          "Blog",
+          "FAQ",
+          "Contact form"
+        ]
+      },
+      "headline": {
+        "nl": "Laat zien wie je bent, en maak de eerste stap makkelijk.",
+        "en": "Show who you are, and make the first step easy."
+      },
+      "text": {
+        "nl": "Een warme, rustige website voor coaches met twaalf pagina's: Home, Over mij, een overzicht van je aanbod met drie detailpagina's (losse gesprekken, traject en online coaching), Blog met artikelpagina, Afspraak maken, Contact, Privacy, Voorwaarden en een 404-pagina. Bezoekers kiezen zelf een gesprekstype, datum en tijd. Gemaakt voor mobiel, tablet en desktop.",
+        "en": "A warm, calm website for coaches with twelve pages: Home, About me, an overview of your services with three detail pages (single sessions, programme and online coaching), Blog with article page, Book an appointment, Contact, Privacy, Terms and a 404 page. Visitors choose a session type, date and time themselves. Built for mobile, tablet and desktop."
+      },
+      "textSub": {
+        "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en vraag een offerte aan. De voorbeeldsite is van het fictieve Koers Coaching.",
+        "en": "Start yourself or get help with setup? Choose your package and request a quote. The sample site belongs to the fictional Koers Coaching."
+      },
+      "preview": {
+        "desktop": "assets/img/coaching-pagina.jpg",
+        "mobile": "assets/img/coaching-pagina-mobiel.jpg"
+      },
+      "steps": {
+        "title": {
+          "nl": "Van template naar jouw website",
+          "en": "From template to your website"
+        },
+        "sub": {
+          "nl": "Zo pakken we het aan. De planning en prijs staan in je offerte.",
+          "en": "Here is how we get started. Your quote states the schedule and price."
+        },
+        "items": [
+          {
+            "title": {
+              "nl": "Offerte en akkoord",
+              "en": "Quote and approval"
+            },
+            "text": {
+              "nl": "Kies je pakket en vraag een offerte aan. Na je akkoord gaan we van start.",
+              "en": "Choose your package and request a quote. Once you approve, we get started."
+            }
+          },
+          {
+            "title": {
+              "nl": "Jouw praktijk in beeld",
+              "en": "Tell me about your practice"
+            },
+            "text": {
+              "nl": "Stuur je praktijkgegevens, contactgegevens en gesprekstypen. Bij Compleet lever je ook je teksten over jezelf, je aanbod en de veelgestelde vragen aan. Afbeeldingen voeg je zelf toe.",
+              "en": "Send your practice details, contact details and session types. For Complete, also supply your text about yourself, your services and the FAQ. You add images yourself."
+            }
+          },
+          {
+            "title": {
+              "nl": "Website inrichten",
+              "en": "Website setup"
+            },
+            "text": {
+              "nl": "Bij Plus regel ik de techniek, het contactformulier en de koppeling met je online agenda. Bij Compleet plaats ik ook je inhoud en stem ik kleuren en lettertype af op je huisstijl.",
+              "en": "With Plus, I handle the technical setup, the contact form and the link to your online calendar. With Complete, I also add your content and match the colours and font to your brand style."
+            }
+          },
+          {
+            "title": {
+              "nl": "Testen en correcties",
+              "en": "Test and revise"
+            },
+            "text": {
+              "nl": "Je bekijkt de website voor de livegang, inclusief het afspraak maken.",
+              "en": "Review your website before launch, including the booking flow."
+            }
+          },
+          {
+            "title": {
+              "nl": "Online",
+              "en": "Live"
+            },
+            "text": {
+              "nl": "Je website gaat online op je eigen domein en je krijgt de toegang tot je accounts.",
+              "en": "Your website goes live on your own domain and you receive access to your accounts."
+            }
+          }
+        ]
+      },
+      "price": "",
+      "priceText": {
+        "nl": "Prijs op offerte",
+        "en": "Price on request"
+      },
+      "priceNote": {
+        "nl": "incl. btw",
+        "en": "incl. VAT"
+      },
+      "requestLabel": {
+        "nl": "Vraag een offerte aan",
+        "en": "Request a quote"
+      },
+      "tiersSub": {
+        "nl": "Kies wat bij je past. De prijs voor jouw pakket ontvang je in een offerte.",
+        "en": "Choose what suits you. You receive the price for your package in a quote."
+      },
+      "tierNote": {
+        "nl": "Prijs in je offerte",
+        "en": "Price in your quote"
+      },
+      "tiers": [
+        {
+          "name": "Basic",
+          "price": {
+            "nl": "Op offerte",
+            "en": "On request"
+          },
+          "description": {
+            "nl": "Voor wie zelf bouwt. Je ontvangt de code van de template. Inhoud aanpassen, formulieren en agenda koppelen en online zetten doe je zelf.",
+            "en": "For the DIY builder. You receive the template code. You edit the content, connect the forms and calendar and publish the website yourself."
+          }
+        },
+        {
+          "name": "Plus",
+          "price": {
+            "nl": "Op offerte",
+            "en": "On request"
+          },
+          "description": {
+            "nl": "Jij vult in, ik regel de techniek. Ik zet je website online op je eigen domein en koppel het contactformulier en je online agenda. Jij vult je teksten zelf in.",
+            "en": "You add the content; I handle the technical setup. I publish your website on your own domain and connect the contact form and your online calendar. You add your text yourself."
+          }
+        },
+        {
+          "name": {
+            "nl": "Compleet",
+            "en": "Complete"
+          },
+          "price": {
+            "nl": "Op offerte",
+            "en": "On request"
+          },
+          "popular": true,
+          "badge": {
+            "nl": "Voor je ingericht",
+            "en": "Set up for you"
+          },
+          "description": {
+            "nl": "Jij coacht, ik regel de inrichting, teksten, huisstijl en livegang. Alleen afbeeldingen voeg je zelf toe; ik leg uit hoe je ze toevoegt.",
+            "en": "You coach; I handle setup, text, brand style and launch. You add the images yourself; I explain how to add them."
+          }
+        }
+      ],
+      "compare": [
+        {
+          "label": {
+            "nl": "Templatecode met 12 pagina's (HTML/CSS/JS)",
+            "en": "Template code with 12 pages (HTML/CSS/JS)"
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Alle inhoud en instellingen in één configuratiebestand",
+            "en": "All content and settings in one configuration file"
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Afspraakmodule: aanvraagformulier, link of ingesloten agenda (bijv. Calendly of Cal.com)",
+            "en": "Booking module: request form, link or embedded calendar (e.g. Calendly or Cal.com)"
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Code zelf aanpassen en op eigen hosting gebruiken",
+            "en": "Edit the code and use your own hosting"
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Domeinnaam registreren en koppelen",
+            "en": "Domain name registered and connected"
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Hosting instellen met HTTPS/SSL",
+            "en": "Hosting set up with HTTPS/SSL"
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Werkend contactformulier",
+            "en": "Working contact form"
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Afspraak maken gekoppeld aan jouw online agenda",
+            "en": "Booking connected to your online calendar"
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Contactgegevens, gesprekstypen en tijden ingesteld",
+            "en": "Contact details, session types and hours set up"
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Uitleg over zelf toevoegen van portretfoto, sfeerfoto's en site-icoon",
+            "en": "Guidance on adding your own portrait, mood photos and site icon"
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Jouw aangeleverde teksten geplaatst: over mij, aanbod, vragen en blog",
+            "en": "Your supplied text added: about me, services, FAQ and blog"
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Kleuren en lettertype aangepast aan je huisstijl",
+            "en": "Colours and font matched to your brand style"
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Basis voor Google: SEO, Search Console en Bedrijfsprofiel",
+            "en": "Google basics: SEO, Search Console and Business Profile"
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Controle op mobiel, tablet en desktop",
+            "en": "Checks on mobile, tablet and desktop"
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "packageNotes": {
+        "nl": [
+          "Je koopt een bestaande template. Bij Basic doe je het zelf; bij Plus regel ik de techniek; bij Compleet ook je teksten en huisstijl.",
+          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt.",
+          "Reviews op de voorbeeldsite zijn gemarkeerde voorbeeldinhoud. Plaats alleen echte reviews, met toestemming van je cliënt.",
+          "Voor online afspraken gebruik je je eigen account bij een agendadienst naar keuze. Eventuele kosten daarvan staan vooraf in je offerte.",
+          "De website is Nederlandstalig. Je past hem aan in HTML/CSS/JS-bestanden; er is geen visuele editor."
+        ],
+        "en": [
+          "You are buying an existing template. With Basic you do it yourself; with Plus I handle the technical setup; with Complete I also add your text and brand style.",
+          "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them.",
+          "Reviews on the sample site are marked sample content. Only publish genuine reviews, with your client's permission.",
+          "For online booking you use your own account with a calendar service of your choice. Any costs are stated in your quote upfront.",
+          "The website is in Dutch. You edit it in HTML/CSS/JS files; there is no visual editor."
+        ]
+      },
+      "contactCopy": {
+        "heading": {
+          "nl": "Jouw praktijk,\npersoonlijk online.",
+          "en": "Your practice,\npersonally online."
+        },
+        "lead": {
+          "nl": "Zelf starten of je website laten inrichten? Vertel kort over je praktijk. Je ontvangt een helder voorstel met prijs voor jouw pakket.",
+          "en": "Start yourself or have your website set up? Tell me about your practice and receive a clear proposal with a price for your package."
+        },
+        "soft": {
+          "nl": "Kies Basic, Plus of Compleet en vermeld met welke agenda je werkt.",
+          "en": "Choose Basic, Plus or Complete and mention which calendar you use."
+        }
+      },
+      "delivery": ""
     }
   ],
 
