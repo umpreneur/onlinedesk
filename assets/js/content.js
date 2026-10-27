@@ -1402,6 +1402,7 @@ window.SITE_CONTENT = {
       },
       "highlights": {
         "nl": [
+          "Onderwerpen met eigen pagina",
           "Persoonlijke introductie",
           "Aanbod en trajecten",
           "Online afspraak maken",
@@ -1411,6 +1412,7 @@ window.SITE_CONTENT = {
           "Contactformulier"
         ],
         "en": [
+          "Topics with their own page",
           "Personal introduction",
           "Services and programmes",
           "Online booking",
@@ -1425,8 +1427,8 @@ window.SITE_CONTENT = {
         "en": "Show who you are, and make the first step easy."
       },
       "text": {
-        "nl": "Een warme, rustige website voor coaches met twaalf pagina's: Home, Over mij, een overzicht van je aanbod met drie detailpagina's (losse gesprekken, traject en online coaching), Blog met artikelpagina, Afspraak maken, Contact, Privacy, Voorwaarden en een 404-pagina. Bezoekers kiezen zelf een gesprekstype, datum en tijd, en melden zich aan voor je nieuwsbrief. Warme, ingetogen stijl met elegante koppen en een handgeschreven accent. Gemaakt voor mobiel, tablet en desktop.",
-        "en": "A warm, calm website for coaches with twelve pages: Home, About me, an overview of your services with three detail pages (single sessions, programme and online coaching), Blog with article page, Book an appointment, Contact, Privacy, Terms and a 404 page. Visitors choose a session type, date and time themselves and sign up for your newsletter. A warm, understated style with elegant headings and a handwritten accent. Built for mobile, tablet and desktop."
+        "nl": "Een warme, rustige website voor coaches met vijftien pagina's. De homepage draait om je bezoeker: eerst de onderwerpen waar je bezoekers mee rondlopen (elk met een eigen pagina), dan wat jij voor ze kunt doen, inzichten uit je blog, wie je bent en een uitnodiging om kennis te maken. Verder: Over mij, een overzicht van je aanbod met drie detailpagina's (losse gesprekken, traject en online coaching), Blog met artikelpagina, Afspraak maken, Contact, Privacy, Voorwaarden en een 404-pagina. Bezoekers kiezen zelf een gesprekstype, datum en tijd, en melden zich aan voor je nieuwsbrief. Warme, ingetogen stijl met elegante koppen en een handgeschreven accent. Gemaakt voor mobiel, tablet en desktop.",
+        "en": "A warm, calm website for coaches with fifteen pages. The home page centres on your visitor: first the topics on their mind (each with its own page), then how you can help, insights from your blog, who you are and an invitation to meet. Also: About me, an overview of your services with three detail pages (single sessions, programme and online coaching), Blog with article page, Book an appointment, Contact, Privacy, Terms and a 404 page. Visitors choose a session type, date and time themselves and sign up for your newsletter. A warm, understated style with elegant headings and a handwritten accent. Built for mobile, tablet and desktop."
       },
       "textSub": {
         "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en bekijk de demo van het fictieve Koers Coaching.",
@@ -1462,8 +1464,8 @@ window.SITE_CONTENT = {
               "en": "Tell me about your practice"
             },
             "text": {
-              "nl": "Stuur je praktijkgegevens, contactgegevens en gesprekstypen. Bij Compleet lever je ook je teksten over jezelf, je aanbod en de veelgestelde vragen aan. Afbeeldingen voeg je zelf toe.",
-              "en": "Send your practice details, contact details and session types. For Complete, also supply your text about yourself, your services and the FAQ. You add images yourself."
+              "nl": "Stuur je praktijkgegevens, contactgegevens en gesprekstypen. Bij Compleet lever je ook je teksten over je onderwerpen, jezelf, je aanbod en de veelgestelde vragen aan. Afbeeldingen voeg je zelf toe.",
+              "en": "Send your practice details, contact details and session types. For Complete, also supply your text about your topics, yourself, your services and the FAQ. You add images yourself."
             }
           },
           {
@@ -1565,8 +1567,8 @@ window.SITE_CONTENT = {
       "compare": [
         {
           "label": {
-            "nl": "Templatecode met 12 pagina's (HTML/CSS/JS)",
-            "en": "Template code with 12 pages (HTML/CSS/JS)"
+            "nl": "Templatecode met 15 pagina's (HTML/CSS/JS)",
+            "en": "Template code with 15 pages (HTML/CSS/JS)"
           },
           "values": [
             true,
@@ -1697,8 +1699,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Jouw aangeleverde teksten geplaatst: over mij, aanbod, vragen en blog",
-            "en": "Your supplied text added: about me, services, FAQ and blog"
+            "nl": "Jouw aangeleverde teksten geplaatst: onderwerpen, over mij, aanbod, vragen en blog",
+            "en": "Your supplied text added: topics, about me, services, FAQ and blog"
           },
           "values": [
             false,
