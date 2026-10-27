@@ -1395,7 +1395,7 @@ window.SITE_CONTENT = {
       "icon": "chat",
       "color": "sage",
       "image": "assets/img/coaching.jpg",
-      "demo": "",
+      "demo": "https://koers-coaching-demo.netlify.app",
       "audience": {
         "nl": "Coaches, trainers en adviseurs",
         "en": "Coaches, trainers and consultants"
@@ -1427,8 +1427,8 @@ window.SITE_CONTENT = {
         "en": "A warm, calm website for coaches with twelve pages: Home, About me, an overview of your services with three detail pages (single sessions, programme and online coaching), Blog with article page, Book an appointment, Contact, Privacy, Terms and a 404 page. Visitors choose a session type, date and time themselves. Built for mobile, tablet and desktop."
       },
       "textSub": {
-        "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en vraag een offerte aan. De voorbeeldsite is van het fictieve Koers Coaching.",
-        "en": "Start yourself or get help with setup? Choose your package and request a quote. The sample site belongs to the fictional Koers Coaching."
+        "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en bekijk de demo van het fictieve Koers Coaching.",
+        "en": "Start yourself or get help with setup? Choose your package and explore the demo of the fictional Koers Coaching."
       },
       "preview": {
         "desktop": "assets/img/coaching-pagina.jpg",
