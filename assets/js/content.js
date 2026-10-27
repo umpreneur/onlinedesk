@@ -1406,6 +1406,7 @@ window.SITE_CONTENT = {
           "Aanbod en trajecten",
           "Online afspraak maken",
           "Blog",
+          "Nieuwsbrief",
           "Veelgestelde vragen",
           "Contactformulier"
         ],
@@ -1414,6 +1415,7 @@ window.SITE_CONTENT = {
           "Services and programmes",
           "Online booking",
           "Blog",
+          "Newsletter",
           "FAQ",
           "Contact form"
         ]
@@ -1423,8 +1425,8 @@ window.SITE_CONTENT = {
         "en": "Show who you are, and make the first step easy."
       },
       "text": {
-        "nl": "Een warme, rustige website voor coaches met twaalf pagina's: Home, Over mij, een overzicht van je aanbod met drie detailpagina's (losse gesprekken, traject en online coaching), Blog met artikelpagina, Afspraak maken, Contact, Privacy, Voorwaarden en een 404-pagina. Bezoekers kiezen zelf een gesprekstype, datum en tijd. Gemaakt voor mobiel, tablet en desktop.",
-        "en": "A warm, calm website for coaches with twelve pages: Home, About me, an overview of your services with three detail pages (single sessions, programme and online coaching), Blog with article page, Book an appointment, Contact, Privacy, Terms and a 404 page. Visitors choose a session type, date and time themselves. Built for mobile, tablet and desktop."
+        "nl": "Een warme, rustige website voor coaches met twaalf pagina's: Home, Over mij, een overzicht van je aanbod met drie detailpagina's (losse gesprekken, traject en online coaching), Blog met artikelpagina, Afspraak maken, Contact, Privacy, Voorwaarden en een 404-pagina. Bezoekers kiezen zelf een gesprekstype, datum en tijd, en melden zich aan voor je nieuwsbrief. Warme, ingetogen stijl met elegante koppen en een handgeschreven accent. Gemaakt voor mobiel, tablet en desktop.",
+        "en": "A warm, calm website for coaches with twelve pages: Home, About me, an overview of your services with three detail pages (single sessions, programme and online coaching), Blog with article page, Book an appointment, Contact, Privacy, Terms and a 404 page. Visitors choose a session type, date and time themselves and sign up for your newsletter. A warm, understated style with elegant headings and a handwritten accent. Built for mobile, tablet and desktop."
       },
       "textSub": {
         "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en bekijk de demo van het fictieve Koers Coaching.",
@@ -1596,6 +1598,17 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
+            "nl": "Nieuwsbriefaanmelding op elke pagina (koppelbaar aan bijv. MailerLite, Brevo of Laposta)",
+            "en": "Newsletter sign-up on every page (connects to e.g. MailerLite, Brevo or Laposta)"
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
             "nl": "Code zelf aanpassen en op eigen hosting gebruiken",
             "en": "Edit the code and use your own hosting"
           },
@@ -1642,6 +1655,17 @@ window.SITE_CONTENT = {
           "label": {
             "nl": "Afspraak maken gekoppeld aan jouw online agenda",
             "en": "Booking connected to your online calendar"
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Nieuwsbriefformulier gekoppeld aan jouw nieuwsbriefdienst",
+            "en": "Newsletter form connected to your newsletter service"
           },
           "values": [
             false,
@@ -1721,14 +1745,14 @@ window.SITE_CONTENT = {
           "Je koopt een bestaande template. Bij Basic doe je het zelf; bij Plus regel ik de techniek; bij Compleet ook je teksten en huisstijl.",
           "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt.",
           "Reviews op de voorbeeldsite zijn gemarkeerde voorbeeldinhoud. Plaats alleen echte reviews, met toestemming van je cliënt.",
-          "Voor online afspraken gebruik je je eigen account bij een agendadienst naar keuze. Eventuele kosten daarvan staan vooraf in je offerte.",
+          "Voor online afspraken en de nieuwsbrief gebruik je je eigen account bij een agendadienst en nieuwsbriefdienst naar keuze. Eventuele kosten daarvan staan vooraf in je offerte.",
           "De website is Nederlandstalig. Je past hem aan in HTML/CSS/JS-bestanden; er is geen visuele editor."
         ],
         "en": [
           "You are buying an existing template. With Basic you do it yourself; with Plus I handle the technical setup; with Complete I also add your text and brand style.",
           "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them.",
           "Reviews on the sample site are marked sample content. Only publish genuine reviews, with your client's permission.",
-          "For online booking you use your own account with a calendar service of your choice. Any costs are stated in your quote upfront.",
+          "For online booking and the newsletter you use your own accounts with a calendar service and newsletter service of your choice. Any costs are stated in your quote upfront.",
           "The website is in Dutch. You edit it in HTML/CSS/JS files; there is no visual editor."
         ]
       },
