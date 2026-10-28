@@ -1407,7 +1407,7 @@ window.SITE_CONTENT = {
           "Persoonlijke introductie",
           "Aanbod en trajecten",
           "Online afspraak maken",
-          "Blog en podcast",
+          "Blog",
           "Nieuwsbrief",
           "Veelgestelde vragen",
           "Contactformulier"
@@ -1418,7 +1418,7 @@ window.SITE_CONTENT = {
           "Personal introduction",
           "Services and programmes",
           "Online booking",
-          "Blog and podcast",
+          "Blog",
           "Newsletter",
           "FAQ",
           "Contact form"
@@ -1429,8 +1429,8 @@ window.SITE_CONTENT = {
         "en": "Show who you are, and make the first step easy."
       },
       "text": {
-        "nl": "Een warme, rustige website voor coaches met zestien pagina's, waarin het onderwerp centraal staat in plaats van de verkoop. De homepage begint bij de vraag van je bezoeker: een herkenbaar verhaal met beeld, bruikbare inzichten met artikelen en podcast, een kort blok over je begeleiding, wie je bent en een rustige uitnodiging om kennis te maken. Verder: een pagina over het onderwerp met deelonderwerpen, Over mij, een overzicht van je aanbod met drie detailpagina's (losse gesprekken, traject en online coaching), Blog / Podcast met artikelpagina, Afspraak maken, Contact, Privacy, Voorwaarden en een 404-pagina. Bezoekers kiezen zelf een gesprekstype, datum en tijd, en melden zich aan voor je nieuwsbrief. Warme, ingetogen stijl met elegante koppen en veel ruimte voor tekst en beeld. Gemaakt voor mobiel, tablet en desktop.",
-        "en": "A warm, calm website for coaches with sixteen pages, centred on the topic rather than on selling. The home page starts with your visitor's question: a relatable story with images, practical insights with articles and podcast, a short section on your guidance, who you are and a calm invitation to meet. Also: a topic page with subtopics, About me, an overview of your services with three detail pages (single sessions, programme and online coaching), Blog / Podcast with article page, Book an appointment, Contact, Privacy, Terms and a 404 page. Visitors choose a session type, date and time themselves and sign up for your newsletter. A warm, understated style with elegant headings and plenty of room for text and images. Built for mobile, tablet and desktop."
+        "nl": "Een warme, rustige website voor coaches met zestien pagina's, waarin het onderwerp centraal staat in plaats van de verkoop. De homepage begint bij de vraag van je bezoeker: een herkenbaar verhaal met beeld, bruikbare inzichten met artikelen uit je blog, een kort blok over je begeleiding, wie je bent en een rustige uitnodiging om kennis te maken. Verder: een pagina over het onderwerp met deelonderwerpen, Over mij, een overzicht van je aanbod met drie detailpagina's (losse gesprekken, traject en online coaching), Blog met artikelpagina (een podcast kun je erbij aanzetten), Afspraak maken, Contact, Privacy, Voorwaarden en een 404-pagina. Bezoekers kiezen zelf een gesprekstype, datum en tijd, en melden zich aan voor je nieuwsbrief. Warme, ingetogen stijl met elegante koppen en veel ruimte voor tekst en beeld. Gemaakt voor mobiel, tablet en desktop.",
+        "en": "A warm, calm website for coaches with sixteen pages, centred on the topic rather than on selling. The home page starts with your visitor's question: a relatable story with images, practical insights with articles from your blog, a short section on your guidance, who you are and a calm invitation to meet. Also: a topic page with subtopics, About me, an overview of your services with three detail pages (single sessions, programme and online coaching), Blog with article page (a podcast can be switched on), Book an appointment, Contact, Privacy, Terms and a 404 page. Visitors choose a session type, date and time themselves and sign up for your newsletter. A warm, understated style with elegant headings and plenty of room for text and images. Built for mobile, tablet and desktop."
       },
       "textSub": {
         "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en bekijk de demo van het fictieve Koers Coaching.",
