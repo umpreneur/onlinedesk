@@ -520,16 +520,6 @@ window.SITE_CONTENT = {
         ]
       }
     },
-
-    {
-      "id": "salon",
-      "tagline": { "nl": "Een eigen plek voor jouw salon.", "en": "A place of your own for your salon." }, "wire": "circle",
-      "title": { "nl": "Salonwebsite", "en": "Salon website" },
-      "icon": "scissors", "color": "lav", "image": "", "demo": "",
-      "audience": { "nl": "Kappers, barbers en schoonheidssalons", "en": "Hairdressers, barbers and beauty salons" },
-      "highlights": { "nl": ["Behandelingen", "Prijzen", "Sfeerfoto's", "Afspraakknop"], "en": ["Treatments", "Prices", "Atmosphere photos", "Booking button"] },
-      "price": "", "priceNote": { "nl": "excl. btw", "en": "excl. VAT" }, "delivery": ""
-    },
     {
       "id": "horeca",
       "tagline": {

@@ -21,7 +21,7 @@ Open `assets/js/content.js` en zoek op **INVULLEN**:
 
 - `contact.email` — je echte e-mailadres. Zolang dit leeg is, verwijzen de aanvraagknoppen naar het contactblok en staat het contactformulier uit.
 - `contact.phone`, `contact.linkedin`, `contact.location` — optioneel.
-- Per pakket `price` (en `delivery`) — zolang dit leeg is, staat er "Prijs volgt". Nu nog leeg: bedrijfs-, salon- en coachingswebsite. Werk je met een offerte, vul dan `priceText` in (bijv. "Prijs op offerte") en eventueel `requestLabel` voor de aanvraagknop (bijv. "Offerte aanvragen"); zo staat het bij de horecawebsite.
+- Per pakket `price` (en `delivery`) — zolang dit leeg is, staat er "Prijs volgt". Nu nog leeg: bedrijfs- en coachingswebsite. Werk je met een offerte, vul dan `priceText` in (bijv. "Prijs op offerte") en eventueel `requestLabel` voor de aanvraagknop (bijv. "Offerte aanvragen"); zo staat het bij de horecawebsite.
 - Per pakket de detaillijsten (`features`, `included`, `extra`, `recurring`, `supply`, `receive`) — zolang die ontbreken, meldt de detailpagina dat de details binnenkort volgen.
 - Per pakket `image` — een echte screenshot (bijv. `assets/img/webshop.png`). Zolang dit leeg is, toont de site een rustige schets.
 - Per pakket `demo` — link naar een werkende demo. Leeg = geen "Bekijk demo"-knop.
