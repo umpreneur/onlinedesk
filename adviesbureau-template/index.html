@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#28565b">
+<meta name="description" content="Onafhankelijk adviesbureau voor strategie, organisatie, financiën en data.">
+<title>Koersvast Advies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: mat zakelijk — effen vlakken zonder verlopen of glans; warm gebroken wit, petrol voor knoppen en belangrijke vlakken, antraciet voor tekst; zeven pagina's via het menu */
+/* AANPASSEN: wijzig hier de kleuren en het lettertype. --petrol is de merkkleur. */
+:root {
+  --bg: #f5f3ee;
+  --surface: #fbfaf7;
+  --soft: #ebe8e0;
+  --fg: #252a2d;
+  --muted: #5e6466;
+  --line: #dcd8ce;
+  --petrol: #28565b;
+  --petrol-deep: #1f4447;
+  --petrol-light: #dfe7e6;
+  --on-petrol: #f5f3ee;
+  --on-petrol-muted: #b9cbcb;
+  --font: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --radius: 3px;
+  --wrap: 76rem;
+}
+* { box-sizing: border-box; }
+html { padding-top: env(safe-area-inset-top, 0px); }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 1rem; line-height: 1.6; -webkit-text-size-adjust: 100%; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap {
+  max-width: var(--wrap); margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: -0.02em; text-wrap: balance; font-weight: 700; }
+p, ul, dl, ol { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--petrol); outline-offset: 3px; }
+.label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--petrol); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+  font: 600 0.95rem/1 var(--font); padding: 1rem 1.4rem; border-radius: var(--radius); min-height: 48px;
+  background: var(--petrol); color: var(--on-petrol); border: 1px solid var(--petrol); text-decoration: none; cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.btn:hover { background: var(--petrol-deep); border-color: var(--petrol-deep); }
+.btn.outline { background: transparent; color: var(--on-petrol); border-color: var(--on-petrol-muted); }
+.btn.outline:hover { background: var(--on-petrol); color: var(--fg); border-color: var(--on-petrol); }
+.btn.light { background: var(--on-petrol); color: var(--petrol-deep); border-color: var(--on-petrol); }
+.btn.light:hover { background: var(--fg); color: var(--on-petrol); border-color: var(--fg); }
+.btn.small { padding: 0.7rem 1rem; font-size: 0.88rem; min-height: 40px; }
+.arrow::after { content: "→"; transition: transform .15s ease; }
+.arrow:hover::after { transform: translateX(3px); }
+.link { font-weight: 600; text-decoration: none; color: var(--petrol); display: inline-flex; gap: 0.4rem; border-bottom: 1px solid var(--petrol); padding-bottom: 0.1rem; }
+
+/* demo bar */
+.demo-bar { background: var(--petrol-light); color: var(--fg); font-size: 0.85rem; }
+.demo-bar .wrap { padding-block: 0.55rem; text-align: center; }
+.demo-bar strong { color: var(--petrol); }
+
+/* header */
+header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 0.85rem; }
+.logo { display: flex; align-items: center; gap: 0.6rem; font-weight: 800; font-size: 1.12rem; text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; }
+.logo i { width: 22px; height: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; flex: none; }
+.logo i::before, .logo i::after { content: ""; background: var(--petrol); }
+.logo i::after { background: var(--fg); margin-top: 8px; }
+.menu { display: flex; align-items: center; gap: 2rem; }
+.menu nav { display: flex; gap: 1.5rem; font-size: 0.92rem; font-weight: 500; }
+.menu nav a { text-decoration: none; color: var(--muted); padding-block: 0.4rem; border-bottom: 2px solid transparent; white-space: nowrap; }
+.menu nav a:hover { color: var(--fg); }
+.menu nav a[aria-current="page"] { color: var(--fg); border-bottom-color: var(--petrol); }
+.menu-toggle { display: none; align-items: center; gap: 0.5rem; font: 600 0.9rem/1 var(--font); color: var(--fg); background: transparent; border: 1px solid var(--line); border-radius: var(--radius); padding: 0.6rem 0.8rem; min-height: 44px; cursor: pointer; }
+.menu-toggle i { width: 18px; height: 12px; display: block; border-block: 2px solid currentColor; position: relative; }
+.menu-toggle i::after { content: ""; position: absolute; left: 0; right: 0; top: 3px; border-top: 2px solid currentColor; }
+.menu-toggle[aria-expanded="true"] { background: var(--petrol); color: var(--on-petrol); border-color: var(--petrol); }
+@media (max-width: 1040px) {
+  .menu-toggle { display: inline-flex; }
+  .menu { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; padding: 0.5rem max(16px, env(safe-area-inset-right, 0px)) 1.25rem max(16px, env(safe-area-inset-left, 0px)); max-height: calc(100dvh - 70px); overflow-y: auto; }
+  .menu.open { display: flex; }
+  .menu nav { flex-direction: column; gap: 0; font-size: 1.05rem; }
+  .menu nav a { padding: 0.95rem 0; border-bottom: 1px solid var(--line); }
+  .menu nav a[aria-current="page"] { color: var(--petrol); border-bottom-color: var(--line); font-weight: 700; }
+  .menu .btn { margin-top: 1.25rem; width: 100%; }
+}
+
+/* hero with image / video */
+.hero { position: relative; background: var(--fg); color: var(--on-petrol); overflow: hidden; }
+.hero-media { position: absolute; inset: 0; }
+.hero-media canvas, .hero-media img, .hero-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(31, 36, 38, 0.58); }
+.hero .wrap { position: relative; z-index: 1; padding-block: clamp(4rem, 12vw, 8.5rem) clamp(3rem, 8vw, 6rem); display: grid; gap: 1.4rem; justify-items: start; }
+.hero .label { color: var(--on-petrol-muted); }
+.hero h1 { font-size: clamp(2.3rem, 6.5vw, 4.6rem); font-weight: 700; max-width: 15ch; letter-spacing: -0.03em; }
+.hero p { font-size: clamp(1.05rem, 2.4vw, 1.2rem); color: var(--on-petrol-muted); max-width: 34rem; }
+.hero .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+@media (max-width: 480px) { .hero .actions { width: 100%; } .hero .actions .btn { flex: 1 1 100%; } }
+.hero-bar { position: relative; z-index: 1; background: var(--petrol); }
+.hero-bar .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.hero-bar div.stat { padding: 1.4rem 1.25rem 1.4rem 0; display: grid; gap: 0.1rem; }
+.hero-bar div.stat + div.stat { padding-left: 1.25rem; border-left: 1px solid rgba(245, 243, 238, 0.2); }
+.hero-bar strong { font-size: clamp(1.4rem, 4vw, 1.75rem); font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.hero-bar span { font-size: 0.85rem; color: var(--on-petrol-muted); }
+@media (max-width: 720px) {
+  .hero-bar .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-bar div.stat:nth-child(3) { padding-left: 0; border-left: 0; }
+  .hero-bar div.stat:nth-child(n+3) { border-top: 1px solid rgba(245, 243, 238, 0.2); }
+}
+
+/* page header for subpages */
+.page-head { background: var(--petrol); color: var(--on-petrol); }
+.page-head .wrap { padding-block: clamp(2.75rem, 7vw, 4.5rem); display: grid; gap: 0.8rem; }
+.page-head .label { color: var(--on-petrol-muted); }
+.page-head h1 { font-size: clamp(2rem, 5vw, 3.25rem); max-width: 20ch; }
+.page-head p { color: var(--on-petrol-muted); font-size: clamp(1rem, 2.4vw, 1.1rem); max-width: 38rem; }
+
+/* sections */
+section.block .wrap { padding-block: clamp(3rem, 8vw, 5.5rem); }
+.soft { background: var(--soft); }
+.head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem 2rem; margin-bottom: 2rem; }
+.head > div { display: grid; gap: 0.6rem; max-width: 38rem; }
+.head h2 { font-size: clamp(1.6rem, 3.8vw, 2.4rem); }
+.head p { color: var(--muted); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+@media (max-width: 960px) { .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 820px) { .grid-3 { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .grid-4 { grid-template-columns: minmax(0, 1fr); } }
+.thumb { aspect-ratio: 4 / 3; max-width: 100%; border-radius: var(--radius); overflow: hidden; background: var(--petrol); }
+.thumb canvas, .thumb img { width: 100%; height: 100%; display: block; object-fit: cover; }
+
+/* service cards */
+.service { display: grid; gap: 0.8rem; align-content: start; text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; transition: border-color .15s ease; }
+.service:hover { border-color: var(--petrol); }
+.service .icon { width: 2.75rem; height: 2.75rem; display: grid; place-items: center; background: var(--petrol); color: var(--on-petrol); border-radius: var(--radius); }
+.service .icon svg { width: 1.35rem; height: 1.35rem; }
+.service h3 { font-size: 1.2rem; }
+.service p { color: var(--muted); font-size: 0.95rem; }
+
+/* cases & news */
+.card-link { display: grid; gap: 0.85rem; align-content: start; text-decoration: none; }
+.meta { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; align-items: center; font-size: 0.85rem; color: var(--muted); }
+.meta .cat { color: var(--petrol); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; }
+.card-link h3 { font-size: 1.15rem; line-height: 1.28; }
+.card-link:hover h3 { text-decoration: underline; text-decoration-color: var(--petrol); text-underline-offset: 4px; }
+.card-link p { color: var(--muted); font-size: 0.95rem; }
+.card-link .result { font-weight: 700; color: var(--petrol); font-variant-numeric: tabular-nums; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+.filters button { font: 600 0.88rem/1 var(--font); padding: 0.7rem 1rem; min-height: 42px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; }
+.filters button[aria-pressed="true"] { background: var(--petrol); color: var(--on-petrol); border-color: var(--petrol); }
+.news-list { display: grid; border-top: 1px solid var(--line); }
+.news-row { display: grid; grid-template-columns: 8rem minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; padding-block: 1.3rem; border-bottom: 1px solid var(--line); text-decoration: none; }
+.news-row:hover h3 { color: var(--petrol); }
+.news-row time { font-size: 0.88rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.news-row h3 { font-size: 1.08rem; }
+.news-row p { color: var(--muted); font-size: 0.93rem; margin-top: 0.25rem; }
+@media (max-width: 640px) { .news-row { grid-template-columns: minmax(0, 1fr); gap: 0.3rem; } .news-row .meta-r { display: none; } }
+
+/* split */
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.split .visual { aspect-ratio: 4 / 3; max-width: 100%; border-radius: var(--radius); overflow: hidden; background: var(--petrol); }
+.split .visual canvas, .split .visual img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.split .text { display: grid; gap: 1rem; align-content: start; }
+.split h2 { font-size: clamp(1.6rem, 3.8vw, 2.4rem); }
+.split p { color: var(--muted); font-size: 1.05rem; }
+@media (max-width: 820px) { .split { grid-template-columns: minmax(0, 1fr); } .split .visual { order: -1; } }
+.checks { list-style: none; padding: 0; display: grid; gap: 0.6rem; }
+.checks li { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr); gap: 0.6rem; }
+.checks li::before { content: ""; width: 0.6rem; height: 0.6rem; background: var(--petrol); margin-top: 0.5rem; }
+.value { border-top: 3px solid var(--petrol); padding-top: 1.1rem; display: grid; gap: 0.4rem; }
+.value h3 { font-size: 1.15rem; }
+.value p { color: var(--muted); font-size: 0.95rem; }
+.certs { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.certs span { border: 1px solid var(--line); padding: 0.6rem 1rem; font-weight: 600; font-size: 0.9rem; border-radius: var(--radius); background: var(--surface); }
+.person { display: grid; gap: 0.15rem; }
+.avatar { width: 100%; max-width: 100%; aspect-ratio: 1 / 1; border-radius: var(--radius); background: var(--petrol-light); display: grid; place-items: center; font-size: 2.25rem; font-weight: 700; color: var(--petrol); margin-bottom: 0.8rem; object-fit: cover; }
+.person h3 { font-size: 1.05rem; }
+.person span { font-size: 0.9rem; color: var(--muted); }
+@media (max-width: 560px) { .team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; } .avatar { font-size: 1.6rem; } }
+
+/* services page */
+.service-row { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(1.25rem, 4vw, 3rem); padding-block: 2.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+.service-row:first-child { padding-top: 0; }
+.service-row .text { display: grid; gap: 0.8rem; }
+.service-row h3 { font-size: clamp(1.35rem, 3vw, 1.6rem); }
+.service-row p { color: var(--muted); }
+.service-row .price { font-weight: 700; font-variant-numeric: tabular-nums; }
+.service-row .price small { font-weight: 400; color: var(--muted); }
+@media (max-width: 820px) { .service-row { grid-template-columns: minmax(0, 1fr); padding-block: 2rem; } }
+.steps { list-style: none; padding: 0; counter-reset: s; }
+.steps li { counter-increment: s; border-top: 3px solid var(--petrol); padding-top: 1.1rem; display: grid; gap: 0.4rem; }
+.steps li::before { content: "Stap " counter(s); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--petrol); }
+.steps h3 { font-size: 1.15rem; }
+.steps p { color: var(--muted); font-size: 0.95rem; }
+
+/* careers */
+.job { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 1.5rem; align-items: center; padding: 1.4rem 1.5rem; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--petrol); border-radius: var(--radius); text-decoration: none; transition: border-color .15s ease; }
+.job:hover { border-color: var(--petrol); }
+.job h3 { font-size: 1.12rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+.tags span { font-size: 0.8rem; padding: 0.2rem 0.55rem; background: var(--soft); border-radius: var(--radius); color: var(--muted); }
+.job .salary { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.jobs { display: grid; gap: 0.75rem; }
+@media (max-width: 720px) { .job { grid-template-columns: minmax(0, 1fr); gap: 0.6rem; padding: 1.2rem; } }
+
+/* cta band */
+.cta { background: var(--petrol); color: var(--on-petrol); }
+.cta .wrap { padding-block: clamp(2.5rem, 6vw, 3.5rem); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem; }
+.cta h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); }
+.cta p { color: var(--on-petrol-muted); margin-top: 0.3rem; }
+@media (max-width: 480px) { .cta .btn { width: 100%; } }
+
+/* contact */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
+.info { display: grid; }
+.info div { display: grid; gap: 0.15rem; padding-block: 1.1rem; border-bottom: 1px solid var(--line); }
+.info div:first-child { border-top: 1px solid var(--line); }
+.info dt { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.info dd { margin: 0; font-size: 1.08rem; font-weight: 500; user-select: all; overflow-wrap: anywhere; }
+form.form { display: grid; gap: 1rem; background: var(--surface); border: 1px solid var(--line); padding: clamp(1.25rem, 3vw, 2.25rem); border-radius: var(--radius); }
+form.form h3 { font-size: 1.3rem; }
+.row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+@media (max-width: 520px) { .row { grid-template-columns: minmax(0, 1fr); } }
+label { display: grid; gap: 0.35rem; font-size: 0.85rem; font-weight: 600; }
+input, textarea, select { font: inherit; font-weight: 400; font-size: 1rem; padding: 0.8rem 0.9rem; min-height: 48px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg); color: var(--fg); width: 100%; }
+input:focus, textarea:focus, select:focus { border-color: var(--petrol); outline: none; box-shadow: 0 0 0 3px var(--petrol-light); }
+textarea { min-height: 8rem; resize: vertical; }
+.form-status { font-size: 0.92rem; padding: 0.8rem 1rem; border-left: 4px solid var(--petrol); background: var(--petrol-light); }
+@media (max-width: 480px) { form.form .btn { width: 100%; } }
+
+/* footer */
+footer { background: var(--fg); color: #b4b8b9; }
+footer .wrap { padding-block: 3rem calc(2rem + env(safe-area-inset-bottom, 0px)); display: grid; gap: 2rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.foot-grid h4 { margin: 0 0 0.8rem; color: var(--on-petrol); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }
+.foot-grid ul { list-style: none; padding: 0; display: grid; gap: 0.45rem; font-size: 0.93rem; }
+.foot-grid a { text-decoration: none; }
+.foot-grid a:hover { color: var(--on-petrol); }
+footer .logo { color: var(--on-petrol); margin-bottom: 0.8rem; }
+footer .logo i::after { background: var(--on-petrol); }
+footer .logo i::before { background: #6f9a9e; }
+.foot-bottom { border-top: 1px solid rgba(245, 243, 238, 0.15); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; font-size: 0.83rem; }
+@media (max-width: 820px) { .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .foot-grid > :first-child { grid-column: 1 / -1; } }
+</style>
+</head>
+<body>
+
+<!-- AANPASSEN: verwijder deze demo-balk als je de website voor een echt bedrijf gebruikt -->
+<div class="demo-bar"><div class="wrap"><strong>Demo</strong> · Koersvast Advies en alle namen, cijfers en gegevens zijn fictief. Het formulier verstuurt niets.</div></div>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#home"><i aria-hidden="true"></i>Koersvast</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="menu"><i aria-hidden="true"></i>Menu</button>
+    <div class="menu" id="menu">
+      <nav aria-label="Hoofdmenu">
+        <a href="#home">Home</a>
+        <a href="#over-ons">Over ons</a>
+        <a href="#diensten">Diensten</a>
+        <a href="#cases">Cases</a>
+        <a href="#nieuws">Nieuws</a>
+        <a href="#werken-bij">Werken bij</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn small" href="#contact">Afspraak maken</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ======================= HOME ======================= -->
+  <div class="view" data-view="home">
+    <section class="hero">
+      <!-- AANPASSEN: vervang het canvas door een foto of video, bijvoorbeeld:
+           <img src="images/hero.jpg" alt="">
+           <video autoplay muted loop playsinline poster="images/hero.jpg"><source src="video/hero.mp4" type="video/mp4"></video> -->
+      <div class="hero-media"><canvas data-scene="city" aria-hidden="true"></canvas></div>
+      <div class="wrap">
+        <span class="label">Strategie · Organisatie · Financiën · Data</span>
+        <h1>Helder advies. Meetbaar resultaat.</h1>
+        <p>Koersvast helpt directies in het mkb en de publieke sector om beter te presteren. Met een vaste aanpak, een vaste prijs en één vast aanspreekpunt.</p>
+        <div class="actions">
+          <a class="btn light arrow" href="#contact">Afspraak maken</a>
+          <a class="btn outline" href="#diensten">Onze diensten</a>
+        </div>
+      </div>
+      <div class="hero-bar">
+        <div class="wrap">
+          <div class="stat"><strong>140+</strong><span>projecten afgerond</span></div>
+          <div class="stat"><strong>12 jaar</strong><span>ervaring</span></div>
+          <div class="stat"><strong>8,6</strong><span>klantwaardering</span></div>
+          <div class="stat"><strong>35</strong><span>adviseurs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <div class="head">
+          <div><span class="label">Diensten</span><h2>Waar we u mee helpen</h2></div>
+          <a class="link arrow" href="#diensten">Alle diensten</a>
+        </div>
+        <div class="grid-4">
+          <a class="service" href="#diensten">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span>
+            <h3>Strategie</h3><p>Een heldere koers met duidelijke keuzes.</p>
+          </a>
+          <a class="service" href="#diensten">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="3" width="6" height="5"/><rect x="3" y="16" width="6" height="5"/><rect x="15" y="16" width="6" height="5"/><path d="M12 8v4M6 16v-2h12v2"/></svg></span>
+            <h3>Organisatie</h3><p>Structuur, rollen en verandering met draagvlak.</p>
+          </a>
+          <a class="service" href="#diensten">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14"/><path d="M3 10h18M8 15h3"/></svg></span>
+            <h3>Financiën &amp; control</h3><p>Begroting, prognoses en grip op kosten.</p>
+          </a>
+          <a class="service" href="#diensten">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+            <h3>Data &amp; rapportage</h3><p>Stuurinformatie waar u op kunt bouwen.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block soft">
+      <div class="wrap">
+        <div class="head">
+          <div><span class="label">Cases</span><h2>Resultaten bij klanten</h2></div>
+          <a class="link arrow" href="#cases">Alle cases</a>
+        </div>
+        <div class="grid-3" data-cases="3"></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <div class="head">
+          <div><span class="label">Nieuws</span><h2>Laatste nieuws</h2></div>
+          <a class="link arrow" href="#nieuws">Alle berichten</a>
+        </div>
+        <div class="grid-3" data-news="3"></div>
+      </div>
+    </section>
+
+    <section class="block soft">
+      <div class="wrap split">
+        <div class="visual"><canvas data-scene="meeting" aria-hidden="true"></canvas></div>
+        <div class="text">
+          <span class="label">Werken bij</span>
+          <h2>Werk aan vraagstukken die ertoe doen</h2>
+          <p>We zoeken adviseurs die graag resultaat zien. Je werkt aan uiteenlopende opdrachten met ervaren collega's.</p>
+          <div><a class="btn arrow" href="#werken-bij">Bekijk vacatures</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div><h2>Klaar voor de volgende stap?</h2><p>Plan een vrijblijvend kennismakingsgesprek van een uur.</p></div>
+        <a class="btn light arrow" href="#contact">Afspraak maken</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================= OVER ONS ======================= -->
+  <div class="view" data-view="over-ons" hidden>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="label">Over ons</span>
+        <h1>Een onafhankelijk adviesbureau sinds 2014</h1>
+        <p>We helpen organisaties om plannen om te zetten in resultaat.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap split">
+        <div class="text">
+          <span class="label">Wie we zijn</span>
+          <h2>Van advies naar uitvoering</h2>
+          <p>Koersvast is een adviesbureau met 35 adviseurs, gevestigd in Utrecht. We werken voor bedrijven, gemeenten en zorgorganisaties in heel Nederland.</p>
+          <ul class="checks">
+            <li>Onafhankelijk en in eigendom van de partners</li>
+            <li>Senior adviseurs op elk project</li>
+            <li>Vaste prijs per fase</li>
+          </ul>
+        </div>
+        <div class="visual"><canvas data-scene="facade" aria-hidden="true"></canvas></div>
+      </div>
+    </section>
+
+    <section class="block soft">
+      <div class="wrap">
+        <div class="head"><div><span class="label">Waarden</span><h2>Waar we voor staan</h2></div></div>
+        <div class="grid-3">
+          <div class="value"><h3>Helder</h3><p>We zeggen wat we zien en maken keuzes concreet.</p></div>
+          <div class="value"><h3>Resultaatgericht</h3><p>We meten wat we bereiken, vooraf en achteraf.</p></div>
+          <div class="value"><h3>Betrokken</h3><p>We werken naast uw mensen, niet boven hen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <div class="head"><div><span class="label">Erkenningen</span><h2>Lidmaatschappen en keurmerken</h2></div></div>
+        <!-- AANPASSEN: vervang door de keurmerken en lidmaatschappen van uw bedrijf -->
+        <div class="certs"><span>ISO 9001</span><span>Branchevereniging adviseurs</span><span>Certified Management Consultant</span><span>Erkend leerbedrijf</span></div>
+      </div>
+    </section>
+
+    <section class="block soft">
+      <div class="wrap">
+        <div class="head"><div><span class="label">Partners</span><h2>Ons team</h2></div></div>
+        <!-- AANPASSEN: vervang de initialen door een foto: <img class="avatar" src="images/naam.jpg" alt="Naam"> -->
+        <div class="grid-4 team">
+          <div class="person"><div class="avatar" aria-hidden="true">MB</div><h3>Marloes Bakker</h3><span>Managing partner</span></div>
+          <div class="person"><div class="avatar" aria-hidden="true">JO</div><h3>Jeroen Okkerse</h3><span>Partner organisatie</span></div>
+          <div class="person"><div class="avatar" aria-hidden="true">SH</div><h3>Samira Haddou</h3><span>Partner data</span></div>
+          <div class="person"><div class="avatar" aria-hidden="true">TV</div><h3>Thomas de Vries</h3><span>Partner financiën</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================= DIENSTEN ======================= -->
+  <div class="view" data-view="diensten" hidden>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="label">Diensten</span>
+        <h1>Wat wij voor u doen</h1>
+        <p>Vier diensten, elk met een vaste aanpak en een duidelijke prijs.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <div class="service-row">
+          <div class="thumb"><canvas data-scene="compass" aria-hidden="true"></canvas></div>
+          <div class="text"><span class="label">01</span><h3>Strategie</h3><p>Een meerjarenstrategie die het managementteam zelf kan uitleggen, vertaald naar doelen per afdeling.</p>
+            <ul class="checks"><li>Meerjarenplan</li><li>Markt- en concurrentieanalyse</li><li>Portfoliokeuzes</li></ul>
+            <p class="price">vanaf € 9.500 <small>· 4–6 weken</small></p></div>
+        </div>
+        <div class="service-row">
+          <div class="thumb"><canvas data-scene="meeting" aria-hidden="true"></canvas></div>
+          <div class="text"><span class="label">02</span><h3>Organisatie &amp; verandering</h3><p>Nieuwe structuur, rollen en overleggen, ingevoerd met draagvlak. Inclusief het adviestraject met de OR.</p>
+            <ul class="checks"><li>Herinrichting</li><li>Veranderbegeleiding</li><li>Leiderschap</li></ul>
+            <p class="price">vanaf € 18.000 <small>· 8–12 weken</small></p></div>
+        </div>
+        <div class="service-row">
+          <div class="thumb"><canvas data-scene="ledger" aria-hidden="true"></canvas></div>
+          <div class="text"><span class="label">03</span><h3>Financiën &amp; control</h3><p>Een begroting die klopt en prognoses waarop u kunt sturen. Ook interim controllers beschikbaar.</p>
+            <ul class="checks"><li>Begroting en prognose</li><li>Kostenanalyse</li><li>Interim controller</li></ul>
+            <p class="price">vanaf € 7.500 <small>· 3–6 weken</small></p></div>
+        </div>
+        <div class="service-row">
+          <div class="thumb"><canvas data-scene="chart" aria-hidden="true"></canvas></div>
+          <div class="text"><span class="label">04</span><h3>Data &amp; rapportage</h3><p>Een handvol kpi's die kloppen, in een dashboard dat de directie elke maand gebruikt.</p>
+            <ul class="checks"><li>Kpi-ontwerp</li><li>Dashboards</li><li>Maandrapportage</li></ul>
+            <p class="price">vanaf € 6.500 <small>· 3–5 weken</small></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block soft">
+      <div class="wrap">
+        <div class="head"><div><span class="label">Werkwijze</span><h2>Zo werken we samen</h2></div></div>
+        <ol class="steps grid-4">
+          <li><h3>Kennismaken</h3><p>Een gratis gesprek van een uur over uw vraag.</p></li>
+          <li><h3>Voorstel</h3><p>Binnen 5 werkdagen een plan met vaste prijs.</p></li>
+          <li><h3>Uitvoering</h3><p>Eén vaste adviseur, elke twee weken een update.</p></li>
+          <li><h3>Borging</h3><p>We meten het resultaat en dragen over aan uw team.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div><h2>Welke dienst past bij u?</h2><p>We denken graag vrijblijvend mee.</p></div>
+        <a class="btn light arrow" href="#contact">Neem contact op</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================= CASES ======================= -->
+  <div class="view" data-view="cases" hidden>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="label">Cases</span>
+        <h1>Wat ons werk oplevert</h1>
+        <p>Een selectie van recente opdrachten, met het resultaat in cijfers.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <div class="filters" role="group" aria-label="Filter cases">
+          <button type="button" data-filter="Alle" aria-pressed="true">Alle</button>
+          <button type="button" data-filter="Strategie" aria-pressed="false">Strategie</button>
+          <button type="button" data-filter="Organisatie" aria-pressed="false">Organisatie</button>
+          <button type="button" data-filter="Financiën" aria-pressed="false">Financiën</button>
+          <button type="button" data-filter="Data" aria-pressed="false">Data</button>
+        </div>
+        <div class="grid-3" data-cases="all"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================= NIEUWS ======================= -->
+  <div class="view" data-view="nieuws" hidden>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="label">Nieuws &amp; inzichten</span>
+        <h1>Nieuws</h1>
+        <p>Actualiteiten, projecten en inzichten van onze adviseurs.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <div class="grid-3" data-news="3"></div>
+        <div class="news-list" style="margin-top:3rem" data-news-list></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================= WERKEN BIJ ======================= -->
+  <div class="view" data-view="werken-bij" hidden>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="label">Werken bij</span>
+        <h1>Carrière bij Koersvast</h1>
+        <p>Werk aan uitdagende opdrachten met ervaren collega's. We groeien en zoeken versterking.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <div class="head"><div><span class="label">Wat we bieden</span><h2>Waarom bij ons werken</h2></div></div>
+        <div class="grid-3">
+          <div class="value"><h3>Groei</h3><p>Persoonlijk opleidingsbudget van € 3.000 per jaar.</p></div>
+          <div class="value"><h3>Flexibel</h3><p>Hybride werken en een leaseauto of NS Business Card.</p></div>
+          <div class="value"><h3>Goede voorwaarden</h3><p>13e maand, winstdeling en een goed pensioen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block soft">
+      <div class="wrap">
+        <div class="head"><div><span class="label">Vacatures</span><h2>Openstaande vacatures</h2></div></div>
+        <div class="jobs">
+          <a class="job" href="#contact">
+            <div><h3>Senior adviseur strategie</h3><div class="tags"><span>Utrecht</span><span>32–40 uur</span><span>8+ jaar ervaring</span></div></div>
+            <span class="salary">€ 5.800 – € 7.600</span>
+            <span class="link arrow">Solliciteer</span>
+          </a>
+          <a class="job" href="#contact">
+            <div><h3>Adviseur organisatie</h3><div class="tags"><span>Utrecht</span><span>36–40 uur</span><span>3+ jaar ervaring</span></div></div>
+            <span class="salary">€ 4.200 – € 5.600</span>
+            <span class="link arrow">Solliciteer</span>
+          </a>
+          <a class="job" href="#contact">
+            <div><h3>Business controller</h3><div class="tags"><span>Utrecht / hybride</span><span>32–40 uur</span><span>HBO / WO</span></div></div>
+            <span class="salary">€ 4.400 – € 5.900</span>
+            <span class="link arrow">Solliciteer</span>
+          </a>
+          <a class="job" href="#contact">
+            <div><h3>Afstudeerstage bedrijfskunde</h3><div class="tags"><span>Utrecht</span><span>5 maanden</span><span>HBO / WO</span></div></div>
+            <span class="salary">€ 650 p/m</span>
+            <span class="link arrow">Solliciteer</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div><h2>Geen passende vacature?</h2><p>Stuur ons een open sollicitatie.</p></div>
+        <a class="btn light arrow" href="#contact">Open sollicitatie</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ======================= CONTACT ======================= -->
+  <div class="view" data-view="contact" hidden>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="label">Contact</span>
+        <h1>Neem contact met ons op</h1>
+        <p>Bel, mail of vul het formulier in. We reageren binnen 1 werkdag.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap contact-grid">
+        <!-- AANPASSEN: vul hier uw eigen contactgegevens in -->
+        <dl class="info">
+          <div><dt>Telefoon</dt><dd>030 000 00 00</dd></div>
+          <div><dt>E-mail</dt><dd>info@voorbeeld.nl</dd></div>
+          <div><dt>Bezoekadres</dt><dd>Voorbeeldstraat 1<br>3500 AA Utrecht</dd></div>
+          <div><dt>Openingstijden</dt><dd>Maandag t/m vrijdag<br>8:30 – 17:30</dd></div>
+        </dl>
+
+        <!-- AANPASSEN: zet het adres van uw formulierdienst (bijv. Formspree) in action, met method="post". Zonder action toont het formulier alleen een demo-melding. -->
+        <form class="form" id="contactForm" novalidate>
+          <h3>Stuur een bericht</h3>
+          <div class="row">
+            <label for="naam">Naam<input id="naam" name="naam" autocomplete="name"></label>
+            <label for="bedrijf">Organisatie<input id="bedrijf" name="bedrijf" autocomplete="organization"></label>
+          </div>
+          <div class="row">
+            <label for="email">E-mail<input id="email" name="email" type="email" autocomplete="email" inputmode="email"></label>
+            <label for="telefoon">Telefoon<input id="telefoon" name="telefoon" type="tel" autocomplete="tel" inputmode="tel"></label>
+          </div>
+          <label for="onderwerp">Onderwerp
+            <select id="onderwerp" name="onderwerp">
+              <option>Strategie</option><option>Organisatie &amp; verandering</option><option>Financiën &amp; control</option><option>Data &amp; rapportage</option><option>Sollicitatie</option><option>Overig</option>
+            </select>
+          </label>
+          <label for="bericht">Bericht<textarea id="bericht" name="bericht" placeholder="Waar kunnen we u mee helpen?"></textarea></label>
+          <div><button class="btn arrow" type="submit">Verstuur bericht</button></div>
+          <p class="form-status" id="formStatus" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#home"><i aria-hidden="true"></i>Koersvast</a>
+        <p style="max-width:22rem;font-size:0.93rem">Onafhankelijk adviesbureau voor strategie, organisatie, financiën en data.</p>
+      </div>
+      <div><h4>Bedrijf</h4><ul><li><a href="#over-ons">Over ons</a></li><li><a href="#cases">Cases</a></li><li><a href="#nieuws">Nieuws</a></li><li><a href="#werken-bij">Werken bij</a></li></ul></div>
+      <div><h4>Diensten</h4><ul><li><a href="#diensten">Strategie</a></li><li><a href="#diensten">Organisatie</a></li><li><a href="#diensten">Financiën</a></li><li><a href="#diensten">Data</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>030 000 00 00</li><li>info@voorbeeld.nl</li><li>Utrecht</li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Koersvast Advies B.V.</span><span>KvK 12345678</span></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // AANPASSEN: cases. Categorie moet overeenkomen met een filterknop. De eerste 3 verschijnen op Home.
+  const CASES = [
+    { title: 'Gemeente krijgt grip op Wmo-uitgaven', client: 'Middelgrote gemeente', result: '€ 1,2 mln overschrijding voorkomen', cat: 'Data', scene: 'chart' },
+    { title: 'Drie vestigingen worden één organisatie', client: 'Technische groothandel, 230 fte', result: 'Positief OR-advies in 4 maanden', cat: 'Organisatie', scene: 'meeting' },
+    { title: 'Nieuwe meerjarenstrategie voor zorggroep', client: 'Regionale zorgaanbieder', result: '3 speerpunten, gedragen door 40 managers', cat: 'Strategie', scene: 'compass' },
+    { title: 'Kostenbesparing in inkoop en facilitair', client: 'Onderwijsinstelling', result: '8% lagere kosten per jaar', cat: 'Financiën', scene: 'ledger' },
+    { title: 'Maandrapportage voor woningcorporatie', client: 'Woningcorporatie, 11.000 woningen', result: 'Rapportage van 40 naar 8 pagina’s', cat: 'Data', scene: 'grid' },
+    { title: 'Herinrichting klantenservice', client: 'Energieleverancier', result: '−35% wachttijd aan de telefoon', cat: 'Organisatie', scene: 'facade' }
+  ];
+  // AANPASSEN: nieuwsberichten. De nieuwste staan bovenaan; de eerste 3 verschijnen op Home.
+  const NEWS = [
+    { date: '2026-10-14', cat: 'Project', title: 'Gemeente bespaart € 1,2 miljoen met nieuwe stuurinformatie', text: 'Met zes heldere indicatoren ziet de gemeente afwijkingen nu binnen weken.', scene: 'chart' },
+    { date: '2026-09-30', cat: 'Inzicht', title: 'Vijf signalen dat uw organisatie toe is aan een nieuwe structuur', text: 'Herkent u deze knelpunten? Dan is het tijd om de organisatie te herzien.', scene: 'grid' },
+    { date: '2026-09-12', cat: 'Bedrijf', title: 'Koersvast opent tweede kantoor in Rotterdam', text: 'Vanaf november zijn we ook in Rotterdam gevestigd.', scene: 'facade' },
+    { date: '2026-08-21', cat: 'Project', title: 'Zorggroep presenteert nieuwe strategie', text: 'Drie speerpunten voor de komende vijf jaar, samen opgesteld met 40 managers.', scene: 'compass' },
+    { date: '2026-07-03', cat: 'Inzicht', title: 'Waarom de meeste dashboards niet worden gebruikt', text: 'Minder cijfers, betere besluiten: zo kiest u de juiste kpi’s.', scene: 'grid' },
+    { date: '2026-06-17', cat: 'Bedrijf', title: 'Twee nieuwe partners bij Koersvast', text: 'Ons partnerteam groeit met ervaring in financiën en zorg.', scene: 'meeting' }
+  ];
+  const MONTHS = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+  const fmt = d => { const [y, m, day] = d.split('-').map(Number); return day + ' ' + MONTHS[m - 1] + ' ' + y; };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  document.querySelectorAll('[data-cases]').forEach(el => {
+    const n = el.dataset.cases === 'all' ? CASES.length : +el.dataset.cases;
+    el.innerHTML = CASES.slice(0, n).map(p =>
+      '<a class="card-link case" href="#cases" data-cat="' + esc(p.cat) + '"><div class="thumb"><canvas data-scene="' + p.scene + '" aria-hidden="true"></canvas></div>' +
+      '<div class="meta"><span class="cat">' + esc(p.cat) + '</span><span>' + esc(p.client) + '</span></div>' +
+      '<h3>' + esc(p.title) + '</h3><p class="result">' + esc(p.result) + '</p></a>').join('');
+  });
+  document.querySelectorAll('[data-news]').forEach(el => {
+    el.innerHTML = NEWS.slice(0, +el.dataset.news).map(n =>
+      '<a class="card-link" href="#nieuws"><div class="thumb" style="aspect-ratio:16/10"><canvas data-scene="' + n.scene + '" aria-hidden="true"></canvas></div>' +
+      '<div class="meta"><span class="cat">' + esc(n.cat) + '</span><time datetime="' + n.date + '">' + fmt(n.date) + '</time></div>' +
+      '<h3>' + esc(n.title) + '</h3><p>' + esc(n.text) + '</p></a>').join('');
+  });
+  document.querySelectorAll('[data-news-list]').forEach(el => {
+    el.innerHTML = NEWS.slice(3).map(n =>
+      '<a class="news-row" href="#nieuws"><time datetime="' + n.date + '">' + fmt(n.date) + '</time>' +
+      '<div><h3>' + esc(n.title) + '</h3><p>' + esc(n.text) + '</p></div><span class="meta-r meta"><span class="cat">' + esc(n.cat) + '</span></span></a>').join('');
+  });
+
+  // Case filter
+  const filterBtns = document.querySelectorAll('[data-filter]');
+  filterBtns.forEach(btn => btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    filterBtns.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+    document.querySelectorAll('[data-cases="all"] .case').forEach(card => { card.hidden = f !== 'Alle' && card.dataset.cat !== f; });
+    paintAll(0);
+  }));
+
+  // Placeholder visuals: flat, matte scenes in the palette until real photos are added
+  const C = { petrol: '#28565b', deep: '#1f4447', mid: '#3e6c71', light: '#6f9a9e', pale: '#dfe7e6', bg: '#f5f3ee', sand: '#e4dfd4', ink: '#252a2d', lamp: '#e9dcbc' };
+  function rng(seed) { return () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
+  const SEEDS = { city: 11, facade: 5, meeting: 29, chart: 17, grid: 23, compass: 31, ledger: 7 };
+  function rect(c, col, x, y, w, h) { c.fillStyle = col; c.fillRect(x, y, w, h); }
+  function windows(c, r, x, y, bw, bh, lit, size) {
+    const s = size || 14, cols = Math.max(2, Math.floor(bw / s)), rows = Math.max(1, Math.floor(bh / (s * 1.2)));
+    const cw = bw / cols, rh = bh / rows;
+    for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++)
+      rect(c, r() < lit ? C.lamp : 'rgba(245,243,238,0.10)', x + i * cw + cw * 0.22, y + j * rh + rh * 0.22, cw * 0.56, rh * 0.5);
+  }
+  function paint(canvas, t) {
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if (!w || !h) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    if (canvas.width !== Math.round(w * dpr)) { canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr); }
+    const c = canvas.getContext('2d');
+    c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const scene = canvas.dataset.scene, r = rng(SEEDS[scene] || 3);
+
+    if (scene === 'city') {
+      rect(c, C.mid, 0, 0, w, h);
+      const drift = Math.sin(t * 0.00008) * w * 0.03;
+      const ground = h * 0.92;
+      [{ col: C.light, top: 0.32, sp: 0.4, lit: 0 }, { col: C.petrol, top: 0.2, sp: 0.7, lit: 0.18 }, { col: C.deep, top: 0.1, sp: 1, lit: 0.32 }].forEach(L => {
+        let x = -w * 0.08 + drift * L.sp;
+        while (x < w * 1.08) {
+          const bw = w * (0.07 + r() * 0.1), by = h * (L.top + r() * 0.35);
+          rect(c, L.col, x, by, bw, ground - by);
+          if (L.lit) windows(c, r, x + 4, by + 8, bw - 8, ground - by - 12, L.lit, 13);
+          x += bw + w * 0.006;
+        }
+      });
+      rect(c, C.ink, 0, ground, w, h - ground);
+    } else if (scene === 'facade') {
+      rect(c, C.pale, 0, 0, w, h);
+      const bx = w * 0.12, bw = w * 0.76;
+      rect(c, C.petrol, bx, h * 0.12, bw, h * 0.88);
+      windows(c, r, bx + 10, h * 0.16, bw - 20, h * 0.7, 0.35, 22);
+      rect(c, C.deep, bx + bw * 0.4, h * 0.82, bw * 0.2, h * 0.18);
+      rect(c, C.ink, 0, h * 0.96, w, h * 0.04);
+    } else if (scene === 'meeting') {
+      rect(c, C.sand, 0, 0, w, h);
+      rect(c, C.pale, w * 0.06, h * 0.08, w * 0.36, h * 0.34);
+      rect(c, C.petrol, w * 0.1, h * 0.28, w * 0.05, h * 0.1); rect(c, C.petrol, w * 0.18, h * 0.2, w * 0.05, h * 0.18); rect(c, C.petrol, w * 0.26, h * 0.14, w * 0.05, h * 0.24); rect(c, C.ink, w * 0.34, h * 0.1, w * 0.05, h * 0.28);
+      const ty = h * 0.62;
+      rect(c, C.ink, w * 0.1, ty, w * 0.8, h * 0.05);
+      const people = [0.2, 0.38, 0.62, 0.8];
+      people.forEach((px, i) => {
+        const col = i % 2 ? C.petrol : C.deep;
+        c.fillStyle = col; c.beginPath(); c.arc(w * px, ty - h * 0.2, Math.min(w, h) * 0.055, 0, Math.PI * 2); c.fill();
+        rect(c, col, w * px - w * 0.06, ty - h * 0.13, w * 0.12, h * 0.13);
+      });
+      rect(c, C.bg, w * 0.44, ty - h * 0.06, w * 0.12, h * 0.06);
+      rect(c, C.light, w * 0.1, ty + h * 0.05, w * 0.03, h * 0.3); rect(c, C.light, w * 0.87, ty + h * 0.05, w * 0.03, h * 0.3);
+    } else if (scene === 'chart') {
+      rect(c, C.petrol, 0, 0, w, h);
+      for (let i = 1; i < 5; i++) rect(c, 'rgba(245,243,238,0.12)', w * 0.08, h * (0.15 + i * 0.16), w * 0.84, 1);
+      const n = 8;
+      for (let i = 0; i < n; i++) {
+        const bh = h * (0.14 + i * 0.065 + r() * 0.05);
+        rect(c, i === n - 1 ? C.bg : C.light, w * (0.1 + i * 0.1), h * 0.86 - bh, w * 0.065, bh);
+      }
+      rect(c, C.bg, w * 0.08, h * 0.86, w * 0.84, 2);
+    } else if (scene === 'grid') {
+      rect(c, C.bg, 0, 0, w, h);
+      const s = Math.max(w, h) / 8;
+      for (let x = 0; x < w; x += s) for (let y = 0; y < h; y += s) {
+        const k = Math.floor(r() * 6);
+        rect(c, [C.petrol, C.pale, C.sand, C.light, C.pale, C.deep][k], x + 3, y + 3, s - 6, s - 6);
+      }
+    } else if (scene === 'compass') {
+      rect(c, C.deep, 0, 0, w, h);
+      const cx = w / 2, cy = h / 2, R = Math.min(w, h) * 0.32;
+      c.fillStyle = C.petrol; c.beginPath(); c.arc(cx, cy, R * 1.25, 0, Math.PI * 2); c.fill();
+      c.fillStyle = C.mid; c.beginPath(); c.arc(cx, cy, R, 0, Math.PI * 2); c.fill();
+      c.fillStyle = C.bg; c.beginPath(); c.moveTo(cx, cy - R * 0.85); c.lineTo(cx + R * 0.16, cy); c.lineTo(cx - R * 0.16, cy); c.fill();
+      c.fillStyle = C.light; c.beginPath(); c.moveTo(cx, cy + R * 0.85); c.lineTo(cx + R * 0.16, cy); c.lineTo(cx - R * 0.16, cy); c.fill();
+    } else if (scene === 'ledger') {
+      rect(c, C.sand, 0, 0, w, h);
+      const px = w * 0.18, pw = w * 0.64, py = h * 0.12, ph = h * 0.76;
+      rect(c, C.bg, px, py, pw, ph);
+      rect(c, C.petrol, px, py, pw, h * 0.08);
+      for (let i = 0; i < 7; i++) {
+        const y = py + h * 0.14 + i * ph * 0.11;
+        rect(c, C.pale, px + pw * 0.08, y, pw * 0.5, h * 0.025);
+        rect(c, i === 6 ? C.petrol : C.light, px + pw * 0.68, y, pw * (0.12 + r() * 0.12), h * 0.025);
+      }
+    }
+  }
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function paintAll(t) { document.querySelectorAll('canvas[data-scene]').forEach(cv => { if (cv.offsetParent) paint(cv, t || 0); }); }
+  function loop(ts) {
+    const hero = document.querySelector('canvas[data-scene="city"]');
+    if (hero && hero.offsetParent) paint(hero, ts);
+    requestAnimationFrame(loop);
+  }
+
+  // Mobile menu
+  const toggle = document.getElementById('menuToggle'), menu = document.getElementById('menu');
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.lastChild.textContent = open ? 'Sluiten' : 'Menu';
+  }
+  toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // Pages: each menu link (#home, #over-ons, ...) shows one view
+  const views = document.querySelectorAll('[data-view]');
+  const links = document.querySelectorAll('header nav a');
+  function show() {
+    const name = location.hash.slice(1);
+    const target = document.querySelector('[data-view="' + name + '"]') ? name : 'home';
+    views.forEach(v => { v.hidden = v.dataset.view !== target; });
+    links.forEach(a => {
+      if (a.getAttribute('href') === '#' + target) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    setMenu(false);
+    window.scrollTo(0, 0);
+    paintAll(0);
+  }
+  window.addEventListener('hashchange', show);
+  menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  window.addEventListener('resize', () => paintAll(0));
+  show();
+  if (!reduce) requestAnimationFrame(loop);
+
+  // Contact form: validates in the page; submits for real only when the form has an action URL
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', function (e) {
+    const naam = form.naam.value.trim(), email = form.email.value.trim();
+    if (!naam || !email || !form.email.checkValidity()) {
+      e.preventDefault();
+      status.textContent = 'Vul uw naam en een geldig e-mailadres in.';
+      status.hidden = false;
+      (naam ? form.email : form.naam).focus();
+      return;
+    }
+    if (form.getAttribute('action')) return;
+    e.preventDefault();
+    status.textContent = 'Demo: dit formulier is nog niet gekoppeld, er is niets verzonden.';
+    status.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
