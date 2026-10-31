@@ -17,11 +17,11 @@
         title: 'OnlineDesk · Websites, webshops en apps',
         description: 'Kant-en-klare websites en webshops, en websites, webshops en apps op maat. Van concept tot online succes: persoonlijk, met duidelijke prijzen en afspraken.'
       },
-      nav: { maatwerk: 'Op maat', producten: 'Producten', faq: 'FAQ', contact: 'Contact' },
+      nav: { producten: 'Mijn producten', maatwerk: 'Wat ik doe', faq: 'FAQ', contact: 'Contact' },
       mainMenu: 'Hoofdmenu', openMenu: 'Menu openen',
       hello: ['Hoi, ik ben Rahma', 'Leuk dat je er bent!'],
       seeProducts: 'Mijn producten', discussCustom: 'Wat ik doe',
-      available: { label: 'Beschikbaar voor projecten', title: 'Weet je nog niet wat je nodig hebt?', text: 'Vertel wat je wilt bereiken. Samen maken we je plannen concreet en kiezen we een passende oplossing.', cta: 'Denk met me mee' },
+      available: { label: 'Beschikbaar voor projecten', title: 'Weet je nog niet wat je nodig hebt?', text: 'Vertel wat je wilt bereiken. Samen maken we je plannen concreet en kiezen we een passende oplossing.', cta: 'Even overleggen' },
       unavailable: { label: 'Niet beschikbaar', title: 'Momenteel niet beschikbaar', text: 'Mijn agenda zit vol. Neem gerust contact op voor een later moment.', cta: 'Neem contact op' },
       productsEyebrow: 'Producten', productsTitle: 'Direct aan de slag?',
       productsText: 'De basis staat al klaar. Kies een website of webshop die bij je past en bepaal wat je zelf wilt doen. Zelf aanpassen of hulp nodig met je inhoud, huisstijl of het online zetten? Bekijk de mogelijkheden per product.',
@@ -71,11 +71,11 @@
         title: 'OnlineDesk · Websites, webshops and apps',
         description: 'Ready-made websites and webshops, plus custom websites, webshops and apps. From concept to online success: personal, with clear prices and agreements.'
       },
-      nav: { maatwerk: 'Custom-built', producten: 'Products', faq: 'FAQ', contact: 'Contact' },
+      nav: { producten: 'My products', maatwerk: 'What I do', faq: 'FAQ', contact: 'Contact' },
       mainMenu: 'Main menu', openMenu: 'Open menu',
       hello: ["Hi, I'm Rahma", 'Great to have you here!'],
       seeProducts: 'My products', discussCustom: 'What I do',
-      available: { label: 'Available for projects', title: "Not sure yet what you need?", text: "Tell me what you want to achieve. Together we'll make your plans concrete and choose a solution that fits.", cta: "Let's think it through" },
+      available: { label: 'Available for projects', title: "Not sure yet what you need?", text: "Tell me what you want to achieve. Together we'll make your plans concrete and choose a solution that fits.", cta: "Let's talk" },
       unavailable: { label: 'Unavailable', title: 'Currently unavailable', text: 'My schedule is full. Feel free to get in touch for a later date.', cta: 'Get in touch' },
       productsEyebrow: 'Products', productsTitle: 'Ready to get started?',
       productsText: "The starting point is ready. Choose a website or online store that suits you and decide how much you want to do yourself. Explore each product to see the options for editing content, personalisation and publishing.",
@@ -247,7 +247,7 @@
 
   /* ---------- Secties ---------- */
 
-  const NAV = ['maatwerk', 'producten', 'faq', 'contact'];
+  const NAV = ['producten', 'maatwerk', 'faq', 'contact'];
   // Op de detailpagina verwijzen menulinks naar de homepage; contact staat op beide pagina's.
   const PAGE = document.body.dataset.page || 'home';
   const navHref = (id) => (PAGE === 'home' || id === 'contact' ? `#${id}` : `./#${id}`);
@@ -835,7 +835,7 @@
     applyMeta();
     const main = PAGE === 'pakket'
       ? h('main', { id: 'main' }, detailPage(), contact())
-      : h('main', { id: 'main' }, hero(), custom(), products(), faq(), contact());
+      : h('main', { id: 'main' }, hero(), products(), custom(), faq(), contact());
     $('#app').replaceChildren(main, footer());
     $('#app').prepend(header());
     observe(instant);

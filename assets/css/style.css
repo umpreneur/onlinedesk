@@ -301,15 +301,15 @@ button { font: inherit; color: inherit; }
 .hero-title { font-size: clamp(2.4rem, 5.4vw, 4.4rem); margin-bottom: 20px; max-width: 14ch; }
 /* Accentwoorden: alleen in de groene accentkleur */
 .squiggle { color: var(--sage-deep); }
-.hero-sub { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.2rem, 2.4vw, 1.6rem); letter-spacing: -0.015em; color: var(--ink-2); margin: -6px 0 18px; }
+.hero-sub { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.05rem, 1.9vw, 1.3rem); letter-spacing: -0.01em; color: var(--ink-2); margin: -6px 0 18px; }
 .hero-intro { color: var(--ink-2); max-width: 54ch; font-size: 1.06rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 
 /* Beschikbaarheid-tegel */
 .tile-cta { background: var(--primary); color: var(--primary-ink); min-height: 150px; padding: 28px; gap: 10px; }
 .status-pill {
-  display: inline-flex; align-items: center; gap: 8px; width: fit-content; margin-bottom: 8px;
-  padding: 6px 13px 6px 11px; border-radius: 999px; font-size: .85rem; font-weight: 800;
+  display: inline-flex; align-items: center; gap: 7px; width: fit-content; margin-bottom: 6px; white-space: nowrap;
+  padding: 5px 11px 5px 9px; border-radius: 999px; font-size: .78rem; font-weight: 800;
   background: rgba(255, 253, 250, .16);
 }
 .tile-cta .dot { background: #A8E0B6; box-shadow: 0 0 0 0 rgba(168, 224, 182, .6); animation: ping 2.2s ease-out infinite; }
