@@ -38,7 +38,7 @@
       mailNote: 'De knoppen openen je e-mailprogramma met je keuze al ingevuld.',
       noMailNote: 'Aanvragen kan via de contactgegevens onderaan de pagina.',
       options: { ready: 'Kant-en-klaar', custom: 'Laten aanpassen', bespoke: 'Maatwerk' },
-      customEyebrow: 'Op maat', customTitle: 'Websites, webshops en apps op maat', workTitle: 'Eigen werk',
+      customEyebrow: 'Wat ik doe', customCta: 'Neem contact op', customTitle: 'Websites, webshops en apps op maat', workTitle: 'Eigen werk',
       faqEyebrow: 'Vragen', faqTitle: 'Goed om te weten.', faqSub: 'Een paar antwoorden voordat je begint.',
       faqMore: 'Nog een vraag?', faqMoreLink: 'Stuur me een bericht.',
       contactEyebrow: 'Contact',
@@ -92,7 +92,7 @@
       mailNote: 'The buttons open your email program with your choice already filled in.',
       noMailNote: 'You can request this via the contact details at the bottom of the page.',
       options: { ready: 'Ready-made', custom: 'Customised', bespoke: 'Custom build' },
-      customEyebrow: 'Custom-built', customTitle: 'Custom websites, webshops and apps', workTitle: 'My work',
+      customEyebrow: 'What I do', customCta: 'Get in touch', customTitle: 'Custom websites, webshops and apps', workTitle: 'My work',
       faqEyebrow: 'Questions', faqTitle: 'Good to know.', faqSub: 'A few answers before you start.',
       faqMore: 'Another question?', faqMoreLink: 'Send me a message.',
       contactEyebrow: 'Contact',
@@ -654,8 +654,7 @@
             h('p', { class: 'eyebrow custom-eyebrow' }, ui().customEyebrow),
             h('h2', {}, withBreaks(tr(c.title) || ui().customTitle)),
             String(tr(c.text) || '').split(/\n\s*\n/).map((t) => h('p', {}, withBreaks(t))),
-            h('a', { class: 'btn btn-primary', href: requestHref(ui().mail.ideaSubject, ui().mail.ideaBody), 'data-request': 'idea' },
-              ui().discussCustom, icon('arrow', 18))
+            h('a', { class: 'btn btn-primary', href: '#contact' }, ui().customCta, icon('arrow', 18))
           ),
           h('div', { class: 'custom-cards' },
             (c.services || []).map((s, i) =>
@@ -835,7 +834,7 @@
     applyMeta();
     const main = PAGE === 'pakket'
       ? h('main', { id: 'main' }, detailPage(), contact())
-      : h('main', { id: 'main' }, hero(), products(), custom(), faq(), contact());
+      : h('main', { id: 'main' }, hero(), custom(), products(), faq(), contact());
     $('#app').replaceChildren(main, footer());
     $('#app').prepend(header());
     observe(instant);

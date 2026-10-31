@@ -1770,24 +1770,24 @@ window.SITE_CONTENT = {
 
   /* Op maat: tekst links, vier gekleurde kaarten rechts. "\n" in een tekst = nieuwe regel. */
   "custom": {
-    "title": { "nl": "Jouw idee,\nop maat gebouwd.", "en": "Your idea,\ncustom-built." },
+    "title": { "nl": "Jouw onderneming,\nonline tot leven.", "en": "Your business,\nbrought to life online." },
     "text": {
-      "nl": "Een eigen website, webshop of app? Ik denk met je mee en bouw wat jij nodig hebt.\n\nVan eerste idee tot werkend product.\nMet een duidelijk plan en heldere afspraken.",
-      "en": "Your own website, webshop or app? I'll help you work out what you need and build it.\n\nFrom first idea to working product.\nWith a clear plan and clear agreements."
+      "nl": "Je onderneming starten, je aanbod online verkopen of je werk makkelijker organiseren? Ik help je bepalen wat je nodig hebt en werk het uit in een website, webshop of app.\n\nVan strategie en ontwerp tot techniek, teksten en vindbaarheid: samen bouwen we een oplossing die past bij jouw onderneming en de mensen die je wilt bereiken.",
+      "en": "Starting your business, selling your offer online or organising your work more easily? I'll help you decide what you need and build it into a website, webshop or app.\n\nFrom strategy and design to technology, copy and search visibility: together we build a solution that fits your business and the people you want to reach."
     },
     "services": [
       { "icon": "compass", "color": "sage",
         "title": { "nl": "Strategie", "en": "Strategy" },
-        "text": { "nl": "Samen maken we jouw idee concreet.", "en": "Together, we make your idea concrete." } },
+        "text": { "nl": "Van jouw idee naar een duidelijk plan.", "en": "From your idea to a clear plan." } },
       { "icon": "pen", "color": "clay",
         "title": { "nl": "Ontwerp", "en": "Design" },
-        "text": { "nl": "Een helder ontwerp dat prettig werkt.", "en": "A clear design that's pleasant to use." } },
+        "text": { "nl": "Een ontwerp dat bij je past en makkelijk te gebruiken is.", "en": "A design that suits you and is easy to use." } },
       { "icon": "code", "color": "lav",
         "title": { "nl": "Ontwikkeling", "en": "Development" },
-        "text": { "nl": "Gebouwd met de functies die jij nodig hebt.", "en": "Built with the features you need." } },
+        "text": { "nl": "Ik bouw websites, webshops en apps met functies zoals afspraken boeken, bestellen of een contactformulier.", "en": "I build websites, webshops and apps with features such as booking appointments, ordering or a contact form." } },
       { "icon": "search", "color": "sand",
         "title": { "nl": "Content & vindbaarheid", "en": "Content & search visibility" },
-        "text": { "nl": "Duidelijke teksten en een goede basis voor Google.", "en": "Clear copy and a solid foundation for Google." } }
+        "text": { "nl": "Heldere teksten voor je bezoekers en een goede basis voor Google.", "en": "Clear copy for your visitors and a solid foundation for Google." } }
     ]
   },
 
