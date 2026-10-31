@@ -1772,8 +1772,8 @@ window.SITE_CONTENT = {
   "custom": {
     "title": { "nl": "Jouw onderneming,\nonline tot leven.", "en": "Your business,\nbrought to life online." },
     "text": {
-      "nl": "Je onderneming starten, je aanbod online verkopen of je werk makkelijker organiseren? Ik help je bepalen wat je nodig hebt en werk het uit in een website, webshop of app.\n\nVan strategie en ontwerp tot techniek, teksten en vindbaarheid: samen bouwen we een oplossing die past bij jouw onderneming en de mensen die je wilt bereiken.",
-      "en": "Starting your business, selling your offer online or organising your work more easily? I'll help you decide what you need and build it into a website, webshop or app.\n\nFrom strategy and design to technology, copy and search visibility: together we build a solution that fits your business and the people you want to reach."
+      "nl": "Je onderneming starten, je aanbod online verkopen of je werk makkelijker organiseren? Ik help je bepalen wat je nodig hebt en werk het uit.\n\nVan strategie en ontwerp tot techniek, teksten en vindbaarheid: samen bouwen we een oplossing die past bij jouw onderneming en de mensen die je wilt bereiken.",
+      "en": "Starting your business, selling your offer online or organising your work more easily? I'll help you decide what you need and build it.\n\nFrom strategy and design to technology, copy and search visibility: together we build a solution that fits your business and the people you want to reach."
     },
     "services": [
       { "icon": "compass", "color": "sage",

@@ -247,7 +247,7 @@
 
   /* ---------- Secties ---------- */
 
-  const NAV = ['maatwerk', 'producten', 'faq', 'contact'];
+  const NAV = ['maatwerk', 'producten', 'contact'];
   // Op de detailpagina verwijzen menulinks naar de homepage; contact staat op beide pagina's.
   const PAGE = document.body.dataset.page || 'home';
   const navHref = (id) => (PAGE === 'home' || id === 'contact' ? `#${id}` : `./#${id}`);
@@ -834,7 +834,7 @@
     applyMeta();
     const main = PAGE === 'pakket'
       ? h('main', { id: 'main' }, detailPage(), contact())
-      : h('main', { id: 'main' }, hero(), custom(), products(), faq(), contact());
+      : h('main', { id: 'main' }, hero(), custom(), products(), contact());
     $('#app').replaceChildren(main, footer());
     $('#app').prepend(header());
     observe(instant);
