@@ -16,15 +16,15 @@ window.SITE_CONTENT = {
   "available": true,
 
   "hero": {
-    "headline": { "nl": "Van concept tot klik.", "en": "From concept to click." },
-    "accent": { "nl": "klik", "en": "click" },
+    "headline": { "nl": "Van concept tot online succes.", "en": "From concept to online success." },
+    "accent": { "nl": "online succes", "en": "online success" },
     "sub": {
-      "nl": "Een sterke start voor jouw website, webshop of app.",
-      "en": "A strong start for your website, webshop or app."
+      "nl": "Strategie, ontwerp, ontwikkeling en content voor jouw website, webshop of app.",
+      "en": "Strategy, design, development and content for your website, webshop or app."
     },
     "intro": {
-      "nl": "Snel starten met een kant-en-klare oplossing of een eigen idee laten uitwerken? Ik help je kiezen, aanpassen en bouwen tot alles werkt.",
-      "en": "Want to start quickly with a ready-made solution, or have your own idea worked out? I'll help you choose, customise and build until everything works."
+      "nl": "Een nieuw idee uitwerken, snel starten met een kant-en-klare oplossing of verbeteren wat je al hebt? Ik denk met je mee en help je van de eerste keuze tot een oplossing die werkt.",
+      "en": "Developing a new idea, getting started quickly with a ready-made solution or improving what you already have? I'll think along with you and help you from the first choice to a solution that works."
     }
   },
 
