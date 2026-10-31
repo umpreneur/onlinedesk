@@ -21,7 +21,7 @@
       mainMenu: 'Hoofdmenu', openMenu: 'Menu openen',
       hello: ['Hoi, ik ben Rahma', 'Leuk dat je er bent!'],
       seeProducts: 'Mijn producten', discussCustom: 'Wat ik doe',
-      available: { label: 'Beschikbaar voor projecten', title: 'Weet je nog niet wat je nodig hebt?', text: 'Vertel wat je wilt bereiken. Samen maken we je plannen concreet en kiezen we een passende oplossing.', cta: 'Even overleggen' },
+      available: { label: 'Beschikbaar voor projecten', title: 'Weet je nog niet wat je nodig hebt?', text: 'Vertel wat je wilt bereiken. Samen maken we je plannen concreet en kiezen we een passende oplossing.', cta: 'Even sparren' },
       unavailable: { label: 'Niet beschikbaar', title: 'Momenteel niet beschikbaar', text: 'Mijn agenda zit vol. Neem gerust contact op voor een later moment.', cta: 'Neem contact op' },
       productsEyebrow: 'Producten', productsTitle: 'Direct aan de slag?',
       productsText: 'De basis staat al klaar. Kies een website of webshop die bij je past en bepaal wat je zelf wilt doen. Zelf aanpassen of hulp nodig met je inhoud, huisstijl of het online zetten? Bekijk de mogelijkheden per product.',
