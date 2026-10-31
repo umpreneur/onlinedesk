@@ -247,7 +247,7 @@
 
   /* ---------- Secties ---------- */
 
-  const NAV = ['producten', 'maatwerk', 'faq', 'contact'];
+  const NAV = ['maatwerk', 'producten', 'faq', 'contact'];
   // Op de detailpagina verwijzen menulinks naar de homepage; contact staat op beide pagina's.
   const PAGE = document.body.dataset.page || 'home';
   const navHref = (id) => (PAGE === 'home' || id === 'contact' ? `#${id}` : `./#${id}`);
@@ -316,8 +316,8 @@
           p.sub ? h('p', { class: 'hero-sub' }, tr(p.sub)) : null,
           p.intro ? h('p', { class: 'hero-intro' }, tr(p.intro)) : null,
           h('div', { class: 'hero-actions' },
-            h('a', { href: '#producten', class: 'btn btn-primary' }, ui().seeProducts, icon('arrow', 18)),
-            h('a', { href: '#maatwerk', class: 'btn btn-ghost' }, ui().discussCustom)
+            h('a', { href: '#maatwerk', class: 'btn btn-primary' }, ui().discussCustom, icon('arrow', 18)),
+            h('a', { href: '#producten', class: 'btn btn-ghost' }, ui().seeProducts)
           )
         ),
         availabilityTile()
