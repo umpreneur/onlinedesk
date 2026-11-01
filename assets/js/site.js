@@ -619,7 +619,7 @@
             ),
             h('div', { class: 'product-actions' },
               hasTiers
-                ? h('a', { class: 'btn btn-primary', href: '#pakketten' }, ui().tiers.see, icon('arrow', 18))
+                ? h('a', { class: 'btn btn-primary', href: '#pakketten' }, p.id === 'portfolio' ? (lang === 'nl' ? 'Bekijk pakketten en prijzen' : 'View packages and prices') : ui().tiers.see, icon('arrow', 18))
                 : requestButton(tr(p.requestLabel) || ui().requestPkg, title, ui().options.ready, 'btn-primary'),
               hasTiers ? null : requestButton(ui().customise, title, ui().options.custom, 'btn-ghost'),
               demo ? h('a', { class: 'btn btn-ghost', href: demo, target: '_blank', rel: 'noopener' }, ui().demo, icon('external', 16)) : null
