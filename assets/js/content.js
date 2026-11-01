@@ -407,8 +407,8 @@ window.SITE_CONTENT = {
       "icon": "cart",
       "color": "clay",
       "popular": true,
-      "image": "",
-      "demo": "",
+      "image": "assets/img/webshop.jpg",
+      "demo": "https://umpreneur.github.io/linde-wonen/",
       "audience": {
         "nl": "Ondernemers die producten verkopen",
         "en": "Entrepreneurs who sell products"
@@ -508,6 +508,10 @@ window.SITE_CONTENT = {
           "Your business details for the webshop (such as company number and address)",
           "An account with a payment provider"
         ]
+      },
+      "preview": {
+        "desktop": "assets/img/webshop-pagina.jpg",
+        "mobile": "assets/img/webshop-pagina-mobiel.jpg"
       },
       "receive": {
         "nl": [
