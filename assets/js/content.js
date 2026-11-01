@@ -1013,16 +1013,16 @@ window.SITE_CONTENT = {
         "en": "Photographers, designers and other creatives"
       },
       "headline": {
-        "nl": "Geef jouw werk de ruimte.",
-        "en": "Give your work room to shine."
+        "nl": "Jouw portfolio, professioneel online.",
+        "en": "Your portfolio, professionally online."
       },
       "textSub": {
-        "nl": "Pas de website zelf aan, of laat mij je helpen.",
-        "en": "Customise the website yourself, or let me help."
+        "nl": "Nederlands en Engels inbegrepen. Basic bevat de websitebestanden en een handleiding; je past de site zelf aan en zet hem online. Voor hulp kies je Plus of Compleet.",
+        "en": "Dutch and English included. Basic includes the website files and a guide; you customise and publish it yourself. Choose Plus or Complete for help."
       },
       "text": {
-        "nl": "Een rustige, tweetalige website van één pagina voor jouw projecten, diensten en verhaal. Je bezoekers kiezen tussen Nederlands en Engels.",
-        "en": "A clean, bilingual one-page website for your projects, services and story. Visitors can switch between Dutch and English."
+        "nl": "Laat je projecten, diensten en verhaal zien op één overzichtelijke website.",
+        "en": "Showcase your projects, services and story on one clear, elegant website."
       },
       "preview": {
         "desktop": "assets/img/portfolio-pagina.jpg",
