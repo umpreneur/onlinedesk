@@ -1135,14 +1135,21 @@ window.SITE_CONTENT = {
       "compare": [
         {
           "label": {
-            "nl": "Websitebestanden (HTML/CSS/JS); aanpassen in code, geen visuele editor",
-            "en": "Website files (HTML/CSS/JS); edit in code, no visual editor"
+            "nl": "Websitebestanden in HTML, CSS en JavaScript. Je past de website aan in de code; er is geen visuele editor.",
+            "en": "Website files in HTML, CSS and JavaScript. You edit the website in code; there is no visual editor."
           },
           "values": [
             true,
             true,
             true
           ]
+        },
+        {
+          "label": {
+            "nl": "Taalwissel tussen Nederlands en Engels",
+            "en": "Language switch between Dutch and English"
+          },
+          "values": [true, true, true]
         },
         {
           "label": {
@@ -1201,13 +1208,13 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Je levert teksten in het Nederlands en/of Engels aan; ik plaats ze. Schrijven of vertalen tegen meerprijs.",
-            "en": "You supply text in Dutch and/or English; I add it. Writing or translation costs extra."
+            "nl": "Je levert zelf je teksten in het Nederlands en/of Engels aan. Hulp bij schrijven of vertalen is mogelijk tegen meerprijs.",
+            "en": "You supply your own text in Dutch and/or English. Writing or translation assistance is available at an additional cost."
           },
           "values": [
-            false,
-            false,
-            true
+            { "nl": "Je plaatst ze zelf", "en": "You add it yourself" },
+            { "nl": "Je plaatst ze zelf", "en": "You add it yourself" },
+            { "nl": "Ik plaats ze", "en": "I add it for you" }
           ]
         },
         {
