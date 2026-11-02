@@ -1054,8 +1054,8 @@ window.SITE_CONTENT = {
               "en": "Agreement and payment"
             },
             "text": {
-              "nl": "We bespreken je wensen en bevestigen de afspraken en prijs per e-mail. Na akkoord betaal je Basic vooraf; bij Plus en Compleet betaal je 50% vooraf en 50% bij oplevering.",
-              "en": "We discuss your needs and confirm the agreement and price by email. After approval, Basic is paid in advance; for Plus and Complete, 50% is due in advance and 50% on delivery."
+              "nl": "We bespreken je wensen en bevestigen de afspraken en prijs per e-mail. Na akkoord betaal je Basic volledig vooraf; bij Plus en Compleet betaal je 50% vooraf en 50% bij oplevering.",
+              "en": "We discuss your needs and confirm the agreement and price by email. After approval, Basic is paid in full in advance; for Plus and Complete, 50% is due in advance and 50% on delivery."
             }
           },
           {
@@ -1326,8 +1326,8 @@ window.SITE_CONTENT = {
             "en": "On request"
           },
           "description": {
-            "nl": "Advies over je portfolio en doelgroep, als je opdracht aansluit bij mijn expertise.",
-            "en": "Portfolio and audience advice when your project fits my expertise."
+            "nl": "Advies over je portfolio en doelgroep, als je opdracht aansluit bij mijn kennis en ervaring.",
+            "en": "Portfolio and audience advice when your project fits my knowledge and experience."
           }
         },
         {
