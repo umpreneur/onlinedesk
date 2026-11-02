@@ -1017,12 +1017,12 @@ window.SITE_CONTENT = {
         "en": "Your portfolio, professionally online."
       },
       "textSub": {
-        "nl": "Nederlands en Engels inbegrepen. Basic bevat de websitebestanden en een handleiding; je past de site zelf aan en zet hem online. Voor hulp kies je Plus of Compleet.",
-        "en": "Dutch and English included. Basic includes the website files and a guide; you customise and publish it yourself. Choose Plus or Complete for help."
+        "nl": "Geef je projecten, diensten en verhaal een plek die bij je past. Ga zelf aan de slag of kies voor persoonlijke hulp bij het online zetten van je portfolio.",
+        "en": "Give your projects, services and story a place that feels like you. Get started yourself or choose personal help to bring your portfolio online."
       },
       "text": {
-        "nl": "Laat je projecten, diensten en verhaal zien op één overzichtelijke website.",
-        "en": "Showcase your projects, services and story on one clear, elegant website."
+        "nl": "Laat zien waar je goed in bent, bereik de juiste mensen en maak het makkelijker om contact met je op te nemen.",
+        "en": "Show what you do best, reach the right people and make it easy for them to get in touch."
       },
       "preview": {
         "desktop": "assets/img/portfolio-pagina.jpg",
