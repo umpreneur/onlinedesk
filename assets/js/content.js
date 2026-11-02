@@ -1013,8 +1013,8 @@ window.SITE_CONTENT = {
         "en": "Photographers, designers and other creatives"
       },
       "headline": {
-        "nl": "Jouw werk verdient een plek om gezien te worden.",
-        "en": "Your work deserves a place to be seen."
+        "nl": "Geef jouw werk een plek.",
+        "en": "Give your work a place."
       },
       "textSub": {
         "nl": "Met een portfolio dat bij jou past, geef je jouw verhaal de ruimte en kunnen bezoekers ontdekken wie je bent en wat je doet.",
