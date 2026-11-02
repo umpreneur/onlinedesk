@@ -414,7 +414,7 @@
             h('tr', {},
               h('td', {}),
               tiers.map((t) => h('td', { class: pop(t).trim() || null },
-                requestButton(`${T.choose} ${tr(t.name)}`, title, tr(t.name), t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm')))
+                p.id === 'portfolio' ? h('a', { class: `btn ${t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm'}`, href: '#contact', onclick: () => { const select = document.querySelector('#portfolio-package'); if (select) select.value = t === tiers[0] ? 'Basic' : t === tiers[1] ? 'Plus' : 'Compleet'; } }, `${T.choose} ${tr(t.name)}`) : requestButton(`${T.choose} ${tr(t.name)}`, title, tr(t.name), t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm')))
             )
           )
         )
@@ -505,7 +505,7 @@
     if (!extras.length) return null;
     return h('div', { class: 'detail-card extras reveal' },
       h('h3', {}, ui().tiers.extras),
-      h('ul', { class: 'extras-list' }, extras.map((x) => h('li', {}, h('span', {}, tr(x.name)), h('b', {}, tr(x.price))))),
+      h('ul', { class: 'extras-list' }, extras.map((x) => h('li', {}, h('span', {}, h('strong', {}, tr(x.name)), x.description ? h('span', { style: 'display:block' }, tr(x.description)) : null), h('b', {}, tr(x.price))))),
       p.extrasNote ? h('p', {}, tr(p.extrasNote)) : null
     );
   }
@@ -589,7 +589,7 @@
       .map((k) => { const items = trList(p[k]); return items.length ? h('div', { class: 'detail-card reveal' }, h('h3', {}, L[k]), checks(items)) : null; })
       .filter(Boolean);
     const extras = extrasBlock(p);
-    if (extras) groups.splice(p.features ? 1 : 0, 0, extras);
+    if (extras && p.id !== 'portfolio') groups.splice(p.features ? 1 : 0, 0, extras);
     const hasTiers = (p.tiers || []).length > 0;
 
     return h('section', { class: `section detail tone-${colorOf(p.color, i)}`, id: 'top' },
@@ -631,10 +631,11 @@
         sectionsBlock(p),
         galleryBlock(p),
         tiersBlock(p, title),
+        p.id === 'portfolio' ? extras : null,
         stepsBlock(p),
         groups.length
           ? h('div', { class: `detail-grid${groups.length === 2 ? ' is-two' : ''}` }, groups)
-          : h('div', { class: 'detail-pending reveal' }, icon('clock', 22), h('p', {}, ui().detailsPending))
+          : p.id === 'portfolio' ? null : h('div', { class: 'detail-pending reveal' }, icon('clock', 22), h('p', {}, ui().detailsPending))
       )
     );
   }
@@ -725,6 +726,7 @@
     const mode = endpoint ? 'send' : (email() ? 'mail' : 'off');
     const copy = PAGE === 'pakket' ? currentProduct()?.p.contactCopy : null;
     const t = { ...ui().form, ...(copy ? Object.fromEntries(Object.entries(copy).map(([key, value]) => [key, tr(value)])) : {}) };
+    const isPortfolio = PAGE === 'pakket' && currentProduct()?.p.id === 'portfolio';
     const phone = String(c.phone || '').trim();
     const direct = [
       email() && ['mail', t.directMail, email(), `mailto:${email()}?subject=${encodeURIComponent(ui().mail.generalSubject)}`],
@@ -744,11 +746,12 @@
       h('h3', {}, t.title),
       field('naam', t.name, 'text'),
       field('email', t.email, 'email'),
-      field('bericht', t.message, 'textarea'),
+      isPortfolio ? h('label', { class: 'field-row' }, h('span', {}, lang === 'nl' ? 'Pakketkeuze' : 'Package'), h('select', { id: 'portfolio-package', name: 'pakket', disabled: mode === 'off' }, h('option', { value: '' }, lang === 'nl' ? 'Ik twijfel nog' : 'Still deciding'), ['Basic', 'Plus', 'Compleet'].map((value) => h('option', { value }, value === 'Compleet' && lang === 'en' ? 'Complete' : value)))) : null,
+      field('bericht', isPortfolio ? (lang === 'nl' ? 'Je wensen of vraag' : 'Your wishes or question') : t.message, 'textarea'),
       // Onzichtbaar veld tegen spam-robots.
       h('input', { type: 'text', name: '_gotcha', tabindex: '-1', autocomplete: 'off', class: 'hp', 'aria-hidden': 'true' }),
       h('button', { class: 'btn btn-primary btn-block', type: 'submit', disabled: mode === 'off' },
-        mode === 'mail' ? t.submitMail : t.submit, icon('arrow', 18)),
+        isPortfolio ? (lang === 'nl' ? 'Verstuur je bericht' : 'Send your message') : mode === 'mail' ? t.submitMail : t.submit, icon('arrow', 18)),
       status,
       h('p', { class: 'form-note' }, mode === 'off' ? t.noteOff : mode === 'mail' ? t.noteMail : t.notePrivacy)
     );
@@ -760,7 +763,7 @@
       const data = Object.fromEntries(new FormData(form));
       if (data._gotcha) return;
       if (mode === 'mail') {
-        const body = `${data.bericht}\n\n${t.name}: ${data.naam}\n${t.email}: ${data.email}\n`;
+        const body = `${data.bericht}\n\n${isPortfolio ? `${lang === 'nl' ? 'Pakketkeuze' : 'Package'}: ${data.pakket || (lang === 'nl' ? 'Ik twijfel nog' : 'Still deciding')}\n` : ''}${t.name}: ${data.naam}\n${t.email}: ${data.email}\n`;
         location.href = `mailto:${email()}?subject=${encodeURIComponent(ui().mail.generalSubject)}&body=${encodeURIComponent(body)}`;
         status.textContent = t.mailOpened; status.className = 'form-status';
         return;
