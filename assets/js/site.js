@@ -396,7 +396,7 @@
             h('tr', {},
               h('th', { scope: 'col', class: 'compare-corner' }, h('span', { class: 'sr-only' }, T.title)),
               tiers.map((t) => h('th', { scope: 'col', class: pop(t).trim() || null },
-                t.popular ? h('span', { class: 'chip chip-on tier-chip' }, t.badge ? tr(t.badge) : ui().popular) : null,
+                t.popular && p.id !== 'portfolio' ? h('span', { class: 'chip chip-on tier-chip' }, t.badge ? tr(t.badge) : ui().popular) : null,
                 h('span', { class: 'tier-name' }, tr(t.name)),
                 h('span', { class: 'tier-price' }, tr(t.price)),
                 tierNote ? h('small', {}, tierNote) : null,
