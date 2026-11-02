@@ -1013,16 +1013,16 @@ window.SITE_CONTENT = {
         "en": "Photographers, designers and other creatives"
       },
       "headline": {
-        "nl": "Jouw portfolio, professioneel online.",
-        "en": "Your portfolio, professionally online."
+        "nl": "Jouw werk verdient een plek om gezien te worden.",
+        "en": "Your work deserves a place to be seen."
       },
       "textSub": {
-        "nl": "Geef je projecten, diensten en verhaal een plek die bij je past. Ga zelf aan de slag of kies voor persoonlijke hulp bij het online zetten van je portfolio.",
-        "en": "Give your projects, services and story a place that feels like you. Get started yourself or choose personal help to bring your portfolio online."
+        "nl": "Met een portfolio dat bij jou past, geef je jouw verhaal de ruimte en kunnen bezoekers ontdekken wie je bent en wat je doet.",
+        "en": "With a portfolio that feels like you, you give your story room to shine and invite visitors to discover who you are and what you do."
       },
       "text": {
-        "nl": "Laat zien waar je goed in bent, bereik de juiste mensen en maak het makkelijker om contact met je op te nemen.",
-        "en": "Show what you do best, reach the right people and make it easy for them to get in touch."
+        "nl": "Je hebt iets te laten zien. Projecten waar je trots op bent, ideeën die je wilt delen of diensten waarmee je anderen helpt.",
+        "en": "You have something to share. Projects you’re proud of, ideas you want to share, or services that help others."
       },
       "preview": {
         "desktop": "assets/img/portfolio-pagina.jpg",
