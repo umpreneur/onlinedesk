@@ -1107,10 +1107,6 @@ window.SITE_CONTENT = {
           "price": {
             "nl": "€ 79",
             "en": "€79"
-          },
-          "description": {
-            "nl": "Je ontvangt de websitebestanden en een handleiding in het Nederlands of Engels. Je past de website zelf aan en zet hem zelf online.",
-            "en": "You receive the website files and a guide in Dutch or English. You customise and publish the website yourself."
           }
         },
         {
@@ -1118,10 +1114,6 @@ window.SITE_CONTENT = {
           "price": {
             "nl": "€ 249",
             "en": "€249"
-          },
-          "description": {
-            "nl": "Jij past de inhoud aan en koopt je domeinnaam en hosting. Ik help je met de installatie en stel het contactformulier in.",
-            "en": "You edit the content and purchase your domain name and hosting. I help with the setup and configure the contact form."
           }
         },
         {
@@ -1137,10 +1129,6 @@ window.SITE_CONTENT = {
           "badge": {
             "nl": "Met persoonlijke hulp",
             "en": "With personal help"
-          },
-          "description": {
-            "nl": "Ik plaats je teksten, pas kleuren en lettertype aan en zet je website online. Afbeeldingen voeg je zelf toe; ik leg uit hoe je ze toevoegt.",
-            "en": "I add your text, adjust colours and font, and publish your website. You add images yourself; I explain how to add them."
           }
         }
       ],
