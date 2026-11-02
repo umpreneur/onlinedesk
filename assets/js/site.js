@@ -614,7 +614,7 @@
             suitedFor(p),
             highlights.length ? h('ul', { class: 'feature-tags' }, highlights.map((x) => h('li', {}, x))) : null,
             h('div', { class: 'product-facts' },
-              priceLine(p),
+              p.id === 'portfolio' ? null : priceLine(p),
               tr(p.delivery) ? h('p', { class: 'product-meta' }, icon('clock', 16), `${ui().delivery}: ${tr(p.delivery)}`) : null
             ),
             h('div', { class: 'product-actions' },
