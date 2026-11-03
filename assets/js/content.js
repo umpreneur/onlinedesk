@@ -1146,21 +1146,10 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Taalwissel tussen Nederlands en Engels",
-            "en": "Language switch between Dutch and English"
+            "nl": "Website met taalkeuze Nederlands en Engels, inclusief handleiding in beide talen.",
+            "en": "Website with a choice of Dutch or English, including a guide in both languages."
           },
           "values": [true, true, true]
-        },
-        {
-          "label": {
-            "nl": "Handleiding in het Nederlands of Engels",
-            "en": "Guide in Dutch or English"
-          },
-          "values": [
-            true,
-            true,
-            true
-          ]
         },
         {
           "label": {
