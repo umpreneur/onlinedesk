@@ -1175,17 +1175,6 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Uitleg over zelf toevoegen van een site-icoon en deelafbeelding",
-            "en": "Guidance on adding your own site icon and sharing image"
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
             "nl": "Je levert zelf je teksten in het Nederlands en/of Engels aan. Hulp bij schrijven of vertalen is mogelijk tegen meerprijs.",
             "en": "You supply your own text in Dutch and/or English. Writing or translation assistance is available at an additional cost."
           },
