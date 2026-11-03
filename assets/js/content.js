@@ -49,7 +49,7 @@ window.SITE_CONTENT = {
       "icon": "briefcase",
       "color": "sage",
       "image": "assets/img/bedrijf.jpg",
-      "demo": "https://koersvast-advies-demo.netlify.app",
+      "demo": "https://umpreneur.github.io/koersvast-advies-demo/",
       "audience": {
         "nl": "Adviesbureaus en zakelijke dienstverleners",
         "en": "Consultancies and professional service firms"
@@ -538,7 +538,7 @@ window.SITE_CONTENT = {
       "icon": "coffee",
       "color": "sand",
       "image": "assets/img/horeca.jpg",
-      "demo": "https://aantafel-demo.netlify.app",
+      "demo": "https://umpreneur.github.io/aantafel-demo/",
       "audience": {
         "nl": "Lunchrooms, broodjeszaken en kleine afhaalzaken",
         "en": "Lunchrooms, sandwich shops and small takeaways"
@@ -1320,7 +1320,7 @@ window.SITE_CONTENT = {
       "icon": "chat",
       "color": "sage",
       "image": "assets/img/coaching.jpg",
-      "demo": "https://koers-coaching-demo.netlify.app",
+      "demo": "https://umpreneur.github.io/koers-coaching-demo/",
       "audience": {
         "nl": "Coaches, trainers en adviseurs",
         "en": "Coaches, trainers and consultants"
