@@ -1153,19 +1153,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Hulp bij je eigen domeinnaam en hosting",
-            "en": "Help with your own domain name and hosting"
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Technische installatie op jouw hosting, met HTTPS",
-            "en": "Technical setup on your hosting, with HTTPS"
+            "nl": "Hulp bij het kiezen van je domeinnaam en hosting, inclusief installatie met HTTPS. Domein en hosting staan op jouw naam.",
+            "en": "Help choosing your domain name and hosting, including setup with HTTPS. The domain and hosting are in your name."
           },
           "values": [
             false,
