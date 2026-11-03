@@ -1189,6 +1189,13 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
+            "nl": "Ik plaats foto's in overleg.",
+            "en": "I add photos by arrangement."
+          },
+          "values": [false, true, true]
+        },
+        {
+          "label": {
             "nl": "Ik pas de kleuren en het lettertype aan jouw voorkeur of huisstijl aan.",
             "en": "I adjust the colours and font to suit your preferences or brand style."
           },
