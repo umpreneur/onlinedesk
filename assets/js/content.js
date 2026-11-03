@@ -1182,8 +1182,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Kleuren en lettertype naar jouw voorkeur of huisstijl",
-            "en": "Colours and font to suit your preferences or brand style"
+            "nl": "Ik pas de kleuren en het lettertype aan jouw voorkeur of huisstijl aan.",
+            "en": "I adjust the colours and font to suit your preferences or brand style."
           },
           "values": [
             false,
