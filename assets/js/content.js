@@ -1781,3 +1781,25 @@ window.SITE_CONTENT = {
     "formEndpoint": ""
   }
 };
+
+// De pakketpagina's delen dezelfde basis; prijzen en productbeelden blijven per product.
+(() => {
+  const products = window.SITE_CONTENT.products || [];
+  const portfolio = products.find(p => p.id === 'portfolio');
+  if (!portfolio) return;
+  const copy = {
+    heading: { nl: 'Jouw website,\nop jouw manier.', en: 'Your website,\nyour way.' },
+    lead: portfolio.contactCopy.lead,
+    soft: portfolio.contactCopy.soft
+  };
+  products.forEach(p => {
+    p.extras = portfolio.extras;
+    p.extrasNote = portfolio.extrasNote;
+    p.steps = portfolio.steps;
+    p.contactCopy = copy;
+    p.packageNotes = portfolio.packageNotes;
+    p.tiersSub = portfolio.tiersSub;
+    p.tierNote = portfolio.tierNote;
+    p.priceNote = portfolio.priceNote;
+  });
+})();
