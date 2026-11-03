@@ -73,8 +73,8 @@ window.SITE_CONTENT = {
         ]
       },
       "headline": {
-        "nl": "Laat zien wat je doet, en waarom klanten voor je kiezen.",
-        "en": "Show what you do, and why clients choose you."
+        "nl": "Laat zien waarom klanten voor jou kiezen.",
+        "en": "Show why clients choose you."
       },
       "text": {
         "nl": "Een strakke, zakelijke website met zeven pagina's: Home, Over ons, Diensten, Cases, Nieuws, Werken bij en Contact. Met een groot beeld of video bovenaan, kerncijfers, filterbare cases, nieuwsberichten en vacatures. Gemaakt voor mobiel, tablet en desktop.",
