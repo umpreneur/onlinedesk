@@ -73,12 +73,12 @@ window.SITE_CONTENT = {
         ]
       },
       "headline": {
-        "nl": "Laat zien waarom klanten voor jou kiezen.",
-        "en": "Show why clients choose you."
+        "nl": "Een professionele website voor jouw bedrijf.",
+        "en": "A professional website for your business."
       },
       "text": {
-        "nl": "Een strakke, zakelijke website met zeven pagina's: Home, Over ons, Diensten, Cases, Nieuws, Werken bij en Contact. Met een groot beeld of video bovenaan, kerncijfers, filterbare cases, nieuwsberichten en vacatures. Gemaakt voor mobiel, tablet en desktop.",
-        "en": "A clean, professional website with seven pages: Home, About, Services, Case studies, News, Careers and Contact. With a large image or video at the top, key figures, filterable case studies, news and vacancies. Built for mobile, tablet and desktop."
+        "nl": "Een plek waar klanten je bedrijf online kunnen vinden en zien wat je aanbiedt. Een strakke, zakelijke website met zeven pagina's: Home, Over ons, Diensten, Cases, Nieuws, Werken bij en Contact. Met een groot beeld of video bovenaan, kerncijfers, filterbare cases, nieuwsberichten en vacatures. Gemaakt voor mobiel, tablet en desktop.",
+        "en": "A place where clients can find your business online and see what you offer. A clean, professional website with seven pages: Home, About, Services, Case studies, News, Careers and Contact. With a large image or video at the top, key figures, filterable case studies, news and vacancies. Built for mobile, tablet and desktop."
       },
       "textSub": {
         "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en bekijk de demo van het fictieve adviesbureau Koersvast.",
