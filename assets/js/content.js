@@ -1182,8 +1182,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Ik plaats jouw teksten",
-            "en": "I add your text for you"
+            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
+            "en": "I add the text you provide to the website."
           },
           "values": [false, true, true]
         },
@@ -1200,8 +1200,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "2 correctierondes",
-            "en": "2 rounds of revisions"
+            "nl": "Na de eerste aanpassing kun je nog één keer wijzigingen in de huisstijl doorgeven.",
+            "en": "After the initial customisation, you can request changes to your brand styling one more time."
           },
           "values": [
             false,
