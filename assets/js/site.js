@@ -608,7 +608,7 @@
             p.text ? h('p', { class: 'product-text' }, tr(p.text)) : null,
             p.textSub ? h('p', { class: 'product-subtext' }, tr(p.textSub)) : null,
             suitedFor(p),
-            highlights.length ? h('ul', { class: 'feature-tags' }, highlights.map((x) => h('li', {}, x))) : null,
+            p.id !== 'bedrijf' && highlights.length ? h('ul', { class: 'feature-tags' }, highlights.map((x) => h('li', {}, x))) : null,
             h('div', { class: 'product-facts' },
               
               tr(p.delivery) ? h('p', { class: 'product-meta' }, icon('clock', 16), `${ui().delivery}: ${tr(p.delivery)}`) : null
