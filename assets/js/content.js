@@ -1208,26 +1208,6 @@ window.SITE_CONTENT = {
             false,
             true
           ]
-        },
-        {
-          "label": {
-            "nl": "Persoonlijke begeleiding bij het invullen",
-            "en": "Personal guidance on adding your content"
-          },
-          "values": [
-            {
-              "nl": "Geen",
-              "en": "None"
-            },
-            {
-              "nl": "Geen",
-              "en": "None"
-            },
-            {
-              "nl": "Tot oplevering",
-              "en": "Until delivery"
-            }
-          ]
         }
       ],
       "extras": [
