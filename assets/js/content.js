@@ -1064,8 +1064,8 @@ window.SITE_CONTENT = {
               "en": "Preparation"
             },
             "text": {
-              "nl": "Je levert aan wat voor jouw pakket nodig is en regelt zelf je domeinnaam en hosting. Bij Plus en Compleet kan ik je helpen.",
-              "en": "You provide what your package requires and arrange your own domain and hosting. With Plus and Complete, I can help."
+              "nl": "Je levert aan wat voor jouw pakket nodig is en regelt zelf je domeinnaam en hosting. De kosten voor je domeinnaam en hosting betaal je zelf. Deze zijn niet inbegrepen in de pakketprijs. Bij Plus en Compleet kan ik je helpen.",
+              "en": "You provide what your package requires and arrange your own domain and hosting. You pay for your domain and hosting separately; these costs are not included in the package price. With Plus and Complete, I can help."
             }
           },
           {
