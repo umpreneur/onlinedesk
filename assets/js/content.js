@@ -262,8 +262,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
-            "en": "I add the text you provide to the website."
+            "nl": "Ik plaats je aangeleverde teksten voor Home, Over ons en Diensten, plus maximaal twee korte cases. Nieuws en vacatures vul je zelf in.",
+            "en": "I add your supplied text for Home, About and Services, plus up to two short case studies. You add news and vacancies yourself."
           },
           "values": [
             false,
