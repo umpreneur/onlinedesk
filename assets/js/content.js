@@ -1164,8 +1164,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Werkend contactformulier",
-            "en": "Working contact form"
+            "nl": "Installatie van het bestaande contactformulier via Formspree of Web3Forms.",
+            "en": "Setup of the existing contact form using Formspree or Web3Forms."
           },
           "values": [
             false,
@@ -1261,6 +1261,14 @@ window.SITE_CONTENT = {
         }
       ],
       "extras": [
+        {
+          "name": { "nl": "Contactformulier op maat", "en": "Custom contact form" },
+          "price": { "nl": "Op aanvraag", "en": "On request" },
+          "description": {
+            "nl": "Een contactformulier op maat laten maken kan in overleg en tegen meerprijs.",
+            "en": "A custom contact form can be created by arrangement for an additional charge."
+          }
+        },
         {
           "name": {
             "nl": "Webteksten schrijven",
