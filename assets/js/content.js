@@ -1007,7 +1007,7 @@ window.SITE_CONTENT = {
       "icon": "layout",
       "color": "sky",
       "image": "assets/img/portfolio.jpg",
-      "demo": "https://onlinedesk-portfolio.netlify.app",
+      "demo": "https://umpreneur.github.io/onlinedesk-portfolio/",
       "audience": {
         "nl": "Fotografen, ontwerpers en andere makers",
         "en": "Photographers, designers and other creatives"
