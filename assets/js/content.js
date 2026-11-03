@@ -1146,6 +1146,13 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
+            "nl": "De website werkt op mobiel, tablet en desktop.",
+            "en": "The website works on mobile, tablet and desktop."
+          },
+          "values": [true, true, true]
+        },
+        {
+          "label": {
             "nl": "Website met taalkeuze Nederlands en Engels, inclusief handleiding in beide talen.",
             "en": "Website with a choice of Dutch or English, including a guide in both languages."
           },
@@ -1184,28 +1191,6 @@ window.SITE_CONTENT = {
           "label": {
             "nl": "Ik pas de kleuren en het lettertype aan jouw voorkeur of huisstijl aan.",
             "en": "I adjust the colours and font to suit your preferences or brand style."
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Basis-SEO en hulp bij Google Search Console",
-            "en": "Basic SEO and guidance on Google Search Console"
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Controle na persoonlijke invulling op mobiel, tablet en desktop",
-            "en": "Checks after personalisation on mobile, tablet and desktop"
           },
           "values": [
             false,
