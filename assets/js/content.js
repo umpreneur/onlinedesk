@@ -1249,16 +1249,16 @@ window.SITE_CONTENT = {
         },
         {
           "name": {
-            "nl": "Strategisch advies",
-            "en": "Strategic advice"
+            "nl": "Advies over online vindbaarheid",
+            "en": "Online visibility advice"
           },
           "price": {
             "nl": "Op aanvraag",
             "en": "On request"
           },
           "description": {
-            "nl": "Advies over je portfolio en doelgroep, als je opdracht aansluit bij mijn kennis en ervaring.",
-            "en": "Portfolio and audience advice when your project fits my knowledge and experience."
+            "nl": "Praktisch advies over SEO en hoe je jezelf online en op social media presenteert.",
+            "en": "Practical advice on SEO and how you present yourself online and on social media."
           }
         },
         {
