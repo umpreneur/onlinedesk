@@ -169,8 +169,8 @@ window.SITE_CONTENT = {
             "en": "€149"
           },
           "description": {
-            "nl": "Voor wie zelf bouwt. Je ontvangt de code van de template en een Nederlandstalige handleiding. Inhoud aanpassen, het formulier koppelen en online zetten doe je zelf.",
-            "en": "For the DIY builder. You receive the template code and a guide in Dutch. You edit the content, connect the form and publish the website yourself."
+            "nl": "Zelf aan de slag met de websitebestanden.",
+            "en": "Work on the website files yourself."
           }
         },
         {
@@ -180,8 +180,8 @@ window.SITE_CONTENT = {
             "en": "€449"
           },
           "description": {
-            "nl": "Jij vult in, ik regel de techniek. Ik zet je website online op je eigen domein en stel het contactformulier in. Jij vult je teksten zelf in.",
-            "en": "You add the content; I handle the technical setup. I publish your website on your own domain and set up the contact form. You add your text yourself."
+            "nl": "Hulp bij installatie en het plaatsen van je teksten.",
+            "en": "Help with setup and adding your text."
           }
         },
         {
@@ -193,118 +193,115 @@ window.SITE_CONTENT = {
             "nl": "€ 899",
             "en": "€899"
           },
+          "description": {
+            "nl": "Plus, met kleuren en lettertype aangepast aan jouw huisstijl en een correctieronde.",
+            "en": "Plus, with colours and font adapted to your brand and one revision round."
+          },
           "popular": true,
           "badge": {
-            "nl": "Voor je ingericht",
-            "en": "Set up for you"
-          },
-          "description": {
-            "nl": "Jij runt je bedrijf, ik regel de inrichting, teksten, huisstijl en livegang. Alleen afbeeldingen voeg je zelf toe; ik leg uit hoe je ze toevoegt.",
-            "en": "You run your business; I handle setup, text, brand style and launch. You add the images yourself; I explain how to add them."
+            "nl": "Met persoonlijke hulp",
+            "en": "With personal help"
           }
         }
       ],
       "compare": [
         {
           "label": {
-            "nl": "Templatecode met 7 pagina's (HTML/CSS/JS)",
-            "en": "Template code with 7 pages (HTML/CSS/JS)"
-          },
-          "values": [true, true, true]
-        },
-        {
-          "label": {
-            "nl": "Nederlandstalige handleiding (teksten, kleuren, nieuws, cases, vacatures)",
-            "en": "Guide in Dutch (text, colours, news, case studies, vacancies)"
-          },
-          "values": [true, true, true]
-        },
-        {
-          "label": {
-            "nl": "Code zelf aanpassen en op eigen hosting gebruiken",
-            "en": "Edit the code and use your own hosting"
-          },
-          "values": [true, true, true]
-        },
-        {
-          "label": {
-            "nl": "Domeinnaam registreren en koppelen (1e jaar)",
-            "en": "Domain name registered and connected (1st year)"
-          },
-          "values": [false, true, true]
-        },
-        {
-          "label": {
-            "nl": "Hosting instellen met HTTPS/SSL",
-            "en": "Hosting set up with HTTPS/SSL"
-          },
-          "values": [false, true, true]
-        },
-        {
-          "label": {
-            "nl": "Werkend contactformulier",
-            "en": "Working contact form"
-          },
-          "values": [false, true, true]
-        },
-        {
-          "label": {
-            "nl": "Contactgegevens, adres en openingstijden ingesteld",
-            "en": "Contact details, address and opening hours set up"
-          },
-          "values": [false, true, true]
-        },
-        {
-          "label": {
-            "nl": "Uitleg over zelf toevoegen van site-icoon, deelafbeelding en grote foto of video bovenaan",
-            "en": "Guidance on adding your own site icon, sharing image and large hero image or video"
-          },
-          "values": [false, true, true]
-        },
-        {
-          "label": {
-            "nl": "Jouw aangeleverde teksten geplaatst: diensten, cases, nieuws en vacatures",
-            "en": "Your supplied text added: services, case studies, news and vacancies"
-          },
-          "values": [false, false, true]
-        },
-        {
-          "label": {
-            "nl": "Kleuren en lettertype aangepast aan je huisstijl",
-            "en": "Colours and font matched to your brand style"
-          },
-          "values": [false, false, true]
-        },
-        {
-          "label": {
-            "nl": "Basis voor Google: SEO, Search Console en Bedrijfsprofiel",
-            "en": "Google basics: SEO, Search Console and Business Profile"
-          },
-          "values": [false, false, true]
-        },
-        {
-          "label": {
-            "nl": "Controle op mobiel, tablet en desktop",
-            "en": "Checks on mobile, tablet and desktop"
-          },
-          "values": [false, false, true]
-        },
-        {
-          "label": {
-            "nl": "2 correctierondes",
-            "en": "2 rounds of revisions"
-          },
-          "values": [false, false, true]
-        },
-        {
-          "label": {
-            "nl": "Support",
-            "en": "Support"
+            "nl": "De website is gemaakt met HTML, CSS en JavaScript. Aanpassen gaat via de code; er is geen visuele editor.",
+            "en": "Website files in HTML, CSS and JavaScript. You edit the website in code; there is no visual editor."
           },
           "values": [
-            { "nl": "Geen", "en": "None" },
-            { "nl": "Geen", "en": "None" },
-            { "nl": "Tot oplevering", "en": "Until delivery" }
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "De website werkt op mobiel, tablet en desktop.",
+            "en": "The website works on mobile, tablet and desktop."
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Website met taalkeuze Nederlands en Engels, inclusief handleiding in beide talen.",
+            "en": "Website with a choice of Dutch or English, including a guide in both languages."
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Hulp bij het kiezen van je domeinnaam en hosting, inclusief installatie met HTTPS. Domein en hosting staan op jouw naam.",
+            "en": "Help choosing your domain name and hosting, including setup with HTTPS. The domain and hosting are in your name."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Installatie van het bestaande contactformulier via Formspree of Web3Forms. De dienst kan eigen kosten of gebruikslimieten hebben.",
+            "en": "Setup of the existing contact form using Formspree or Web3Forms. The service may have its own charges or usage limits."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
+            "en": "I add the text you provide to the website."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Ik plaats foto's in overleg.",
+            "en": "I add photos by arrangement."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Ik pas de kleuren en het lettertype aan jouw voorkeur of huisstijl aan.",
+            "en": "I adjust the colours and font to suit your preferences or brand style."
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Na de eerste aanpassing kun je nog één keer wijzigingen in de huisstijl doorgeven.",
+            "en": "After the initial customisation, you can request changes to your brand styling one more time."
+          },
+          "values": [
+            false,
+            false,
+            true
           ]
         }
       ],
@@ -398,6 +395,153 @@ window.SITE_CONTENT = {
     },
     {
       "id": "webshop",
+      "compare": [
+        {
+          "label": {
+            "nl": "De website is gemaakt met HTML, CSS en JavaScript. Aanpassen gaat via de code; er is geen visuele editor.",
+            "en": "Website files in HTML, CSS and JavaScript. You edit the website in code; there is no visual editor."
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "De website werkt op mobiel, tablet en desktop.",
+            "en": "The website works on mobile, tablet and desktop."
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Website met taalkeuze Nederlands en Engels, inclusief handleiding in beide talen.",
+            "en": "Website with a choice of Dutch or English, including a guide in both languages."
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Hulp bij het kiezen van je domeinnaam en hosting, inclusief installatie met HTTPS. Domein en hosting staan op jouw naam.",
+            "en": "Help choosing your domain name and hosting, including setup with HTTPS. The domain and hosting are in your name."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Installatie van het bestaande contactformulier via Formspree of Web3Forms. De dienst kan eigen kosten of gebruikslimieten hebben.",
+            "en": "Setup of the existing contact form using Formspree or Web3Forms. The service may have its own charges or usage limits."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
+            "en": "I add the text you provide to the website."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Ik plaats foto's in overleg.",
+            "en": "I add photos by arrangement."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Ik pas de kleuren en het lettertype aan jouw voorkeur of huisstijl aan.",
+            "en": "I adjust the colours and font to suit your preferences or brand style."
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Na de eerste aanpassing kun je nog één keer wijzigingen in de huisstijl doorgeven.",
+            "en": "After the initial customisation, you can request changes to your brand styling one more time."
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        }
+      ],
+      "tiers": [
+        {
+          "name": {
+            "nl": "Basic",
+            "en": "Basic"
+          },
+          "price": {
+            "nl": "Prijs volgt",
+            "en": "Price to follow"
+          },
+          "description": {
+            "nl": "Zelf aan de slag met de websitebestanden.",
+            "en": "Work on the website files yourself."
+          }
+        },
+        {
+          "name": "Plus",
+          "price": {
+            "nl": "Prijs volgt",
+            "en": "Price to follow"
+          },
+          "description": {
+            "nl": "Hulp bij installatie en het plaatsen van je teksten.",
+            "en": "Help with setup and adding your text."
+          }
+        },
+        {
+          "name": {
+            "nl": "Compleet",
+            "en": "Complete"
+          },
+          "price": {
+            "nl": "Prijs volgt",
+            "en": "Price to follow"
+          },
+          "description": {
+            "nl": "Plus, met kleuren en lettertype aangepast aan jouw huisstijl en een correctieronde.",
+            "en": "Plus, with colours and font adapted to your brand and one revision round."
+          },
+          "popular": true,
+          "badge": {
+            "nl": "Met persoonlijke hulp",
+            "en": "With personal help"
+          }
+        }
+      ],
       "tagline": {
         "nl": "Verkoop jouw producten online.",
         "en": "Sell your products online."
@@ -640,8 +784,8 @@ window.SITE_CONTENT = {
             "en": "€199"
           },
           "description": {
-            "nl": "Voor wie zelf bouwt. Je ontvangt alleen de code van de template. Inhoud aanpassen, koppelingen instellen en online zetten doe je zelf.",
-            "en": "For the DIY builder. You receive only the template code. You edit the content, configure integrations and publish the website yourself."
+            "nl": "Zelf aan de slag met de websitebestanden.",
+            "en": "Work on the website files yourself."
           }
         },
         {
@@ -651,8 +795,8 @@ window.SITE_CONTENT = {
             "en": "€599"
           },
           "description": {
-            "nl": "Jij vult in, ik regel de techniek. Ik zet je website online en stel reserveren, afhalen, bezorgen en online betalen in. Jij vult je menukaart en teksten in.",
-            "en": "You add the content; I handle the technical setup. I publish your website and configure reservations, pickup, delivery and online payments. You add your menu and text."
+            "nl": "Hulp bij installatie en het plaatsen van je teksten.",
+            "en": "Help with setup and adding your text."
           }
         },
         {
@@ -664,22 +808,22 @@ window.SITE_CONTENT = {
             "nl": "€ 1.199",
             "en": "€1,199"
           },
+          "description": {
+            "nl": "Plus, met kleuren en lettertype aangepast aan jouw huisstijl en een correctieronde.",
+            "en": "Plus, with colours and font adapted to your brand and one revision round."
+          },
           "popular": true,
           "badge": {
-            "nl": "Voor je ingericht",
-            "en": "Set up for you"
-          },
-          "description": {
-            "nl": "Jij runt je zaak, ik regel de inrichting, menukaart, teksten, koppelingen en livegang. Alleen afbeeldingen voeg je zelf toe; ik leg uit hoe je ze toevoegt.",
-            "en": "You run your business; I handle setup, your menu, text, integrations and launch. You add the images yourself; I explain how to add them."
+            "nl": "Met persoonlijke hulp",
+            "en": "With personal help"
           }
         }
       ],
       "compare": [
         {
           "label": {
-            "nl": "Templatecode voor menukaart, reserveren en bestellen",
-            "en": "Template code for menus, reservations and ordering"
+            "nl": "De website is gemaakt met HTML, CSS en JavaScript. Aanpassen gaat via de code; er is geen visuele editor.",
+            "en": "Website files in HTML, CSS and JavaScript. You edit the website in code; there is no visual editor."
           },
           "values": [
             true,
@@ -689,8 +833,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Code zelf aanpassen en op eigen hosting gebruiken",
-            "en": "Edit the code and use your own hosting"
+            "nl": "De website werkt op mobiel, tablet en desktop.",
+            "en": "The website works on mobile, tablet and desktop."
           },
           "values": [
             true,
@@ -700,8 +844,19 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Domeinnaam registreren en koppelen (1e jaar)",
-            "en": "Domain name registered and connected (1st year)"
+            "nl": "Website met taalkeuze Nederlands en Engels, inclusief handleiding in beide talen.",
+            "en": "Website with a choice of Dutch or English, including a guide in both languages."
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Hulp bij het kiezen van je domeinnaam en hosting, inclusief installatie met HTTPS. Domein en hosting staan op jouw naam.",
+            "en": "Help choosing your domain name and hosting, including setup with HTTPS. The domain and hosting are in your name."
           },
           "values": [
             false,
@@ -711,8 +866,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Hosting instellen met HTTPS/SSL",
-            "en": "Hosting set up with HTTPS/SSL"
+            "nl": "Installatie van het bestaande contactformulier via Formspree of Web3Forms. De dienst kan eigen kosten of gebruikslimieten hebben.",
+            "en": "Setup of the existing contact form using Formspree or Web3Forms. The service may have its own charges or usage limits."
           },
           "values": [
             false,
@@ -722,8 +877,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Reserveren en bestellen voor afhalen ingesteld",
-            "en": "Reservations and pickup ordering configured"
+            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
+            "en": "I add the text you provide to the website."
           },
           "values": [
             false,
@@ -733,8 +888,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Bezorggebieden, bezorgkosten en minimumbedrag ingesteld",
-            "en": "Delivery areas, fees and minimum order configured"
+            "nl": "Ik plaats foto's in overleg.",
+            "en": "I add photos by arrangement."
           },
           "values": [
             false,
@@ -744,41 +899,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Online betalen gekoppeld (account op jouw naam)",
-            "en": "Online payment connected (account in your name)"
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Openingstijden, adres, route en contact ingesteld",
-            "en": "Opening hours, address, directions and contact set up"
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Uitleg over zelf toevoegen van site-icoon en deelafbeelding",
-            "en": "Guidance on adding your own site icon and sharing image"
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Menukaart ingevuld met jouw gerechten, prijzen en allergenen",
-            "en": "Menu populated with your dishes, prices and allergens"
+            "nl": "Ik pas de kleuren en het lettertype aan jouw voorkeur of huisstijl aan.",
+            "en": "I adjust the colours and font to suit your preferences or brand style."
           },
           "values": [
             false,
@@ -788,77 +910,13 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Jouw aangeleverde teksten geplaatst",
-            "en": "Your supplied text added"
+            "nl": "Na de eerste aanpassing kun je nog één keer wijzigingen in de huisstijl doorgeven.",
+            "en": "After the initial customisation, you can request changes to your brand styling one more time."
           },
           "values": [
             false,
             false,
             true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Kleuren en lettertype aangepast aan je huisstijl",
-            "en": "Colours and font matched to your brand style"
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Basis voor Google: SEO, Search Console en Bedrijfsprofiel",
-            "en": "Google basics: SEO, Search Console and Business Profile"
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Samen een testbestelling en controle op mobiel, tablet en desktop",
-            "en": "Test order together and checks on mobile, tablet and desktop"
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "2 correctierondes",
-            "en": "2 rounds of revisions"
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Support",
-            "en": "Support"
-          },
-          "values": [
-            {
-              "nl": "Geen",
-              "en": "None"
-            },
-            {
-              "nl": "Geen",
-              "en": "None"
-            },
-            {
-              "nl": "Tot oplevering",
-              "en": "Until delivery"
-            }
           ]
         }
       ],
@@ -1450,14 +1508,17 @@ window.SITE_CONTENT = {
       },
       "tiers": [
         {
-          "name": "Basic",
+          "name": {
+            "nl": "Basic",
+            "en": "Basic"
+          },
           "price": {
             "nl": "Op offerte",
             "en": "On request"
           },
           "description": {
-            "nl": "Voor wie zelf bouwt. Je ontvangt de code van de template. Inhoud aanpassen, formulieren en agenda koppelen en online zetten doe je zelf.",
-            "en": "For the DIY builder. You receive the template code. You edit the content, connect the forms and calendar and publish the website yourself."
+            "nl": "Zelf aan de slag met de websitebestanden.",
+            "en": "Work on the website files yourself."
           }
         },
         {
@@ -1467,8 +1528,8 @@ window.SITE_CONTENT = {
             "en": "On request"
           },
           "description": {
-            "nl": "Jij vult in, ik regel de techniek. Ik zet je website online op je eigen domein en koppel het contactformulier en je online agenda. Jij vult je teksten zelf in.",
-            "en": "You add the content; I handle the technical setup. I publish your website on your own domain and connect the contact form and your online calendar. You add your text yourself."
+            "nl": "Hulp bij installatie en het plaatsen van je teksten.",
+            "en": "Help with setup and adding your text."
           }
         },
         {
@@ -1480,22 +1541,22 @@ window.SITE_CONTENT = {
             "nl": "Op offerte",
             "en": "On request"
           },
+          "description": {
+            "nl": "Plus, met kleuren en lettertype aangepast aan jouw huisstijl en een correctieronde.",
+            "en": "Plus, with colours and font adapted to your brand and one revision round."
+          },
           "popular": true,
           "badge": {
-            "nl": "Voor je ingericht",
-            "en": "Set up for you"
-          },
-          "description": {
-            "nl": "Jij coacht, ik regel de inrichting, teksten, huisstijl en livegang. Alleen afbeeldingen voeg je zelf toe; ik leg uit hoe je ze toevoegt.",
-            "en": "You coach; I handle setup, text, brand style and launch. You add the images yourself; I explain how to add them."
+            "nl": "Met persoonlijke hulp",
+            "en": "With personal help"
           }
         }
       ],
       "compare": [
         {
           "label": {
-            "nl": "Templatecode met 16 pagina's (HTML/CSS/JS)",
-            "en": "Template code with 16 pages (HTML/CSS/JS)"
+            "nl": "De website is gemaakt met HTML, CSS en JavaScript. Aanpassen gaat via de code; er is geen visuele editor.",
+            "en": "Website files in HTML, CSS and JavaScript. You edit the website in code; there is no visual editor."
           },
           "values": [
             true,
@@ -1505,8 +1566,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Alle inhoud en instellingen in één configuratiebestand",
-            "en": "All content and settings in one configuration file"
+            "nl": "De website werkt op mobiel, tablet en desktop.",
+            "en": "The website works on mobile, tablet and desktop."
           },
           "values": [
             true,
@@ -1516,8 +1577,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Afspraakmodule: aanvraagformulier, link of ingesloten agenda (bijv. Calendly of Cal.com)",
-            "en": "Booking module: request form, link or embedded calendar (e.g. Calendly or Cal.com)"
+            "nl": "Website met taalkeuze Nederlands en Engels, inclusief handleiding in beide talen.",
+            "en": "Website with a choice of Dutch or English, including a guide in both languages."
           },
           "values": [
             true,
@@ -1527,30 +1588,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Nieuwsbriefaanmelding op elke pagina (koppelbaar aan bijv. MailerLite, Brevo of Laposta)",
-            "en": "Newsletter sign-up on every page (connects to e.g. MailerLite, Brevo or Laposta)"
-          },
-          "values": [
-            true,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Code zelf aanpassen en op eigen hosting gebruiken",
-            "en": "Edit the code and use your own hosting"
-          },
-          "values": [
-            true,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Domeinnaam registreren en koppelen",
-            "en": "Domain name registered and connected"
+            "nl": "Hulp bij het kiezen van je domeinnaam en hosting, inclusief installatie met HTTPS. Domein en hosting staan op jouw naam.",
+            "en": "Help choosing your domain name and hosting, including setup with HTTPS. The domain and hosting are in your name."
           },
           "values": [
             false,
@@ -1560,8 +1599,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Hosting instellen met HTTPS/SSL",
-            "en": "Hosting set up with HTTPS/SSL"
+            "nl": "Installatie van het bestaande contactformulier via Formspree of Web3Forms. De dienst kan eigen kosten of gebruikslimieten hebben.",
+            "en": "Setup of the existing contact form using Formspree or Web3Forms. The service may have its own charges or usage limits."
           },
           "values": [
             false,
@@ -1571,8 +1610,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Werkend contactformulier",
-            "en": "Working contact form"
+            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
+            "en": "I add the text you provide to the website."
           },
           "values": [
             false,
@@ -1582,8 +1621,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Afspraak maken gekoppeld aan jouw online agenda",
-            "en": "Booking connected to your online calendar"
+            "nl": "Ik plaats foto's in overleg.",
+            "en": "I add photos by arrangement."
           },
           "values": [
             false,
@@ -1593,41 +1632,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Nieuwsbriefformulier gekoppeld aan jouw nieuwsbriefdienst",
-            "en": "Newsletter form connected to your newsletter service"
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Contactgegevens, gesprekstypen en tijden ingesteld",
-            "en": "Contact details, session types and hours set up"
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Uitleg over zelf toevoegen van portretfoto, sfeerfoto's en site-icoon",
-            "en": "Guidance on adding your own portrait, mood photos and site icon"
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Jouw aangeleverde teksten geplaatst: onderwerpen, over mij, aanbod, vragen en blog",
-            "en": "Your supplied text added: topics, about me, services, FAQ and blog"
+            "nl": "Ik pas de kleuren en het lettertype aan jouw voorkeur of huisstijl aan.",
+            "en": "I adjust the colours and font to suit your preferences or brand style."
           },
           "values": [
             false,
@@ -1637,30 +1643,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Kleuren en lettertype aangepast aan je huisstijl",
-            "en": "Colours and font matched to your brand style"
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Basis voor Google: SEO, Search Console en Bedrijfsprofiel",
-            "en": "Google basics: SEO, Search Console and Business Profile"
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Controle op mobiel, tablet en desktop",
-            "en": "Checks on mobile, tablet and desktop"
+            "nl": "Na de eerste aanpassing kun je nog één keer wijzigingen in de huisstijl doorgeven.",
+            "en": "After the initial customisation, you can request changes to your brand styling one more time."
           },
           "values": [
             false,
