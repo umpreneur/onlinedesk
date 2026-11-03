@@ -585,11 +585,7 @@
     const L = ui().lists;
     const demo = safeUrl(p.demo);
     const highlights = trList(p.highlights);
-    const groups = ['features', 'included', 'extra', 'recurring', 'supply', 'receive', 'terms']
-      .map((k) => { const items = trList(p[k]); return items.length ? h('div', { class: 'detail-card reveal' }, h('h3', {}, L[k]), checks(items)) : null; })
-      .filter(Boolean);
     const extras = extrasBlock(p);
-    if (extras && p.id !== 'portfolio') groups.splice(p.features ? 1 : 0, 0, extras);
     const hasTiers = (p.tiers || []).length > 0;
 
     return h('section', { class: `section detail tone-${colorOf(p.color, i)}`, id: 'top' },
@@ -631,11 +627,9 @@
         sectionsBlock(p),
         galleryBlock(p),
         tiersBlock(p, title),
-        p.id === 'portfolio' ? extras : null,
+        extras,
         stepsBlock(p),
-        groups.length
-          ? h('div', { class: `detail-grid${groups.length === 2 ? ' is-two' : ''}` }, groups)
-          : p.id === 'portfolio' ? null : h('div', { class: 'detail-pending reveal' }, icon('clock', 22), h('p', {}, ui().detailsPending))
+        null
       )
     );
   }
