@@ -396,7 +396,7 @@
             h('tr', {},
               h('th', { scope: 'col', class: 'compare-corner' }, h('span', { class: 'sr-only' }, T.title)),
               tiers.map((t) => h('th', { scope: 'col', class: pop(t).trim() || null },
-                t.popular && p.id !== 'portfolio' ? h('span', { class: 'chip chip-on tier-chip' }, t.badge ? tr(t.badge) : ui().popular) : null,
+                
                 h('span', { class: 'tier-name' }, tr(t.name)),
                 h('span', { class: 'tier-price' }, tr(t.price)),
                 tierNote ? h('small', {}, tierNote) : null,
@@ -614,7 +614,7 @@
             suitedFor(p),
             highlights.length ? h('ul', { class: 'feature-tags' }, highlights.map((x) => h('li', {}, x))) : null,
             h('div', { class: 'product-facts' },
-              p.id === 'portfolio' ? null : priceLine(p),
+              
               tr(p.delivery) ? h('p', { class: 'product-meta' }, icon('clock', 16), `${ui().delivery}: ${tr(p.delivery)}`) : null
             ),
             h('div', { class: 'product-actions' },
