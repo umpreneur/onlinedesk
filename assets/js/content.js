@@ -1225,8 +1225,8 @@ window.SITE_CONTENT = {
             "en": "Website copywriting"
           },
           "price": {
-            "nl": "Op aanvraag",
-            "en": "On request"
+            "nl": "€ 45 per uur excl. btw (€ 54,45 incl. btw)",
+            "en": "€45 per hour excl. VAT (€54.45 incl. VAT)"
           },
           "description": {
             "nl": "Heldere teksten die passen bij jou en je website.",
@@ -1239,8 +1239,8 @@ window.SITE_CONTENT = {
             "en": "Translation"
           },
           "price": {
-            "nl": "Op aanvraag",
-            "en": "On request"
+            "nl": "€ 45 per uur excl. btw (€ 54,45 incl. btw)",
+            "en": "€45 per hour excl. VAT (€54.45 incl. VAT)"
           },
           "description": {
             "nl": "Je webteksten vertaald tussen Nederlands en Engels.",
