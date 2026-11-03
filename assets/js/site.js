@@ -414,7 +414,7 @@
             h('tr', {},
               h('td', {}),
               tiers.map((t) => h('td', { class: pop(t).trim() || null },
-                p.id === 'portfolio' ? h('a', { class: `btn ${t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm'}`, href: '#contact', onclick: () => { const select = document.querySelector('#portfolio-package'); if (select) select.value = t === tiers[0] ? 'Basic' : t === tiers[1] ? 'Plus' : 'Compleet'; } }, `${T.choose} ${tr(t.name)}`) : requestButton(`${T.choose} ${tr(t.name)}`, title, tr(t.name), t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm')))
+                h('a', { class: `btn ${t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm'}`, href: '#contact', onclick: () => { const select = document.querySelector('#product-package'); if (select) select.value = tr(t.name); } }, `${T.choose} ${tr(t.name)}`)))
             )
           )
         )
@@ -726,7 +726,8 @@
     const mode = endpoint ? 'send' : (email() ? 'mail' : 'off');
     const copy = PAGE === 'pakket' ? currentProduct()?.p.contactCopy : null;
     const t = { ...ui().form, ...(copy ? Object.fromEntries(Object.entries(copy).map(([key, value]) => [key, tr(value)])) : {}) };
-    const isPortfolio = PAGE === 'pakket' && currentProduct()?.p.id === 'portfolio';
+    const product = PAGE === 'pakket' ? currentProduct()?.p : null;
+    const hasPackages = Boolean(product?.tiers?.length);
     const phone = String(c.phone || '').trim();
     const direct = [
       email() && ['mail', t.directMail, email(), `mailto:${email()}?subject=${encodeURIComponent(ui().mail.generalSubject)}`],
@@ -746,12 +747,13 @@
       h('h3', {}, t.title),
       field('naam', t.name, 'text'),
       field('email', t.email, 'email'),
-      isPortfolio ? h('label', { class: 'field-row' }, h('span', {}, lang === 'nl' ? 'Pakketkeuze' : 'Package'), h('select', { id: 'portfolio-package', name: 'pakket', disabled: mode === 'off' }, h('option', { value: '' }, lang === 'nl' ? 'Ik twijfel nog' : 'Still deciding'), ['Basic', 'Plus', 'Compleet'].map((value) => h('option', { value }, value === 'Compleet' && lang === 'en' ? 'Complete' : value)))) : null,
-      field('bericht', isPortfolio ? (lang === 'nl' ? 'Je wensen of vraag' : 'Your wishes or question') : t.message, 'textarea'),
+      product ? h('input', { type: 'hidden', name: 'product', value: tr(product.title) }) : null,
+      hasPackages ? h('label', { class: 'field-row' }, h('span', {}, lang === 'nl' ? 'Pakketkeuze' : 'Package'), h('select', { id: 'product-package', name: 'pakket', disabled: mode === 'off' }, h('option', { value: '' }, lang === 'nl' ? 'Ik twijfel nog' : 'Still deciding'), product.tiers.map((tier) => h('option', { value: tr(tier.name) }, tr(tier.name))))) : null,
+      field('bericht', hasPackages ? (lang === 'nl' ? 'Je wensen of vraag' : 'Your wishes or question') : t.message, 'textarea'),
       // Onzichtbaar veld tegen spam-robots.
       h('input', { type: 'text', name: '_gotcha', tabindex: '-1', autocomplete: 'off', class: 'hp', 'aria-hidden': 'true' }),
       h('button', { class: 'btn btn-primary btn-block', type: 'submit', disabled: mode === 'off' },
-        isPortfolio ? (lang === 'nl' ? 'Verstuur je bericht' : 'Send your message') : mode === 'mail' ? t.submitMail : t.submit, icon('arrow', 18)),
+        hasPackages ? (lang === 'nl' ? 'Verstuur je bericht' : 'Send your message') : mode === 'mail' ? t.submitMail : t.submit, icon('arrow', 18)),
       status,
       h('p', { class: 'form-note' }, mode === 'off' ? t.noteOff : mode === 'mail' ? t.noteMail : t.notePrivacy)
     );
@@ -763,7 +765,7 @@
       const data = Object.fromEntries(new FormData(form));
       if (data._gotcha) return;
       if (mode === 'mail') {
-        const body = `${data.bericht}\n\n${isPortfolio ? `${lang === 'nl' ? 'Pakketkeuze' : 'Package'}: ${data.pakket || (lang === 'nl' ? 'Ik twijfel nog' : 'Still deciding')}\n` : ''}${t.name}: ${data.naam}\n${t.email}: ${data.email}\n`;
+        const body = `${data.bericht}\n\n${product ? `${lang === 'nl' ? 'Product' : 'Product'}: ${tr(product.title)}\n` : ''}${hasPackages ? `${lang === 'nl' ? 'Pakketkeuze' : 'Package'}: ${data.pakket || (lang === 'nl' ? 'Ik twijfel nog' : 'Still deciding')}\n` : ''}${t.name}: ${data.naam}\n${t.email}: ${data.email}\n`;
         location.href = `mailto:${email()}?subject=${encodeURIComponent(ui().mail.generalSubject)}&body=${encodeURIComponent(body)}`;
         status.textContent = t.mailOpened; status.className = 'form-status';
         return;
