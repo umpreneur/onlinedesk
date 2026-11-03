@@ -1175,14 +1175,10 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Je levert zelf je teksten in het Nederlands en/of Engels aan. Hulp bij schrijven of vertalen is mogelijk tegen meerprijs.",
-            "en": "You supply your own text in Dutch and/or English. Writing or translation assistance is available at an additional cost."
+            "nl": "Ik plaats jouw teksten",
+            "en": "I add your text for you"
           },
-          "values": [
-            { "nl": "Je plaatst ze zelf", "en": "You add it yourself" },
-            { "nl": "Je plaatst ze zelf", "en": "You add it yourself" },
-            { "nl": "Ik plaats ze", "en": "I add it for you" }
-          ]
+          "values": [false, true, true]
         },
         {
           "label": {
