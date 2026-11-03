@@ -1284,8 +1284,8 @@ window.SITE_CONTENT = {
         }
       ],
       "extrasNote": {
-        "nl": "Deze extra diensten zijn beschikbaar tegen een meerprijs. De kosten bespreken we vooraf.",
-        "en": "These optional services cost extra. We discuss the price in advance."
+        "nl": "Deze extra diensten zijn beschikbaar tegen een meerprijs. De kosten bespreken we vooraf. Voor schrijven en vertalen krijg je vooraf een ureninschatting.",
+        "en": "These optional services cost extra. We discuss the price in advance. For writing and translation, you receive an estimated number of hours beforehand."
       },
       "contactCopy": {
         "heading": {
