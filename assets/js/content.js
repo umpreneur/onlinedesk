@@ -1084,8 +1084,8 @@ window.SITE_CONTENT = {
               "en": "Delivery"
             },
             "text": {
-              "nl": "Je ontvangt de bestanden. Bij Plus en Compleet help ik de website online te zetten. Onderhoud is niet inbegrepen.",
-              "en": "You receive the files. With Plus and Complete, I help publish the website. Maintenance is not included."
+              "nl": "Je ontvangt de bestanden. Bij Plus en Compleet help ik de website online te zetten. Onderhoud is niet inbegrepen. Hulp of wijzigingen na oplevering zijn mogelijk in overleg en tegen meerprijs.",
+              "en": "You receive the files. With Plus and Complete, I help publish the website. Maintenance is not included. Help or changes after delivery are available by arrangement for an additional charge."
             }
           }
         ]
