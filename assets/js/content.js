@@ -1107,14 +1107,16 @@ window.SITE_CONTENT = {
           "price": {
             "nl": "€ 79",
             "en": "€79"
-          }
+          },
+          "description": { "nl": "Zelf aan de slag met de websitebestanden.", "en": "Work on the website files yourself." }
         },
         {
           "name": "Plus",
           "price": {
             "nl": "€ 249",
             "en": "€249"
-          }
+          },
+          "description": { "nl": "Hulp bij installatie en het plaatsen van je teksten.", "en": "Help with setup and adding your text." }
         },
         {
           "name": {
@@ -1125,6 +1127,7 @@ window.SITE_CONTENT = {
             "nl": "€ 595",
             "en": "€595"
           },
+          "description": { "nl": "Plus, met kleuren en lettertype aangepast aan jouw huisstijl en een correctieronde.", "en": "Plus, with colours and font adapted to your brand and one revision round." },
           "popular": true,
           "badge": {
             "nl": "Met persoonlijke hulp",
@@ -1171,8 +1174,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Installatie van het bestaande contactformulier via Formspree of Web3Forms.",
-            "en": "Setup of the existing contact form using Formspree or Web3Forms."
+            "nl": "Installatie van het bestaande contactformulier via Formspree of Web3Forms. De dienst kan eigen kosten of gebruikslimieten hebben.",
+            "en": "Setup of the existing contact form using Formspree or Web3Forms. The service may have its own charges or usage limits."
           },
           "values": [
             false,
