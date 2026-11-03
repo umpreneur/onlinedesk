@@ -1135,7 +1135,7 @@ window.SITE_CONTENT = {
       "compare": [
         {
           "label": {
-            "nl": "Websitebestanden in HTML, CSS en JavaScript. Je past de website aan in de code; er is geen visuele editor.",
+            "nl": "De website is gemaakt met HTML, CSS en JavaScript. Aanpassen gaat via de code; er is geen visuele editor.",
             "en": "Website files in HTML, CSS and JavaScript. You edit the website in code; there is no visual editor."
           },
           "values": [
