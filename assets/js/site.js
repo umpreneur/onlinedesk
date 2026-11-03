@@ -588,7 +588,7 @@
     const extras = extrasBlock(p);
     const hasTiers = (p.tiers || []).length > 0;
 
-    return h('section', { class: `section detail tone-${colorOf(p.color, i)}`, id: 'top' },
+    return h('section', { class: `section detail product-${p.id} tone-${colorOf(p.color, i)}`, id: 'top' },
       h('div', { class: 'container' },
         h('a', { class: 'back-link', href: './#producten' }, icon('back', 16), ui().allPackages),
         h('div', { class: 'detail-hero reveal' },
