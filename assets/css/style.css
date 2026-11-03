@@ -819,3 +819,11 @@ button { font: inherit; color: inherit; }
   .contact-card { border-radius: 28px; }
   .footer-inner { flex-direction: column; }
 }
+
+/* Achtergronden bij de voorbeelden, afgestemd op de betreffende demo. */
+.detail.product-bedrijf { --preview-bg: #dfe7e6; }
+.detail.product-webshop { --preview-bg: #e6e9da; }
+.detail.product-horeca { --preview-bg: #f5e6da; }
+.detail.product-portfolio { --preview-bg: #ece6ff; }
+.detail.product-coaching { --preview-bg: #e8e1d5; }
+.detail .detail-visual, .detail .preview-stage { background: var(--preview-bg, var(--tone-soft)); }
