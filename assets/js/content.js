@@ -1566,12 +1566,12 @@ window.SITE_CONTENT = {
               "en": "Request form; you confirm manually."
             },
             {
-              "nl": "Ik sluit een bestaande gratis boekingsapplicatie aan.",
-              "en": "I connect an existing free booking app."
+              "nl": "Ik sluit een bestaande boekingsapplicatie aan.",
+              "en": "I connect an existing booking app."
             },
             {
-              "nl": "Ik sluit een bestaande gratis boekingsapplicatie aan.",
-              "en": "I connect an existing free booking app."
+              "nl": "Ik sluit een bestaande boekingsapplicatie aan.",
+              "en": "I connect an existing booking app."
             }
           ]
         },
@@ -1680,14 +1680,14 @@ window.SITE_CONTENT = {
           "Je koopt een bestaande template. Bij Basic doe je het zelf; bij Plus regel ik de techniek; bij Compleet ook je teksten en huisstijl.",
           "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt.",
           "Reviews op de voorbeeldsite zijn gemarkeerde voorbeeldinhoud. Plaats alleen echte reviews, met toestemming van je cliënt.",
-          "Bij Basic bevestig je afspraakaanvragen zelf. Bij Plus en Compleet sluit ik een bestaande gratis boekingsapplicatie aan.",
+          "Bij Basic bevestig je afspraakaanvragen zelf. Bij Plus en Compleet sluit ik een bestaande boekingsapplicatie aan.",
           "De website is Nederlandstalig. Je past hem aan in HTML/CSS/JS-bestanden; er is geen visuele editor."
         ],
         "en": [
           "You are buying an existing template. With Basic you do it yourself; with Plus I handle the technical setup; with Complete I also add your text and brand style.",
           "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them.",
           "Reviews on the sample site are marked sample content. Only publish genuine reviews, with your client's permission.",
-          "With Basic, you confirm appointment requests manually. With Plus and Complete, I connect an existing free booking app.",
+          "With Basic, you confirm appointment requests manually. With Plus and Complete, I connect an existing booking app.",
           "The website is in Dutch. You edit it in HTML/CSS/JS files; there is no visual editor."
         ]
       },
