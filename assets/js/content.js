@@ -81,7 +81,7 @@ window.SITE_CONTENT = {
         "en": "A website that inspires trust and helps you reach new clients."
       },
       "textSub": {
-        "nl": "Zelf starten of hulp bij de inrichting? Kies jouw pakket en bekijk de demo van het fictieve adviesbureau Koersvast.",
+        "nl": "Een eigen plek online waar je bedrijf tot zijn recht komt en bezoekers zich welkom voelen.",
         "en": "Start yourself or get help with setup? Choose your package and explore the demo of the fictional consultancy Koersvast."
       },
       "preview": {
