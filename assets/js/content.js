@@ -1487,27 +1487,15 @@ window.SITE_CONTENT = {
           }
         ]
       },
-      "price": "",
-      "priceText": {
-        "nl": "Prijs op offerte",
-        "en": "Price on request"
-      },
+      "price": { "nl": "€ 149", "en": "€149" },
+      "priceText": "",
       "priceNote": {
         "nl": "incl. btw",
         "en": "incl. VAT"
       },
-      "requestLabel": {
-        "nl": "Vraag een offerte aan",
-        "en": "Request a quote"
-      },
-      "tiersSub": {
-        "nl": "Kies wat bij je past. De prijs voor jouw pakket ontvang je in een offerte.",
-        "en": "Choose what suits you. You receive the price for your package in a quote."
-      },
-      "tierNote": {
-        "nl": "Prijs in je offerte",
-        "en": "Price in your quote"
-      },
+      "requestLabel": { "nl": "Vraag dit pakket aan", "en": "Request this package" },
+      "tiersSub": { "nl": "Alle prijzen zijn eenmalig en inclusief btw.", "en": "All prices are one-off and include VAT." },
+      "tierNote": { "nl": "incl. btw · eenmalig", "en": "incl. VAT · one-off" },
       "tiers": [
         {
           "name": {
@@ -1515,8 +1503,7 @@ window.SITE_CONTENT = {
             "en": "Basic"
           },
           "price": {
-            "nl": "Op offerte",
-            "en": "On request"
+            "nl": "€ 149", "en": "€149"
           },
           "description": {
             "nl": "Zelf aan de slag met de websitebestanden.",
@@ -1526,8 +1513,7 @@ window.SITE_CONTENT = {
         {
           "name": "Plus",
           "price": {
-            "nl": "Op offerte",
-            "en": "On request"
+            "nl": "€ 599", "en": "€599"
           },
           "description": {
             "nl": "Hulp bij installatie en het plaatsen van je teksten.",
@@ -1540,8 +1526,7 @@ window.SITE_CONTENT = {
             "en": "Complete"
           },
           "price": {
-            "nl": "Op offerte",
-            "en": "On request"
+            "nl": "€ 1.049", "en": "€1,049"
           },
           "description": {
             "nl": "Plus, met kleuren en lettertype aangepast aan jouw huisstijl en een correctieronde.",
