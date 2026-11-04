@@ -1792,15 +1792,16 @@ window.SITE_CONTENT = {
     lead: portfolio.contactCopy.lead,
     soft: portfolio.contactCopy.soft
   };
+  const sharedExtras = portfolio.extras;
   products.forEach(p => {
-    p.extras = ['bedrijf', 'portfolio'].includes(p.id) ? [...portfolio.extras, {
+    p.extras = ['bedrijf', 'portfolio'].includes(p.id) ? [...sharedExtras, {
       name: { nl: 'Hostingbeheer in overleg', en: 'Hosting management by arrangement' },
       description: {
         nl: 'Hostingbeheer na oplevering, in overleg afgestemd op jouw website en wensen. Werkzaamheden en kosten spreken we vooraf af.',
         en: 'Hosting management after delivery, tailored by agreement to your website and needs. We agree on the work and costs in advance.'
       },
       price: { nl: 'Op aanvraag', en: 'On request' }
-    }] : portfolio.extras;
+    }] : sharedExtras;
     p.extrasNote = portfolio.extrasNote;
     p.steps = portfolio.steps;
     p.contactCopy = copy;
