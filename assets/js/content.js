@@ -1796,8 +1796,8 @@ window.SITE_CONTENT = {
     p.extras = p.id === 'bedrijf' ? [...portfolio.extras, {
       name: { nl: 'Hostingbeheer in overleg', en: 'Hosting management by arrangement' },
       description: {
-        nl: 'Hostingbeheer na oplevering is op aanvraag mogelijk. Ik bekijk per aanvraag of ik het beheer kan verzorgen. De werkzaamheden en kosten spreken we vooraf af.',
-        en: 'Hosting management after delivery may be available on request. I assess each request to see whether I can provide the service. We agree on the work and costs in advance.'
+        nl: 'Hostingbeheer na oplevering, in overleg afgestemd op jouw website en wensen. Werkzaamheden en kosten spreken we vooraf af.',
+        en: 'Hosting management after delivery, tailored by agreement to your website and needs. We agree on the work and costs in advance.'
       },
       price: { nl: 'Op aanvraag', en: 'On request' }
     }] : portfolio.extras;
