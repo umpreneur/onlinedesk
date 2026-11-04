@@ -1412,12 +1412,12 @@ window.SITE_CONTENT = {
         "en": "Space for your coaching."
       },
       "text": {
-        "nl": "Een warme, rustige plek online waar bezoekers herkenning vinden en ontdekken wat jouw begeleiding voor hen kan betekenen.",
-        "en": "A warm, calm space online where visitors feel understood and discover what your coaching could mean for them."
+        "nl": "Een website die de rust en aandacht van jouw praktijk uitstraalt.",
+        "en": "A website that reflects the calm and care of your practice."
       },
       "textSub": {
-        "nl": "Met ruimte voor jouw werkwijze, aanbod en inzichten, zodat bezoekers op hun eigen tempo kunnen kennismaken met jouw praktijk.",
-        "en": "Room for your approach, services and insights, so visitors can get to know your practice at their own pace."
+        "nl": "Waar bezoekers zich herkennen in wat je schrijft en vertrouwd raken met jouw manier van begeleiden.",
+        "en": "Where visitors recognise themselves in your words and become familiar with your approach to coaching."
       },
       "preview": {
         "desktop": "assets/img/coaching-pagina.jpg",
