@@ -1793,7 +1793,7 @@ window.SITE_CONTENT = {
     soft: portfolio.contactCopy.soft
   };
   products.forEach(p => {
-    p.extras = p.id === 'bedrijf' ? [...portfolio.extras, {
+    p.extras = ['bedrijf', 'portfolio'].includes(p.id) ? [...portfolio.extras, {
       name: { nl: 'Hostingbeheer in overleg', en: 'Hosting management by arrangement' },
       description: {
         nl: 'Hostingbeheer na oplevering, in overleg afgestemd op jouw website en wensen. Werkzaamheden en kosten spreken we vooraf af.',
