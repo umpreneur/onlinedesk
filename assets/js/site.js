@@ -400,7 +400,7 @@
                 h('span', { class: 'tier-name' }, tr(t.name)),
                 h('span', { class: 'tier-price' }, tr(t.price)),
                 tierNote ? h('small', {}, tierNote) : null,
-                p.id !== 'bedrijf' && t.description ? h('small', {}, tr(t.description)) : null
+                !['bedrijf', 'coaching'].includes(p.id) && t.description ? h('small', {}, tr(t.description)) : null
               ))
             )
           ),
