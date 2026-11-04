@@ -1793,7 +1793,14 @@ window.SITE_CONTENT = {
     soft: portfolio.contactCopy.soft
   };
   products.forEach(p => {
-    p.extras = portfolio.extras;
+    p.extras = p.id === 'bedrijf' ? [...portfolio.extras, {
+      name: { nl: 'Hostingbeheer in overleg', en: 'Hosting management by arrangement' },
+      description: {
+        nl: 'Hostingbeheer na oplevering is op aanvraag mogelijk. Ik bekijk per aanvraag of ik het beheer kan verzorgen. De werkzaamheden en kosten spreken we vooraf af.',
+        en: 'Hosting management after delivery may be available on request. I assess each request to see whether I can provide the service. We agree on the work and costs in advance.'
+      },
+      price: { nl: 'Op aanvraag', en: 'On request' }
+    }] : portfolio.extras;
     p.extrasNote = portfolio.extrasNote;
     p.steps = portfolio.steps;
     p.contactCopy = copy;
