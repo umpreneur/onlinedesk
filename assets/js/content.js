@@ -48,7 +48,7 @@ window.SITE_CONTENT = {
       },
       "icon": "briefcase",
       "color": "sage",
-      "image": "assets/img/bedrijf.jpg",
+      "image": "assets/img/bedrijf.jpg?v=20261104",
       "demo": "https://umpreneur.github.io/koersvast-advies-demo/",
       "audience": {
         "nl": "Adviesbureaus en zakelijke dienstverleners",
@@ -61,7 +61,8 @@ window.SITE_CONTENT = {
           "Cases",
           "Nieuws",
           "Vacatures",
-          "Contactformulier"
+          "Contactformulier",
+          "Nederlands en Engels"
         ],
         "en": [
           "Large hero image",
@@ -69,7 +70,8 @@ window.SITE_CONTENT = {
           "Case studies",
           "News",
           "Vacancies",
-          "Contact form"
+          "Contact form",
+          "Dutch and English"
         ]
       },
       "headline": {
@@ -85,8 +87,8 @@ window.SITE_CONTENT = {
         "en": "Start yourself or get help with setup? Choose your package and explore the demo of the fictional consultancy Koersvast."
       },
       "preview": {
-        "desktop": "assets/img/bedrijf-pagina.jpg",
-        "mobile": "assets/img/bedrijf-pagina-mobiel.jpg"
+        "desktop": "assets/img/bedrijf-pagina.jpg?v=20261104",
+        "mobile": "assets/img/bedrijf-pagina-mobiel.jpg?v=20261104"
       },
       "steps": {
         "title": {
@@ -309,7 +311,7 @@ window.SITE_CONTENT = {
         "nl": [
           "Je koopt een bestaande template. Bij Basic doe je het zelf; bij Plus regel ik de techniek; bij Compleet ook je teksten en huisstijl.",
           "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt.",
-          "De website is Nederlandstalig. Je past hem aan in HTML/CSS/JS-bestanden; er is geen visuele editor.",
+          "De website is tweetalig: bezoekers wisselen tussen Nederlands en Engels. Je past hem aan in HTML/CSS/JS-bestanden; er is geen visuele editor.",
           "Bij Plus en Compleet staan domein en hosting op jouw naam. Je betaalt geen verplicht abonnement aan mij.",
           "Het eerste jaar domein is inbegrepen bij Plus en Compleet. Daarna betaal je de verlenging zelf. Eventuele hosting- en formulierkosten staan vooraf in je offerte.",
           "Een extra pagina of aanvullende wens? Bekijk de extra's; we spreken de kosten vooraf af."
@@ -317,7 +319,7 @@ window.SITE_CONTENT = {
         "en": [
           "You are buying an existing template. With Basic you do it yourself; with Plus I handle the technical setup; with Complete I also add your text and brand style.",
           "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them.",
-          "The website is in Dutch. You edit it in HTML/CSS/JS files; there is no visual editor.",
+          "The website is bilingual: visitors switch between Dutch and English. You edit it in HTML/CSS/JS files; there is no visual editor.",
           "With Plus and Complete, the domain and hosting are in your name. There is no mandatory subscription to me.",
           "The first year of the domain is included with Plus and Complete. You pay for renewals afterwards. Any hosting and form service costs are stated in your quote upfront.",
           "Need an extra page or something extra? Explore the extras; we agree on costs in advance."
@@ -329,7 +331,7 @@ window.SITE_CONTENT = {
           "price": { "nl": "€ 95", "en": "€95" }
         },
         {
-          "name": { "nl": "Extra taal (bijv. Engels)", "en": "Extra language (e.g. English)" },
+          "name": { "nl": "Extra taal naast Nederlands en Engels", "en": "Extra language besides Dutch and English" },
           "price": { "nl": "€ 235,95", "en": "€235.95" }
         },
         {
@@ -1064,7 +1066,7 @@ window.SITE_CONTENT = {
       },
       "icon": "layout",
       "color": "sky",
-      "image": "assets/img/portfolio.jpg",
+      "image": "assets/img/portfolio.jpg?v=20261104",
       "demo": "https://umpreneur.github.io/onlinedesk-portfolio/",
       "audience": {
         "nl": "Fotografen, ontwerpers en andere makers",
@@ -1083,8 +1085,8 @@ window.SITE_CONTENT = {
         "en": "You have something to share. Projects you’re proud of, ideas you want to share, or services that help others."
       },
       "preview": {
-        "desktop": "assets/img/portfolio-pagina.jpg",
-        "mobile": "assets/img/portfolio-pagina-mobiel.jpg"
+        "desktop": "assets/img/portfolio-pagina.jpg?v=20261104",
+        "mobile": "assets/img/portfolio-pagina-mobiel.jpg?v=20261104"
       },
       "steps": {
         "title": {
