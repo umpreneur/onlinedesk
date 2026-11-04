@@ -262,8 +262,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Ik plaats je aangeleverde teksten voor Home, Over ons en Diensten, plus maximaal twee korte cases. Nieuws en vacatures vul je zelf in.",
-            "en": "I add your supplied text for Home, About and Services, plus up to two short case studies. You add news and vacancies yourself."
+            "nl": "We spreken vooraf af hoeveel tekst en afbeeldingen binnen het pakket vallen; extra werk alleen in overleg.",
+            "en": "We agree in advance how much text and how many images are included in the package; additional work only by arrangement."
           },
           "values": [
             false,
@@ -453,8 +453,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
-            "en": "I add the text you provide to the website."
+            "nl": "We spreken vooraf af hoeveel tekst en afbeeldingen binnen het pakket vallen; extra werk alleen in overleg.",
+            "en": "We agree in advance how much text and how many images are included in the package; additional work only by arrangement."
           },
           "values": [
             false,
@@ -877,8 +877,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
-            "en": "I add the text you provide to the website."
+            "nl": "We spreken vooraf af hoeveel tekst en afbeeldingen binnen het pakket vallen; extra werk alleen in overleg.",
+            "en": "We agree in advance how much text and how many images are included in the package; additional work only by arrangement."
           },
           "values": [
             false,
@@ -1243,8 +1243,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
-            "en": "I add the text you provide to the website."
+            "nl": "We spreken vooraf af hoeveel tekst en afbeeldingen binnen het pakket vallen; extra werk alleen in overleg.",
+            "en": "We agree in advance how much text and how many images are included in the package; additional work only by arrangement."
           },
           "values": [false, true, true]
         },
@@ -1610,8 +1610,8 @@ window.SITE_CONTENT = {
         },
         {
           "label": {
-            "nl": "Ik verwerk jouw aangeleverde teksten in de website.",
-            "en": "I add the text you provide to the website."
+            "nl": "We spreken vooraf af hoeveel tekst en afbeeldingen binnen het pakket vallen; extra werk alleen in overleg.",
+            "en": "We agree in advance how much text and how many images are included in the package; additional work only by arrangement."
           },
           "values": [
             false,
