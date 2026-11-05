@@ -1,3 +1,7 @@
 # Werkbestanden bevatten je inhoud en codes onversleuteld
 portfolio-werkbestand-*.json
 .claude/
+
+# Verkoopversies van templates: alleen lokaal, niet openbaar
+adviesbureau-template/
+koersvast.html
