@@ -690,11 +690,11 @@ window.SITE_CONTENT = {
         "en": "Lunchrooms, sandwich shops and small takeaways"
       },
       "headline": {
-        "nl": "Laat gasten reserveren, bestellen en aanschuiven.",
+        "nl": "Jouw zaak online net zo gastvrij.",
         "en": "Let guests book a table, order and enjoy."
       },
       "text": {
-        "nl": "Maak van bezoekers gasten. Met deze template presenteer je jouw zaak en menukaart én bied je reserveren, afhalen en bezorgen op één plek. Gasten bestellen rechtstreeks bij jou en betalen online.",
+        "nl": "Laat mensen meteen denken: daar wil ik naartoe.",
         "en": "Turn visitors into guests. This template brings your business, menu, table reservations, pickup and delivery together. Guests order directly from you and pay online."
       },
       "textSub": {
