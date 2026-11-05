@@ -785,10 +785,7 @@ window.SITE_CONTENT = {
             "nl": "€ 199",
             "en": "€199"
           },
-          "description": {
-            "nl": "Zelf aan de slag met de websitebestanden.",
-            "en": "Work on the website files yourself."
-          }
+          "description": ""
         },
         {
           "name": "Plus",
@@ -796,10 +793,7 @@ window.SITE_CONTENT = {
             "nl": "€ 599",
             "en": "€599"
           },
-          "description": {
-            "nl": "Hulp bij installatie en het plaatsen van je teksten.",
-            "en": "Help with setup and adding your text."
-          }
+          "description": ""
         },
         {
           "name": {
@@ -810,10 +804,7 @@ window.SITE_CONTENT = {
             "nl": "€ 1.199",
             "en": "€1,199"
           },
-          "description": {
-            "nl": "Plus, met kleuren en lettertype aangepast aan jouw huisstijl en een correctieronde.",
-            "en": "Plus, with colours and font adapted to your brand and one revision round."
-          },
+          "description": "",
           "popular": true,
           "badge": {
             "nl": "Met persoonlijke hulp",
@@ -822,6 +813,61 @@ window.SITE_CONTENT = {
         }
       ],
       "compare": [
+        {
+          "label": {
+            "nl": "Menukaart, informatie over je zaak, openingstijden en contact.",
+            "en": "Menu, business information, opening hours and contact details."
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Werkend bestellen voor afhalen.",
+            "en": "Working online ordering for pickup."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Online betalen bij je bestelling.",
+            "en": "Online payment for orders."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Bestellen voor bezorgen, met bezorggebied en bezorgkosten.",
+            "en": "Delivery ordering, including delivery areas and fees."
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Tafelreserveringen; de werkwijze spreken we vooraf af.",
+            "en": "Table reservations; we agree on the booking process in advance."
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        },
         {
           "label": {
             "nl": "De website is gemaakt met HTML, CSS en JavaScript. Aanpassen gaat via de code; er is geen visuele editor.",
@@ -1814,7 +1860,7 @@ window.SITE_CONTENT = {
     p.contactCopy = copy;
     p.packageNotes = portfolio.packageNotes;
     p.tiersSub = portfolio.tiersSub;
-    p.tierNote = portfolio.tierNote;
+    p.tierNote = p.id === 'horeca' ? { nl: 'incl. btw', en: 'incl. VAT' } : portfolio.tierNote;
     p.priceNote = portfolio.priceNote;
   });
 })();
