@@ -815,61 +815,6 @@ window.SITE_CONTENT = {
       "compare": [
         {
           "label": {
-            "nl": "Menukaart, informatie over je zaak, openingstijden en contact.",
-            "en": "Menu, business information, opening hours and contact details."
-          },
-          "values": [
-            true,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Werkend bestellen voor afhalen.",
-            "en": "Working online ordering for pickup."
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Online betalen bij je bestelling.",
-            "en": "Online payment for orders."
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Bestellen voor bezorgen, met bezorggebied en bezorgkosten.",
-            "en": "Delivery ordering, including delivery areas and fees."
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Tafelreserveringen; de werkwijze spreken we vooraf af.",
-            "en": "Table reservations; we agree on the booking process in advance."
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
             "nl": "De website is gemaakt met HTML, CSS en JavaScript. Aanpassen gaat via de code; er is geen visuele editor.",
             "en": "Website files in HTML, CSS and JavaScript. You edit the website in code; there is no visual editor."
           },
@@ -920,6 +865,61 @@ window.SITE_CONTENT = {
           "values": [
             false,
             true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Menukaart, informatie over je zaak, openingstijden en contact.",
+            "en": "Menu, business information, opening hours and contact details."
+          },
+          "values": [
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Werkend bestellen voor afhalen.",
+            "en": "Working online ordering for pickup."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Online betalen bij je bestelling.",
+            "en": "Online payment for orders."
+          },
+          "values": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Bestellen voor bezorgen, met bezorggebied en bezorgkosten.",
+            "en": "Delivery ordering, including delivery areas and fees."
+          },
+          "values": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "label": {
+            "nl": "Tafelreserveringen; de werkwijze spreken we vooraf af.",
+            "en": "Table reservations; we agree on the booking process in advance."
+          },
+          "values": [
+            false,
+            false,
             true
           ]
         },
