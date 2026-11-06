@@ -1888,9 +1888,11 @@ window.SITE_CONTENT = {
     p.extrasNote = portfolio.extrasNote;
     p.steps = portfolio.steps;
     p.contactCopy = copy;
-    p.packageNotes = portfolio.packageNotes;
-    p.tiersSub = portfolio.tiersSub;
-    p.tierNote = p.id === 'horeca' ? { nl: 'incl. btw', en: 'incl. VAT' } : portfolio.tierNote;
-    p.priceNote = portfolio.priceNote;
+    if (p.id !== 'webshop') {
+      p.packageNotes = portfolio.packageNotes;
+      p.tiersSub = portfolio.tiersSub;
+      p.tierNote = p.id === 'horeca' ? { nl: 'incl. btw', en: 'incl. VAT' } : portfolio.tierNote;
+      p.priceNote = portfolio.priceNote;
+    }
   });
 })();
