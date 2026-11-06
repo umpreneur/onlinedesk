@@ -539,8 +539,8 @@ window.SITE_CONTENT = {
             {
                   "name": "Plus",
                   "price": {
-                        "nl": "€ 1.199",
-                        "en": "€1,199"
+                        "nl": "€ 1.999",
+          "en": "€1,999"
                   },
                   "description": ""
             },
@@ -550,8 +550,8 @@ window.SITE_CONTENT = {
                         "en": "Complete"
                   },
                   "price": {
-                        "nl": "€ 1.799",
-                        "en": "€1,799"
+                        "nl": "€ 2.999",
+          "en": "€2,999"
                   },
                   "description": "",
                   "popular": true,
