@@ -559,23 +559,18 @@ window.SITE_CONTENT = {
         "nl": "Ondernemers die producten verkopen",
         "en": "Entrepreneurs who sell products"
       },
-      "highlights": {
-        "nl": [
-          "Productfoto's",
-          "Categorieën",
-          "Productpagina",
-          "Winkelwagen"
-        ],
-        "en": [
-          "Product photos",
-          "Categories",
-          "Product page",
-          "Shopping cart"
-        ]
+      "highlights": { "nl": [], "en": [] },
+      "headline": {
+        "nl": "Een eigen webshop voor jouw merk.",
+        "en": "Your own webshop for your brand."
       },
       "text": {
-        "nl": "Een complete online winkel, klaar om te verkopen. Ik richt hem in met jouw producten en lever hem online op.",
-        "en": "A complete online store, ready to sell. I set it up with your products and deliver it online."
+        "nl": "Een webshop die vertrouwen uitstraalt en je helpt jouw producten te verkopen.",
+        "en": "A webshop that inspires trust and helps you sell your products."
+      },
+      "textSub": {
+        "nl": "Een eigen plek online waar je merk tot zijn recht komt en klanten gemakkelijk bestellen.",
+        "en": "Your own place online where your brand shines and customers can order with ease."
       },
       "price": {
         "nl": "€ 1.495",
@@ -585,10 +580,7 @@ window.SITE_CONTENT = {
         "nl": "excl. btw",
         "en": "excl. VAT"
       },
-      "delivery": {
-        "nl": "2–3 weken",
-        "en": "2–3 weeks"
-      },
+      "delivery": "",
       "features": {
         "nl": [
           "Productpagina's en winkelwagen",
