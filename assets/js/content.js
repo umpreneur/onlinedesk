@@ -397,6 +397,7 @@ window.SITE_CONTENT = {
     },
     {
       "id": "webshop",
+      "tierNote": { "nl": "incl. btw", "en": "incl. VAT" },
       "compare": [
         {
           "label": {
@@ -508,10 +509,7 @@ window.SITE_CONTENT = {
             "nl": "Prijs volgt",
             "en": "Price to follow"
           },
-          "description": {
-            "nl": "Zelf aan de slag met de websitebestanden.",
-            "en": "Work on the website files yourself."
-          }
+          "description": ""
         },
         {
           "name": "Plus",
@@ -519,10 +517,7 @@ window.SITE_CONTENT = {
             "nl": "Prijs volgt",
             "en": "Price to follow"
           },
-          "description": {
-            "nl": "Hulp bij installatie en het plaatsen van je teksten.",
-            "en": "Help with setup and adding your text."
-          }
+          "description": ""
         },
         {
           "name": {
@@ -533,10 +528,7 @@ window.SITE_CONTENT = {
             "nl": "Prijs volgt",
             "en": "Price to follow"
           },
-          "description": {
-            "nl": "Plus, met kleuren en lettertype aangepast aan jouw huisstijl en een correctieronde.",
-            "en": "Plus, with colours and font adapted to your brand and one revision round."
-          },
+          "description": "",
           "popular": true,
           "badge": {
             "nl": "Met persoonlijke hulp",
