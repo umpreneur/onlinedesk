@@ -540,7 +540,7 @@
         sectionHead(ui().productsEyebrow, ui().productsTitle, ui().productsText),
         h('div', { class: 'package-grid' },
           list.map((p) =>
-            h('a', { class: 'pcard reveal', href: detailHref(p), id: `product-${p.id}` },
+            h('a', { class: 'pcard reveal', href: p.demo || detailHref(p), id: `product-${p.id}` },
               wireframe(p),
               h('div', { class: 'pcard-row' },
                 h('h3', {}, tr(p.title)),
