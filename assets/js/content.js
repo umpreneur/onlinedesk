@@ -396,149 +396,174 @@ window.SITE_CONTENT = {
       "delivery": ""
     },
     {
-      "id": "webshop",
-      "tierNote": { "nl": "incl. btw", "en": "incl. VAT" },
+            "id": "webshop",
+      "tierNote": {
+            "nl": "incl. btw",
+            "en": "incl. VAT"
+      },
       "compare": [
-        {
-          "label": {
-            "nl": "De website is gemaakt met HTML, CSS en JavaScript. Aanpassen gaat via de code; er is geen visuele editor.",
-            "en": "Website files in HTML, CSS and JavaScript. You edit the website in code; there is no visual editor."
-          },
-          "values": [
-            true,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "De website werkt op mobiel, tablet en desktop.",
-            "en": "The website works on mobile, tablet and desktop."
-          },
-          "values": [
-            true,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Website met taalkeuze Nederlands en Engels, inclusief handleiding in beide talen.",
-            "en": "Website with a choice of Dutch or English, including a guide in both languages."
-          },
-          "values": [
-            true,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Hulp bij het kiezen van je domeinnaam en hosting, inclusief installatie met HTTPS. Domein en hosting staan op jouw naam.",
-            "en": "Help choosing your domain name and hosting, including setup with HTTPS. The domain and hosting are in your name."
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Installatie van het bestaande contactformulier via Formspree of Web3Forms. De dienst kan eigen kosten of gebruikslimieten hebben.",
-            "en": "Setup of the existing contact form using Formspree or Web3Forms. The service may have its own charges or usage limits."
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "We spreken vooraf af hoeveel tekst en afbeeldingen binnen het pakket vallen; extra werk alleen in overleg.",
-            "en": "We agree in advance how much text and how many images are included in the package; additional work only by arrangement."
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Ik plaats foto's in overleg.",
-            "en": "I add photos by arrangement."
-          },
-          "values": [
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Ik pas de kleuren en het lettertype aan jouw voorkeur of huisstijl aan.",
-            "en": "I adjust the colours and font to suit your preferences or brand style."
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "label": {
-            "nl": "Na de eerste aanpassing kun je nog één keer wijzigingen in de huisstijl doorgeven.",
-            "en": "After the initial customisation, you can request changes to your brand styling one more time."
-          },
-          "values": [
-            false,
-            false,
-            true
-          ]
-        }
+            {
+                  "label": {
+                        "nl": "Bestaand webshopontwerp met productpagina’s en winkelmand.",
+                        "en": "Existing webshop design with product pages and a shopping cart."
+                  },
+                  "values": [
+                        true,
+                        true,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Geschikt voor mobiel, tablet en desktop.",
+                        "en": "Suitable for mobile, tablet and desktop."
+                  },
+                  "values": [
+                        true,
+                        true,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Templatebestanden en handleiding om zelf aan de slag te gaan.",
+                        "en": "Template files and a guide to get started yourself."
+                  },
+                  "values": [
+                        true,
+                        true,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Installatie en online zetten op jouw domein.",
+                        "en": "Installation and publishing on your domain."
+                  },
+                  "values": [
+                        false,
+                        true,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Een standaard betaalprovider aansluiten en instellen.",
+                        "en": "Connect and configure a standard payment provider."
+                  },
+                  "values": [
+                        false,
+                        true,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Bestelbeheer en automatische bevestigingsmails aansluiten.",
+                        "en": "Set up order management and automatic confirmation emails."
+                  },
+                  "values": [
+                        false,
+                        true,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Standaard verzendinstellingen inrichten.",
+                        "en": "Configure standard shipping settings."
+                  },
+                  "values": [
+                        false,
+                        true,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Je voert zelf producten in met de aangeleverde uitleg.",
+                        "en": "You add products yourself using the supplied instructions."
+                  },
+                  "values": [
+                        true,
+                        true,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Kleuren en lettertype aanpassen aan jouw huisstijl.",
+                        "en": "Adapt colours and font to your brand."
+                  },
+                  "values": [
+                        false,
+                        false,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Maximaal 10 producten invoeren met jouw aangeleverde teksten en beelden.",
+                        "en": "Add up to 10 products using the text and images you supply."
+                  },
+                  "values": [
+                        false,
+                        false,
+                        true
+                  ]
+            },
+            {
+                  "label": {
+                        "nl": "Eén correctieronde op de afgesproken inrichting.",
+                        "en": "One revision round on the agreed setup."
+                  },
+                  "values": [
+                        false,
+                        false,
+                        true
+                  ]
+            }
       ],
       "tiers": [
-        {
-          "name": {
-            "nl": "Basic",
-            "en": "Basic"
-          },
-          "price": {
-            "nl": "Prijs volgt",
-            "en": "Price to follow"
-          },
-          "description": ""
-        },
-        {
-          "name": "Plus",
-          "price": {
-            "nl": "Prijs volgt",
-            "en": "Price to follow"
-          },
-          "description": ""
-        },
-        {
-          "name": {
-            "nl": "Compleet",
-            "en": "Complete"
-          },
-          "price": {
-            "nl": "Prijs volgt",
-            "en": "Price to follow"
-          },
-          "description": "",
-          "popular": true,
-          "badge": {
-            "nl": "Met persoonlijke hulp",
-            "en": "With personal help"
-          }
-        }
+            {
+                  "name": {
+                        "nl": "Basic",
+                        "en": "Basic"
+                  },
+                  "price": {
+                        "nl": "€ 199",
+                        "en": "€199"
+                  },
+                  "description": ""
+            },
+            {
+                  "name": "Plus",
+                  "price": {
+                        "nl": "€ 1.199",
+                        "en": "€1,199"
+                  },
+                  "description": ""
+            },
+            {
+                  "name": {
+                        "nl": "Compleet",
+                        "en": "Complete"
+                  },
+                  "price": {
+                        "nl": "€ 1.799",
+                        "en": "€1,799"
+                  },
+                  "description": "",
+                  "popular": true,
+                  "badge": {
+                        "nl": "Met persoonlijke hulp",
+                        "en": "With personal help"
+                  }
+            }
       ],
       "tagline": {
-        "nl": "Verkoop jouw producten online.",
-        "en": "Sell your products online."
+            "nl": "Verkoop jouw producten online.",
+            "en": "Sell your products online."
       },
       "wire": "shop",
       "title": "Webshop",
@@ -548,112 +573,133 @@ window.SITE_CONTENT = {
       "image": "assets/img/webshop.jpg",
       "demo": "https://umpreneur.github.io/linde-wonen/",
       "audience": {
-        "nl": "Ondernemers die producten verkopen",
-        "en": "Entrepreneurs who sell products"
+            "nl": "Ondernemers die producten verkopen",
+            "en": "Entrepreneurs who sell products"
       },
-      "highlights": { "nl": [], "en": [] },
+      "highlights": {
+            "nl": [],
+            "en": []
+      },
       "headline": {
-        "nl": "Een eigen webshop voor jouw merk.",
-        "en": "Your own webshop for your brand."
+            "nl": "Een eigen webshop voor jouw merk.",
+            "en": "Your own webshop for your brand."
       },
       "text": {
-        "nl": "Een webshop die vertrouwen uitstraalt en je helpt jouw producten te verkopen.",
-        "en": "A webshop that inspires trust and helps you sell your products."
+            "nl": "Een webshop die vertrouwen uitstraalt en je helpt jouw producten te verkopen.",
+            "en": "A webshop that inspires trust and helps you sell your products."
       },
       "textSub": {
-        "nl": "Een eigen plek online waar je merk tot zijn recht komt en klanten gemakkelijk bestellen.",
-        "en": "Your own place online where your brand shines and customers can order with ease."
+            "nl": "Een eigen plek online waar je merk tot zijn recht komt en klanten gemakkelijk bestellen.",
+            "en": "Your own place online where your brand shines and customers can order with ease."
       },
       "price": {
-        "nl": "€ 1.495",
-        "en": "€1,495"
+            "nl": "€ 199",
+            "en": "€199"
       },
       "priceNote": {
-        "nl": "excl. btw",
-        "en": "excl. VAT"
+            "nl": "incl. btw",
+            "en": "incl. VAT"
       },
       "delivery": "",
       "features": {
-        "nl": [
-          "Productpagina's en winkelwagen",
-          "Veilig betalen met iDEAL, creditcard en meer",
-          "Geschikt voor mobiel, tablet en desktop"
-        ],
-        "en": [
-          "Product pages and shopping cart",
-          "Secure payments with iDEAL, credit card and more",
-          "Suitable for mobile, tablet and desktop"
-        ]
+            "nl": [
+                  "Productpagina's en winkelwagen",
+                  "Veilig betalen met iDEAL, creditcard en meer",
+                  "Geschikt voor mobiel, tablet en desktop"
+            ],
+            "en": [
+                  "Product pages and shopping cart",
+                  "Secure payments with iDEAL, credit card and more",
+                  "Suitable for mobile, tablet and desktop"
+            ]
       },
       "included": {
-        "nl": [
-          "Professioneel ontwerp in jouw huisstijl",
-          "Tot 50 producten voor je ingericht",
-          "Domeinnaam en hosting voor 1 jaar",
-          "Korte uitleg, zodat je zelf verder kunt",
-          "Oplevering: ik zet de webshop online",
-          "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt."
-        ],
-        "en": [
-          "Professional design in your brand style",
-          "Up to 50 products set up for you",
-          "Domain name and hosting for 1 year",
-          "A short walkthrough so you can carry on yourself",
-          "Delivery: I put the webshop online",
-          "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them."
-        ]
+            "nl": [
+                  "Professioneel ontwerp in jouw huisstijl",
+                  "Tot 50 producten voor je ingericht",
+                  "Domeinnaam en hosting voor 1 jaar",
+                  "Korte uitleg, zodat je zelf verder kunt",
+                  "Oplevering: ik zet de webshop online",
+                  "Afbeeldingen voeg je zelf toe, ook bij Compleet. Ik lever of plaats ze niet, maar leg uit hoe je ze toevoegt."
+            ],
+            "en": [
+                  "Professional design in your brand style",
+                  "Up to 50 products set up for you",
+                  "Domain name and hosting for 1 year",
+                  "A short walkthrough so you can carry on yourself",
+                  "Delivery: I put the webshop online",
+                  "You add images yourself, including with Complete. I do not supply or add them, but I explain how to add them."
+            ]
       },
       "extra": {
-        "nl": [
-          "Meer dan 50 producten inrichten",
-          "Koppelingen (zoals boekhouding of voorraad) en extra functies",
-          "Hulp bij productteksten en vindbaarheid"
-        ],
-        "en": [
-          "Setting up more than 50 products",
-          "Integrations (such as accounting or stock) and extra features",
-          "Help with product copy and search visibility"
-        ]
+            "nl": [
+                  "Meer dan 50 producten inrichten",
+                  "Koppelingen (zoals boekhouding of voorraad) en extra functies",
+                  "Hulp bij productteksten en vindbaarheid"
+            ],
+            "en": [
+                  "Setting up more than 50 products",
+                  "Integrations (such as accounting or stock) and extra features",
+                  "Help with product copy and search visibility"
+            ]
       },
       "recurring": {
-        "nl": [
-          "Domeinnaam en hosting na het eerste jaar — de kosten staan in je voorstel",
-          "Transactiekosten van je betaalprovider (rechtstreeks via de provider)"
-        ],
-        "en": [
-          "Domain name and hosting after the first year — the costs are in your proposal",
-          "Transaction fees from your payment provider (charged directly by the provider)"
-        ]
+            "nl": [
+                  "Domeinnaam en hosting na het eerste jaar — de kosten staan in je voorstel",
+                  "Transactiekosten van je betaalprovider (rechtstreeks via de provider)"
+            ],
+            "en": [
+                  "Domain name and hosting after the first year — the costs are in your proposal",
+                  "Transaction fees from your payment provider (charged directly by the provider)"
+            ]
       },
       "supply": {
-        "nl": [
-          "Productgegevens: namen, prijzen en omschrijvingen",
-          "Je huisstijl en voorkeuren",
-          "Je bedrijfsgegevens voor op de webshop (zoals KvK-nummer en adres)",
-          "Een account bij een betaalprovider"
-        ],
-        "en": [
-          "Product details: names, prices and descriptions",
-          "Your brand style and preferences",
-          "Your business details for the webshop (such as company number and address)",
-          "An account with a payment provider"
-        ]
+            "nl": [
+                  "Productgegevens: namen, prijzen en omschrijvingen",
+                  "Je huisstijl en voorkeuren",
+                  "Je bedrijfsgegevens voor op de webshop (zoals KvK-nummer en adres)",
+                  "Een account bij een betaalprovider"
+            ],
+            "en": [
+                  "Product details: names, prices and descriptions",
+                  "Your brand style and preferences",
+                  "Your business details for the webshop (such as company number and address)",
+                  "An account with a payment provider"
+            ]
       },
       "preview": {
-        "desktop": "assets/img/webshop-pagina.jpg",
-        "mobile": "assets/img/webshop-pagina-mobiel.jpg"
+            "desktop": "assets/img/webshop-pagina.jpg",
+            "mobile": "assets/img/webshop-pagina-mobiel.jpg"
       },
       "receive": {
-        "nl": [
-          "Een werkende webshop, online op je domeinnaam",
-          "Een korte uitleg om zelf producten en bestellingen te beheren"
-        ],
-        "en": [
-          "A working webshop, live on your domain name",
-          "A short walkthrough to manage products and orders yourself"
-        ]
+            "nl": [
+                  "Een werkende webshop, online op je domeinnaam",
+                  "Een korte uitleg om zelf producten en bestellingen te beheren"
+            ],
+            "en": [
+                  "A working webshop, live on your domain name",
+                  "A short walkthrough to manage products and orders yourself"
+            ]
+      },
+      "tiersSub": {
+            "nl": "Voorstel voor de pakketindeling. Alle prijzen zijn inclusief btw. Basic is een template; Plus en Compleet omvatten het aansluiten van een bestaande webshopoplossing.",
+            "en": "Proposed package structure. All prices include VAT. Basic is a template; Plus and Complete include connecting an existing e-commerce solution."
+      },
+      "packageNotes": {
+            "nl": [
+                  "Basic bevat geen aangesloten betalingen of bestelbeheer. Voor echte verkoop moet je die zelf laten aansluiten.",
+                  "Bij Plus en Compleet maak je de benodigde accounts op eigen naam aan. We spreken vooraf af welk webshopplatform en welke betaalprovider we gebruiken.",
+                  "Platformabonnementen, hosting, domein en transactiekosten zijn niet inbegrepen.",
+                  "Extra producten invoeren, teksten schrijven, extra correctierondes en bijzondere koppelingen zijn meerwerk op afspraak."
+            ],
+            "en": [
+                  "Basic does not include connected payments or order management. You arrange these yourself before selling.",
+                  "With Plus and Complete, you create the required accounts in your own name. We agree on the platform and payment provider in advance.",
+                  "Platform subscriptions, hosting, domain and transaction fees are not included.",
+                  "Additional product entry, copywriting, extra revisions and special integrations are additional work by agreement."
+            ]
       }
-    },
+},
     {
       "id": "horeca",
       "tagline": {
