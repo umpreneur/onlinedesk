@@ -390,7 +390,26 @@
     // Per product eigen uitleg boven de tabel ("tiersSub") en onder elke prijs ("tierNote"),
     // bijv. bij werken met een offerte in plaats van vaste prijzen.
     const tierNote = p.tierNote ? tr(p.tierNote) : [tr(p.priceNote), T.once].filter(Boolean).join(' · ');
-    const chooseTier = (t) => { const select = document.querySelector('#product-package'); if (select) select.value = tr(t.name); };
+    // Kies het pakket in het formulier en scrol naar het formulier zelf (niet naar de tekst erboven).
+    const chooseTier = (t, e) => {
+      if (e) e.preventDefault();
+      const select = document.querySelector('#product-package');
+      if (select) {
+        select.value = tr(t.name);
+        select.classList.remove('is-picked'); void select.offsetWidth; select.classList.add('is-picked');
+      }
+      const form = document.querySelector('#contact form') || document.querySelector('#contact');
+      if (form) {
+        // Positie zonder de inschuif-animatie (offsetTop telt transform niet mee).
+        $$('#contact .reveal').forEach((el) => el.classList.add('in'));
+        let y = 0;
+        for (let el = form; el; el = el.offsetParent) y += el.offsetTop;
+        const header = $('.site-header');
+        const top = y - (header ? header.offsetHeight : 0) - 16;
+        window.scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      }
+      history.replaceState(null, '', '#contact');
+    };
     return h('div', { class: 'tiers-wrap reveal', id: 'pakketten' },
       h('div', { class: 'tiers-head' }, h('h2', {}, T.title), h('p', {}, p.tiersSub ? tr(p.tiersSub) : T.sub)),
       tierTabs(p, tiers, tierNote, chooseTier),
@@ -418,7 +437,7 @@
             h('tr', {},
               h('td', {}),
               tiers.map((t) => h('td', { class: pop(t).trim() || null },
-                h('a', { class: `btn ${t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm'}`, href: '#contact', onclick: () => chooseTier(t) }, `${T.choose} ${tr(t.name)}`)))
+                h('a', { class: `btn ${t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm'}`, href: '#contact', onclick: (e) => chooseTier(t, e) }, `${T.choose} ${tr(t.name)}`)))
             )
           )
         )
@@ -467,7 +486,7 @@
         no.length ? h('ul', { class: 'tier-missing' }, no.map((r) => h('li', {}, h('span', { 'aria-hidden': 'true' }, '–'), h('span', {}, r.label)))) : null,
         notes.length ? h('h3', {}, T.terms) : null,
         notes.length ? checks(notes) : null,
-        h('a', { class: 'btn btn-primary btn-block', href: '#contact', onclick: () => chooseTier(t) }, `${T.choose} ${tr(t.name)}`, icon('arrow', 18))
+        h('a', { class: 'btn btn-primary btn-block', href: '#contact', onclick: (e) => chooseTier(t, e) }, `${T.choose} ${tr(t.name)}`, icon('arrow', 18))
       );
     });
     const select = (i, focus) => {
