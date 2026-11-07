@@ -1331,8 +1331,8 @@ window.SITE_CONTENT = {
             "en": "Website copywriting"
           },
           "price": {
-            "nl": "€ 45 per uur excl. btw (€ 54,45 incl. btw)",
-            "en": "€45 per hour excl. VAT (€54.45 incl. VAT)"
+            "nl": "€ 54,45 per uur incl. btw",
+            "en": "€54.45 per hour incl. VAT"
           },
           "description": {
             "nl": "Heldere teksten die passen bij jou en je website.",
@@ -1345,8 +1345,8 @@ window.SITE_CONTENT = {
             "en": "Translation"
           },
           "price": {
-            "nl": "€ 45 per uur excl. btw (€ 54,45 incl. btw)",
-            "en": "€45 per hour excl. VAT (€54.45 incl. VAT)"
+            "nl": "€ 54,45 per uur incl. btw",
+            "en": "€54.45 per hour incl. VAT"
           },
           "description": {
             "nl": "Je webteksten vertaald tussen Nederlands en Engels.",
@@ -1359,8 +1359,8 @@ window.SITE_CONTENT = {
             "en": "Online visibility advice"
           },
           "price": {
-            "nl": "€ 45 per uur excl. btw (€ 54,45 incl. btw)",
-            "en": "€45 per hour excl. VAT (€54.45 incl. VAT)"
+            "nl": "€ 54,45 per uur incl. btw",
+            "en": "€54.45 per hour incl. VAT"
           },
           "description": {
             "nl": "Praktisch advies over SEO en hoe je jezelf online en op social media presenteert.",

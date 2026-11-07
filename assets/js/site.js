@@ -569,12 +569,11 @@
     return h('div', { class: 'detail-card extras reveal' },
       h('h3', {}, ui().tiers.extras),
       h('ul', { class: 'extras-list' }, extras.map((x) => h('li', {}, h('span', {}, h('strong', {}, tr(x.name)), x.description ? h('span', { style: 'display:block' }, tr(x.description)) : null), h('b', {}, tr(x.price))))),
-      // Op mobiel: naam en prijs direct zichtbaar, de uitleg opent met een tik.
-      h('div', { class: 'extras-acc' }, extras.map((x) => x.description
-        ? h('details', {},
-            h('summary', { class: String(tr(x.price)).length > 18 ? 'is-long' : null }, h('strong', {}, tr(x.name)), h('b', {}, tr(x.price)), h('span', { class: 'extras-toggle', 'aria-hidden': 'true' })),
-            h('p', {}, tr(x.description)))
-        : h('div', { class: `extras-row${String(tr(x.price)).length > 18 ? ' is-long' : ''}` }, h('strong', {}, tr(x.name)), h('b', {}, tr(x.price))))),
+      // Op mobiel: alleen de naam; een tik toont de prijs en de uitleg.
+      h('div', { class: 'extras-acc' }, extras.map((x) => h('details', {},
+        h('summary', {}, h('strong', {}, tr(x.name)), h('span', { class: 'extras-toggle', 'aria-hidden': 'true' })),
+        h('b', {}, tr(x.price)),
+        x.description ? h('p', {}, tr(x.description)) : null))),
       p.extrasNote ? h('p', {}, tr(p.extrasNote)) : null
     );
   }
