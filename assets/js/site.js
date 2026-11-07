@@ -29,7 +29,7 @@
       sample: 'Voorbeeldafbeelding', sampleNote: 'echte screenshot volgt',
       lists: { features: 'Functies', included: 'In de prijs', extra: 'Extra of op offerte', recurring: 'Terugkerende kosten', supply: 'Dit lever jij aan', receive: 'Dit ontvang je bij oplevering', terms: 'Voorwaarden' },
       page: { suited: 'Geschikt voor', preview: 'Zo ziet het eruit', previewSub: 'Scroll door de website om te zien hoe hij eruitziet.', desktop: 'Computer', mobile: 'Telefoon', sections: 'Wat staat erop' },
-      tiers: { title: 'Kies je pakket', sub: 'Zelf aan de slag of hulp nodig? Vergelijk hieronder wat je per pakket krijgt. Alle prijzen zijn eenmalig en inclusief btw.', choose: 'Kies', once: 'eenmalig', see: 'Bekijk de pakketten', extras: 'Extra opties' },
+      tiers: { title: 'Kies je pakket', sub: 'Zelf aan de slag of hulp nodig? Vergelijk hieronder wat je per pakket krijgt. Alle prijzen zijn eenmalig en inclusief btw.', choose: 'Kies', once: 'eenmalig', see: 'Bekijk de pakketten', extras: 'Extra opties', tabs: 'Pakketten', included: 'Inbegrepen', excluded: 'Niet in dit pakket', terms: 'Voorwaarden' },
       requestPkg: 'Pakket aanvragen', customise: 'Laten aanpassen', demo: 'Bekijk demo',
       forWho: 'Voor', details: 'Bekijk details', priceTbd: 'Prijs volgt', allPackages: 'Alle producten',
       invite: { title: 'Staat jouw idee er niet tussen?', text: 'Ik maak ook websites, webshops en apps op maat.', cta: 'Vertel je idee' },
@@ -84,7 +84,7 @@
       sample: 'Sample image', sampleNote: 'real screenshot coming soon',
       lists: { features: 'Features', included: 'Included in the price', extra: 'Extra or on quotation', recurring: 'Recurring costs', supply: 'What you supply', receive: 'What you receive on delivery', terms: 'Terms' },
       page: { suited: 'Suitable for', preview: 'What it looks like', previewSub: 'Scroll through the website to see what it looks like.', desktop: 'Desktop', mobile: 'Phone', sections: "What's on it" },
-      tiers: { title: 'Choose your package', sub: 'Want to do it yourself or need some help? Compare what each package includes. All package prices are one-off and include VAT.', choose: 'Choose', once: 'one-off', see: 'View the packages', extras: 'Extra options' },
+      tiers: { title: 'Choose your package', sub: 'Want to do it yourself or need some help? Compare what each package includes. All package prices are one-off and include VAT.', choose: 'Choose', once: 'one-off', see: 'View the packages', extras: 'Extra options', tabs: 'Packages', included: 'Included', excluded: 'Not in this package', terms: 'Terms' },
       requestPkg: 'Request package', customise: 'Have it customised', demo: 'View demo',
       forWho: 'For', details: 'View details', priceTbd: 'Price coming soon', allPackages: 'All products',
       invite: { title: "Can't find your idea here?", text: 'I also build custom websites, webshops and apps.', cta: 'Tell me your idea' },
@@ -390,8 +390,10 @@
     // Per product eigen uitleg boven de tabel ("tiersSub") en onder elke prijs ("tierNote"),
     // bijv. bij werken met een offerte in plaats van vaste prijzen.
     const tierNote = p.tierNote ? tr(p.tierNote) : [tr(p.priceNote), T.once].filter(Boolean).join(' · ');
+    const chooseTier = (t) => { const select = document.querySelector('#product-package'); if (select) select.value = tr(t.name); };
     return h('div', { class: 'tiers-wrap reveal', id: 'pakketten' },
       h('div', { class: 'tiers-head' }, h('h2', {}, T.title), h('p', {}, p.tiersSub ? tr(p.tiersSub) : T.sub)),
+      tierTabs(p, tiers, tierNote, chooseTier),
       h('div', { class: 'compare-scroll' },
         h('table', { class: 'compare' },
           h('thead', {},
@@ -416,14 +418,73 @@
             h('tr', {},
               h('td', {}),
               tiers.map((t) => h('td', { class: pop(t).trim() || null },
-                h('a', { class: `btn ${t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm'}`, href: '#contact', onclick: () => { const select = document.querySelector('#product-package'); if (select) select.value = tr(t.name); } }, `${T.choose} ${tr(t.name)}`)))
+                h('a', { class: `btn ${t.popular ? 'btn-primary btn-sm' : 'btn-ghost btn-sm'}`, href: '#contact', onclick: () => chooseTier(t) }, `${T.choose} ${tr(t.name)}`)))
             )
           )
         )
       ),
       trList(p.packageNotes).length
-        ? h('div', { class: 'detail-card' }, checks(trList(p.packageNotes)))
+        ? h('div', { class: 'detail-card tier-notes' }, checks(trList(p.packageNotes)))
         : null
+    );
+  }
+
+  // Alleen op mobiel: per pakket een tabblad met prijs, alles wat erin zit, de voorwaarden en de aanvraagknop.
+  // Elk tabblad is volledig, zodat je Plus of Compleet begrijpt zonder eerst Basic te lezen.
+  function tierTabs(p, tiers, tierNote, chooseTier) {
+    const T = ui().tiers;
+    // Een voorwaarde die een pakketnaam noemt, hoort alleen bij dat pakket; de rest geldt voor alle pakketten.
+    const tierNames = tiers.map((t) => [t.name?.nl ?? t.name, t.name?.en ?? t.name].map((n) => String(n).toLowerCase()));
+    const notesFor = (i) => trList(p.packageNotes).filter((note) => {
+      const text = note.toLowerCase();
+      const named = tierNames.map((names) => names.some((n) => new RegExp(`\\b${n}\\b`).test(text)));
+      return !named.some(Boolean) || named[i];
+    });
+    const uid = `tiers-${p.id}`;
+    const tabs = tiers.map((t, i) => h('button', {
+      type: 'button', role: 'tab', id: `${uid}-tab-${i}`, class: `tier-tab${t.popular ? ' is-popular' : ''}`,
+      'aria-controls': `${uid}-panel-${i}`, 'aria-selected': String(i === 0), tabindex: i === 0 ? '0' : '-1'
+    }, tr(t.name)));
+    const panels = tiers.map((t, i) => {
+      const rows = (p.compare || []).map((row) => {
+        const v = (row.values || [])[i];
+        return { label: tr(row.label), value: typeof v === 'object' && v !== null ? tr(v) : v };
+      });
+      const yes = rows.filter((r) => r.value === true || (typeof r.value === 'string' && r.value !== ''));
+      const no = rows.filter((r) => !yes.includes(r));
+      const notes = notesFor(i);
+      return h('div', { role: 'tabpanel', id: `${uid}-panel-${i}`, class: `tier-panel${t.popular ? ' is-popular' : ''}`, 'aria-labelledby': `${uid}-tab-${i}`, hidden: i !== 0, tabindex: '0' },
+        h('div', { class: 'tier-panel-head' },
+          h('span', { class: 'tier-name' }, tr(t.name)),
+          h('span', { class: 'tier-price' }, tr(t.price)),
+          tierNote ? h('small', {}, tierNote) : null,
+          !['bedrijf', 'coaching'].includes(p.id) && t.description ? h('p', { class: 'tier-desc' }, tr(t.description)) : null
+        ),
+        yes.length ? h('h3', {}, T.included) : null,
+        yes.length ? h('ul', { class: 'checks' }, yes.map((r) => h('li', {}, icon('check', 18),
+          h('span', {}, r.value === true ? r.label : [h('strong', {}, `${r.label}: `), r.value])))) : null,
+        no.length ? h('h3', {}, T.excluded) : null,
+        no.length ? h('ul', { class: 'tier-missing' }, no.map((r) => h('li', {}, h('span', { 'aria-hidden': 'true' }, '–'), h('span', {}, r.label)))) : null,
+        notes.length ? h('h3', {}, T.terms) : null,
+        notes.length ? checks(notes) : null,
+        h('a', { class: 'btn btn-primary btn-block', href: '#contact', onclick: () => chooseTier(t) }, `${T.choose} ${tr(t.name)}`, icon('arrow', 18))
+      );
+    });
+    const select = (i, focus) => {
+      tabs.forEach((tab, j) => { tab.setAttribute('aria-selected', String(i === j)); tab.tabIndex = i === j ? 0 : -1; panels[j].hidden = i !== j; });
+      if (focus) tabs[i].focus();
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => select(i));
+      tab.addEventListener('keydown', (e) => {
+        const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (step) { e.preventDefault(); select((i + step + tabs.length) % tabs.length, true); }
+        if (e.key === 'Home' || e.key === 'End') { e.preventDefault(); select(e.key === 'Home' ? 0 : tabs.length - 1, true); }
+      });
+    });
+    return h('div', { class: 'tier-tabs' },
+      h('div', { class: 'tier-tablist', role: 'tablist', 'aria-label': T.tabs }, tabs),
+      panels
     );
   }
 

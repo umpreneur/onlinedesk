@@ -843,3 +843,30 @@ button { font: inherit; color: inherit; }
 }
 @keyframes thanks-in { from { opacity: 0; transform: translateY(12px) scale(.96); } }
 @media (prefers-reduced-motion: reduce) { .thanks-dialog[open] { animation: none; } }
+
+/* Pakketten op mobiel: tabbladen in plaats van de vergelijkingstabel */
+.tier-tabs { display: none; }
+@media (max-width: 600px) {
+  .tier-tabs { display: block; }
+  .compare-scroll, .tier-notes { display: none; }
+  .tier-tablist {
+    position: sticky; top: 72px; z-index: 5; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px;
+    padding: 5px; margin-bottom: 14px; border-radius: 999px; background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--line), var(--shadow);
+  }
+  .tier-tab {
+    min-height: 44px; border: 0; border-radius: 999px; background: none; color: var(--ink-2);
+    font: 800 .95rem/1 var(--font-body); cursor: pointer; transition: background .2s, color .2s;
+  }
+  .tier-tab[aria-selected="true"] { background: var(--tone-deep); color: var(--surface); }
+  .tier-panel { padding: 24px 20px; border-radius: var(--radius); background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--line); }
+  .tier-panel.is-popular { background: var(--tone-soft); box-shadow: none; }
+  .tier-panel-head { display: grid; gap: 2px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid var(--line); }
+  .tier-panel-head .tier-price { font-size: 2rem; }
+  .tier-panel-head small { font-size: .8rem; font-weight: 700; color: var(--muted); }
+  .tier-desc { margin-top: 8px; color: var(--ink-2); }
+  .tier-panel h3 { margin: 18px 0 10px; font-size: 1rem; }
+  .tier-panel-head + h3 { margin-top: 0; }
+  .tier-missing { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: .92rem; }
+  .tier-missing li { display: grid; grid-template-columns: 18px 1fr; gap: 10px; }
+  .tier-panel .btn-block { margin-top: 24px; }
+}
