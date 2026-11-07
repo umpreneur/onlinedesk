@@ -1861,7 +1861,7 @@ window.SITE_CONTENT = {
     /* INVULLEN (optioneel): adres van een formulierdienst, bijv. "https://formspree.io/f/xxxxxxx".
        Ingevuld = het formulier verstuurt echt. Leeg = het formulier opent het e-mailprogramma
        (als "email" is ingevuld) of is uitgeschakeld (als ook "email" leeg is). */
-    "formEndpoint": ""
+    "formEndpoint": "https://formspree.io/f/mldqgory"
   }
 };
 

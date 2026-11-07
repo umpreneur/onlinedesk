@@ -742,6 +742,8 @@
       field('naam', t.name, 'text'),
       field('email', t.email, 'email'),
       product ? h('input', { type: 'hidden', name: 'product', value: tr(product.title) }) : null,
+      // Onderwerp van de e-mail die Formspree stuurt.
+      h('input', { type: 'hidden', name: '_subject', value: product ? `Aanvraag: ${tr(product.title)}` : 'Bericht via OnlineDesk' }),
       hasPackages ? h('label', { class: 'field-row' }, h('span', {}, lang === 'nl' ? 'Pakketkeuze' : 'Package'), h('select', { id: 'product-package', name: 'pakket', disabled: mode === 'off' }, h('option', { value: '' }, lang === 'nl' ? 'Ik twijfel nog' : 'Still deciding'), product.tiers.map((tier) => h('option', { value: tr(tier.name) }, tr(tier.name))))) : null,
       field('bericht', hasPackages ? (lang === 'nl' ? 'Je wensen of vraag' : 'Your wishes or question') : t.message, 'textarea'),
       // Onzichtbaar veld tegen spam-robots.
@@ -767,7 +769,9 @@
       const btn = form.querySelector('button');
       btn.disabled = true; status.textContent = t.sending; status.className = 'form-status';
       try {
-        const res = await fetch(endpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+        const body = new FormData(form);
+        if (body.get('pakket')) body.set('_subject', `${body.get('_subject')} – ${body.get('pakket')}`);
+        const res = await fetch(endpoint, { method: 'POST', headers: { Accept: 'application/json' }, body });
         if (!res.ok) throw new Error(String(res.status));
         form.reset();
         status.textContent = t.sent; status.className = 'form-status is-ok';
