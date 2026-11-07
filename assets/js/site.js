@@ -54,6 +54,7 @@
         noteOff: 'Het contactformulier wordt binnenkort geactiveerd.',
         invalid: 'Vul je naam, een geldig e-mailadres en je bericht in.',
         sending: 'Bezig met versturen…', sent: 'Bedankt! Je bericht is verstuurd. Ik reageer zo snel mogelijk.',
+        thanksTitle: 'Bedankt voor je bericht!', thanksText: 'Je bericht is goed aangekomen. Ik reageer zo snel mogelijk per e-mail.', thanksClose: 'Sluiten',
         mailOpened: 'Je e-mailprogramma is geopend. Verstuur het bericht daar om het af te ronden.',
         failed: 'Versturen is niet gelukt. Probeer het later nog eens.',
         failedMail: (m) => `Versturen is niet gelukt. Probeer het later nog eens of mail naar ${m}.`
@@ -108,6 +109,7 @@
         noteOff: 'The contact form will be activated soon.',
         invalid: 'Please enter your name, a valid email address and your message.',
         sending: 'Sending…', sent: "Thank you! Your message has been sent. I'll get back to you as soon as possible.",
+        thanksTitle: 'Thank you for your message!', thanksText: 'Your message has arrived safely. I will reply by email as soon as possible.', thanksClose: 'Close',
         mailOpened: 'Your email program has opened. Send the message there to finish.',
         failed: "Sending didn't work. Please try again later.",
         failedMail: (m) => `Sending didn't work. Please try again later or email ${m}.`
@@ -710,6 +712,20 @@
     );
   }
 
+  // Bedankvenster na het versturen; sluit met de knop, Esc of een klik naast het venster.
+  function thanksPopup(t) {
+    const dialog = h('dialog', { class: 'thanks-dialog', 'aria-labelledby': 'thanks-title' },
+      h('div', { class: 'thanks-icon' }, icon('check', 34)),
+      h('h2', { id: 'thanks-title' }, t.thanksTitle),
+      h('p', {}, t.thanksText),
+      h('button', { class: 'btn btn-primary btn-block', type: 'button', onclick: () => dialog.close() }, t.thanksClose)
+    );
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+    dialog.addEventListener('close', () => dialog.remove());
+    document.body.append(dialog);
+    dialog.showModal();
+  }
+
   // Contact: tekst links, formulier rechts.
   // Het formulier verstuurt alleen echt als "contact.formEndpoint" is ingevuld (bijv. een Formspree-adres).
   // Zonder endpoint maar met e-mailadres opent het je e-mailprogramma met het bericht al ingevuld.
@@ -775,6 +791,7 @@
         if (!res.ok) throw new Error(String(res.status));
         form.reset();
         status.textContent = t.sent; status.className = 'form-status is-ok';
+        thanksPopup(t);
       } catch (_) {
         status.textContent = email() ? t.failedMail(email()) : t.failed; status.className = 'form-status is-error';
       } finally {

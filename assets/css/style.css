@@ -827,3 +827,19 @@ button { font: inherit; color: inherit; }
 .detail.product-portfolio { --preview-bg: #ece6ff; }
 .detail.product-coaching { --preview-bg: #e8e1d5; }
 .detail .detail-visual, .detail .preview-stage { background: var(--preview-bg, var(--tone-soft)); }
+
+/* Bedankvenster na het versturen van een formulier */
+.thanks-dialog {
+  width: min(420px, calc(100vw - 32px)); padding: 36px 32px 28px; border: 0; border-radius: var(--radius);
+  background: var(--surface); color: var(--ink); text-align: center; box-shadow: var(--shadow);
+}
+.thanks-dialog[open] { animation: thanks-in .35s var(--spring); }
+.thanks-dialog::backdrop { background: rgba(30, 35, 32, .45); backdrop-filter: blur(3px); }
+.thanks-dialog h2 { margin: 0 0 10px; font-family: var(--font-display); font-size: 1.6rem; line-height: 1.15; }
+.thanks-dialog p { margin: 0 0 24px; color: var(--ink-2); }
+.thanks-icon {
+  width: 68px; height: 68px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--sage-soft); color: var(--sage-deep);
+}
+@keyframes thanks-in { from { opacity: 0; transform: translateY(12px) scale(.96); } }
+@media (prefers-reduced-motion: reduce) { .thanks-dialog[open] { animation: none; } }
