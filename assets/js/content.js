@@ -359,26 +359,6 @@ window.SITE_CONTENT = {
         "nl": "Extra's kies je zelf. We spreken de inhoud en kosten vooraf af. Alle bedragen zijn inclusief btw.",
         "en": "Choose the extras you need. We agree on the scope and costs upfront. All amounts include VAT."
       },
-      "terms": {
-        "nl": [
-          "Basic betaal je volledig vooraf. Je ontvangt de templatecode en handleiding binnen 1 werkdag na betaling.",
-          "Voor Plus en Compleet betaal je 50% bij akkoord en 50% bij oplevering, binnen 14 dagen na factuurdatum.",
-          "De planning start zodra alle benodigde gegevens binnen zijn. Lever je later aan, dan schuift de oplevering mee.",
-          "Na volledige betaling ontvang je de websitebestanden en een gebruikslicentie voor één website. Je mag de inhoud, code en vormgeving aanpassen. De template is niet exclusief en mag niet als template worden doorverkocht of verspreid.",
-          "Er is geen onderhoud of support inbegrepen na oplevering.",
-          "Werk buiten de offerte gebeurt alleen na akkoord en tegen de genoemde tarieven.",
-          "Een offerte is 30 dagen geldig. Alle genoemde prijzen zijn inclusief 21% btw."
-        ],
-        "en": [
-          "Basic is paid in full upfront. You receive the template code and guide within 1 working day of payment.",
-          "For Plus and Complete, you pay 50% on approval and 50% on delivery, within 14 days of the invoice date.",
-          "The schedule starts once all required details have arrived. Later delivery of your content moves the launch date accordingly.",
-          "After full payment, you receive the website files and a licence for one website. You may edit the content, code and design. The template is not exclusive and may not be resold or distributed as a template.",
-          "No maintenance or support is included after delivery.",
-          "Work outside the quote is only done after approval and at the stated rates.",
-          "A quote is valid for 30 days. All listed prices include 21% VAT."
-        ]
-      },
       "contactCopy": {
         "heading": {
           "nl": "Jouw bedrijf,\nzakelijk online.",
@@ -1091,26 +1071,6 @@ window.SITE_CONTENT = {
       "extrasNote": {
         "nl": "Extra's kies je zelf. We spreken de inhoud en kosten vooraf af. Alle bedragen zijn inclusief btw.",
         "en": "Choose the extras you need. We agree on the scope and costs upfront. All amounts include VAT."
-      },
-      "terms": {
-        "nl": [
-          "Basic betaal je volledig vooraf. Je ontvangt alleen de templatecode, binnen 1 werkdag na betaling.",
-          "Voor Plus en Compleet betaal je 50% bij akkoord en 50% bij oplevering, binnen 14 dagen na factuurdatum.",
-          "De planning start zodra alle benodigde gegevens binnen zijn. Lever je later aan, dan schuift de oplevering mee.",
-          "Bij Plus en Compleet komen domein, hosting en betaalaccount op jouw naam. Na volledige betaling ontvang je de websitebestanden.",
-          "Er is geen onderhoud of support inbegrepen na oplevering.",
-          "Werk buiten de offerte gebeurt alleen na akkoord en tegen de genoemde tarieven.",
-          "Een offerte is 30 dagen geldig. Alle genoemde prijzen zijn inclusief 21% btw."
-        ],
-        "en": [
-          "Basic is paid in full upfront. You receive only the template code within 1 working day of payment.",
-          "For Plus and Complete, you pay 50% on approval and 50% on delivery, within 14 days of the invoice date.",
-          "The schedule starts once all required details have arrived. Later delivery of your content moves the launch date accordingly.",
-          "With Plus and Complete, the domain, hosting and payment account are in your name. You receive the website files after full payment.",
-          "No maintenance or support is included after delivery.",
-          "Work outside the quote is only done after approval and at the stated rates.",
-          "A quote is valid for 30 days. All listed prices include 21% VAT."
-        ]
       },
       "contactCopy": {
         "heading": {
