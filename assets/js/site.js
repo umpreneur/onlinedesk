@@ -36,7 +36,7 @@
     nl: {
       meta: {
         title: 'OnlineDesk · Websites, webshops en apps',
-        description: 'Kant-en-klare websites en webshops, en websites, webshops en apps op maat. Van concept tot online succes: persoonlijk, met duidelijke prijzen en afspraken.'
+        description: 'Kant-en-klare websites en webshops, en websites, webshops en apps op maat. Van idee tot online succes: persoonlijk, met duidelijke prijzen en afspraken.'
       },
       nav: { producten: 'Mijn producten', maatwerk: 'Wat ik doe', faq: 'FAQ', contact: 'Contact' },
       mainMenu: 'Hoofdmenu', openMenu: 'Menu openen',
@@ -91,7 +91,7 @@
     en: {
       meta: {
         title: 'OnlineDesk · Websites, webshops and apps',
-        description: 'Ready-made websites and webshops, plus custom websites, webshops and apps. From concept to online success: personal, with clear prices and agreements.'
+        description: 'Ready-made websites and webshops, plus custom websites, webshops and apps. From idea to online success: personal, with clear prices and agreements.'
       },
       nav: { producten: 'My products', maatwerk: 'What I do', faq: 'FAQ', contact: 'Contact' },
       mainMenu: 'Main menu', openMenu: 'Open menu',

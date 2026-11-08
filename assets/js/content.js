@@ -16,15 +16,11 @@ window.SITE_CONTENT = {
   "available": true,
 
   "hero": {
-    "headline": { "nl": "Van concept tot online succes.", "en": "From concept to online success." },
+    "headline": { "nl": "Van idee tot online succes.", "en": "From idea to online success." },
     "accent": { "nl": "online succes", "en": "online success" },
-    "sub": {
-      "nl": "Strategie, ontwerp, ontwikkeling en content voor jouw website, webshop of app.",
-      "en": "Strategy, design, development and content for your website, webshop or app."
-    },
     "intro": {
-      "nl": "Een nieuw idee uitwerken, snel starten met een kant-en-klare oplossing of verbeteren wat je al hebt? Ik denk met je mee en help je van de eerste keuze tot een oplossing die werkt.",
-      "en": "Developing a new idea, getting started quickly with a ready-made solution or improving what you already have? I'll think along with you and help you from the first choice to a solution that works."
+      "nl": "Vertel me wat je wilt bereiken. Ik denk met je mee en bouw wat je nodig hebt. Een website om je bedrijf te laten zien, een webshop om online te verkopen of een app die je werk makkelijker maakt.",
+      "en": "Tell me what you want to achieve. I'll think along with you and build what you need. A website to showcase your business, a webshop to sell online or an app that makes your work easier."
     }
   },
 
@@ -1734,8 +1730,8 @@ window.SITE_CONTENT = {
   "custom": {
     "title": { "nl": "Jouw onderneming,\nonline tot leven.", "en": "Your business,\nbrought to life online." },
     "text": {
-      "nl": "Je onderneming starten, je aanbod online verkopen of je werk makkelijker organiseren? Ik help je bepalen wat je nodig hebt en werk het uit.\n\nVan strategie en ontwerp tot techniek, teksten en vindbaarheid: samen bouwen we een oplossing die past bij jouw onderneming en de mensen die je wilt bereiken.",
-      "en": "Starting your business, selling your offer online or organising your work more easily? I'll help you decide what you need and build it.\n\nFrom strategy and design to technology, copy and search visibility: together we build a solution that fits your business and the people you want to reach."
+      "nl": "Vertel me wat je wilt bereiken, dan kijken we samen wat je nodig hebt.",
+      "en": "Tell me what you want to achieve, and together we'll work out what you need."
     },
     "services": [
       { "icon": "compass", "color": "sage",

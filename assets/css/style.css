@@ -899,7 +899,8 @@ button { font: inherit; color: inherit; }
   .extras-acc details p { margin: 0 0 14px; color: var(--ink-2); }
 }
 
-/* Op mobiel geen beschikbaarheidstegel in de kop: rustiger beeld. */
-@media (max-width: 600px) {
+/* De beschikbaarheidstegel alleen tonen als hij naast de intro past (desktop).
+   Vanaf 960px en smaller zou hij eronder vallen; dan weglaten. */
+@media (max-width: 960px) {
   .bento .tile-cta { display: none; }
 }
