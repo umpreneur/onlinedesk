@@ -334,10 +334,11 @@ button { font: inherit; color: inherit; }
 /* Inhoud als één groep in het midden; een zachte ring rechtsboven vult de lege hoek. */
 .tile-cta { justify-content: center; gap: 0; isolation: isolate; }
 .tile-cta .cta-title { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
-.tile-cta .cta-link { margin-top: 28px; padding-top: 0; }
+.tile-cta .status-pill { margin-bottom: 26px; }
+.tile-cta .cta-link { margin-top: 40px; padding-top: 0; }
 .tile-cta::before {
-  content: ''; position: absolute; z-index: -1; top: -80px; right: -80px; width: 220px; height: 220px;
-  border-radius: 50%; border: 28px solid color-mix(in srgb, currentColor 8%, transparent);
+  content: ''; position: absolute; z-index: -1; top: -70px; right: -70px; width: 140px; height: 140px;
+  border-radius: 50%; border: 20px solid color-mix(in srgb, currentColor 8%, transparent);
   pointer-events: none; transition: transform .8s var(--spring);
 }
 .tile-cta:hover::before { transform: scale(1.08); }
