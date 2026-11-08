@@ -257,17 +257,6 @@
 
   const email = () => String((C.contact && C.contact.email) || '').trim();
 
-  // Een mailto-link met onderwerp en bericht al ingevuld; zonder e-mailadres naar het contactblok.
-  function requestHref(subject, body) {
-    if (!email()) return '#contact';
-    return `mailto:${email()}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }
-
-  function requestButton(label, what, option, cls) {
-    const href = requestHref(ui().mail.subject(what, option), ui().mail.body(what, option));
-    return h('a', { class: `btn ${cls}`, href, 'data-request': `${what} | ${option}` }, email() ? icon('mail', 18) : null, label);
-  }
-
   /* ---------- Secties ---------- */
 
   const NAV = ['maatwerk', 'producten', 'contact'];
@@ -360,24 +349,6 @@
     );
   }
 
-  // Voorbeeldafbeelding zolang er geen echte screenshot is — duidelijk als voorbeeld gemarkeerd.
-  function productVisual(p, big) {
-    const src = safeSrc(p.image);
-    if (src) return h('div', { class: 'product-shot' }, h('img', { src, alt: tr(p.title), loading: big ? 'eager' : 'lazy' }));
-    const isShop = p.id === 'webshop';
-    return h('div', { class: 'product-shot is-sample', role: 'img', 'aria-label': `${ui().sample}: ${tr(p.title)}` },
-      h('div', { class: 'mock', 'aria-hidden': 'true' },
-        h('div', { class: 'mock-bar' }, h('i'), h('i'), h('i')),
-        h('div', { class: `mock-body ${isShop ? 'mock-shop' : 'mock-folio'}` },
-          isShop
-            ? [1, 2, 3].map(() => h('div', { class: 'mock-card' }, h('b'), h('span'), h('em')))
-            : [h('div', { class: 'mock-hero' }, h('span'), h('span')), [1, 2, 3].map(() => h('div', { class: 'mock-tile' }))]
-        )
-      ),
-      h('span', { class: 'sample-badge' }, ui().sample, big ? [' · ', ui().sampleNote] : null)
-    );
-  }
-
   const detailHref = (p) => `pakket.html?id=${encodeURIComponent(p.id)}`;
 
   // Eigen prijs per pakket; zolang die niet is ingevuld staat er "Prijs volgt".
@@ -387,10 +358,6 @@
     return tr(p.price)
       ? h('p', { class: 'product-price' }, h('small', {}, ui().from), ' ', tr(p.price), p.priceNote ? h('small', {}, ' ', tr(p.priceNote)) : null)
       : h('p', { class: 'product-price is-tbd' }, ui().priceTbd);
-  }
-
-  function popularChip(p) {
-    return p.popular ? h('span', { class: 'chip chip-on' }, '★ ', ui().popular) : null;
   }
 
   // Pakketopties (bijv. Basis / Plus / Compleet) als vergelijkingstabel: per rij een onderdeel,
@@ -421,7 +388,7 @@
       scrollToForm();
     };
     return h('div', { class: 'tiers-wrap reveal', id: 'pakketten' },
-      h('div', { class: 'tiers-head' }, h('h2', {}, T.title), h('p', {}, p.tiersSub ? tr(p.tiersSub) : T.sub)),
+      h('div', { class: 'tiers-head' }, h('h1', {}, T.title), h('p', {}, p.tiersSub ? tr(p.tiersSub) : T.sub)),
       tierTabs(p, tiers, tierNote, chooseTier),
       h('div', { class: 'compare-scroll' },
         h('table', { class: 'compare' },
@@ -517,54 +484,6 @@
     );
   }
 
-  // "Geschikt voor": korte labels met de doelgroep.
-  function suitedFor(p) {
-    const list = trList(p.audienceList);
-    if (!list.length) return null;
-    return h('div', { class: 'suited' },
-      h('span', { class: 'suited-label' }, icon('users', 16), ui().page.suited),
-      h('ul', { class: 'suited-list' }, list.map((x) => h('li', {}, x)))
-    );
-  }
-
-  // "Zo ziet het eruit": de hele pagina in een browser- en telefoonkader, scrollbaar.
-  function previewBlock(p) {
-    const pv = p.preview || {};
-    const desk = safeSrc(pv.desktop), mob = safeSrc(pv.mobile), demo = safeUrl(p.demo);
-    if (!desk && !mob) return null;
-    const P = ui().page;
-    return h('div', { class: 'preview reveal' },
-      // De beelden en de demoknop geven voldoende context; geen herhaalde introductie.
-      h('div', { class: 'preview-stage' },
-        desk ? h('figure', { class: 'browser' },
-          h('div', { class: 'browser-bar', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'), demo ? h('span', {}, demo.replace(/^https?:\/\//, '').replace(/\/$/, '')) : null),
-          h('div', { class: 'browser-view', tabindex: '0', 'aria-label': `${P.preview} · ${P.desktop}` }, h('img', { src: desk, alt: `${tr(p.title)} · ${P.desktop}`, loading: 'lazy' })),
-          h('figcaption', {}, P.desktop)
-        ) : null,
-        mob ? h('figure', { class: 'handset' },
-          h('div', { class: 'handset-body' },
-            h('span', { class: 'handset-island', 'aria-hidden': 'true' }),
-            h('div', { class: 'handset-view', tabindex: '0', 'aria-label': `${P.preview} · ${P.mobile}` }, h('img', { src: mob, alt: `${tr(p.title)} · ${P.mobile}`, loading: 'lazy' }))
-          ),
-          h('figcaption', {}, P.mobile)
-        ) : null
-      )
-    );
-  }
-
-  // "Wat staat erop": de onderdelen van de website, kort en met een icoon.
-  function sectionsBlock(p) {
-    const items = p.sections || [];
-    if (!items.length) return null;
-    return h('div', { class: 'parts reveal' },
-      h('h2', {}, ui().page.sections),
-      h('ul', { class: 'parts-list' }, items.map((s) => h('li', {},
-        h('span', { class: 'parts-icon' }, icon(s.icon || 'spark', 20)),
-        h('div', {}, h('h3', {}, tr(s.title)), h('p', {}, tr(s.text)))
-      )))
-    );
-  }
-
   // Kort proces in genummerde stappen.
   function stepsBlock(p) {
     const st = p.steps;
@@ -576,18 +495,6 @@
         h('span', { class: 'step-num' }, String(i + 1)),
         h('div', {}, h('h3', {}, tr(s.title)), h('p', {}, tr(s.text)))
       )))
-    );
-  }
-
-  // Fotogalerij met schermafbeeldingen. "wide" = breed beeld, "tall" = staand (bijv. mobiel).
-  function galleryBlock(p) {
-    const pics = (p.gallery || []).filter((g) => safeSrc(g.src));
-    if (!pics.length) return null;
-    return h('div', { class: 'gallery reveal' },
-      pics.map((g) => h('a', { class: `gallery-item${g.size ? ` is-${g.size}` : ''}`, href: safeSrc(g.src), target: '_blank', rel: 'noopener' },
-        h('img', { src: safeSrc(g.src), alt: tr(g.alt) || tr(p.title), loading: 'lazy' }),
-        g.caption ? h('span', { class: 'gallery-cap' }, tr(g.caption)) : null
-      ))
     );
   }
 
@@ -678,55 +585,12 @@
       );
     }
     const { p, i } = found;
-    const title = tr(p.title);
-    const L = ui().lists;
-    const demo = safeUrl(p.demo);
-    const highlights = trList(p.highlights);
-    const extras = extrasBlock(p);
-    const hasTiers = (p.tiers || []).length > 0;
-
+    // De pakketpagina begint direct bij "Kies je pakket".
     return h('section', { class: `section detail product-${p.id} tone-${colorOf(p.color, i)}`, id: 'top' },
       h('div', { class: 'container' },
-        h('a', { class: 'back-link', href: './#producten' }, icon('back', 16), ui().allPackages),
-        h('div', { class: 'detail-hero reveal' },
-          h('div', { class: 'detail-visual' }, productVisual(p, true), popularChip(p)),
-          h('div', { class: 'detail-copy' },
-            // Met "headline": de pakketnaam als klein label en de headline als grote kop.
-            p.headline
-              ? [
-                  h('p', { class: 'detail-eyebrow' }, h('span', { class: 'project-icon' }, icon(p.icon || 'code', 18)), title),
-                  h('h1', { class: 'detail-title is-headline' }, tr(p.headline))
-                ]
-              : h('div', { class: 'product-head' },
-                  h('span', { class: 'project-icon' }, icon(p.icon || 'code', 24)),
-                  h('h1', { class: 'detail-title' }, title)
-                ),
-            p.audience && !p.audienceList && !hasTiers ? h('p', { class: 'type-audience' }, `${ui().forWho}: ${tr(p.audience)}`) : null,
-            p.text ? h('p', { class: 'product-text' }, tr(p.text)) : null,
-            p.textSub ? h('p', { class: 'product-subtext' }, tr(p.textSub)) : null,
-            suitedFor(p),
-            !['bedrijf', 'coaching'].includes(p.id) && highlights.length ? h('ul', { class: 'feature-tags' }, highlights.map((x) => h('li', {}, x))) : null,
-            h('div', { class: 'product-facts' },
-              
-              tr(p.delivery) ? h('p', { class: 'product-meta' }, icon('clock', 16), `${ui().delivery}: ${tr(p.delivery)}`) : null
-            ),
-            h('div', { class: 'product-actions' },
-              hasTiers
-                ? h('a', { class: 'btn btn-primary', href: '#pakketten' }, p.id === 'portfolio' ? (lang === 'nl' ? 'Bekijk pakketten en prijzen' : 'View packages and prices') : ui().tiers.see, icon('arrow', 18))
-                : requestButton(tr(p.requestLabel) || ui().requestPkg, title, ui().options.ready, 'btn-primary'),
-              hasTiers ? null : requestButton(ui().customise, title, ui().options.custom, 'btn-ghost'),
-              demo ? h('a', { class: 'btn btn-ghost', href: demo, target: '_blank', rel: 'noopener' }, ui().demo, icon('external', 16)) : null
-            ),
-            hasTiers ? null : h('p', { class: 'mail-note is-left' }, icon(email() ? 'mail' : 'arrow', 16), email() ? ui().mailNote : ui().noMailNote)
-          )
-        ),
-        previewBlock(p),
-        sectionsBlock(p),
-        galleryBlock(p),
-        tiersBlock(p, title),
-        extras,
-        stepsBlock(p),
-        null
+        tiersBlock(p, tr(p.title)),
+        extrasBlock(p),
+        stepsBlock(p)
       )
     );
   }
