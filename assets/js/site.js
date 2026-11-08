@@ -743,7 +743,6 @@
       h('div', { class: 'container' },
         h('div', { class: 'custom-grid' },
           h('div', { class: 'custom-copy reveal' },
-            h('p', { class: 'eyebrow custom-eyebrow' }, ui().customEyebrow),
             h('h2', {}, withBreaks(tr(c.title) || ui().customTitle)),
             String(tr(c.text) || '').split(/\n\s*\n/).map((t) => h('p', {}, withBreaks(t))),
             h('a', { class: 'btn btn-primary', href: '#contact' }, ui().customCta, icon('arrow', 18))

@@ -1728,7 +1728,7 @@ window.SITE_CONTENT = {
 
   /* Op maat: tekst links, vier gekleurde kaarten rechts. "\n" in een tekst = nieuwe regel. */
   "custom": {
-    "title": { "nl": "Jouw onderneming,\nonline tot leven.", "en": "Your business,\nbrought to life online." },
+    "title": { "nl": "Waar ik je bij help", "en": "How I can help you" },
     "text": {
       "nl": "Vertel me wat je wilt bereiken, dan kijken we samen wat je nodig hebt.",
       "en": "Tell me what you want to achieve, and together we'll work out what you need."
