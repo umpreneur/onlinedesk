@@ -915,3 +915,10 @@ button { font: inherit; color: inherit; }
 @media (max-width: 960px) {
   .bento .tile-cta { display: none; }
 }
+
+/* "Neem contact op" bij Waar ik je bij help: naast de tekst op desktop, onder de vier vakken als alles onder elkaar staat. */
+.custom-cta-after { display: none; }
+@media (max-width: 960px) {
+  .custom-copy .btn { display: none; }
+  .custom-cta-after { display: inline-flex; justify-self: start; min-height: 56px; padding: 0 30px; font-size: 1.05rem; }
+}

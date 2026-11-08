@@ -648,7 +648,7 @@
           )
         ),
         // Rustige uitnodiging voor maatwerk direct onder de pakketten.
-        h('a', { class: 'invite reveal', href: '#maatwerk' },
+        h('a', { class: 'invite reveal', href: '#contact' },
           h('span', { class: 'invite-text' },
             h('strong', {}, ui().invite.title),
             h('span', {}, ui().invite.text)
@@ -755,7 +755,9 @@
                 h('p', {}, tr(s.text))
               )
             )
-          )
+          ),
+          // Op mobiel staat de knop onder de vier vakken (zie .custom-cta-after).
+          h('a', { class: 'btn btn-primary custom-cta-after', href: '#contact' }, ui().customCta, icon('arrow', 18))
         ),
         // Alleen echte projecten; zonder projecten wordt dit blok niet getoond.
         work.length
