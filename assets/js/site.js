@@ -356,7 +356,6 @@
     return h('a', { class: `tile tile-cta reveal${on ? '' : ' is-off'}`, href: '#contact' },
       h('span', { class: 'status-pill' }, h('span', { class: 'dot' }), t.label),
       h('span', { class: 'cta-title' }, t.title),
-      h('span', { class: 'cta-text' }, t.text),
       h('span', { class: 'cta-link' }, t.cta, h('span', { class: 'cta-arrow' }, icon('arrow', 22)))
     );
   }
