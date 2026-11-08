@@ -331,6 +331,16 @@ button { font: inherit; color: inherit; }
   background: var(--sand-soft); color: var(--sand-deep); transition: transform .5s var(--spring);
 }
 .tile-cta:hover .cta-arrow { transform: rotate(-45deg) scale(1.1); }
+/* Inhoud als één groep in het midden; een zachte ring rechtsboven vult de lege hoek. */
+.tile-cta { justify-content: center; gap: 0; isolation: isolate; }
+.tile-cta .cta-title { font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+.tile-cta .cta-link { margin-top: 28px; padding-top: 0; }
+.tile-cta::before {
+  content: ''; position: absolute; z-index: -1; top: -80px; right: -80px; width: 220px; height: 220px;
+  border-radius: 50%; border: 28px solid color-mix(in srgb, currentColor 8%, transparent);
+  pointer-events: none; transition: transform .8s var(--spring);
+}
+.tile-cta:hover::before { transform: scale(1.08); }
 
 /* =========================================================
    Secties
