@@ -7,6 +7,27 @@
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+  // Scrol naar het contactformulier zelf (niet naar de tekst erboven), net onder de menubalk.
+  function scrollToForm(instant) {
+    const form = document.querySelector('#contact form') || document.querySelector('#contact');
+    if (!form) return;
+    // Positie zonder de inschuif-animatie (offsetTop telt transform niet mee).
+    $$('#contact .reveal').forEach((el) => el.classList.add('in'));
+    let y = 0;
+    for (let el = form; el; el = el.offsetParent) y += el.offsetTop;
+    const header = $('.site-header');
+    const top = y - (header ? header.offsetHeight : 0) - 16;
+    window.scrollTo({ top, behavior: instant || matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    history.replaceState(null, '', '#contact');
+  }
+  // Elke link naar #contact op deze pagina gebruikt dezelfde scroll.
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href="#contact"]');
+    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    scrollToForm();
+  });
   const C = window.SITE_CONTENT || {};
 
   /* ---------- Talen ---------- */
@@ -398,17 +419,7 @@
         select.value = tr(t.name);
         select.classList.remove('is-picked'); void select.offsetWidth; select.classList.add('is-picked');
       }
-      const form = document.querySelector('#contact form') || document.querySelector('#contact');
-      if (form) {
-        // Positie zonder de inschuif-animatie (offsetTop telt transform niet mee).
-        $$('#contact .reveal').forEach((el) => el.classList.add('in'));
-        let y = 0;
-        for (let el = form; el; el = el.offsetParent) y += el.offsetTop;
-        const header = $('.site-header');
-        const top = y - (header ? header.offsetHeight : 0) - 16;
-        window.scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
-      }
-      history.replaceState(null, '', '#contact');
+      scrollToForm();
     };
     return h('div', { class: 'tiers-wrap reveal', id: 'pakketten' },
       h('div', { class: 'tiers-head' }, h('h2', {}, T.title), h('p', {}, p.tiersSub ? tr(p.tiersSub) : T.sub)),
@@ -999,7 +1010,7 @@
   const target = location.hash && location.hash.length > 1 && !/lang=/.test(location.hash) ? document.getElementById(location.hash.slice(1)) : null;
   if (target) {
     // Direct springen (niet animeren) en nog eens na het laden, omdat lettertypes de layout kunnen verschuiven.
-    const jump = () => target.scrollIntoView({ behavior: 'instant', block: 'start' });
+    const jump = () => (target.id === 'contact' ? scrollToForm(true) : target.scrollIntoView({ behavior: 'instant', block: 'start' }));
     jump();
     window.addEventListener('load', jump, { once: true });
   }
