@@ -1730,8 +1730,8 @@ window.SITE_CONTENT = {
   "custom": {
     "title": { "nl": "Jouw onderneming,\nonline tot leven.", "en": "Your business,\nbrought to life online." },
     "text": {
-      "nl": "Vertel me wat je wilt bereiken, dan kijken we samen wat je nodig hebt.",
-      "en": "Tell me what you want to achieve, and together we'll work out what you need."
+      "nl": "Vertel me wat je wilt bereiken. Samen maken we jouw plannen concreet.",
+      "en": "Tell me what you want to achieve. Together we'll make your plans concrete."
     },
     "services": [
       { "icon": "compass", "color": "sage",
