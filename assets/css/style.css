@@ -898,3 +898,8 @@ button { font: inherit; color: inherit; }
   .extras-acc details b { display: block; margin-bottom: 4px; color: var(--tone-deep); }
   .extras-acc details p { margin: 0 0 14px; color: var(--ink-2); }
 }
+
+/* Op mobiel geen beschikbaarheidstegel in de kop: rustiger beeld. */
+@media (max-width: 600px) {
+  .bento .tile-cta { display: none; }
+}
